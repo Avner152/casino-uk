@@ -1,14 +1,14 @@
 import casinos from "../json/casino-list.json";
 import CasinoItem from "./CasinoItem";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 import { Fade, Slide } from "react-awesome-reveal";
 
 export default function CasinoSection() {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  const isTablet = useMediaQuery({
-    query: "(min-width: 768px) and (max-width: 1023px)",
-  });
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  // const isTablet = useMediaQuery({
+  //   query: "(min-width: 768px) and (max-width: 1023px)",
+  // });
+  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <div>
