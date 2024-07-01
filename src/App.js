@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./App.css";
+import Header from "./components/Header";
+import CasinoSection from "./components/CasinoSection";
+import { useMediaQuery } from "react-responsive";
+import Footer from "./components/Footer";
 
 function App() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  // const isLaptop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isTablet = useMediaQuery({
+    query: "(min-width: 768px) and (max-width: 1023px)",
+  });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={`${isDesktop ? "w-50" : "w-100 p-2"} m-auto casino-main`}>
+        <Header />
+        <div className="casino-section">
+          <CasinoSection />
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }
 
