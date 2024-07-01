@@ -1,0 +1,277 @@
+:root {
+  --dark: #2d3241;
+  --dark_trans: #2d3241f1;
+  --golden: #ffd600;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url(./assets/bg-tst.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #13161f !important;
+  font-family: "Poppins", sans-serif !important;
+  position: relative;
+}
+
+/* .logo {
+  background-image: url(./assets/logo.png);
+  width: 180px;
+  height: 180px;
+} */
+
+.cas-wrap {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.tokens {
+  position: absolute;
+  /* background: url(./assets/tokens.png) no-repeat top; */
+  height: 850px;
+  transform: scale(0.54);
+  width: 100%;
+  left: -15%;
+  top: -150px;
+  z-index: 1;
+}
+
+.cas-img {
+  position: relative;
+  /* background: url(./assets/girls.png) no-repeat top; */
+  height: 450px;
+  z-index: 2;
+  top: -30px;
+  transition: transform 300ms ease-in-out;
+}
+
+.casino-section {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul svg {
+  fill: var(--golden);
+  font-weight: bold;
+  width: 20px;
+  margin-top: -2px;
+  margin-right: 3px;
+}
+
+.my-card {
+  background-color: var(--dark_trans);
+  margin: 1rem 0;
+  border: 1px solid #00bd68;
+  transition: all 300ms ease-in-out;
+  border-radius: 6px;
+}
+
+.top-card {
+  padding: 1.25rem 0;
+  border: unset !important;
+  border-bottom-left-radius: unset !important;
+  border-bottom-right-radius: unset !important;
+}
+
+.top-card > div {
+  min-width: 15%;
+  max-width: 28%;
+}
+
+.golden {
+  color: var(--golden);
+}
+
+.my-card:hover {
+  cursor: pointer;
+  background-color: #2d324191;
+  border-color: var(--golden) !important;
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;
+}
+
+.accordion,
+.accordion-button {
+  color: #00bd68 !important;
+  background-color: var(--dark_trans) !important;
+  --bs-accordion-bg: var(--dark_trans);
+}
+
+.accordion-button {
+  padding: 12px 25px;
+  font-size: 0.9rem;
+}
+
+.accordion-body {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.accordion-item {
+  /* border: 1px solid #00bd68; */
+  border-top: unset;
+  color: #fff;
+  font-size: 0.7em;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: unset;
+}
+
+.accordion-button:focus {
+  box-shadow: unset;
+  border: unset;
+}
+
+.star,
+.empty {
+  color: var(--golden);
+  font-size: 1.5em;
+}
+
+.star::before {
+  content: "\2605";
+}
+
+.btn {
+  background-color: #00bd68;
+  background-image: linear-gradient(-180deg, #00d775, #00bd68);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  outline: 0;
+  overflow: hidden;
+  pointer-events: auto;
+  position: relative;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+  border: 0;
+  padding: 0.85rem 3rem;
+  font-size: 1.35rem;
+}
+
+.btn:hover,
+.btn:active {
+  background: #00bd68 !important;
+}
+
+.score h3,
+.score h5,
+.score > div {
+  margin: -3px 0;
+  line-height: 1.15;
+}
+
+.score-text {
+  font-weight: 900;
+}
+
+/* Burger */
+
+.nav-menu {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 75%;
+  background-color: var(--dark);
+  padding: 15px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 21px 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.fs-7 {
+  font-size: 0.75rem;
+}
+
+.rev-url {
+  letter-spacing: 1px;
+  margin-top: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.reg {
+  padding: 0 1rem 1rem;
+  line-height: 1.3;
+  font-size: 0.75rem;
+  text-align: center;
+  /* background-color: #ffffff71;
+  color: #000; */
+}
+
+.welcome-bonus {
+  max-width: 320px;
+  text-align: left;
+}
+
+.welcome-bonus h1 {
+  font-size: 1.25rem;
+}
+
+footer {
+  background-color: #242424;
+  color: #888;
+  min-height: 2vh;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 1023px) {
+  .top-card > div {
+    min-width: unset;
+    max-width: unset;
+  }
+  .disclaimer {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .casino-main {
+    width: 75% !important;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    background-image: url(./assets/bg-mob.jpg);
+  }
+
+  .my-card {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .welcome-bonus {
+    width: 75%;
+    text-align: center;
+    margin: 10px 0 0;
+  }
+}
