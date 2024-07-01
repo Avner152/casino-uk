@@ -2,10 +2,10 @@ import logo from "../assets/logo.png";
 import { useMediaQuery } from "react-responsive";
 
 export default function Footer() {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  const isTablet = useMediaQuery({
-    query: "(min-width: 768px) and (max-width: 1023px)",
-  });
+  // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  // const isTablet = useMediaQuery({
+  //   query: "(min-width: 768px) and (max-width: 1023px)",
+  // });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const footer = [
     {
@@ -41,7 +41,7 @@ export default function Footer() {
         } m-auto`}
       >
         <div className="d-flex flex-column align-items-center">
-          <img width={150} src={logo} />
+          <img alt="logos" width={150} src={logo} />
           <div className="disclaimer">
             © 2024 Avner Levy. All rights reserved.
           </div>
@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           {footer.map((f, k) => (
             <a key={k} href={f.url}>
-              <img height={30} src={f.src} />
+              <img alt="disc" height={30} src={f.src} />
             </a>
           ))}
         </div>
