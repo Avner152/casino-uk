@@ -10,7 +10,7 @@ import CardsSection from "./components/CardsSection";
 
 export function importImages(r) {
   let images = {};
-  r.keys().map((item) => {
+  r.keys().forEach((item) => {
     images[item.replace("./", "")] = r(item);
   });
   return images;
