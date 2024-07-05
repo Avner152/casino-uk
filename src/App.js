@@ -5,6 +5,16 @@ import Header from "./components/Header";
 import CasinoSection from "./components/CasinoSection";
 import { useMediaQuery } from "react-responsive";
 import Footer from "./components/Footer";
+import Content from "./components/Content";
+import CardsSection from "./components/CardsSection";
+
+export function importImages(r) {
+  let images = {};
+  r.keys().map((item) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
 
 function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -19,7 +29,12 @@ function App() {
         <Header />
         <div className="casino-section">
           <CasinoSection />
+          {isDesktop && <CardsSection />}
+          <br />
         </div>
+      </div>
+      <div className="mt-5 min-vh-100 bg-secondary text-white-50 p-5">
+        <Content isDesktop={isDesktop} />
       </div>
       <Footer />
     </>
