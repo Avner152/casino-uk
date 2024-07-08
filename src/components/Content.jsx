@@ -21,6 +21,9 @@ export default function Content({ isDesktop }) {
   };
   return (
     <div className={`w-${isDesktop ? 50 : 100} m-auto`}>
+      <h1 className="fw-bold">
+        Best UK Online Casinos: Top Sites, Games, and Bonuses for 2024
+      </h1>
       <p>
         Welcome to our online casino comparison site, your ultimate guide to
         finding the best and most reliable casino sites in the UK. We are here

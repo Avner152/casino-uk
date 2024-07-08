@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import "./App.css";
-import Header from "./components/Header";
-import CasinoSection from "./components/CasinoSection";
 import { useMediaQuery } from "react-responsive";
+import { useState } from "react";
+import { getCookie } from "./json/helpers";
+import Header from "./components/Header";
+import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
-import Content from "./components/Content";
-import CardsSection from "./components/CardsSection";
+import MyRoutes from "./routes/MyRoutes";
 
 export function importImages(r) {
   let images = {};
@@ -17,6 +17,9 @@ export function importImages(r) {
 }
 
 function App() {
+  const [hasCookie, setCookieStatus] = useState(
+    getCookie("uk-sefty-cookie") ? true : false
+  );
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isLaptop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
@@ -25,17 +28,12 @@ function App() {
   // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
     <>
+      {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
       <div className={`${isDesktop ? "w-50" : "w-100 p-2"} m-auto casino-main`}>
         <Header />
-        <div className="casino-section">
-          <CasinoSection />
-          {isDesktop && <CardsSection />}
-          <br />
-        </div>
       </div>
-      <div className="mt-5 min-vh-100 bg-secondary text-white-50 p-5">
-        <Content isDesktop={isDesktop} />
-      </div>
+      <MyRoutes />
+
       <Footer />
     </>
   );

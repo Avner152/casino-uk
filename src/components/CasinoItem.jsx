@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 
-export default function CasinoItem({ item, src }) {
+export default function CasinoItem({ index, item, src }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
@@ -13,11 +13,17 @@ export default function CasinoItem({ item, src }) {
 
   return (
     <div className="my-card shadow">
+      {index < 2 && (
+        <div className="ribbon ribbon-top-left">
+          <span>top-rated</span>
+        </div>
+      )}
       <div
         className={`top-card d-flex gap-${
           !isDesktop ? "2 flex-column" : "1"
         }  justify-content-around border rounded align-items-center text-center`}
       >
+        {/* <div className="fs-2">{index + 1}</div> */}
         <div className="border border-2 rounded">
           <img alt="casino" width={140} height={55} src={src} />
         </div>
