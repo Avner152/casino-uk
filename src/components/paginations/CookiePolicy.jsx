@@ -1,128 +1,227 @@
-import React from "react";
-
 export default function CookiePolicy() {
   return (
-    <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3">
-      <div className="w-75 m-auto pt-3">
-        <h1>Cookie Policy</h1>
+    <div className="text-bg-dark text-white _pt-5 _pb-5 mb-3 mt-3 information">
+      <div className="m-auto">
+        <div>
+          <div className="d-flex align-items-center gap-3">
+            <h1>Cookie Policy</h1>
+            <span>18+</span>
+          </div>
+          <span>Last Updated: April 10, 2024</span>
+        </div>
+
         <p>
-          At 10BestCasinoDeals, accessible at
-          https://www.10bestcasinodeals.co.uk/, safeguarding the privacy of our
-          visitors is a top priority. This Privacy Policy outlines the types of
-          information collected by 10BestCasinoDeals and how we use it.
+          This Cookie Policy ("Policy") applies to websites operated by Natural
+          Intelligence Ltd. ("NI", "us", or "we"). By using the Site, you agree
+          to the use of cookies as described in this Policy.
         </p>
         <p>
-          If you have any questions or need more information about our Privacy
-          Policy, please don't hesitate to contact us.
+          We reserve the right to modify this Policy at any time. If there are
+          significant changes, you will be notified via the Site. We encourage
+          you to review this page periodically. Continued use of the Site
+          constitutes your acceptance of any changes. If you do not agree with
+          the terms, discontinue use of the Site or adjust your browser settings
+          to refuse cookies.
         </p>
+        <div>
+          <span>
+            This Cookie Policy is part of our Privacy Policy, and terms defined
+            there have the same meanings here. This Policy explains:
+          </span>
+          <ul>
+            <li>What cookies are?</li>
+            <li>Cookies used when you use the Site</li>
+            <li>Third-party use of cookies on the Site.</li>
+            <li>Your cookie options</li>
+            <li>Interest-Based Advertising</li>
+          </ul>
+        </div>
+
+        <div>
+          <ol>
+            <li>
+              <div>What Are Cookies?</div>
+              <p>
+                A cookie is a small text file stored in your web browser that
+                allows the Site or a third party to recognize you. Cookies may
+                be used for:
+              </p>
+              <ol>
+                <li>Enabling certain functions</li>
+                <li>Providing analytics</li>
+                <li>Storing preferences</li>
+                <li>Enabling ad delivery and behavioral advertising</li>
+              </ol>
+              <p>
+                Cookies can be session cookies (expire when you close your
+                browser) or persistent cookies (remain until they expire or you
+                delete them). Cookies placed by the site you’re visiting are
+                "first-party cookies," while those placed by other entities are
+                "third-party cookies."
+              </p>
+              <p>
+                Cookies often work with pixel tags (web beacons or clear GIFs)
+                to measure visitor actions. For example, pixel tags may track
+                interactions on the Site or referrals to partners, for
+                retargeting or interest-based advertising as explained in
+                section 5 below.
+              </p>
+            </li>
+            <li>
+              <div>What Cookies Are Used When I Use the Site?</div>
+              <p>
+                When you access or use the Site, we or a third party may place
+                several cookies in your browser. Some cookies are used only if
+                you use certain features or preferences, while others serve
+                longer-term purposes, as detailed in our Privacy Policy.
+              </p>
+              <p>Each cookie serves one of the following purposes:</p>
+              <ul>
+                <li>
+                  Essential Cookies: These first-party cookies allow users to
+                  use features of the Site like staying logged in or making
+                  purchases
+                </li>
+                <li>
+                  Preference Cookies: These first-party cookies store your Site
+                  preferences
+                </li>
+                <li>
+                  Ad Targeting Cookies: These third-party cookies enable
+                  advertising networks to deliver ads relevant to your
+                  activities.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div>How Do Third Parties Use Cookies on the Site?</div>
+              <p>
+                Third parties like analytics vendors or ad networks use cookies
+                to collect user information anonymously. This helps them
+                understand users' activities on the Site and other websites they
+                visit.
+              </p>
+            </li>
+            <li>
+              <div>What Are My Cookie Options?</div>
+              <p>
+                You can change your browser settings to delete cookies or refuse
+                new ones. Visit your browser’s help pages for instructions. Note
+                that if you delete or refuse cookies, some features of the Site
+                may not function properly.
+              </p>
+              <p>
+                You may also opt-out of third-party cookies by following
+                instructions in each third party's privacy policy.
+              </p>
+            </li>
+            <li>
+              <div>How to Manage Cookies?</div>
+              <p>
+                Cookies help you get the most out of our Site. If you disable
+                cookies, certain sections of the Site may not function properly.
+              </p>
+            </li>
+            <li>
+              <div>How to Manage Your Cookies?</div>
+              <p>
+                Most browsers are set to accept cookies by default. You can
+                change settings to block cookies or alert you when cookies are
+                sent.
+              </p>
+              <p>
+                Be aware that disabling cookies may affect your experience on
+                the Site, such as not being able to visit certain areas or
+                receive personalized content.
+              </p>
+              <p>
+                For more information about the cookies used on the Site, click
+                here.
+              </p>
+            </li>
+            <li>
+              <div>Interest-Based Advertising</div>
+              <p>
+                We and third parties engage in interest-based advertising to
+                deliver personalized content that we believe will be of interest
+                to you. We do not control third-party cookies or the resulting
+                information for online, mobile, or email advertising and are not
+                responsible for their actions or policies. Your Online Choices |
+                EDAA{" "}
+                <a href="https://www.youronlinechoices.eu">
+                  https://www.youronlinechoices.eu
+                </a>
+              </p>
+            </li>
+          </ol>
+        </div>
+        <h2># How to Disable Behaviorally Targeted Advertising Cookies</h2>
         <p>
-          This Privacy Policy is specific to our online activities and is
-          applicable to visitors to our website regarding the information they
-          share and/or collect on 10BestCasinoDeals. It does not apply to
-          information collected offline or through channels other than this
-          website.
+          For users in the European Union, visit www.youronlinechoices.eu. For
+          users in the US, visit www.aboutads.info/choices.
         </p>
-        <h2>### Consent</h2>
-        <p>
-          By using our website, you consent to our Privacy Policy and agree to
-          its terms.
-        </p>
-        <h2>### Information We Collect</h2>
-        <p>
-          We will clarify the personal information requested and the reasons for
-          its request at the point of collection.
-        </p>
-        <p>
-          If you contact us directly, we may receive additional information such
-          as your name, email address, phone number, the contents of your
-          message and/or attachments, and any other information you provide.
-        </p>
-        <p>
-          When you register for an account, we may ask for contact information,
-          including your name, company name, address, email address, and
-          telephone number.
-        </p>
-        <h2>### How We Use Your Information</h2>
-        <p>The information we collect is used in various ways, including to:</p>
-        <ul>
-          <li>Provide, operate, and maintain our website</li>
-          <li>Improve, personalize, and expand our website</li>
-          <li>Understand and analyze how you use our website</li>
-          <li>Develop new products, services, features, and functionality</li>
+        <h2>How to Enable and Disable Cookies Using Your Browser</h2>
+        <p>Google Chrome:</p>
+        <ol>
+          <li>Click the wrench icon on the toolbar</li>
+          <li>Select Settings - Show advanced settings.</li>
+          <li>In the "Privacy" section, click 'Content settings.'</li>
           <li>
-            Communicate with you directly or through our partners for customer
-            service, updates, and promotional purposes
+            To enable cookies, pick 'Allow local data to be set.' To allow only
+            first-party cookies, pick 'Block all third-party cookies without
+            exception.'
           </li>
-          <li>Send you emails</li>
-          <li>Detect and prevent fraud</li>
-        </ul>
+          <li>To disable cookies, pick 'Block sites from setting any data.'</li>
+        </ol>
+        <p>For more information, visit Google’s support page.</p>
 
-        <h2>### Log Files</h2>
-        <p>
-          10BestCasinoDeals follows standard procedures for using log files,
-          which log visitors when they visit websites. The information collected
-          includes IP addresses, browser type, Internet Service Provider (ISP),
-          date and time stamp, referring/exit pages, and possibly the number of
-          clicks. This information is not linked to any personally identifiable
-          information and is used for analyzing trends, administering the site,
-          tracking users' movement, and gathering demographic information.
-        </p>
+        <h3>Microsoft Internet Explorer:</h3>
+        <ol>
+          <li>
+            Click 'Tools' at the top of your browser window and select 'Internet
+            Options.'
+          </li>
+          <li>Navigate to the 'Privacy' tab.</li>
+          <li>To enable cookies, set the slider to 'Medium' or below.</li>
+          <li>To disable cookies, move the slider to the top.</li>
+        </ol>
+        <p>For more information, visit Microsoft’s support page.</p>
 
-        <h2>### Cookies and Web Beacons</h2>
-        <p>
-          Like many websites, 10BestCasinoDeals uses cookies to store
-          information, including visitors’ preferences and the pages on the site
-          that were visited. This information is used to optimize the users'
-          experience by customizing web page content based on visitors' browser
-          type and/or other information.
-        </p>
-        <h2>### Google DoubleClick DART Cookie</h2>
-        <p>
-          Google, a third-party vendor on our site, uses DART cookies to serve
-          ads to our visitors based on their visits to{" "}
-          <a href="www.website.com">www.website.com</a> and other sites on the
-          internet. Visitors can opt-out of the use of DART cookies by visiting
-          the Google ad and content network Privacy Policy at
-          <a href="https://policies.google.com/technologies/ads" rel="nofollow">
-            https://policies.google.com/technologies/ads
-          </a>
-          .
-        </p>
-        <h2>### Our Advertising Partners</h2>
-        <p>
-          Some advertisers on our site may use cookies and web beacons. Each of
-          our advertising partners has its own Privacy Policy. For easier
-          access, we have hyperlinked to their Privacy Policies below:
-        </p>
-        <p>
-          Google:{" "}
-          <a href="https://policies.google.com/technologies/ads" rel="nofollow">
-            https://policies.google.com/technologies/ads
-          </a>
-        </p>
-        <h2>### Advertising Partners Privacy Policies</h2>
-        <p>
-          You can consult this list to find the Privacy Policy for each of the
-          advertising partners of 10BestCasinoDeals.
-        </p>
-        <p>
-          Third-party ad servers or ad networks use technologies like cookies,
-          JavaScript, or Web Beacons in their advertisements and links that
-          appear on 10BestCasinoDeals, which are sent directly to users'
-          browsers. They automatically receive your IP address when this occurs.
-          These technologies measure the effectiveness of their advertising
-          campaigns and/or personalize the advertising content you see on
-          websites you visit.
-        </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <h3>Microsoft Edge:</h3>
+        <ol>
+          <li>
+            Click the More actions button on the toolbar, and select Settings.
+          </li>
+          <li>Search for View advanced settings and click it.</li>
+          <li>
+            Under Cookies section, select either 'Don't block cookies' (default)
+            or 'Block only third-party cookies.'
+          </li>
+        </ol>
+        <h3>Mozilla Firefox:</h3>
+        <ol>
+          <li>Click 'Tools' at the browser menu and select 'Options.'</li>
+          <li>Select the Privacy panel.</li>
+          <li>To enable cookies, check 'Accept cookies for sites.'</li>
+          <li>To disable cookies, uncheck 'Accept cookies for sites.'</li>
+        </ol>
+        <p>For more information, visit Mozilla’s support page.</p>
+        <h3>Opera:</h3>
+        <ol>
+          <li>Click 'Setting' at the browser menu and select 'Settings.'</li>
+          <li>Select 'Quick Preferences.'</li>
+          <li>To enable cookies, check 'Enable Cookies.'</li>
+          <li>To disable cookies, uncheck 'Enable Cookies.'</li>
+        </ol>
+        <p>For more information, visit Opera’s support page.</p>
+        <h3>Safari on OSX:</h3>
+        <ol>
+          <li>Click 'Safari' at the menu bar and select 'Preferences.'</li>
+          <li>Click 'Security.'</li>
+          <li>To enable cookies, select 'Only from site you navigate to.'</li>
+          <li>To disable cookies, select 'Never.'</li>
+        </ol>
+        <p>For more information, visit Apple’s support page.</p>
       </div>
     </div>
   );

@@ -1,37 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useMediaQuery } from "react-responsive";
+import { importImages } from "../App";
 export default function Footer() {
   // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
   // });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const footer = [
+
+  const importedRegPhotos = importImages(
+    require.context("../assets/reg", false, /\.(svg)$/)
+  );
+
+  const regLogosData = [
+    { name: "18plus", url: "https://www.top10bestonlinecasinos.co.uk/" },
     {
-      src: "https://images.naturalint.com/q_auto/v1/production/foundation-entities/uploads/photo/1.18Plus_FooterLogos_UK.20230714081510.svg",
-      url: "https://www.top10bestonlinecasinos.co.uk/",
+      name: "raig",
+      url: "https://www.raig.org/news-press/news/raig-social-responsibility-audit",
     },
-    {
-      src: "https://images.naturalint.com/q_auto/v1/production/foundation-entities/uploads/photo/2.RAIG_FooterLogos_UK.20230714081542.svg",
-      url: "https://www.raig.org/news-press/news/raig-social-responsibility-audit/",
-    },
-    {
-      src: "https://images.naturalint.com/q_auto/v1/production/foundation-entities/uploads/photo/3.GAMSTOP_FooterLogos_UK.20230714081600.svg",
-      url: "https://www.gamstop.co.uk/",
-    },
-    {
-      src: "https://images.naturalint.com/q_auto/v1/production/foundation-entities/uploads/photo/4.GameCare_FooterLogos_UK.20230714081627.svg",
-      url: "https://www.gamcare.org.uk/",
-    },
-    {
-      src: "https://images.naturalint.com/q_auto/v1/production/foundation-entities/uploads/photo/5.BeGambleAware_FooterLogos_UK.20230714081641.svg",
-      url: "https://www.begambleaware.org/",
-    },
-    {
-      src: "https://images.naturalint.com/q_auto/v1/production/foundation-entities/uploads/photo/6.GamblingTherapy_FooterLogos_UK.20230714081659.svg",
-      url: "https://www.gamblingtherapy.org/",
-    },
+    { name: "gamstop", url: "https://www.gamstop.co.uk" },
+    { name: "gamcare", url: "https://www.gamcare.org.uk/" },
+    { name: "be-gamble-aware", url: "https://www.begambleaware.org/" },
+    { name: "gambling-therapy", url: "https://www.gamblingtherapy.org/" },
   ];
 
   return (
@@ -51,9 +42,13 @@ export default function Footer() {
         </div>
         <div className="d-flex flex-column gap-3">
           <div className="d-flex gap-3 justify-content-center flex-wrap">
-            {footer.map((f, k) => (
-              <a key={k} href={f.url}>
-                <img alt="disc" height={30} src={f.src} />
+            {regLogosData.map((photo, k) => (
+              <a key={k} href={photo.url}>
+                <img
+                  alt={photo.name}
+                  height={30}
+                  src={importedRegPhotos[`${photo.name}.svg`]}
+                />
               </a>
             ))}
           </div>

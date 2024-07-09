@@ -276,6 +276,13 @@ a:hover {
   font-weight: bold;
 }
 
+.information {
+  background-color: #13161fea !important;
+  width: 55%;
+  margin: auto;
+  padding: 1.25% 3%;
+}
+
 @media only screen and (max-width: 1023px) {
   .top-card > div {
     min-width: unset;
@@ -295,10 +302,14 @@ a:hover {
   .tit-n-des {
     width: 88%;
     margin: auto;
+    background-color: var(--dark_trans);
+    padding: 0.5rem 2rem;
   }
   body {
     /* background-image: url(./assets/bg-mob.jpg); */
-    background: linear-gradient(180deg, #f09819 0, #ff512f 100%);
+
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
   }
 
   .my-card {
@@ -310,6 +321,10 @@ a:hover {
     width: 75%;
     text-align: center;
     margin: 10px 0 0;
+  }
+  .information {
+    width: 95%;
+    padding: 5%;
   }
 }
 

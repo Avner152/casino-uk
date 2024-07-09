@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useMediaQuery } from "react-responsive";
 
@@ -17,7 +18,15 @@ export default function Header() {
           !isDesktop && "justify-content-between"
         } align-items-center mt-3 fs-2 text-uppercase`}
       >
-        <img src={logo} width={180} alt="logo" height={50} className="_mt-2" />
+        <Link to="/">
+          <img
+            src={logo}
+            width={180}
+            alt="logo"
+            height={50}
+            className="_mt-2"
+          />
+        </Link>
         {/* {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
             <div className="d-flex fs-6 justify-content-start gap-3 p-3 text-white">

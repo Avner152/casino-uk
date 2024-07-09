@@ -19,7 +19,7 @@ export default function CasinoSection() {
 
   return (
     <div>
-      <div className="mt-5 mb-5 tit-n-des">
+      <div className={`${!isMobile && "mt-4"} mb-4 tit-n-des`}>
         <h1>
           Top 10 Best Online Casinos -{" "}
           <span className="color-green">
