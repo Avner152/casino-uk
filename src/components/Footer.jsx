@@ -53,6 +53,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="d-flex gap-3 justify-content-center">
+            <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/cookie-consent-policy">Cookies Policy</Link>
             <Link to="/terms-and-conditions">Terms & Conditions</Link>
           </div>

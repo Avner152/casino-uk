@@ -13,9 +13,9 @@ export default function CasinoItem({ index, item, src }) {
 
   return (
     <div className="my-card shadow">
-      {index < 2 && (
+      {item.ribbonText && (
         <div className="ribbon ribbon-top-left">
-          <span>top-rated</span>
+          <span>{item.ribbonText}</span>
         </div>
       )}
       <div
@@ -49,20 +49,17 @@ export default function CasinoItem({ index, item, src }) {
           </div>
         </div>
         <div className="d-flex flex-column">
-          <Button onClick={() => setClicked(!clicked)}>
+          <Button
+            onClick={() => {
+              setClicked(!clicked);
+              window.open(item.url, "_blank");
+            }}
+          >
             {clicked ? "Visit Again" : "Get Bonus"}
           </Button>
-          {/* <a className="rev-url" href={item.review_url}>
-            <span className="fs-7">Review</span>
-          </a> */}
         </div>
       </div>
-      <div className="reg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nulla sint
-        voluptas atque eligendi eveniet laboriosam deleniti provident vitae
-        aspernatur. Asperiores maxime alias repellat ipsum voluptatem, natus
-        placeat sunt voluptates.
-      </div>
+      <div className="reg">{item.brandText}</div>
     </div>
   );
 }
