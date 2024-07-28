@@ -6,16 +6,12 @@ import Terms from "../components/paginations/Terms";
 import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 
 export default function MyRoutes() {
-  //  int number = 2;
-  // 0 01 100 1000 10000 100000 100000 // 2^32
-  // 2^64
-
   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // setActivated(activeHandler);
   }, [location.pathname]);
+
   return (
     <>
       <Routes>

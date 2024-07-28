@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
 import { useMediaQuery } from "react-responsive";
 import { importImages } from "../App";
 export default function Footer() {
