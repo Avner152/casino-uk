@@ -28,18 +28,10 @@ export default function Footer() {
   return (
     <footer className={`w-100 p-${isMobile ? "0 pb-5" : 5}`}>
       <div
-        className={`d-flex justify-content-between w-${
-          isMobile ? "100 flex-column align-items-center" : 75
+        className={`d-flex justify-content-center w-${
+          isMobile ? "100 flex-column align-items-center" : 100
         } m-auto`}
       >
-        <div className="d-flex flex-column align-items-center">
-          <Link to="/">
-            <img alt="logos" width={150} src={logo} />
-          </Link>
-          <div className="disclaimer">
-            © 2024 Avner Levy. All rights reserved.
-          </div>
-        </div>
         <div className="d-flex flex-column gap-3">
           <div className="d-flex gap-3 justify-content-center flex-wrap">
             {regLogosData.map((photo, k) => (

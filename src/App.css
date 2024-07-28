@@ -312,13 +312,18 @@ a:hover {
     /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
   }
 
+  .top-card {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+
   .my-card {
     width: 90%;
     margin: 1rem auto;
     position: relative;
   }
   .welcome-bonus {
-    width: 75%;
+    width: 50%;
     text-align: center;
     margin: 10px 0 0;
   }

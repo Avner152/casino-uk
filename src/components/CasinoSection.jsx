@@ -11,7 +11,7 @@ export default function CasinoSection() {
 
   const curDate = new Date();
 
-  // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
   // });
@@ -152,23 +152,16 @@ export default function CasinoSection() {
         <Fade
           key={k}
           direction={!isMobile ? (k % 2 ? "right" : "left") : null}
-          delay={k * 250}
+          delay={isDesktop ? k * 250 : 0}
           cascade
           triggerOnce
         >
-          {/* <Slide
-            // direction={k % 2 ? "right" : "left"}
-            delay={k * 250}
-            cascade
-            triggerOnce
-          > */}
           <CasinoItem
             key={k}
             index={k}
             item={casino}
             src={images[`${casino.img}.png`]}
           />
-          {/* </Slide> */}
         </Fade>
       ))}
     </div>

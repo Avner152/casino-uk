@@ -79,6 +79,36 @@ export default function Content({ isDesktop }) {
           })}
         </Accordion>
       </div>
+      <div className="mt-5 d-flex flex-column gap-3">
+        <div>
+          According to the British Gambling Commission, the statutory gambling
+          regulator, "Safe and responsible gambling comes from an industry that
+          takes care of its customers, customers who are empowered with the
+          knowledge to manage their gambling, and a regulator that ensures the
+          consumer is at the heart of everything we do." This information aims
+          to address the first two criteria. As we promote gambling services on
+          this site, we believe it is important to inform our customers about
+          the risks associated with gambling and provide information on where to
+          find further advice and support if needed.
+        </div>
+        <div>
+          "18+ Advertiser Disclosure This website is a free online resource
+          dedicated to providing valuable content and comparison tools to our
+          visitors. We receive advertising compensation from the companies
+          featured on our site, which affects the positioning and ranking of the
+          brands and their products. This compensation also influences the
+          scores assigned to them. The inclusion of companies on this page does
+          not constitute an endorsement. Not all market providers are listed.
+          Except as explicitly stated in our Terms of Use, we disclaim all
+          representations and warranties regarding the information presented.
+          The details, including pricing, on this site are subject to change at
+          any time."
+        </div>
+        <div>
+          © 2024 CasinoRate. All rights reserved. All trademarks are the
+          property of their respective owners.
+        </div>
+      </div>
     </div>
   );
 }

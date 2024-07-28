@@ -23,7 +23,6 @@ export default function CasinoItem({ index, item, src }) {
           !isDesktop ? "2 flex-column" : "1"
         }  justify-content-around border rounded align-items-center text-center`}
       >
-        {/* <div className="fs-2">{index + 1}</div> */}
         <div className="border border-2 rounded">
           <img alt="casino" width={140} height={55} src={src} />
         </div>
@@ -31,23 +30,25 @@ export default function CasinoItem({ index, item, src }) {
           <h1 className="golden">{item.welcomeBonuses}</h1>
         </div>
 
-        <div className="score d-flex flex-column ">
-          {/* <h5>Our Score</h5> */}
-          <h3 className="_golden fw-bold fs-1">{item.score}</h3>
-          <div className="d-flex flex-column">
-            <div>
-              {Array.from({ length: 5 }).map((_, i) => (
-                <span
-                  className={`${i <= item.rank ? "star" : "empty"}`}
-                  key={i}
-                >
-                  {i > item.rank && "☆"}
-                </span>
-              ))}
+        {isDesktop && (
+          <div className="score d-flex flex-column ">
+            <h3 className="_golden fw-bold fs-1">{item.score}</h3>
+            <div className="d-flex flex-column">
+              <div>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span
+                    className={`${i <= item.rank ? "star" : "empty"}`}
+                    key={i}
+                  >
+                    {i > item.rank && "☆"}
+                  </span>
+                ))}
+              </div>
+              <span className="fs-7">Views ({item.views})</span>
             </div>
-            <span className="fs-7">Views ({item.views})</span>
           </div>
-        </div>
+        )}
+
         <div className="d-flex flex-column">
           <Button
             onClick={() => {
