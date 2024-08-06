@@ -6,9 +6,7 @@ export default function HomePage() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   return (
     <>
-      <div
-        className={`${isDesktop ? "w-50" : "w-100 p-2"} m-auto  casino-section`}
-      >
+      <div className="w-100 p-2 m-auto  casino-section">
         <CasinoSection />
         {/* {isDesktop && <CardsSection />} */}
         <br />

@@ -20,8 +20,8 @@ export default function Content({ isDesktop }) {
     ],
   };
   return (
-    <div className={`w-${isDesktop ? 50 : 100} m-auto`}>
-      <h1 className="fw-bold">
+    <div className="w-100 m-auto">
+      <h1 className="fw-bold text-white">
         Best UK Online Casinos: Top Sites, Games, and Bonuses for 2024
       </h1>
       <p>
@@ -61,8 +61,15 @@ export default function Content({ isDesktop }) {
         start enjoying the best casino experience!
       </p>
 
+      <p>
+        We conducted detailed research to create this guide on the top 10 casino
+        sites in the UK. During our research, we discovered that British players
+        often have common questions about online casinos. To address these, we
+        have compiled a useful FAQ section with the answers you need.
+      </p>
+
       <div className="faq">
-        <h1>{faq.t}</h1>
+        <h1 className="fw-bold text-white">{faq.t}</h1>
         <p>{faq.p}</p>
         <Accordion>
           {faq.ques.map((qNa, i) => {

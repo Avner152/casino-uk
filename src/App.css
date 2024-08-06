@@ -6,14 +6,56 @@
 
 body {
   overflow-x: hidden;
-  background-image: url(./assets/bg-tst.jpg);
+  background-color: #13161f !important;
+  font-family: "Raleway", sans-serif;
+  background-image: url(./assets/bg.webp);
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: #13161f !important;
-  font-family: "Poppins", sans-serif !important;
   position: relative;
+  /* text-align: center; */
+}
+body::after {
+  content: "";
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./assets/bg.webp");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  /* filter: blur(5px) brightness(0.75); */
+  z-index: -2;
+}
+
+.w-60 {
+  width: 60%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-40 {
+  width: 48%;
+}
+
+.params .row {
+  /* width: 80%; */
+  padding: 0 3rem;
+  gap: 0.9rem;
+}
+
+.params .col-md-6 {
+  flex: 1 0 33%;
+  width: 37%;
+  margin: auto;
+}
+
+.square {
+  max-width: 105px;
 }
 
 /* .logo {
@@ -52,7 +94,9 @@ body {
 }
 
 .casino-section {
+  position: relative;
   color: #fff;
+  margin-top: 12rem;
 }
 
 ul {
@@ -70,11 +114,13 @@ ul svg {
 }
 
 .my-card {
-  background-color: var(--dark_trans);
+  background-color: #fff;
   margin: 1rem 0;
-  border: 1px solid #00bd68;
+  color: #000;
+  /* border: 1px solid #00bd68; */
   transition: all 300ms ease-in-out;
   border-radius: 6px;
+  padding: 0 1rem;
 }
 
 .top-card {
@@ -82,20 +128,21 @@ ul svg {
   border: unset !important;
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
+  color: #113454;
 }
 
-.top-card > div {
+/* .top-card > div {
   min-width: 15%;
   max-width: 28%;
-}
+} */
 
 .golden {
-  color: var(--golden);
+  /* color: var(--golden); */
 }
 
 .my-card:hover {
   cursor: pointer;
-  background-color: #2d324191;
+  /* background-color: #2d324191; */
   border-color: var(--golden) !important;
   transform: scale(1.05);
   transition: all 300ms ease-in-out;
@@ -109,7 +156,7 @@ ul svg {
 }
 
 .accordion-button {
-  color: #00bd68 !important;
+  color: #2ecc71 !important;
   background-color: var(--dark_trans) !important;
   --bs-accordion-bg: var(--dark_trans);
 }
@@ -160,7 +207,16 @@ ul svg {
   content: "\2605";
 }
 
-.btn {
+.header-btn {
+  background-color: #ff0000;
+  border: unset;
+}
+
+.header-btn:hover {
+  background-color: #ff0000aa;
+}
+
+.top-card .btn {
   background-color: #00bd68;
   background-image: linear-gradient(-180deg, #00d775, #00bd68);
   border-radius: 15px;
@@ -179,9 +235,9 @@ ul svg {
   font-size: 1.35rem;
 }
 
-.btn:hover,
-.btn:active {
-  background: #00bd68 !important;
+.top-card .btn:hover,
+.top-card .btn:active {
+  background: #2ecc71 !important;
 }
 
 .score h3,
@@ -243,33 +299,49 @@ ul svg {
 }
 
 .welcome-bonus {
-  max-width: 320px;
+  width: 25rem;
+  padding: 0 1rem;
   text-align: left;
 }
 
 .welcome-bonus h1 {
   font-size: 1.25rem;
-  text-align: center;
+  font-weight: 700;
+  /* text-align: center; */
 }
 
 footer {
-  background-color: #242424;
+  /* background-color: #242424; */
+  background: linear-gradient(to top, #242424e0 60%, transparent 100%);
+  padding: 10rem 3rem 3rem;
   color: #888;
   min-height: 2vh;
 }
 
+footer .footer-logo {
+  flex-basis: 100%;
+}
+footer .footer-foo {
+  flex-basis: 100%;
+}
+
 a,
 a:visited {
-  color: #00bd68;
-  transition: all 300ms ease-in-out;
+  color: #fff;
+  text-decoration: none;
 }
 a:hover {
-  color: #fff;
+  color: #00bd68;
   transition: all 300ms ease-in-out;
 }
 
 .disclaimer {
   font-size: 0.75rem;
+}
+.header {
+  display: flex;
+  position: absolute;
+  top: 0;
 }
 
 .tit-n-des h1 {
@@ -283,6 +355,63 @@ a:hover {
   padding: 1.25% 3%;
 }
 
+/* Rating */
+
+/* Rating item */
+.rating {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+
+  background: #2ecc71;
+  color: #2ecc71;
+  width: 4.5rem;
+  height: 4.5rem;
+
+  /* Basic style for the text */
+  font-size: calc(6rem / 3);
+  line-height: 1;
+}
+
+/* Rating circle content */
+.rating span {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.rating span small {
+  font-size: 0.5em;
+  font-weight: 900;
+  align-self: center;
+}
+
+.rating::after {
+  content: "";
+  position: absolute;
+  inset: 0.35rem;
+  background: #e7f2fa;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.rating::before {
+  content: "";
+  position: absolute;
+  inset: 10rem;
+  border-radius: inherit;
+  box-shadow: 0 0 0 1rem #c7e1f3;
+  z-index: -1;
+}
+
+.rating.good {
+  background: #2ecc71;
+}
+
 @media only screen and (max-width: 1023px) {
   .top-card > div {
     min-width: unset;
@@ -293,6 +422,14 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  body,
+  .hero,
+  .hero::after,
+  body::after {
+    background-image: none;
+  }
+}
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
   .casino-main {
     width: 75% !important;
@@ -300,36 +437,67 @@ a:hover {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .tit-n-des {
-    width: 88%;
     margin: auto;
     background-color: var(--dark_trans);
-    padding: 0.5rem 2rem;
   }
+
+  .hero img {
+    max-width: 15vw;
+  }
+
   body {
     /* background-image: url(./assets/bg-mob.jpg); */
-
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* background-color: #00bd68; */
     /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
-  }
-
-  .top-card {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
+    background-image: linear-gradient(to top, #000 0%, #000 100%);
   }
 
   .my-card {
-    width: 90%;
-    margin: 1rem auto;
+    margin: 6vw auto;
     position: relative;
   }
   .welcome-bonus {
-    width: 50%;
-    text-align: center;
-    margin: 10px 0 0;
+    width: 100%;
+    /* margin: 10px 0 0; */
+    padding: unset;
   }
+  .card-content h1 {
+    font-size: 12px;
+  }
+  .card-content p {
+    font-size: 2vw;
+    line-height: 1.15;
+    /* font-size: 6px; */
+  }
+
   .information {
     width: 95%;
     padding: 5%;
+  }
+  .my-card {
+    padding: 0;
+  }
+  .top-card {
+    padding: 3vw;
+    max-height: 150px;
+  }
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 2vw;
+    flex-direction: column;
+    max-height: 100%;
+  }
+  /*  */
+
+  .top-card .btn {
+    font-size: 3vw;
+    border-radius: 8px;
+    width: 85%;
+    width: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    padding: 0.45rem 0rem;
   }
 }
 
@@ -377,7 +545,8 @@ a:hover {
 }
 
 .content {
-  background-color: #242424;
+  /* background: linear-gradient(to top, #242424 80%, transparent 100%); */
+  /* background-color: #242424; */
 }
 
 .ribbon {

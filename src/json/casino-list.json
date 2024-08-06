@@ -1,6 +1,7 @@
 [
   {
     "score": 9.9,
+    "name": "777",
     "welcomeBonuses": "77 FREE SPINS & 100% DEPOSIT (up to £20)",
     "url": "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}",
     "img": "777",
@@ -11,19 +12,19 @@
   },
   {
     "score": 9.6,
+    "name": "Betway",
     "welcomeBonuses": "100% Match Bonus up to £50 on 1st ",
     "url": "https://betway.com/bwp/casino-welcome/en-gb/?s=bw38811",
-    "img": "betway",
     "ribbonText": "recommended",
     "views": 14072,
     "rank": 5,
     "brandText": "New customers only. Opt-in required. 100% Match Bonus up to £50 on 1st deposit of £10+. 50x wagering & game weighting applies. Debit Card deposits only (exclusions apply). This offer is valid for 7 days from your new account being registered."
   },
   {
+    "name": "Hippo drome online",
     "score": 9.4,
     "welcomeBonuses": "Up to £50 Welcome Bonus + 50 Free Spins",
     "url": "https://www.hippodromeonline.com/?s=bw38811",
-    "img": "hippodromeonline",
     "ribbonText": "Best Offer",
     "views": 9882,
     "rank": 5,
@@ -31,30 +32,30 @@
   },
 
   {
+    "name": "Jackpot City",
     "score": 8.8,
     "welcomeBonuses": "Up to £100 Welcome Bonus + 100 Free Spins",
     "url": "https://www.jackpotcitycasino.co.uk/?s=bw38811",
-    "img": "jackpotcitycasino",
     "views": 8497,
     "ribbonText": "",
     "rank": 4,
     "brandText": "UK customers only. Opt-in and deposit £20+ via debit card. Offer valid for 7 days. Welcome Bonus: 100% match up to £100 on 1st deposit. 50x wagering and weighting requirements apply. Free Spins: Awarded on Jackpot City Gold Blitz after staking £20 on any Games Global game. Spin value = 10p. No wagering on free spin winnings."
   },
   {
+    "name": "Spin",
     "score": 8.8,
     "welcomeBonuses": "100 Bonus Spins When you stake £20",
     "url": "https://www.spincasino.co.uk/?s=bw38811",
-    "img": "spincasino",
     "views": 10152,
     "ribbonText": "",
     "rank": 4,
     "brandText": "New customers only. Opt-in required. 100 spins on Pile 'em Up, valued at 20p per spin, awarded on first deposit of £20+. 30x wagering and weighting requirements apply. Debit card deposits only. Offer valid for 7 days from account registration."
   },
   {
+    "name": "Casumo",
     "score": 8.3,
     "welcomeBonuses": "Up to £100 Welcome Bonus + 100 Free Spins",
     "url": "http://ads.casumoaffiliates.com/redirect.aspx?pid=495699&bid=1546&AFFID={GCLID}",
-    "img": "casumo",
     "views": 7715,
     "ribbonText": "",
     "rank": 4,
@@ -62,10 +63,10 @@
   },
 
   {
+    "name": "LeoVegas",
     "score": 8.3,
     "welcomeBonuses": "50 FREE SPINS & up to £100",
     "url": "http://ads.leovegas.com/redirect.aspx?pid=3497289&bid=3878&clickid={GCLID}",
-    "img": "leovegas",
     "views": 7926,
     "ribbonText": "",
     "rank": 4,
@@ -73,10 +74,10 @@
   },
 
   {
+    "name": "Slots Magic",
     "score": 8.1,
     "welcomeBonuses": "100% up to £50 + 50 Free Spins",
     "url": "https://site.gotoslotsmagic.com/index.php?aname=topukcasinos1",
-    "img": "gotoslotsmagic",
     "views": 7922,
     "ribbonText": "",
     "rank": 4,

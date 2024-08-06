@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
+import casino from "./assets/casino.png";
 
 export function importImages(r) {
   let images = {};
@@ -17,6 +18,28 @@ export function importImages(r) {
 }
 
 function App() {
+  let homepageIcons = importImages(
+    require.context("./assets/homepage-icons", false, /\.(svg)$/)
+  );
+  const homepageIconsObjectList = [
+    {
+      name: "uk",
+      text: "UK Licensed",
+    },
+    {
+      name: "security",
+      text: "Secure & Trusted",
+    },
+    {
+      name: "rocket",
+      text: "Fast Withdrawals",
+    },
+    {
+      name: "18plus",
+      text: "Advertiser Disclosure",
+    },
+  ];
+
   const [hasCookie, setCookieStatus] = useState(
     getCookie("uk-sefty-cookie") ? true : false
   );
@@ -28,13 +51,47 @@ function App() {
   // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
     <>
-      {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
-      <div className={`${isDesktop ? "w-50" : "w-100 p-2"} m-auto casino-main`}>
+      <div className={`w-${isDesktop ? 60 : 100} p-2 m-auto casino-main`}>
         <Header />
-      </div>
-      <MyRoutes />
+        <br />
+        <br />
+        <div className="mt-5 _mb-4 tit-n-des text-white">
+          <div className="m-auto row d-flex flex-wrap justify-content-center align-items-center text-start">
+            <div className="col-md-8 col-8">
+              <div className="mb-4">
+                <img alt="uk-logo" src={homepageIcons["uk-icon.svg"]} />
+              </div>
+              <h1>Check UK's Top-Rated Casinos</h1>
+              <p>
+                Top UK real money online casinos compared and reviewed. Check
+                our list of the most popular British online casinos. Play safely
+                & responsibly
+              </p>
+            </div>
+            <div className="col-md-4 col-4">
+              <img alt="cards" width={200} src={casino} />
+            </div>
+          </div>
 
+          {isDesktop && (
+            <div className="d-flex gap-5 m-auto justify-content-center align-items-center">
+              {homepageIconsObjectList.map((icon, k) => (
+                <div className="d-flex gap-3 align-items-center" key={k}>
+                  <img
+                    alt={icon.name}
+                    src={homepageIcons[`${icon.name}-icon.svg`]}
+                  />
+                  <span>{icon.text}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <MyRoutes />
+      </div>
       <Footer />
+
+      {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
     </>
   );
 }
