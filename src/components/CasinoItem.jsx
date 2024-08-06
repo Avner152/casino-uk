@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import ParamItem from "./ParamItem";
 
-export default function CasinoItem({ index, item, src, importedIcons }) {
+export default function CasinoItem({ item, src, importedIcons }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
@@ -35,7 +35,7 @@ export default function CasinoItem({ index, item, src, importedIcons }) {
           <img alt="casino" width={100} height={100} src={src} />
         </div>
         <div className="welcome-bonus d-flex flex-column gap-2">
-          <a>{item.name} Casino</a>
+          <a href={item.url}>{item.name} Casino</a>
           <h1 className="golden">{item.welcomeBonuses}</h1>
         </div>
 
