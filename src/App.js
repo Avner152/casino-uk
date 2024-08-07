@@ -51,16 +51,17 @@ function App() {
   // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
     <>
-      <div className={`w-${isDesktop ? 60 : 100} p-2 m-auto casino-main`}>
+      <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
         <Header />
         <br />
         <br />
-        <div className="mt-5 _mb-4 tit-n-des text-white">
-          <div className="m-auto row d-flex flex-wrap justify-content-center align-items-center text-start">
-            <div className="col-md-8 col-8">
-              <div className="mb-4">
-                <img alt="uk-logo" src={homepageIcons["uk-icon.svg"]} />
-              </div>
+        <div className="intro mt-5 tit-n-des text-white p-3">
+          <div>
+            <img alt="uk-logo" src={homepageIcons["uk-icon.svg"]} />
+          </div>
+
+          <div className="d-flex align-items-center">
+            <div>
               <h1>Check UK's Top-Rated Casinos</h1>
               <p>
                 Top UK real money online casinos compared and reviewed. Check
@@ -68,8 +69,13 @@ function App() {
                 & responsibly
               </p>
             </div>
-            <div className="col-md-4 col-4">
-              <img alt="cards" width={200} src={casino} />
+            <div>
+              <img
+                className="cards"
+                alt="cards"
+                width={isDesktop ? 220 : 150}
+                src={casino}
+              />
             </div>
           </div>
 

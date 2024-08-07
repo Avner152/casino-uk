@@ -44,7 +44,6 @@ export default function CasinoSection() {
           ) : (
             <CasinoItem
               key={k}
-              index={k}
               item={casino}
               importedIcons={importedIcons}
               src={

@@ -41,7 +41,6 @@ export default function CasinoItem({ item, src, importedIcons }) {
 
         {isDesktop && (
           <div className="score d-flex flex-column ">
-            {/* <h3 className="_golden fw-bold fs-1">{item.score}</h3> */}
             <div className="d-flex flex-column gap-2">
               <div
                 style={{

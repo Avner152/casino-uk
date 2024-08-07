@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
-export default function CasinoItemMobile({ item, src, importedIcons }) {
+export default function CasinoItemMobile({ item, src }) {
   const [clicked, setClicked] = useState(false);
 
   return (
