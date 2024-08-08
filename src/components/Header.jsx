@@ -3,12 +3,14 @@ import logo from "../assets/logo.svg";
 import burgerLogo from "../assets/burger-logo.svg";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
-import { elastic as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import { Button } from "react-bootstrap";
 
 export default function Header() {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
   const [show, setShow] = useState("");
+  const BONUS_URL =
+    "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}";
 
   const hamburgerHandler = () => {
     isBurgerOpen ? setShow("") : setShow("open");
@@ -55,7 +57,8 @@ export default function Header() {
       list: [
         {
           name: "LeoVegas",
-          url: "",
+          url: "http://ads.leovegas.com/redirect.aspx?pid=3497289&bid=3878&clickid={GCLID}",
+          target: "_blank",
         },
         {
           name: "OLG",
@@ -63,7 +66,8 @@ export default function Header() {
         },
         {
           name: "Betsafe",
-          url: "",
+          url: "https://betway.com/bwp/casino-welcome/en-gb/?s=bw38811",
+          target: "_blank",
         },
         {
           name: "Casino Room",
@@ -120,14 +124,18 @@ export default function Header() {
                 </NavLink>
               ))}
             </div>
-            <Button className="header-btn text-uppercase fw-bold">
+            <Button
+              target="_blank"
+              href={BONUS_URL}
+              className="header-btn text-uppercase fw-bold"
+            >
               Get Bonus
             </Button>
           </div>
         ) : (
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
-              <div>
+              <div className="ms-3">
                 <img alt="logo" src={logo} width={180} />
               </div>
               {/*  */}
@@ -140,54 +148,61 @@ export default function Header() {
                   src={burgerLogo}
                 />
                 <Menu
-                  id="elastic"
+                  id="slide"
                   right
-                  // customCrossIcon={false}
-                  pageWrapId={"page-wrap"}
+                  customCrossIcon={false}
                   outerContainerId={"outer-container"}
                   burgerButtonClassName={show}
                   isOpen={isBurgerOpen}
                   onOpen={hamburgerHandler}
                   onClose={hamburgerHandler}
                 >
-                  <Link to="/">
-                    <img
-                      src={logo}
-                      width={120}
-                      alt="logo"
-                      height={50}
-                      className="_mt-2"
-                    />
-                  </Link>
-                  {menu.map((menuItem, _) => (
-                    <div
-                      key={menuItem.title}
-                      className="d-flex flex-column gap-1"
-                    >
-                      <span className="fw-bold mt-3">{menuItem.title}</span>
-                      {menuItem.list.map((li, j) => (
-                        <Link
-                          onClick={() => {
-                            setShow("");
-                            setBurgerOpen(false);
-                          }}
-                          key={j}
-                          to={li.url}
-                          href={li.url}
-                        >
-                          {li.name}
-                        </Link>
-                      ))}
+                  <div>
+                    <div>
+                      <Link to="/">
+                        <img
+                          src={logo}
+                          width={120}
+                          alt="logo"
+                          height={50}
+                          className="_mt-2"
+                        />
+                      </Link>
+                      <hr className="m-0 me-4" />
                     </div>
-                  ))}
-                  <div className="mt-4">
-                    <Button className="header-btn text-uppercase fw-bold">
-                      Get Bonus
-                    </Button>
+                    {menu.map((menuItem, _) => (
+                      <div
+                        key={menuItem.title}
+                        className="d-flex flex-column gap-1"
+                      >
+                        <span className="fw-bold mt-3">{menuItem.title}</span>
+                        {menuItem.list.map((li, j) => (
+                          <Link
+                            onClick={() => {
+                              setShow("");
+                              setBurgerOpen(false);
+                            }}
+                            key={j}
+                            to={li.url}
+                            href={li.url}
+                            target={li.target || null}
+                          >
+                            {li.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                    <div className="mt-4">
+                      <Button
+                        target="_blank"
+                        href={BONUS_URL}
+                        className="header-btn text-uppercase fw-bold"
+                      >
+                        Get Bonus
+                      </Button>
+                    </div>
                   </div>
                 </Menu>
-
-                <main id="page-wrap"></main>
               </div>
               {/*  */}
             </div>

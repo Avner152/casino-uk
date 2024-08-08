@@ -5,7 +5,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -257,6 +257,7 @@ ul svg {
 }
 
 /* Hamburger */
+
 #outer-container .flag-logo {
   position: relative;
   right: 58px;
@@ -285,10 +286,6 @@ ul svg {
   left: unset !important;
 }
 
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
 .bm-cross-button {
   height: 24px;
   width: 24px;
@@ -299,14 +296,18 @@ ul svg {
 }
 
 .bm-menu-wrap {
-  top: 0;
-  height: 80vh !important;
+  /* top: 0; */
+  width: 220px !important;
+  height: 81vh !important;
   position: relative;
 }
 
 .bm-menu {
   background: #000;
+  display: flex;
+  justify-content: center;
   padding: 0.5em 0.5em 0;
+  border-radius: 25px;
   font-size: 0.9rem;
 }
 
@@ -327,7 +328,9 @@ ul svg {
 }
 
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.85) !important;
+  top: 0;
+  left: 0;
 }
 
 .nav-menu.open {
@@ -439,14 +442,12 @@ a:hover {
   justify-content: center;
   border-radius: 100%;
   overflow: hidden;
-
-  background: #2ecc71;
-  color: #2ecc71;
+  /* background: #2ecc71; */
   width: 4.5rem;
   height: 4.5rem;
 
   /* Basic style for the text */
-  font-size: calc(6rem / 3);
+  font-size: calc(3.85rem / 3);
   line-height: 1;
 }
 
@@ -468,7 +469,7 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0.35rem;
-  background: #e7f2fa;
+  background: #fff;
   border-radius: inherit;
   z-index: 1;
 }
@@ -487,10 +488,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 1023px) {
-  .top-card > div {
+  /* .top-card > div {
     min-width: unset;
     max-width: unset;
-  }
+  } */
   .disclaimer {
     margin-bottom: 3rem;
   }
@@ -540,8 +541,8 @@ a:hover {
     font-size: 12px;
   }
   .card-content p {
-    font-size: 8px;
-    line-height: 1.15;
+    font-size: 6.5px;
+    line-height: 1.5;
     /* font-size: 6px; */
   }
 
@@ -553,8 +554,8 @@ a:hover {
     padding: 5px;
   }
   .top-card {
-    padding: 3vw;
-    max-height: 150px;
+    padding: 0 1.25vw 2vw 1.25vw;
+    max-height: 200px;
   }
   .card-content {
     display: flex;

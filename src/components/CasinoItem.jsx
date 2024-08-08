@@ -36,7 +36,7 @@ export default function CasinoItem({ item, src, importedIcons }) {
         </div>
         <div className="welcome-bonus d-flex flex-column gap-2">
           <a href={item.url}>{item.name} Casino</a>
-          <h1 className="golden">{item.welcomeBonuses}</h1>
+          <h1 className="golden">{item.title}</h1>
         </div>
 
         {isDesktop && (
@@ -46,7 +46,7 @@ export default function CasinoItem({ item, src, importedIcons }) {
                 style={{
                   background: `conic-gradient(rgb(39, 174, 96) ${
                     item.score * 10
-                  }%, transparent 0 100%`,
+                  }%, #0ecc716a 0 100%`,
                 }}
                 className="rating good"
               >

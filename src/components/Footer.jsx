@@ -12,6 +12,9 @@ export default function Footer() {
   // });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
+  const footerText =
+    "Are you looking for the best casino games and the biggest bonuses on the market? CasinoCompare is looking out for you. We have tried and tested most casinos on the Canadian market so you have the choice of only the most trustworthy and fun places to bet your money. Keep up with our news and updates to make the most of your online casino experience!";
+
   const footer = [
     {
       title: "Information",
@@ -52,7 +55,8 @@ export default function Footer() {
       list: [
         {
           name: "LeoVegas",
-          url: "",
+          url: "http://ads.leovegas.com/redirect.aspx?pid=3497289&bid=3878&clickid={GCLID}",
+          target: "_blank",
         },
         {
           name: "OLG",
@@ -60,7 +64,8 @@ export default function Footer() {
         },
         {
           name: "Betsafe",
-          url: "",
+          url: "https://betway.com/bwp/casino-welcome/en-gb/?s=bw38811",
+          target: "_blank",
         },
         {
           name: "Casino Room",
@@ -108,16 +113,11 @@ export default function Footer() {
                 className="_mt-2"
               />
             </Link>
-            <div>
-              <p>
-                Are you looking for the best casino games and the biggest
-                bonuses on the market? CasinoCompare is looking out for you. We
-                have tried and tested most casinos on the Canadian market so you
-                have the choice of only the most trustworthy and fun places to
-                bet your money. Keep up with our news and updates to make the
-                most of your online casino experience!
-              </p>
-            </div>
+            {isDesktop && (
+              <div>
+                <p>{footerText}</p>
+              </div>
+            )}
           </div>
 
           <div
@@ -139,7 +139,12 @@ export default function Footer() {
                 >
                   <span className="fw-bold">{footerItem.title}</span>
                   {footerItem.list.map((li, j) => (
-                    <Link key={j} to={li.url} href={li.url}>
+                    <Link
+                      target={li.target || ""}
+                      key={j}
+                      to={li.url}
+                      // href={li.url}
+                    >
                       {li.name}
                     </Link>
                   ))}
@@ -151,15 +156,12 @@ export default function Footer() {
 
         <hr className="mt-5 mb-5 w-75 m-auto" />
 
-        <div className={`w-${isMobile ? 100 : 75} m-auto text-center`}>
-          CasinoCompare.ca is owned by Game Lounge Ltd, a Maltese company with
-          organization number: C53144 and is completely independent of the
-          gaming companies. Please note that third parties reserve the right to
-          change or remove bonuses / promotions at short notice. canadacasino.ca
-          can therefore not be held responsible for any incorrect information.
-          Always read the terms and conditions of the bonus at each casino
-          carefully before playing.
-        </div>
+        {!isDesktop && (
+          <div className="w-100 text-center m-auto fs-7 text-white">
+            {footerText}
+          </div>
+        )}
+
         <div className="d-flex flex-wrap gap-3 mt-5 justify-content-center">
           {regLogosData.map((photo, k) => (
             <a key={k} href={photo.url}>

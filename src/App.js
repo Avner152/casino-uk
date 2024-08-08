@@ -80,7 +80,7 @@ function App() {
           </div>
 
           {isDesktop && (
-            <div className="d-flex gap-5 m-auto justify-content-center align-items-center">
+            <div className="d-flex gap-5 m-auto justify-content-between align-items-center">
               {homepageIconsObjectList.map((icon, k) => (
                 <div className="d-flex gap-3 align-items-center" key={k}>
                   <img

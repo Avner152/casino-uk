@@ -1,19 +1,18 @@
 [
   {
-    "score": 9.9,
+    "score": 9.7,
     "name": "777",
-    "welcomeBonuses": "77 FREE SPINS & 100% DEPOSIT (up to £20)",
+    "title": "77 FREE SPINS & 100% DEPOSIT (up to £20)",
     "url": "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}",
-    "img": "777",
     "ribbonText": "Best Choice",
     "views": 18902,
     "rank": 5,
     "brandText": "New players only • Wager deposit x35 in 90 days • Valid for selected games • 35 wagering – req. vary by game • Bonus expires within 90 days • Withdrawal restrictions & full T&Cs apply."
   },
   {
-    "score": 9.6,
+    "score": 9.5,
     "name": "Betway",
-    "welcomeBonuses": "100% Match Bonus up to £50 on 1st ",
+    "title": "100% Match Bonus up to £50 on 1st ",
     "url": "https://betway.com/bwp/casino-welcome/en-gb/?s=bw38811",
     "ribbonText": "recommended",
     "views": 14072,
@@ -23,7 +22,7 @@
   {
     "name": "Hippo drome online",
     "score": 9.4,
-    "welcomeBonuses": "Up to £50 Welcome Bonus + 50 Free Spins",
+    "title": "Up to £50 Welcome Bonus + 50 Free Spins",
     "url": "https://www.hippodromeonline.com/?s=bw38811",
     "ribbonText": "Best Offer",
     "views": 9882,
@@ -34,7 +33,7 @@
   {
     "name": "Jackpot City",
     "score": 8.8,
-    "welcomeBonuses": "Up to £100 Welcome Bonus + 100 Free Spins",
+    "title": "Up to £100 Welcome Bonus + 100 Free Spins",
     "url": "https://www.jackpotcitycasino.co.uk/?s=bw38811",
     "views": 8497,
     "ribbonText": "",
@@ -44,7 +43,7 @@
   {
     "name": "Spin",
     "score": 8.8,
-    "welcomeBonuses": "100 Bonus Spins When you stake £20",
+    "title": "100 Bonus Spins When you stake £20",
     "url": "https://www.spincasino.co.uk/?s=bw38811",
     "views": 10152,
     "ribbonText": "",
@@ -54,7 +53,7 @@
   {
     "name": "Casumo",
     "score": 8.3,
-    "welcomeBonuses": "Up to £100 Welcome Bonus + 100 Free Spins",
+    "title": "Up to £100 Welcome Bonus + 100 Free Spins",
     "url": "http://ads.casumoaffiliates.com/redirect.aspx?pid=495699&bid=1546&AFFID={GCLID}",
     "views": 7715,
     "ribbonText": "",
@@ -65,7 +64,7 @@
   {
     "name": "LeoVegas",
     "score": 8.3,
-    "welcomeBonuses": "50 FREE SPINS & up to £100",
+    "title": "50 FREE SPINS & up to £100",
     "url": "http://ads.leovegas.com/redirect.aspx?pid=3497289&bid=3878&clickid={GCLID}",
     "views": 7926,
     "ribbonText": "",
@@ -76,7 +75,7 @@
   {
     "name": "Slots Magic",
     "score": 8.1,
-    "welcomeBonuses": "100% up to £50 + 50 Free Spins",
+    "title": "100% up to £50 + 50 Free Spins",
     "url": "https://site.gotoslotsmagic.com/index.php?aname=topukcasinos1",
     "views": 7922,
     "ribbonText": "",
