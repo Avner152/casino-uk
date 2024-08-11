@@ -5,7 +5,7 @@
 }
 
 html {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 body {
@@ -50,10 +50,20 @@ body::after {
   gap: 0.9rem;
 }
 
+.params {
+  font-size: 0.75rem;
+  width: 400px;
+}
+.params img {
+  width: 2rem !important;
+}
+
 .params .col-md-6 {
+  align-items: center;
+  /* justify-content: space-evenly; */
+
   flex: 1 0 33%;
-  width: 37%;
-  margin: auto;
+  margin: auto 5px auto;
 }
 
 .square {
@@ -221,23 +231,29 @@ ul svg {
   background-color: #ff0000aa !important;
 }
 
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .top-card .btn {
-  background-color: #00bd68;
-  background-image: linear-gradient(-180deg, #00d775, #00bd68);
-  border-radius: 15px;
+  font-weight: 600;
+  background-color: #2ecc71;
+  /* background-image: linear-gradient(-180deg, #00d775, #00bd68); */
+  border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: #ffffff;
   outline: 0;
   overflow: hidden;
   pointer-events: auto;
+  text-transform: uppercase;
   position: relative;
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
   white-space: nowrap;
   border: 0;
-  padding: 0.85rem 3rem;
-  font-size: 1.35rem;
+  padding: 0.65rem 2.75rem;
+  font-size: 1rem;
 }
 
 .top-card .btn:hover,
@@ -368,8 +384,8 @@ ul svg {
   line-height: 1.3;
   font-size: 0.76rem;
   text-align: center;
-  /* background-color: #ffffff71;
-  color: #000; */
+  /* background-color: #1134540d; */
+  /* color: #000;  */
 }
 
 .welcome-bonus {
@@ -407,6 +423,13 @@ a:visited {
   color: #fff;
   text-decoration: none;
 }
+
+.welcome-bonus a,
+.welcome-bonus a:visited {
+  color: #113454;
+  text-decoration: underline;
+}
+
 a:hover {
   color: #00bd68;
   transition: all 300ms ease-in-out;
@@ -442,12 +465,9 @@ a:hover {
   justify-content: center;
   border-radius: 100%;
   overflow: hidden;
-  /* background: #2ecc71; */
-  width: 4.5rem;
-  height: 4.5rem;
-
-  /* Basic style for the text */
-  font-size: calc(3.85rem / 3);
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: calc(3rem / 3);
   line-height: 1;
 }
 
