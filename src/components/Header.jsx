@@ -21,7 +21,7 @@ export default function Header() {
     {
       title: "Information",
       list: [
-        { name: "About Us", url: "/about-us" },
+        // { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
         { name: "Terms & Conditions", url: "terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
@@ -87,7 +87,7 @@ export default function Header() {
     "Roulette",
     "Live Casino",
     "Game Shows",
-    "About us",
+    // "About us",
   ];
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -127,7 +127,7 @@ export default function Header() {
             <Button
               target="_blank"
               href={BONUS_URL}
-              className="header-btn text-uppercase fw-bold"
+              className="header-btn text-uppercase fw-bold text-white"
             >
               Get Bonus
             </Button>
@@ -196,7 +196,7 @@ export default function Header() {
                       <Button
                         target="_blank"
                         href={BONUS_URL}
-                        className="header-btn text-uppercase fw-bold"
+                        className="header-btn text-uppercase fw-bold text-white"
                       >
                         Get Bonus
                       </Button>

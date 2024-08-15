@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
   background-image: url(./assets/bg.webp);
@@ -156,7 +157,7 @@ ul svg {
   cursor: pointer;
   /* background-color: #2d324191; */
   border-color: var(--golden) !important;
-  /* transform: scale(1.05); */
+  transform: scale(1.05);
   transition: all 300ms ease-in-out;
 }
 
@@ -403,7 +404,7 @@ footer {
   /* background-color: #242424; */
   background: linear-gradient(to top, #242424e0 60%, transparent 100%);
   padding: 10rem 3rem 3rem;
-  color: #888;
+  color: #fff;
   min-height: 2vh;
 }
 
@@ -419,7 +420,7 @@ footer .footer-foo {
 
 a,
 a:visited {
-  color: #fff;
+  color: #888;
   text-decoration: none;
 }
 
@@ -430,7 +431,7 @@ a:visited {
 }
 
 a:hover {
-  color: #00bd68;
+  color: #fff;
   transition: all 300ms ease-in-out;
 }
 
@@ -523,6 +524,16 @@ a:hover {
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .rating {
+    width: 3.7vw;
+    height: 3.7vw;
+    font-size: calc(3vw / 3);
+  }
+
+  .score.d-flex.flex-column div:nth-child(2) {
+    font-size: 1vw;
+  }
+
   .casino-main {
     width: 75% !important;
   }
@@ -557,7 +568,8 @@ a:hover {
     padding: unset;
   }
   .card-content h1 {
-    font-size: 12px;
+    font-size: 4vw;
+    line-height: 1;
   }
   .card-content p {
     font-size: 6.5px;
@@ -603,8 +615,8 @@ a:hover {
     background-color: #000;
   }
   .sticky div {
-    width: 85%;
-    font-size: 0.75rem;
+    /* width: 85%; */
+    font-size: 0.5rem;
   }
 }
 
@@ -706,4 +718,46 @@ a:hover {
   right: -25px;
   top: 30px;
   transform: rotate(-45deg);
+}
+
+/* MAC */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    width: 75% !important;
+  }
+
+  .top-card .btn {
+    padding: 0.6rem 2.05rem;
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .params img {
+    width: 1.8vw !important;
+  }
+  .welcome-bonus {
+    padding: 0 0.2rem;
+  }
+  .nav {
+    gap: 1rem !important;
+  }
+
+  .params {
+    font-size: 0.55vw;
+    width: 30vw;
+  }
+
+  .params .row {
+    padding: 0 !important;
+    gap: 0.3rem !important;
+    --bs-gutter-x: 0;
+  }
+
+  .params .row > div {
+    padding: 0.15rem !important;
+  }
+  .params .col-md-6 {
+    flex: 1 0 39%;
+  }
+  /* Styles for Desktops */
 }

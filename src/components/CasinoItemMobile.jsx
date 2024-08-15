@@ -27,8 +27,8 @@ export default function CasinoItemMobile({ item, src }) {
           <img
             className="rounded"
             alt="casino "
-            width={120}
-            height={120}
+            width={170}
+            height={170}
             src={src}
           />
         </div>
@@ -38,16 +38,17 @@ export default function CasinoItemMobile({ item, src }) {
           <p className="mb-2">{item.brandText}</p>
 
           <div
-            className="d-flex justify-content-between w-100 mb-2"
-            style={{ fontSize: "6px" }}
+            className="d-flex _justify-content-between w-100 mb-2"
+            style={{ fontSize: "1.25vw" }}
           >
             {relevantIcons.map((icon, _) => (
               <div
-                className="d-flex align-items-center gap-1 p-1"
+                style={{ gap: ".45vw" }}
+                className="d-flex align-items-center _gap-1 m-auto _p-1"
                 key={icon.name}
               >
                 <img
-                  width={15}
+                  width={12}
                   src={homepageIcons[`${icon.name}-icon.svg`]}
                   alt={icon.name}
                 />

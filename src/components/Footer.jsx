@@ -121,7 +121,7 @@ export default function Footer() {
           </div>
 
           <div
-            className={`footer-foo ${
+            className={`footer-foo fs-7 ${
               !isDesktop && "row"
             } d-flex gap-5 flex-grow-1 justify-content-around`}
           >
@@ -157,7 +157,7 @@ export default function Footer() {
         <hr className="mt-5 mb-5 w-75 m-auto" />
 
         {!isDesktop && (
-          <div className="w-100 text-center m-auto fs-7 text-white">
+          <div style={{fontSize: `0.55rem`}} className="w-100 text-center m-auto fs-7 text-white">
             {footerText}
           </div>
         )}
@@ -167,7 +167,7 @@ export default function Footer() {
             <a key={k} href={photo.url}>
               <img
                 alt={photo.name}
-                height={30}
+                height={isDesktop ? 30 : 15}
                 src={importedRegPhotos[`${photo.name}.svg`]}
               />
             </a>
