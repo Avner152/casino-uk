@@ -35,7 +35,7 @@ export default function CasinoItem({ item, src, importedIcons }) {
           <img alt="casino" width={100} height={100} src={src} />
         </div>
         <div className="welcome-bonus d-flex flex-column gap-2">
-          <a href={item.url}>{item.name} Casino</a>
+          <span className="text-decoration-underline">{item.name} Casino</span>
           <h1 className="golden">{item.title}</h1>
         </div>
 

@@ -54,7 +54,6 @@ function App() {
       <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
         <Header />
         <br />
-        <br />
         <div className="intro mt-5 tit-n-des text-white p-3">
           <div>
             <img alt="uk-logo" src={homepageIcons["uk-icon.svg"]} />
@@ -62,7 +61,7 @@ function App() {
 
           <div className="d-flex align-items-center">
             <div>
-              <h1>Check UK's Top-Rated Casinos</h1>
+              <h1 className="fw-bold">Check UK's Top-Rated Casinos</h1>
               <p>
                 Top UK real money online casinos compared and reviewed. Check
                 our list of the most popular British online casinos. Play safely

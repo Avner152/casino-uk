@@ -4,6 +4,7 @@ import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
 import CasinoItemMobile from "./CasinoItemMobile";
+import { NavLink } from "react-bootstrap";
 
 export default function CasinoSection() {
   const images = importImages(
@@ -25,33 +26,37 @@ export default function CasinoSection() {
       {casinos.map((casino, k) => (
         <Fade
           key={k}
-          direction={!isMobile ? (k % 2 ? "right" : "left") : null}
+          direction="left"
           // delay={isDesktop ? k * 100 : 0}
           cascade
           triggerOnce
         >
           {isMobile ? (
-            <CasinoItemMobile
-              key={k}
-              item={casino}
-              importedIcons={importedIcons}
-              src={
-                images[
-                  `${casino.name.toLocaleLowerCase().replaceAll(" ", "")}.png`
-                ]
-              }
-            />
+            <NavLink href={casino.href} target="_blank">
+              <CasinoItemMobile
+                key={k}
+                item={casino}
+                importedIcons={importedIcons}
+                src={
+                  images[
+                    `${casino.name.toLocaleLowerCase().replaceAll(" ", "")}.png`
+                  ]
+                }
+              />
+            </NavLink>
           ) : (
-            <CasinoItem
-              key={k}
-              item={casino}
-              importedIcons={importedIcons}
-              src={
-                images[
-                  `${casino.name.toLocaleLowerCase().replaceAll(" ", "")}.png`
-                ]
-              }
-            />
+            <NavLink href={casino.url} target="_blank">
+              <CasinoItem
+                key={k}
+                item={casino}
+                importedIcons={importedIcons}
+                src={
+                  images[
+                    `${casino.name.toLocaleLowerCase().replaceAll(" ", "")}.png`
+                  ]
+                }
+              />
+            </NavLink>
           )}
         </Fade>
       ))}

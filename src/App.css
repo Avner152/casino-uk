@@ -46,9 +46,8 @@ body::after {
 }
 
 .params .row {
-  /* width: 80%; */
-  padding: 0 3rem;
-  gap: 0.9rem;
+  padding: 0 2rem;
+  gap: 0.3rem;
 }
 
 .params {
@@ -149,14 +148,10 @@ ul svg {
   max-width: 28%;
 } */
 
-.golden {
-  /* color: var(--golden); */
-}
-
 .my-card:hover {
   cursor: pointer;
   /* background-color: #2d324191; */
-  border-color: var(--golden) !important;
+  /* border-color: var(--golden) !important; */
   transform: scale(1.05);
   transition: all 300ms ease-in-out;
 }
@@ -313,8 +308,8 @@ ul svg {
 
 .bm-menu-wrap {
   /* top: 0; */
-  width: 220px !important;
-  height: 81vh !important;
+  width: 235px !important;
+  height: 65vh !important;
   position: relative;
 }
 
@@ -442,10 +437,6 @@ a:hover {
   display: flex;
   position: absolute;
   top: 0;
-}
-
-.tit-n-des h1 {
-  font-weight: bold;
 }
 
 .information {

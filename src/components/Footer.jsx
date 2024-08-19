@@ -25,31 +25,31 @@ export default function Footer() {
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
-    {
-      title: "Popular pages",
-      list: [
-        {
-          name: "Baccarat",
-          url: "/baccarat",
-        },
-        {
-          name: "Blackjack",
-          url: "/blackjack",
-        },
-        {
-          name: "Live Casino",
-          url: "/live-casino",
-        },
-        {
-          name: "Game Shows",
-          url: "/game-shows",
-        },
-        {
-          name: "Roulette",
-          url: "/roulette",
-        },
-      ],
-    },
+    // {
+    //   title: "Popular pages",
+    //   list: [
+    //     {
+    //       name: "Baccarat",
+    //       url: "/baccarat",
+    //     },
+    //     {
+    //       name: "Blackjack",
+    //       url: "/blackjack",
+    //     },
+    //     {
+    //       name: "Live Casino",
+    //       url: "/live-casino",
+    //     },
+    //     {
+    //       name: "Game Shows",
+    //       url: "/game-shows",
+    //     },
+    //     {
+    //       name: "Roulette",
+    //       url: "/roulette",
+    //     },
+    //   ],
+    // },
     {
       title: "Popular casinos",
       list: [
@@ -157,7 +157,10 @@ export default function Footer() {
         <hr className="mt-5 mb-5 w-75 m-auto" />
 
         {!isDesktop && (
-          <div style={{fontSize: `0.55rem`}} className="w-100 text-center m-auto fs-7 text-white">
+          <div
+            style={{ fontSize: `0.55rem` }}
+            className="w-100 text-center m-auto fs-7 text-white"
+          >
             {footerText}
           </div>
         )}
