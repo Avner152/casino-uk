@@ -23,7 +23,7 @@ export default function CasinoItemMobile({ item, src }) {
         </div>
       )}
       <div className="top-card d-flex justify-content-around align-items-center ">
-        <div className="_square">
+        <div className="square">
           <img
             className="rounded"
             alt="casino "

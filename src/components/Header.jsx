@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import burgerLogo from "../assets/burger-logo.svg";
 import { useMediaQuery } from "react-responsive";
@@ -135,9 +135,9 @@ export default function Header() {
         ) : (
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
-              <div className="ms-3">
+              <NavLink to="/" className="ms-3">
                 <img alt="logo" src={logo} width={180} />
-              </div>
+              </NavLink>
               {/*  */}
 
               <div id="outer-container">
@@ -151,8 +151,8 @@ export default function Header() {
                   id="elastic"
                   right
                   // customCrossIcon={false}
-                  pageWrapId={"page-wrap"}
-                  outerContainerId={"outer-container"}
+                  // pageWrapId={"page-wrap"}
+                  // outerContainerId={"outer-container"}
                   burgerButtonClassName={show}
                   isOpen={isBurgerOpen}
                   onOpen={hamburgerHandler}
@@ -202,8 +202,6 @@ export default function Header() {
                     </Button>
                   </div>
                 </Menu>
-
-                <main id="page-wrap"></main>
               </div>
               {/*  */}
             </div>

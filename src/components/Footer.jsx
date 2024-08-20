@@ -156,15 +156,6 @@ export default function Footer() {
 
         <hr className="mt-5 mb-5 w-75 m-auto" />
 
-        {!isDesktop && (
-          <div
-            style={{ fontSize: `0.55rem` }}
-            className="w-100 text-center m-auto fs-7 text-white"
-          >
-            {footerText}
-          </div>
-        )}
-
         <div className="d-flex flex-wrap gap-3 mt-5 justify-content-center">
           {regLogosData.map((photo, k) => (
             <a key={k} href={photo.url}>

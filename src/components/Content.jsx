@@ -111,10 +111,6 @@ export default function Content({ isDesktop }) {
           The details, including pricing, on this site are subject to change at
           any time."
         </div>
-        <div>
-          © 2024 CasinoRate. All rights reserved. All trademarks are the
-          property of their respective owners.
-        </div>
       </div>
     </div>
   );

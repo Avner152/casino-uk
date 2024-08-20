@@ -39,7 +39,9 @@ export default function CasinoSection() {
                 importedIcons={importedIcons}
                 src={
                   images[
-                    `${casino.name.toLocaleLowerCase().replaceAll(" ", "")}.png`
+                    `${casino.name
+                      .toLocaleLowerCase()
+                      .replaceAll(" ", "-")}.png`
                   ]
                 }
               />
@@ -52,7 +54,9 @@ export default function CasinoSection() {
                 importedIcons={importedIcons}
                 src={
                   images[
-                    `${casino.name.toLocaleLowerCase().replaceAll(" ", "")}.png`
+                    `${casino.name
+                      .toLocaleLowerCase()
+                      .replaceAll(" ", "-")}.png`
                   ]
                 }
               />
