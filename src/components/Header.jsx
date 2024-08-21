@@ -150,7 +150,7 @@ export default function Header() {
                 <Menu
                   id="elastic"
                   right
-                  // customCrossIcon={false}
+                  customCrossIcon={false}
                   // pageWrapId={"page-wrap"}
                   // outerContainerId={"outer-container"}
                   burgerButtonClassName={show}

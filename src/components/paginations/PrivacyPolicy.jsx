@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Terms() {
+export default function PrivacyPolicy() {
   return (
     <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
       <div className="m-auto pt-3">

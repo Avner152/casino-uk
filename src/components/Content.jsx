@@ -99,17 +99,20 @@ export default function Content({ isDesktop }) {
           find further advice and support if needed.
         </div>
         <div>
-          "18+ Advertiser Disclosure This website is a free online resource
-          dedicated to providing valuable content and comparison tools to our
-          visitors. We receive advertising compensation from the companies
-          featured on our site, which affects the positioning and ranking of the
-          brands and their products. This compensation also influences the
-          scores assigned to them. The inclusion of companies on this page does
-          not constitute an endorsement. Not all market providers are listed.
-          Except as explicitly stated in our Terms of Use, we disclaim all
-          representations and warranties regarding the information presented.
-          The details, including pricing, on this site are subject to change at
-          any time."
+          <p>18+ Advertiser Disclosure</p>
+          <p>
+            This website is a free online resource dedicated to providing
+            valuable content and comparison tools for our visitors. We receive
+            advertising compensation from the companies featured on this site,
+            which may influence the placement and ranking of brands (and/or
+            their products) as well as the scores assigned to them. The
+            inclusion of companies on this page does not imply endorsement. We
+            do not cover all providers available in the market. Except as
+            expressly outlined in our Terms of Use, we disclaim any
+            representations and warranties regarding the information provided on
+            this page. The content, including pricing, is subject to change at
+            any time.
+          </p>
         </div>
       </div>
     </div>

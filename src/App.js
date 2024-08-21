@@ -55,9 +55,9 @@ function App() {
         <Header />
         <br />
         <div className="intro mt-5 tit-n-des text-white p-3">
-          <div>
+          {/* <div>
             <img alt="uk-logo" src={homepageIcons["uk-icon.svg"]} />
-          </div>
+          </div> */}
 
           <div className="d-flex align-items-center">
             <div>

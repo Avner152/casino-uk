@@ -13,7 +13,7 @@ export default function Footer() {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const footerText =
-    "Are you looking for the best casino games and the biggest bonuses on the market? CasinoCompare is looking out for you. We have tried and tested most casinos on the Canadian market so you have the choice of only the most trustworthy and fun places to bet your money. Keep up with our news and updates to make the most of your online casino experience!";
+    "To participate, players must be 18 years or older and reside in the United Kingdom. This website provides information on a variety of products and services. Some details, such as prices and special offers, are supplied directly by our partners and may change at any time without prior notice. The information presented here is not intended to be legal or professional advice, nor should it be relied upon as such.";
 
   const footer = [
     {

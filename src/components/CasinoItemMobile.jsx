@@ -12,7 +12,7 @@ export default function CasinoItemMobile({ item, src }) {
   let relevantIcons = [
     { name: "uk", text: "UK Licensed" },
     { name: "rocket", text: "Secure & Trusted" },
-    { name: "18plus", text: "Advertiser Disclosure" },
+    { name: "18plus-black", text: "Advertiser Disclosure" },
   ];
 
   return (
