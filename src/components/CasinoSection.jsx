@@ -17,22 +17,39 @@ const CasinoSection = observer(({ captchaToken }) => {
 
   const location = useLocation();
   const search = !captchaToken ? "none regulated" : location.search;
+  const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
     if (list.length) return;
 
     const url = `${process.env.REACT_APP_SERVER_URI}/uk`;
     const headers = { safety: "daniel" };
-    axios
-      .post(url, { search, referrer: document.referrer }, { headers })
-      .then((res) => {
-        console.log(res.data);
 
-        // setList(res.data.list[0].brands);
-        myStore.updateType(res.data.list[0].type);
-        myStore.updateList(res.data.list[0].brands);
-      })
-      .catch((err) => console.log(err));
+    const fetchIp = async () => {
+      try {
+        const response = await axios.get("https://api.ipify.org?format=json");
+        setUserIp(response.data.ip);
+      } catch (err) {
+        console.error("Error fetching IP:", err);
+      }
+    };
+    const fetchData = async () => {
+      axios
+        .post(url, { search, referrer: document.referrer, userIp }, { headers })
+        .then((res) => {
+          console.log(userIp);
+
+          console.log(res.data);
+
+          // setList(res.data.list[0].brands);
+          myStore.updateType(res.data.list[0].type);
+          myStore.updateList(res.data.list[0].brands);
+        })
+        .catch((err) => console.log(err));
+    };
+
+    fetchIp();
+    userIp && fetchData();
   }, [search, list.length]);
 
   const images = importImages(
