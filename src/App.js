@@ -65,7 +65,7 @@ const App = observer(() => {
   function TurnstileWidget() {
     return (
       <Turnstile
-        sitekey={process.env.REACT_APP_SITE_KEY}
+        sitekey="0x4AAAAAAA3zELOcESURpGT7"
         onVerify={(token) => {
           fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
             method: "POST",
