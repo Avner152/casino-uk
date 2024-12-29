@@ -53,14 +53,6 @@ export default function CasinoItem({ item, src, importedIcons }) {
                 <span>{item.score}</span>
               </div>
               <div>Rating</div>
-              {/* {Array.from({ length: 5 }).map((_, i) => (
-                  <span
-                    className={`${i <= item.rank ? "star" : "empty"}`}
-                    key={i}
-                  >
-                    {i > item.rank && "☆"}
-                  </span>
-                ))} */}
             </div>
           </div>
         )}

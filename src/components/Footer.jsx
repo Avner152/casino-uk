@@ -25,31 +25,19 @@ export default function Footer() {
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
-    // {
-    //   title: "Popular pages",
-    //   list: [
-    //     {
-    //       name: "Baccarat",
-    //       url: "/baccarat",
-    //     },
-    //     {
-    //       name: "Blackjack",
-    //       url: "/blackjack",
-    //     },
-    //     {
-    //       name: "Live Casino",
-    //       url: "/live-casino",
-    //     },
-    //     {
-    //       name: "Game Shows",
-    //       url: "/game-shows",
-    //     },
-    //     {
-    //       name: "Roulette",
-    //       url: "/roulette",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Popular pages",
+      list: [
+        {
+          name: "History",
+          url: "/history",
+        },
+        {
+          name: "Top Crash Games ",
+          url: "/top-crash-games",
+        },
+      ],
+    },
     {
       title: "Popular casinos",
       list: [

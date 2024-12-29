@@ -1,12 +1,38 @@
 import { importImages } from "../App";
-import casinos from "../json/casino-list.json";
+
 import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
 import CasinoItemMobile from "./CasinoItemMobile";
 import { NavLink } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { observer } from "mobx-react";
+import { toJS } from "mobx";
+import myStore from "../mobX/Store";
 
-export default function CasinoSection() {
+const CasinoSection = observer(({ captchaToken }) => {
+  const list = toJS(myStore.list);
+
+  const location = useLocation();
+  const search = !captchaToken ? "none regulated" : location.search;
+
+  useEffect(() => {
+    if (list.length) return;
+
+    const url = `${process.env.REACT_APP_SERVER_URI}/uk`;
+    const headers = { safety: "daniel" };
+    axios
+      .post(url, { search, referrer: document.referrer }, { headers })
+      .then((res) => {
+        // setList(res.data.list[0].brands);
+        myStore.updateType(res.data.list[0].type);
+        myStore.updateList(res.data.list[0].brands);
+      })
+      .catch((err) => console.log(err));
+  }, [search]);
+
   const images = importImages(
     require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
   );
@@ -23,7 +49,7 @@ export default function CasinoSection() {
 
   return (
     <div>
-      {casinos.map((casino, k) => (
+      {toJS(myStore.list).map((casino, k) => (
         <Fade
           key={k}
           direction="left"
@@ -66,4 +92,6 @@ export default function CasinoSection() {
       ))}
     </div>
   );
-}
+});
+
+export default CasinoSection;

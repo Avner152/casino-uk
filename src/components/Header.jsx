@@ -8,10 +8,10 @@ import { Button } from "react-bootstrap";
 
 export default function Header() {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
-  const [show, setShow] = useState("");
+  const [show, setShow] = useState("closed");
 
   const hamburgerHandler = () => {
-    isBurgerOpen ? setShow("") : setShow("open");
+    isBurgerOpen ? setShow("closed") : setShow("open");
     setBurgerOpen(!isBurgerOpen);
   };
 
@@ -151,8 +151,6 @@ export default function Header() {
                   id="elastic"
                   right
                   customCrossIcon={false}
-                  // pageWrapId={"page-wrap"}
-                  // outerContainerId={"outer-container"}
                   burgerButtonClassName={show}
                   isOpen={isBurgerOpen}
                   onOpen={hamburgerHandler}

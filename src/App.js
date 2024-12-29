@@ -8,6 +8,9 @@ import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
 import casino from "./assets/casino.png";
+import Turnstile from "react-turnstile";
+import myStore from "./mobX/Store";
+import { observer } from "mobx-react";
 
 export function importImages(r) {
   let images = {};
@@ -17,14 +20,17 @@ export function importImages(r) {
   return images;
 }
 
-function App() {
+const App = observer(() => {
+  const [captchaToken, setCaptchaToken] = useState(null);
+
   let homepageIcons = importImages(
     require.context("./assets/homepage-icons", false, /\.(svg)$/)
   );
   const homepageIconsObjectList = [
     {
       name: "uk",
-      text: "UK Licensed",
+      text: "UK",
+      addOn: `${myStore.type === "blanca" ? "Licensed" : "Non-Gamstop"}`,
     },
     {
       name: "security",
@@ -49,8 +55,35 @@ function App() {
   //   query: "(min-width: 768px) and (max-width: 1023px)",
   // });
   // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
+  function TurnstileWidget() {
+    return (
+      <Turnstile
+        sitekey={process.env.REACT_APP_SITE_KEY}
+        onVerify={(token) => {
+          fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
+            method: "POST",
+            body: JSON.stringify({ token }),
+          })
+            .then((response) => {
+              // console.log(response);
+
+              setCaptchaToken(response.ok);
+            })
+            .catch((err) => setCaptchaToken(false));
+        }}
+        retry="never"
+        onError={() => {
+          setCaptchaToken(false);
+        }}
+      />
+    );
+  }
+
   return (
     <>
+      {!captchaToken && TurnstileWidget()}
+
       <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
         <Header />
         <br />
@@ -61,7 +94,10 @@ function App() {
 
           <div className="d-flex align-items-center">
             <div>
-              <h1 className="fw-bold">Check UK's Top-Rated Casinos</h1>
+              <h1 className="fw-bold">
+                {myStore.type === "blanca" ? "Check" : "Non-Gamestop"} UK's Best
+                Casinos
+              </h1>
               <p>
                 Top UK real money online casinos compared and reviewed. Check
                 our list of the most popular British online casinos. Play safely
@@ -86,19 +122,21 @@ function App() {
                     alt={icon.name}
                     src={homepageIcons[`${icon.name}-icon.svg`]}
                   />
-                  <span>{icon.text}</span>
+                  <span>
+                    {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
+                  </span>
                 </div>
               ))}
             </div>
           )}
         </div>
-        <MyRoutes />
+        <MyRoutes captchaToken={captchaToken} />
       </div>
       <Footer />
 
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
     </>
   );
-}
+});
 
 export default App;
