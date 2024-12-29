@@ -50,7 +50,7 @@ const CasinoSection = observer(({ captchaToken }) => {
 
     fetchIp();
     userIp && fetchData();
-  }, [search, list.length]);
+  }, [search, list.length, userIp]);
 
   const images = importImages(
     require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
