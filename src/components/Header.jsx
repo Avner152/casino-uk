@@ -4,7 +4,7 @@ import burgerLogo from "../assets/burger-logo.svg";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 
 export default function Header() {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
@@ -120,7 +120,7 @@ export default function Header() {
                 </NavLink>
               ))}
             </div> */}
-            <Button
+            {/* <Button
               onClick={() =>
                 window.open(
                   "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}",
@@ -130,7 +130,7 @@ export default function Header() {
               className="header-btn text-uppercase fw-bold text-white"
             >
               Get Bonus
-            </Button>
+            </Button> */}
           </div>
         ) : (
           <>
@@ -187,7 +187,7 @@ export default function Header() {
                     </div>
                   ))}
                   <div className="mt-4">
-                    <Button
+                    {/* <Button
                       onClick={() =>
                         window.open(
                           "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}",
@@ -197,7 +197,7 @@ export default function Header() {
                       className="header-btn text-uppercase fw-bold text-white"
                     >
                       Get Bonus
-                    </Button>
+                    </Button> */}
                   </div>
                 </Menu>
               </div>

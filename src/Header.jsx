@@ -120,9 +120,9 @@ export default function Header() {
                 </NavLink>
               ))}
             </div>
-            <Button className="header-btn text-uppercase fw-bold text-white">
+            {/* <Button className="header-btn text-uppercase fw-bold text-white">
               Get Bonus
-            </Button>
+            </Button> */}
           </div>
         ) : (
           <>
@@ -181,9 +181,9 @@ export default function Header() {
                     </div>
                   ))}
                   <div className="mt-4">
-                    <Button className="header-btn text-uppercase fw-bold text-white">
+                    {/* <Button className="header-btn text-uppercase fw-bold text-white">
                       Get Bonus
-                    </Button>
+                    </Button> */}
                   </div>
                 </Menu>
 

@@ -30,7 +30,13 @@ const App = observer(() => {
     {
       name: "uk",
       text: "UK",
-      addOn: `${myStore.type === "blanca" ? "Licensed" : "Non-Gamstop"}`,
+      addOn: `${
+        myStore.type === "blanca"
+          ? "Licensed"
+          : myStore.type === "negra"
+          ? "Non-Gamstop"
+          : ""
+      }`,
     },
     {
       name: "security",
@@ -95,7 +101,7 @@ const App = observer(() => {
           <div className="d-flex align-items-center">
             <div>
               <h1 className="fw-bold">
-                {myStore.type === "blanca" ? "Check" : "Non-Gamestop"} UK's Best
+                {myStore.type === "negra" ? "Non-Gamestop" : "Check"} UK's Best
                 Casinos
               </h1>
               <p>
