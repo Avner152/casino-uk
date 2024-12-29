@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import CasinoItemMobile from "./CasinoItemMobile";
 import { NavLink } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { observer } from "mobx-react";
 import { toJS } from "mobx";
