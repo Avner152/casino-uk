@@ -16,7 +16,7 @@ export default function CasinoItemMobile({ item, src }) {
   ];
 
   return (
-    <div className="my-card shadow">
+    <div className="my-card">
       {item.ribbonText && (
         <div className="ribbon ribbon-top-left">
           <span>{item.ribbonText}</span>
@@ -27,8 +27,8 @@ export default function CasinoItemMobile({ item, src }) {
           <img
             className="rounded"
             alt="casino "
-            width={170}
-            height={170}
+            width={220}
+            height={80}
             src={src}
           />
         </div>

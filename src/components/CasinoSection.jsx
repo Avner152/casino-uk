@@ -52,8 +52,11 @@ const CasinoSection = observer(({ captchaToken }) => {
     userIp && fetchData();
   }, [search, list.length, userIp]);
 
-  const images = importImages(
-    require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
+  // const images = importImages(
+  //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
+  // );
+  const brands = importImages(
+    require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
   );
 
   const importedIcons = importImages(
@@ -82,13 +85,14 @@ const CasinoSection = observer(({ captchaToken }) => {
                 key={k}
                 item={casino}
                 importedIcons={importedIcons}
-                src={
-                  images[
-                    `${casino.name
-                      .toLocaleLowerCase()
-                      .replaceAll(" ", "-")}.png`
-                  ]
-                }
+                // src={
+                //   brands[
+                //     `${casino.name
+                //       .toLocaleLowerCase()
+                //       .replaceAll(" ", "-")}.png`
+                //   ]
+                // }
+                src={brands["rolino.png"]}
               />
             </NavLink>
           ) : (
@@ -97,13 +101,14 @@ const CasinoSection = observer(({ captchaToken }) => {
                 key={k}
                 item={casino}
                 importedIcons={importedIcons}
-                src={
-                  images[
-                    `${casino.name
-                      .toLocaleLowerCase()
-                      .replaceAll(" ", "-")}.png`
-                  ]
-                }
+                // src={
+                //   images[
+                //     `${casino.name
+                //       .toLocaleLowerCase()
+                //       .replaceAll(" ", "-")}.png`
+                //   ]
+                // }
+                src={brands["rolino.png"]}
               />
             </NavLink>
           )}

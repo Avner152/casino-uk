@@ -1,12 +1,15 @@
 import React from "react";
 
 export default function Terms() {
+  const curDate = new Date();
   return (
     <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
       <div className="m-auto pt-3">
         <h1>Terms and Conditions</h1>
-        <span>Last Revised: April 10, 2024</span>
-
+        <span>
+          Last Revised: {curDate.toLocaleString("default", { month: "long" })} ,{" "}
+          {curDate.getFullYear()}
+        </span>
         <p>
           These Terms and Conditions govern the use of our Site and services. By
           accessing or using our Service, you agree to be bound by these Terms.

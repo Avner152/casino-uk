@@ -8,16 +8,23 @@ html {
   overflow-x: hidden;
 }
 
+p,
+h1 {
+  font-weight: 600;
+}
+
 body {
   font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
+  /* background-image: url(./assets/bg.webp); */
   background-image: url(./assets/bg.webp);
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+  color: #000 !important;
 }
 body::after {
   content: "";
@@ -122,21 +129,22 @@ ul svg {
 }
 
 .my-card {
-  background-color: #fff;
+  background-color: #000;
   margin: 1rem 0;
-  color: #000;
+  /* color: #000; */
   /* border: 1px solid #00bd68; */
   transition: all 300ms ease-in-out;
   border-radius: 6px;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .top-card {
   padding: 1.25rem 0;
+  width: 100%;
   border: unset !important;
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
-  color: #113454;
+  /* color: #113454; */
 }
 
 /* .top-card > div {
@@ -146,9 +154,9 @@ ul svg {
 
 .my-card:hover {
   cursor: pointer;
-  /* background-color: #2d324191; */
-  /* border-color: var(--golden) !important; */
-  transform: scale(1.05);
+  box-shadow: 0 0 50px 1px rgba(128, 0, 128, 0.7),
+    0 0 10px 2px rgba(147, 112, 219, 0.5), 0 0 10px 2px rgba(186, 85, 211, 0.3),
+    0 0 20px 6px rgba(221, 160, 221, 0.1);
   transition: all 300ms ease-in-out;
 }
 
@@ -228,7 +236,7 @@ ul svg {
 
 .top-card .btn {
   font-weight: 600;
-  background-color: #2ecc71;
+  background-color: #9d00ff;
   /* background-image: linear-gradient(-180deg, #00d775, #00bd68); */
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
@@ -249,7 +257,7 @@ ul svg {
 
 .top-card .btn:hover,
 .top-card .btn:active {
-  background: #2ecc71 !important;
+  background: #9d00ffdd !important;
 }
 
 .score h3,
@@ -371,22 +379,28 @@ ul svg {
 }
 
 .reg {
-  padding: 0 1rem 1rem;
+  /* padding: 0 1rem 1rem; */
+  background-color: #2e2e2eaa;
   line-height: 1.3;
+  padding: 10px 120px;
   font-size: 0.68rem;
+  color: #fff;
   text-align: center;
+
   /* background-color: #1134540d; */
   /* color: #000;  */
 }
 
 .welcome-bonus {
-  width: 25rem;
-  padding: 0 1rem;
+  width: auto;
+  /* padding: 0 1rem; */
   text-align: left;
 }
 
 .welcome-bonus h1 {
   font-size: 1.25rem;
+  min-width: 200px;
+  max-width: 220px;
   font-weight: 700;
   /* text-align: center; */
 }
@@ -437,9 +451,9 @@ a:hover {
 
 .information {
   background-color: #13161fea !important;
-  width: 55%;
+  /* width: 55%; */
   margin: auto;
-  padding: 1.25% 3%;
+  padding: 1.25% 5%;
 }
 
 /* Rating */
@@ -460,6 +474,7 @@ a:hover {
 
 /* Rating circle content */
 .rating span {
+  color: #000;
   position: relative;
   display: flex;
   font-weight: bold;
@@ -507,7 +522,9 @@ a:hover {
 @media only screen and (max-width: 767px) {
   body,
   body::after {
-    background-image: url(./assets/bg-nobile.webp);
+    /* background-image: url(./assets/bg-nobile.webp); */
+    background-image: url(./assets/bg-mob.webp);
+    background-size: cover;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
@@ -526,12 +543,12 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 320px) {
+/* @media only screen and (max-width: 320px) {
   .square img {
-    width: 38vw !important;
-    height: 38vw !important;
+    width: 40vw !important;
+    height: 15vw !important;
   }
-}
+} */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .tit-n-des {
@@ -540,8 +557,8 @@ a:hover {
   }
 
   .square img {
-    width: 35vw;
-    height: 35vw;
+    width: 40vw !important;
+    height: 15vw !important;
   }
 
   .intro {
@@ -573,8 +590,8 @@ a:hover {
     margin-bottom: 1.8vw;
   }
   .card-content p {
-    font-size: 6.5px;
-    line-height: 1.2;
+    font-size: 8.5px;
+    /* line-height: 1.2; */
   }
 
   .information {
@@ -585,6 +602,7 @@ a:hover {
     padding: 5px;
   }
   .top-card {
+    min-height: 40vw;
     padding: 1vw 1.25vw 0.75vw 1.25vw;
     max-height: 200px;
   }
@@ -600,7 +618,7 @@ a:hover {
 
   .top-card .btn {
     font-size: 3vw;
-    border-radius: 8px;
+    border-radius: 6px;
     width: 85%;
     width: 100%;
     margin: auto;
@@ -681,14 +699,14 @@ a:hover {
   z-index: -1;
   content: "";
   display: block;
-  border: 5px solid #2ecc71;
+  border: 5px solid #de811d;
 }
 .ribbon span {
   position: absolute;
   display: block;
   width: 255px;
   padding: 2.5px 0;
-  background-color: #2ecc71;
+  background-color: #de811d;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -738,6 +756,13 @@ a:hover {
   }
   .welcome-bonus {
     padding: 0 0.2rem;
+  }
+  .welcome-bonus h1 {
+    font-size: 1.25rem;
+    min-width: 120px;
+    max-width: 140px;
+    font-weight: 700;
+    /* text-align: center; */
   }
   .nav {
     gap: 1rem !important;

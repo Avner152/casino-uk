@@ -1,6 +1,6 @@
 import { Accordion } from "react-bootstrap";
 
-export default function Content({ isDesktop }) {
+export default function Content() {
   const faq = {
     t: "Frequently Asked Questions from UK Players",
     p: "We conducted detailed research to create this guide on the top 10 casino sites in the UK. During our research, we discovered that British players often have common questions about online casinos. To address these, we have compiled a useful FAQ section with the answers you need.",

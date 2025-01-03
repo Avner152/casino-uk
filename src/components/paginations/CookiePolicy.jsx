@@ -1,4 +1,5 @@
 export default function CookiePolicy() {
+  const curDate = new Date();
   return (
     <div className="text-bg-dark text-white _pt-5 _pb-5 mb-3 mt-3 information">
       <div className="m-auto">
@@ -7,7 +8,11 @@ export default function CookiePolicy() {
             <h1>Cookie Policy</h1>
             <span>18+</span>
           </div>
-          <span>Last Updated: April 10, 2024</span>
+          <span>
+            Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
+            {String(curDate.getDate()).padStart(2, "0")},{" "}
+            {curDate.getFullYear()}
+          </span>
         </div>
 
         <p>
@@ -155,7 +160,7 @@ export default function CookiePolicy() {
             </li>
           </ol>
         </div>
-        <h2># How to Disable Behaviorally Targeted Advertising Cookies</h2>
+        <h2>How to Disable Behaviorally Targeted Advertising Cookies</h2>
         <p>
           For users in the European Union, visit www.youronlinechoices.eu. For
           users in the US, visit www.aboutads.info/choices.
