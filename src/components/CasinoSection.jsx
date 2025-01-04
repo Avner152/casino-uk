@@ -85,14 +85,14 @@ const CasinoSection = observer(({ captchaToken }) => {
                 key={k}
                 item={casino}
                 importedIcons={importedIcons}
-                // src={
-                //   brands[
-                //     `${casino.name
-                //       .toLocaleLowerCase()
-                //       .replaceAll(" ", "-")}.png`
-                //   ]
-                // }
-                src={brands["rolino.png"]}
+                src={
+                  brands[
+                    `${casino.name
+                      .toLocaleLowerCase()
+                      .replaceAll(" ", "-")}.png`
+                  ]
+                }
+                // src={brands["rolino.png"]}
               />
             </NavLink>
           ) : (
@@ -101,14 +101,14 @@ const CasinoSection = observer(({ captchaToken }) => {
                 key={k}
                 item={casino}
                 importedIcons={importedIcons}
-                // src={
-                //   images[
-                //     `${casino.name
-                //       .toLocaleLowerCase()
-                //       .replaceAll(" ", "-")}.png`
-                //   ]
-                // }
-                src={brands["rolino.png"]}
+                src={
+                  brands[
+                    `${casino.name
+                      .toLocaleLowerCase()
+                      .replaceAll(" ", "-")}.png`
+                  ]
+                }
+                // src={brands["rolino.png"]}
               />
             </NavLink>
           )}
