@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
+import { importImages } from "../App";
 // import ParamItem from "./ParamItem";
 
-// export default function CasinoItem({ item, src, importedIcons }) {
-export default function CasinoItem({ item, src }) {
+const CasinoItem = ({ item }) => {
+  const srcTerm = `${item.name.toLowerCase().replaceAll(" ", "-")}.png`;
+  const brands = importImages(
+    require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
+  );
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
@@ -33,9 +37,9 @@ export default function CasinoItem({ item, src }) {
         } justify-content-around border rounded align-items-center text-center`}
       >
         <div className="col-md-3 rounded _square">
-          <img alt="casino" width={210} height={80} src={src} />
+          <img alt="casino" width={210} height={80} src={brands[srcTerm]} />
         </div>
-        <div className="welcome-bonus d-flex flex-column gap-2 col-md-3">
+        <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
           {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
           <span className="text-center">Welcome Bonus:</span>
           <h1 className="golden text-center">{item.title}</h1>
@@ -85,4 +89,6 @@ export default function CasinoItem({ item, src }) {
       <div className="reg">{item.brandText}</div>
     </div>
   );
-}
+};
+
+export default CasinoItem;

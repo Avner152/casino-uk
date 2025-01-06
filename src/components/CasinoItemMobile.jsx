@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { importImages } from "../App";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
+import { toJS } from "mobx";
 
-export default function CasinoItemMobile({ item, src }) {
+const CasinoItemMobile = observer(({ item }) => {
   const [clicked, setClicked] = useState(false);
 
   let homepageIcons = importImages(
@@ -29,11 +32,15 @@ export default function CasinoItemMobile({ item, src }) {
             alt="casino "
             width={220}
             height={80}
-            src={src}
+            src={
+              toJS(myStore.brands)[
+                `${item.name.toLocaleLowerCase().replaceAll(" ", "-")}.png`
+              ]
+            }
           />
         </div>
 
-        <div className="card-content _d-flex _flex-column">
+        <div className="card-content text-white _d-flex _flex-column">
           <h1 className="">{item.title}</h1>
           <p className="mb-2">{item.brandText}</p>
 
@@ -68,4 +75,6 @@ export default function CasinoItemMobile({ item, src }) {
       </div>
     </div>
   );
-}
+});
+
+export default CasinoItemMobile;

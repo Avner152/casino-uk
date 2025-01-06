@@ -36,6 +36,14 @@ export default function Footer() {
           name: "Top Crash Games ",
           url: "/top-crash-games",
         },
+        {
+          name: "Live Games ",
+          url: "/live-games",
+        },
+        {
+          name: "Slots Games ",
+          url: "/slots-games",
+        },
       ],
     },
     {

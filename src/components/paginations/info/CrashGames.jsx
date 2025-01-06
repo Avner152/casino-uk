@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import CasinoSection from "../../CasinoSection";
 
 export default function History() {
@@ -121,8 +122,18 @@ export default function History() {
     p: "Crash games are an exciting addition to the UK casino landscape, combining simplicity, strategy, and suspense. With their fast-paced nature and potential for big rewards, these games appeal to a broad audience of players. By understanding how crash games work and employing smart strategies, you can enhance your enjoyment while keeping your gameplay responsible.\nWhether you’re chasing multipliers in Aviator or exploring the galaxy in Space Crash, crash games offer endless excitement and opportunities. Dive into the world of crash games today and experience the thrill for yourself!",
   };
 
+  const meta = {
+    title: "Top Live Games in the UK Casino Industry: A Guide for Players",
+    description:
+      "Explore the best live games in the UK casino industry. Discover live blackjack, roulette, poker, and game shows with tips to enhance your live casino experience.",
+  };
+
   return (
     <>
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+      </Helmet>
       <CasinoSection />
       <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="mt-4">

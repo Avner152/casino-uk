@@ -55,9 +55,6 @@ const CasinoSection = observer(({ captchaToken }) => {
   // const images = importImages(
   //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
   // );
-  const brands = importImages(
-    require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
-  );
 
   const importedIcons = importImages(
     require.context("../assets/icons", false, /\.(svg)$/)
@@ -84,32 +81,13 @@ const CasinoSection = observer(({ captchaToken }) => {
               <CasinoItemMobile
                 key={k}
                 item={casino}
-                importedIcons={importedIcons}
-                src={
-                  brands[
-                    `${casino.name
-                      .toLocaleLowerCase()
-                      .replaceAll(" ", "-")}.png`
-                  ]
-                }
+
                 // src={brands["rolino.png"]}
               />
             </NavLink>
           ) : (
             <NavLink href={casino.url} target="_blank">
-              <CasinoItem
-                key={k}
-                item={casino}
-                importedIcons={importedIcons}
-                src={
-                  brands[
-                    `${casino.name
-                      .toLocaleLowerCase()
-                      .replaceAll(" ", "-")}.png`
-                  ]
-                }
-                // src={brands["rolino.png"]}
-              />
+              <CasinoItem key={k} item={casino} />
             </NavLink>
           )}
         </Fade>

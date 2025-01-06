@@ -7,6 +7,8 @@ import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
 import History from "../components/paginations/info/History";
 import CrashGames from "../components/paginations/info/CrashGames";
+import LiveGames from "../components/paginations/info/LiveGames";
+import SlotsGames from "../components/paginations/info/SlotsGames";
 
 export default function MyRoutes({ captchaToken }) {
   const location = useLocation();
@@ -36,6 +38,8 @@ export default function MyRoutes({ captchaToken }) {
         <Route exact path="/history" element={<History />}></Route>
 
         <Route exact path="/top-crash-games" element={<CrashGames />}></Route>
+        <Route exact path="/live-games" element={<LiveGames />}></Route>
+        <Route exact path="/slots-games" element={<SlotsGames />}></Route>
       </Routes>
     </>
   );
