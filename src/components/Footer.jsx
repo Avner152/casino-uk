@@ -26,7 +26,7 @@ export default function Footer() {
       ],
     },
     {
-      title: "Popular pages",
+      title: "Information pages",
       list: [
         {
           name: "History",
@@ -43,33 +43,6 @@ export default function Footer() {
         {
           name: "Slots Games ",
           url: "/slots-games",
-        },
-      ],
-    },
-    {
-      title: "Popular casinos",
-      list: [
-        {
-          name: "LeoVegas",
-          url: "http://ads.leovegas.com/redirect.aspx?pid=3497289&bid=3878&clickid={GCLID}",
-          target: "_blank",
-        },
-        {
-          name: "OLG",
-          url: "",
-        },
-        {
-          name: "Betsafe",
-          url: "https://betway.com/bwp/casino-welcome/en-gb/?s=bw38811",
-          target: "_blank",
-        },
-        {
-          name: "Casino Room",
-          url: "",
-        },
-        {
-          name: "SlotJoint",
-          url: "",
         },
       ],
     },

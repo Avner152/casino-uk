@@ -50,28 +50,25 @@ export default function Header() {
     //     },
     //   ],
     // },
+
     {
-      title: "Popular casinos",
+      title: "Information pages",
       list: [
         {
-          name: "LeoVegas",
-          url: "",
+          name: "History",
+          url: "/history",
         },
         {
-          name: "OLG",
-          url: "",
+          name: "Top Crash Games ",
+          url: "/top-crash-games",
         },
         {
-          name: "Betsafe",
-          url: "",
+          name: "Live Games ",
+          url: "/live-games",
         },
         {
-          name: "Casino Room",
-          url: "",
-        },
-        {
-          name: "SlotJoint",
-          url: "",
+          name: "Slots Games ",
+          url: "/slots-games",
         },
       ],
     },
