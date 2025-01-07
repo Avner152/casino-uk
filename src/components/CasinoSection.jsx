@@ -56,9 +56,9 @@ const CasinoSection = observer(({ captchaToken }) => {
   //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
   // );
 
-  const importedIcons = importImages(
-    require.context("../assets/icons", false, /\.(svg)$/)
-  );
+  // const importedIcons = importImages(
+  //   require.context("../assets/icons", false, /\.(svg)$/)
+  // );
 
   // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
