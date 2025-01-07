@@ -1,4 +1,4 @@
-import { importImages } from "../App";
+// import { importImages } from "../App";
 
 import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
