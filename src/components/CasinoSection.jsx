@@ -14,9 +14,13 @@ import myStore from "../mobX/Store";
 
 const CasinoSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
+  captchaToken = true;
 
   const location = useLocation();
-  const search = !captchaToken ? "none regulated" : location.search;
+  const search =
+    captchaToken !== undefined && !captchaToken
+      ? "none regulated"
+      : location.search;
   const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
@@ -34,6 +38,8 @@ const CasinoSection = observer(({ captchaToken }) => {
       }
     };
     const fetchData = async () => {
+      console.log(search);
+
       axios
         .post(url, { search, referrer: document.referrer, userIp }, { headers })
         .then((res) => {

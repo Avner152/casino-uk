@@ -1,6 +1,7 @@
 import React from "react";
+import CasinoSection from "../../CasinoSection";
 
-export default function History() {
+export default function TableGames() {
   const titlePar = {
     h1: "The History of Table Games in the UK Casino Industry",
     p: "Table games are the heartbeat of the casino experience, offering a blend of strategy, skill, and chance that has captured the imagination of players for centuries. In the UK, table games like roulette, blackjack, and poker hold a special place, both in brick-and-mortar casinos and online platforms. Their rich history and cultural significance make them a cornerstone of the UK casino industry.\nThis article takes a journey through the history of table games, their evolution in the UK, and why they continue to be timeless favorites among players.",
@@ -43,64 +44,67 @@ export default function History() {
   };
 
   return (
-    <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
-      <div className="mt-4">
-        <h1>{titlePar.h1}</h1>
-        {titlePar.p.split("\n").map((pi, i) => (
-          <p key={i}>{pi}</p>
-        ))}
-      </div>
-
-      <div id={early.id} className="mt-4">
-        <h2>{early.h2}</h2>
-        {early.p.split("\n").map((pi, i) => (
-          <p key={i}>{pi}</p>
-        ))}
-      </div>
-
-      <div id={modern.id} className="mt-4">
-        <h2>{modern.h2}</h2>
-        {modern.p.split("\n").map((pi, i) => (
-          <p key={i}>{pi}</p>
-        ))}
-      </div>
-
-      <div id={riseOfOnline.id} className="mt-4">
-        <h2>{riseOfOnline.h2}</h2>
-        {riseOfOnline.p.split("\n").map((pi, i) => (
-          <p key={i}>{pi}</p>
-        ))}
-      </div>
-
-      <div id={why.id} className="mt-4">
-        <h2>{why.h2}</h2>
-        <p>{why.p}</p>
-        <ol>
-          {why.ol.map((li, i) => (
-            <li key={i}>
-              {li.split(":").map((sp, k) => (
-                <span className={!k ? "fw-bold" : ""} key={k}>
-                  {sp} {!k ? ":" : ""}
-                </span>
-              ))}
-            </li>
+    <>
+      <CasinoSection />
+      <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
+        <div className="mt-4">
+          <h1>{titlePar.h1}</h1>
+          {titlePar.p.split("\n").map((pi, i) => (
+            <p key={i}>{pi}</p>
           ))}
-        </ol>
-      </div>
+        </div>
 
-      <div id={riseOfOnline.id} className="mt-4">
-        <h2>{riseOfOnline.h2}</h2>
-        {riseOfOnline.p.split("\n").map((pi, i) => (
-          <p key={i}>{pi}</p>
-        ))}
-      </div>
+        <div id={early.id} className="mt-4">
+          <h2>{early.h2}</h2>
+          {early.p.split("\n").map((pi, i) => (
+            <p key={i}>{pi}</p>
+          ))}
+        </div>
 
-      <div id={future.id} className="mt-4">
-        <h2>{future.h2}</h2>
-        {future.p.split("\n").map((pi, i) => (
-          <p key={i}>{pi}</p>
-        ))}
+        <div id={modern.id} className="mt-4">
+          <h2>{modern.h2}</h2>
+          {modern.p.split("\n").map((pi, i) => (
+            <p key={i}>{pi}</p>
+          ))}
+        </div>
+
+        <div id={riseOfOnline.id} className="mt-4">
+          <h2>{riseOfOnline.h2}</h2>
+          {riseOfOnline.p.split("\n").map((pi, i) => (
+            <p key={i}>{pi}</p>
+          ))}
+        </div>
+
+        <div id={why.id} className="mt-4">
+          <h2>{why.h2}</h2>
+          <p>{why.p}</p>
+          <ol>
+            {why.ol.map((li, i) => (
+              <li key={i}>
+                {li.split(":").map((sp, k) => (
+                  <span className={!k ? "fw-bold" : ""} key={k}>
+                    {sp} {!k ? ":" : ""}
+                  </span>
+                ))}
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div id={riseOfOnline.id} className="mt-4">
+          <h2>{riseOfOnline.h2}</h2>
+          {riseOfOnline.p.split("\n").map((pi, i) => (
+            <p key={i}>{pi}</p>
+          ))}
+        </div>
+
+        <div id={future.id} className="mt-4">
+          <h2>{future.h2}</h2>
+          {future.p.split("\n").map((pi, i) => (
+            <p key={i}>{pi}</p>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import CasinoSection from "../../CasinoSection";
 
-export default function History() {
+export default function CrashGames() {
   const titlePar = {
     h1: "Best Crash Games in the UK Casino Industry",
   };

@@ -52,6 +52,17 @@ body::after {
   width: 48%;
 }
 
+.desktop-header {
+  position: fixed !important;
+  background-color: #000000dd;
+  padding: 0 50px 10px;
+  z-index: 9999;
+}
+
+.my-nav:hover {
+  color: #de811d !important;
+}
+
 .params .row {
   padding: 0 2rem;
   gap: 0.3rem;

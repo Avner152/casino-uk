@@ -29,8 +29,8 @@ export default function Footer() {
       title: "Information pages",
       list: [
         {
-          name: "History",
-          url: "/history",
+          name: "Table Games",
+          url: "/table-games",
         },
         {
           name: "Top Crash Games ",

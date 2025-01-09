@@ -90,24 +90,20 @@ const App = observer(() => {
     <>
       {!captchaToken && TurnstileWidget()}
 
+      <Header />
       <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
-        <Header />
         <br />
         <div className="intro mt-5 tit-n-des text-white p-3">
-          {/* <div>
-            <img alt="uk-logo" src={homepageIcons["uk-icon.svg"]} />
-          </div> */}
-
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center justify-content-between">
             <div>
               <h1 className="fw-bold">
                 {myStore.type === "negra" ? "Non-Gamestop" : "Check"} UK's Best
                 Casinos
               </h1>
               <p>
-                Top UK real money online casinos compared and reviewed. Check
-                our list of the most popular British online casinos. Play safely
-                & responsibly
+                Top UK real money online casinos compared and reviewed. <br />
+                Check our list of the most popular British online casinos.
+                <br /> Play safely & responsibly
               </p>
             </div>
             <div>

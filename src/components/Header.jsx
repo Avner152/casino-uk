@@ -1,9 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 // import burgerLogo from "../assets/burger-logo.svg";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
+import { Nav } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 
 export default function Header() {
@@ -25,38 +26,13 @@ export default function Header() {
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
-    // {
-    //   title: "Popular pages",
-    //   list: [
-    //     {
-    //       name: "Baccarat",
-    //       url: "/baccarat",
-    //     },
-    //     {
-    //       name: "Blackjack",
-    //       url: "/blackjack",
-    //     },
-    //     {
-    //       name: "Live Casino",
-    //       url: "/live-casino",
-    //     },
-    //     {
-    //       name: "Game Shows",
-    //       url: "/game-shows",
-    //     },
-    //     {
-    //       name: "Roulette",
-    //       url: "/roulette",
-    //     },
-    //   ],
-    // },
 
     {
       title: "Information pages",
       list: [
         {
-          name: "History",
-          url: "/history",
+          name: "Table Games",
+          url: "/table-games",
         },
         {
           name: "Top Crash Games ",
@@ -90,7 +66,9 @@ export default function Header() {
   // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
-    <header className={`header w-${isDesktop ? 60 : 100}`}>
+    <header
+      className={`${isDesktop ? "desktop" : "mobile"}-header header w-100`}
+    >
       <div
         className={`w-100 d-flex ${
           !isDesktop && "justify-content-between"
@@ -99,35 +77,15 @@ export default function Header() {
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
             <Link to="/">
-              <img
-                src={logo}
-                width={400}
-                alt="logo"
-                height={50}
-                className="_mt-2 ps-3"
-              />
+              <img src={logo} width={220} alt="logo" height={40} />
             </Link>
-            {/* <div className="nav d-flex fs-6 justify-content-start gap-5 p-3 text-white">
-              {desktopMenu.map((menuItem, k) => (
-                <NavLink
-                  to={`/${menuItem.replaceAll(" ", "-").toLocaleLowerCase()}`}
-                  key={k}
-                >
-                  {menuItem}
+            <Nav className="fs-6 gap-3">
+              {menu[1].list.map((item, i) => (
+                <NavLink className="my-nav text-white" to={item.url} key={i}>
+                  {item.name}
                 </NavLink>
               ))}
-            </div> */}
-            {/* <Button
-              onClick={() =>
-                window.open(
-                  "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}",
-                  "_blank"
-                )
-              }
-              className="header-btn text-uppercase fw-bold text-white"
-            >
-              Get Bonus
-            </Button> */}
+            </Nav>
           </div>
         ) : (
           <>
