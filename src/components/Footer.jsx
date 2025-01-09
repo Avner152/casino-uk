@@ -6,6 +6,7 @@ import cards from "../assets/casino.png";
 import React from "react";
 
 export default function Footer() {
+  const curDate = new Date();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
@@ -140,8 +141,8 @@ export default function Footer() {
       {isMobile && (
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            © 2024 CasinoRate. All rights reserved. All trademarks are the
-            property of their respective owners.
+            @{curDate.getFullYear()} CasinoRate. All rights reserved. All
+            trademarks are the property of their respective owners.
           </div>
         </div>
       )}

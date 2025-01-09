@@ -532,7 +532,9 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   body {
-    /* background-image: url(./assets/bg-nobile.webp); */
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-image: url(./assets/bg-mob.webp);
     background-size: cover;
     background-position: center;
