@@ -541,6 +541,7 @@ a:hover {
   body {
     background-image: url(./assets/bg-mob.jpg);
     background-size: cover;
+    height: 150%;
     background-position: center;
     background-repeat: no-repeat;
   }
