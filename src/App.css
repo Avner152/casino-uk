@@ -520,6 +520,10 @@ a:hover {
   background: #2ecc71;
 }
 
+.text-break-all {
+  word-break: break-all;
+}
+
 @media only screen and (max-width: 1023px) {
   /* .top-card > div {
     min-width: unset;
@@ -626,6 +630,7 @@ a:hover {
     /* padding: 1rem 0 1rem 2vw; */
     padding: 1vw 0 1vw 2vw;
     flex-direction: column;
+    min-width: 50vw;
     max-height: 100%;
   }
   /*  */
@@ -638,6 +643,9 @@ a:hover {
     margin: auto;
     text-transform: uppercase;
     padding: 0.45rem 0rem;
+  }
+  .fs-7 {
+    font-size: 3vw;
   }
 
   footer {

@@ -116,21 +116,32 @@ const App = observer(() => {
             </div>
           </div>
 
-          {isDesktop && (
-            <div className="d-flex gap-5 m-auto justify-content-between align-items-center">
-              {homepageIconsObjectList.map((icon, k) => (
-                <div className="d-flex gap-3 align-items-center" key={k}>
-                  <img
-                    alt={icon.name}
-                    src={homepageIcons[`${icon.name}-icon.svg`]}
-                  />
-                  <span>
-                    {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
-                  </span>
-                </div>
-              ))}
+          {
+            <div
+              className={`w-100 d-flex m-auto justify-content-around align-items-center`}
+            >
+              {homepageIconsObjectList
+                .slice(0, isDesktop ? 4 : 3)
+                .map((icon, k) => (
+                  <div
+                    className={`d-flex gap-3 fs-${
+                      isDesktop ? 6 : 7
+                    } _text-break-all flex-column align-items-center justify-content-around`}
+                    key={k}
+                  >
+                    <img
+                      width={isDesktop ? 100 : 40}
+                      height={isDesktop ? 40 : 30}
+                      alt={icon.name}
+                      src={homepageIcons[`${icon.name}-icon.svg`]}
+                    />
+                    <span>
+                      {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
+                    </span>
+                  </div>
+                ))}
             </div>
-          )}
+          }
         </div>
         <MyRoutes captchaToken={captchaToken} />
       </div>

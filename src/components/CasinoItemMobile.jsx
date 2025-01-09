@@ -1,22 +1,15 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import { importImages } from "../App";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
+import { useMediaQuery } from "react-responsive";
+
 import { toJS } from "mobx";
 
 const CasinoItemMobile = observer(({ item }) => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+
   const [clicked, setClicked] = useState(false);
-
-  let homepageIcons = importImages(
-    require.context("../assets/homepage-icons", false, /\.(svg)$/)
-  );
-
-  let relevantIcons = [
-    { name: "uk", text: "UK Licensed" },
-    { name: "rocket", text: "Secure & Trusted" },
-    { name: "18plus-black", text: "Advertiser Disclosure" },
-  ];
 
   return (
     <div className="my-card">
@@ -47,22 +40,7 @@ const CasinoItemMobile = observer(({ item }) => {
           <div
             className="d-flex _justify-content-between w-100 mb-2"
             style={{ fontSize: "1.25vw" }}
-          >
-            {relevantIcons.map((icon, _) => (
-              <div
-                style={{ gap: ".45vw" }}
-                className="d-flex align-items-center _gap-1 m-auto _p-1"
-                key={icon.name}
-              >
-                <img
-                  width={12}
-                  src={homepageIcons[`${icon.name}-icon.svg`]}
-                  alt={icon.name}
-                />
-                <span>{icon.text}</span>
-              </div>
-            ))}
-          </div>
+          ></div>
           <Button
             onClick={() => {
               setClicked(!clicked);

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { importImages } from "../App";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import cards from "../assets/casino.png";
 import React from "react";
 
@@ -77,9 +77,9 @@ export default function Footer() {
             <Link to="/">
               <img
                 src={logo}
-                width={180}
+                width={200}
                 alt="logo"
-                height={50}
+                height={30}
                 className="_mt-2"
               />
             </Link>
