@@ -540,7 +540,7 @@ a:hover {
 @media only screen and (max-width: 767px) {
   body {
     background-image: url(./assets/bg-mob.jpg);
-    background-size: 100% 100%;
+    background-size: contain;
     /* height: 150%; */
     height: 100vh;
     background-position: center;
