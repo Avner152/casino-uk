@@ -546,7 +546,7 @@ a:hover {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
+    /* -webkit-background-size: contain; */
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
