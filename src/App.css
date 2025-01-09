@@ -539,14 +539,11 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
     background-image: url(./assets/bg-mob.webp);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* -webkit-background-size: contain; */
+    height: 100vh; /* Force full viewport height */
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
