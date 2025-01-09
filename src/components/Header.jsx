@@ -76,9 +76,9 @@ export default function Header() {
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
-            <Link to="/">
+            <NavLink to="/">
               <img src={logo} width={220} alt="logo" height={40} />
-            </Link>
+            </NavLink>
             <Nav className="fs-6 gap-3">
               {menu[1].list.map((item, i) => (
                 <NavLink className="my-nav text-white" to={item.url} key={i}>
@@ -105,7 +105,13 @@ export default function Header() {
                   onOpen={hamburgerHandler}
                   onClose={hamburgerHandler}
                 >
-                  <Link to="/">
+                  <Link
+                    onClick={() => {
+                      setShow("");
+                      setBurgerOpen(false);
+                    }}
+                    to="/"
+                  >
                     <img
                       src={logo}
                       width={120}
@@ -135,19 +141,7 @@ export default function Header() {
                       ))}
                     </div>
                   ))}
-                  <div className="mt-4">
-                    {/* <Button
-                      onClick={() =>
-                        window.open(
-                          "http://www.777.com/exclusive/home-page.htm?affid=46&pid=5&promid=26&country=gbr&sr=1244264&anid={GCLID}",
-                          "_blank"
-                        )
-                      }
-                      className="header-btn text-uppercase fw-bold text-white"
-                    >
-                      Get Bonus
-                    </Button> */}
-                  </div>
+                  <div className="mt-4"></div>
                 </Menu>
               </div>
               {/*  */}
