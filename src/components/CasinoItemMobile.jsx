@@ -2,13 +2,10 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
-import { useMediaQuery } from "react-responsive";
 
 import { toJS } from "mobx";
 
 const CasinoItemMobile = observer(({ item }) => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-
   const [clicked, setClicked] = useState(false);
 
   return (
