@@ -311,7 +311,7 @@ ul svg {
 }
 
 .bm-menu-wrap {
-  /* top: 0; */
+  top: 0;
   width: 235px !important;
   height: 65vh !important;
   position: relative;
@@ -335,7 +335,7 @@ ul svg {
 .bm-item-list {
   left: -50px !important;
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: 0 0.8em;
 }
 
 .bm-item {
@@ -400,7 +400,7 @@ ul svg {
 .welcome-bonus h1 {
   font-size: 1.25rem;
   min-width: 200px;
-  max-width: 220px;
+  max-width: 200px;
   font-weight: 700;
   /* text-align: center; */
 }

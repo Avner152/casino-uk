@@ -37,9 +37,9 @@ const CasinoSection = observer(({ captchaToken }) => {
       axios
         .post(url, { search, referrer: document.referrer, userIp }, { headers })
         .then((res) => {
-          console.log(userIp);
+          // console.log(userIp);
 
-          console.log(res.data);
+          // console.log(res.data);
 
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);

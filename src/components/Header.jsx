@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
-import burgerLogo from "../assets/burger-logo.svg";
+// import burgerLogo from "../assets/burger-logo.svg";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
@@ -101,10 +101,10 @@ export default function Header() {
             <Link to="/">
               <img
                 src={logo}
-                width={180}
+                width={400}
                 alt="logo"
                 height={50}
-                className="_mt-2"
+                className="_mt-2 ps-3"
               />
             </Link>
             {/* <div className="nav d-flex fs-6 justify-content-start gap-5 p-3 text-white">
@@ -138,16 +138,10 @@ export default function Header() {
               {/*  */}
 
               <div id="outer-container">
-                <img
-                  alt="flag-logo"
-                  className="flag-logo"
-                  width={23}
-                  src={burgerLogo}
-                />
                 <Menu
                   id="elastic"
                   right
-                  customCrossIcon={false}
+                  // customCrossIcon={false}
                   burgerButtonClassName={show}
                   isOpen={isBurgerOpen}
                   onOpen={hamburgerHandler}

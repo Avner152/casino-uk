@@ -27,7 +27,7 @@ export default function HomePage({ captchaToken }) {
           </div>
         </>
       )}
-      <div className="content _mt-2 min-vh-100 _bg-secondary text-white-50 p-4">
+      <div className="content _mt-2 min-vh-100 _bg-secondary text-white p-4">
         <Content isDesktop={isDesktop} />
       </div>
     </>
