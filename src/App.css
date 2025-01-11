@@ -158,13 +158,21 @@ ul svg {
   color: #00bd68;
 }
 .accordion {
-  --bs-accordion-bg: var(--dark_trans);
+  --bs-accordion-bg: #0000009a;
 }
 
 .accordion-button {
   color: #fff !important;
-  background-color: var(--dark_trans) !important;
-  --bs-accordion-bg: var(--dark_trans);
+  background-color: #000 !important;
+  /* padding: 15px; */
+  font-size: 0.9rem;
+  /* background-color: var(--dark_trans) !important; */
+  --bs-accordion-bg: #000;
+}
+
+.accordion-button p {
+  width: 90%;
+  margin: auto;
 }
 
 .accordion-item {
@@ -174,11 +182,6 @@ ul svg {
 
 .accordion-button::after {
   filter: invert(100%);
-}
-
-.accordion-button {
-  padding: 12px 25px;
-  font-size: 0.9rem;
 }
 
 .accordion-body {
