@@ -529,7 +529,7 @@ a:hover {
     /* background-image: url(./assets/bg-mob.jpg); */
     background-image: url(./assets/bg-2.jpg);
     background-position: left 100%;
-    -webkit-background-position: left 100%;
+    -webkit-background-position: center 100%;
     background-attachment: fixed;
     /* background-color: #000000; */
   }
