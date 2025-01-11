@@ -56,6 +56,7 @@ const App = () => {
 
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
+        <br />
         <Intro />
         <MyRoutes captchaToken={captchaToken} />
       </div>
