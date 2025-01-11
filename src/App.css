@@ -526,10 +526,10 @@ a:hover {
   }
   .casino-container {
     background-repeat: no-repeat;
-    /* background-image: url(./assets/bg-mob.jpg); */
-    background-image: url(./assets/bg-3.jpg);
-    background-position: bottom left;
-    -webkit-background-position: bottom left;
+    background-image: url(./assets/bg.webp);
+    /* background-image: url(./assets/bg-3.jpg); */
+    background-position: center 0;
+    -webkit-background-position: center 0;
     background-attachment: fixed;
     /* background-color: #000000; */
   }
