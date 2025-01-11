@@ -30,20 +30,6 @@ body {
   position: relative;
   color: #000 !important;
 }
-body::after {
-  content: "";
-  position: relative;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./assets/bg.webp");
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  z-index: -2;
-}
 
 .w-60 {
   width: 60%;
@@ -86,12 +72,6 @@ body::after {
   flex: 1 0 33%;
   margin: auto 5px auto;
 }
-
-/* .logo {
-  background-image: url(./assets/logo.png);
-  width: 180px;
-  height: 180px;
-} */
 
 .cas-wrap {
   position: absolute;
@@ -251,7 +231,7 @@ ul svg {
 .top-card .btn {
   font-weight: 600;
   background-color: #9d00ff;
-  /* background-image: linear-gradient(-180deg, #00d775, #00bd68); */
+
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: #ffffff;
@@ -538,13 +518,13 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
-  body {
-    background-image: url(./assets/bg-mob.jpg);
-    background-size: contain;
-    /* height: 150%; */
-    height: 100vh;
-    background-position: center;
+  .casino-main {
     background-repeat: no-repeat;
+    background-image: url(./assets/bg-mob.jpg);
+    -webkit-background-position: center;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #000000;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {

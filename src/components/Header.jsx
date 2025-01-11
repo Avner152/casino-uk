@@ -115,7 +115,7 @@ export default function Header() {
                       src={logo}
                       width={120}
                       alt="logo"
-                      height={50}
+                      height={25}
                       className="_mt-2"
                     />
                   </Link>

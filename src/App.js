@@ -7,10 +7,8 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
-import casino from "./assets/casino.png";
 import Turnstile from "react-turnstile";
-import myStore from "./mobX/Store";
-import { observer } from "mobx-react";
+import Intro from "./components/Intro";
 
 export function importImages(r) {
   let images = {};
@@ -20,47 +18,13 @@ export function importImages(r) {
   return images;
 }
 
-const App = observer(() => {
+const App = () => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const [captchaToken, setCaptchaToken] = useState(null);
-
-  let homepageIcons = importImages(
-    require.context("./assets/homepage-icons", false, /\.(svg)$/)
-  );
-  const homepageIconsObjectList = [
-    {
-      name: "uk",
-      text: "UK",
-      addOn: `${
-        myStore.type === "blanca"
-          ? "Licensed"
-          : myStore.type === "negra"
-          ? "Non-Gamstop"
-          : ""
-      }`,
-    },
-    {
-      name: "security",
-      text: "Secure & Trusted",
-    },
-    {
-      name: "rocket",
-      text: "Fast Withdrawals",
-    },
-    {
-      name: "18plus",
-      text: "Advertiser Disclosure",
-    },
-  ];
 
   const [hasCookie, setCookieStatus] = useState(
     getCookie("uk-sefty-cookie") ? true : false
   );
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isLaptop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
-  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   function TurnstileWidget() {
     return (
@@ -93,56 +57,7 @@ const App = observer(() => {
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
         <br />
-        <div className="intro mt-5 tit-n-des text-white p-3">
-          <div className="d-flex align-items-center justify-content-between">
-            <div>
-              <h1 className="fw-bold">
-                {myStore.type === "negra" ? "Non-Gamestop" : "Check"} UK's Best
-                Casinos
-              </h1>
-              <p>
-                Top UK real money online casinos compared and reviewed. <br />
-                Check our list of the most popular British online casinos.
-                <br /> Play safely & responsibly
-              </p>
-            </div>
-            <div>
-              <img
-                className="cards"
-                alt="cards"
-                width={isDesktop ? 220 : 150}
-                src={casino}
-              />
-            </div>
-          </div>
-
-          {
-            <div
-              className={`w-100 d-flex m-auto justify-content-around align-items-center`}
-            >
-              {homepageIconsObjectList
-                .slice(0, isDesktop ? 4 : 3)
-                .map((icon, k) => (
-                  <div
-                    className={`d-flex gap-3 fs-${
-                      isDesktop ? 6 : 7
-                    } _text-break-all flex-column align-items-center justify-content-around`}
-                    key={k}
-                  >
-                    <img
-                      width={isDesktop ? 100 : 40}
-                      height={isDesktop ? 40 : 30}
-                      alt={icon.name}
-                      src={homepageIcons[`${icon.name}-icon.svg`]}
-                    />
-                    <span>
-                      {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
-                    </span>
-                  </div>
-                ))}
-            </div>
-          }
-        </div>
+        <Intro />
         <MyRoutes captchaToken={captchaToken} />
       </div>
       <Footer />
@@ -150,6 +65,6 @@ const App = observer(() => {
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
     </>
   );
-});
+};
 
 export default App;
