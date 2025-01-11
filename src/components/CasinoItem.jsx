@@ -10,19 +10,8 @@ const CasinoItem = ({ item }) => {
     require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
   );
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
-  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const [clicked, setClicked] = useState(false);
-
-  // const params = [
-  //   { icon: "bullhorn", text: "Regular offers" },
-  //   { icon: "slot", text: "Live casino" },
-  //   { icon: "chat", text: "Live chat" },
-  //   { icon: "vip", text: "VIP program" },
-  // ];
 
   return (
     <div className="my-card ">
@@ -37,7 +26,7 @@ const CasinoItem = ({ item }) => {
         } justify-content-around border rounded align-items-center text-center`}
       >
         <div className="col-md-3 rounded _square">
-          <img alt="casino" width={210} height={80} src={brands[srcTerm]} />
+          <img alt={item.name} width={210} height={80} src={brands[srcTerm]} />
         </div>
         <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
           {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
