@@ -528,6 +528,7 @@ a:hover {
     background-repeat: no-repeat;
     /* background-image: url(./assets/bg-mob.jpg); */
     background-image: url(./assets/bg.webp);
+    background-image: url(./assets/bg-mob.jpg);
     -webkit-background-position: center 0;
     background-position: center 0;
     background-attachment: fixed;
