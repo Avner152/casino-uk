@@ -522,14 +522,14 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   body {
-    background: unset;
+    background-image: unset;
   }
   .casino-container {
     background-repeat: no-repeat;
     /* background-image: url(./assets/bg-mob.jpg); */
     background-image: url(./assets/bg.webp);
-    -webkit-background-position: center;
-    background-position: center;
+    -webkit-background-position: center 0;
+    background-position: center 0;
     background-attachment: fixed;
     /* background-color: #000000; */
   }
