@@ -19,7 +19,7 @@ const CasinoItemMobile = observer(({ item }) => {
         <div className="square">
           <img
             className="rounded"
-            alt="casino "
+            alt={item.name}
             width={220}
             height={80}
             src={
