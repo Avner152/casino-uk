@@ -528,8 +528,8 @@ a:hover {
     background-repeat: no-repeat;
     /* background-image: url(./assets/bg-mob.jpg); */
     background-image: url(./assets/bg-2.jpg);
-    background-position: center 100%;
-    -webkit-background-position: center 100%;
+    background-position: left 0;
+    -webkit-background-position: left 0;
     background-attachment: fixed;
     /* background-color: #000000; */
   }
