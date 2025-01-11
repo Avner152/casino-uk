@@ -524,7 +524,7 @@ a:hover {
   body {
     background: unset;
   }
-  .casino-main {
+  .casino-container {
     background-repeat: no-repeat;
     /* background-image: url(./assets/bg-mob.jpg); */
     background-image: url(./assets/bg.webp);

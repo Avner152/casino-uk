@@ -51,11 +51,11 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className="casino-container">
       {!captchaToken && TurnstileWidget()}
 
       <Header />
-      <div className={`w-${isDesktop ? 60 : 100} +p-2 m-auto casino-main`}>
+      <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
         <Intro />
         <MyRoutes captchaToken={captchaToken} />
@@ -63,7 +63,7 @@ const App = () => {
       <Footer />
 
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
-    </>
+    </div>
   );
 };
 
