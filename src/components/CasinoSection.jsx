@@ -16,10 +16,12 @@ const CasinoSection = observer(({ captchaToken }) => {
   captchaToken = true;
 
   const location = useLocation();
-  const search =
-    captchaToken !== undefined && !captchaToken
-      ? "none regulated"
-      : location.search;
+  // const search =
+  //   captchaToken !== undefined && !captchaToken
+  //     ? "none regulated"
+  //     : location.search;
+
+  const search = "";
   const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
@@ -37,8 +39,6 @@ const CasinoSection = observer(({ captchaToken }) => {
       }
     };
     const fetchData = async () => {
-      console.log(search);
-
       axios
         .post(url, { search, referrer: document.referrer, userIp }, { headers })
         .then((res) => {
