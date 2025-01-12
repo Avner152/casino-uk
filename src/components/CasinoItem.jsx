@@ -16,9 +16,9 @@ const CasinoItem = ({ item }) => {
   return (
     <div className="my-card ">
       {item.ribbonText && (
-        <div className="ribbon ribbon-top-left">
-          <span>{item.ribbonText}</span>
-        </div>
+        <p className="ribbon-2 text-capitalize">
+          <span className="ribbon-text">{item.ribbonText}</span>
+        </p>
       )}
       <div
         className={`top-card d-flex gap-${

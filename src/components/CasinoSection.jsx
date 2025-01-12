@@ -1,5 +1,3 @@
-// import { importImages } from "../App";
-
 import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
@@ -11,6 +9,7 @@ import axios from "axios";
 import { observer } from "mobx-react";
 import { toJS } from "mobx";
 import myStore from "../mobX/Store";
+import { importImages } from "../App";
 
 const CasinoSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
@@ -58,6 +57,35 @@ const CasinoSection = observer(({ captchaToken }) => {
     userIp && fetchData();
   }, [search, list.length, userIp]);
 
+  let homepageIcons = importImages(
+    require.context("../assets/homepage-icons", false, /\.(svg)$/)
+  );
+  const homepageIconsObjectList = [
+    {
+      name: "uk",
+      text: "UK",
+      addOn: `${
+        myStore.type === "blanca"
+          ? "Licensed"
+          : myStore.type === "negra"
+          ? "Non-Gamstop"
+          : ""
+      }`,
+    },
+    {
+      name: "security",
+      text: "Secure & Trusted",
+    },
+    {
+      name: "rocket",
+      text: "Fast Withdrawals",
+    },
+    {
+      name: "18plus",
+      text: "Advertiser Disclosure",
+    },
+  ];
+
   // const images = importImages(
   //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
   // );
@@ -66,7 +94,7 @@ const CasinoSection = observer(({ captchaToken }) => {
   //   require.context("../assets/icons", false, /\.(svg)$/)
   // );
 
-  // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
   // });
@@ -74,6 +102,24 @@ const CasinoSection = observer(({ captchaToken }) => {
 
   return (
     <div>
+      <div className="w-100 d-flex m-auto text-white justify-content-around align-items-center">
+        {homepageIconsObjectList.slice(0, isDesktop ? 4 : 3).map((icon, k) => (
+          <div
+            className="d-flex gap-1 fs-7 flex-column align-items-center"
+            key={k}
+          >
+            <img
+              width={isDesktop ? 50 : 30}
+              height={isDesktop ? 30 : 20}
+              alt={icon.name}
+              src={homepageIcons[`${icon.name}-icon.svg`]}
+            />
+            <span>
+              {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
+            </span>
+          </div>
+        ))}
+      </div>
       {toJS(myStore.list).map((casino, k) => (
         <Fade
           key={k}

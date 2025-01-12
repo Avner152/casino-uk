@@ -27,7 +27,7 @@ export default function Footer() {
       ],
     },
     {
-      title: "Information pages",
+      title: "Top Pages",
       list: [
         {
           name: "Table Games",
@@ -138,14 +138,14 @@ export default function Footer() {
           ))}
         </div>
       </footer>
-      {isMobile && (
+      {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} CasinoRate. All rights reserved. All
+            @{curDate.getFullYear()} UK Best Casino. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>
-      )}
+      }
     </>
   );
 }

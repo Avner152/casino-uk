@@ -11,13 +11,14 @@ const CasinoItemMobile = observer(({ item }) => {
   return (
     <div className="my-card">
       {item.ribbonText && (
-        <div className="ribbon ribbon-top-left">
-          <span>{item.ribbonText}</span>
-        </div>
+        <p className="ribbon-2 text-capitalize">
+          <span className="ribbon-text">{item.ribbonText}</span>
+        </p>
       )}
       <div className="top-card d-flex justify-content-around align-items-center ">
         <div className="square">
           <img
+            onClick={() => window.open(item.url, "_blank")}
             className="rounded"
             alt={item.name}
             width={220}

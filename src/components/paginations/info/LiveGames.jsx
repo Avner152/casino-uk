@@ -75,21 +75,13 @@ export default function LiveGames() {
 
   const what = {
     id: "par-2",
-    h2: "What Are Live Casino Games?",
-    p: "Live casino games are online games hosted by professional dealers or game show hosts and streamed in real-time to your device. Players can interact with the dealer and other participants, creating a social and authentic casino atmosphere.",
-    ul: {
-      prefix: "Key Features of Live Games",
-      list: [
-        "Live Dealers: Games are hosted by trained professionals, ensuring an engaging and fair experience.",
-        "Real-Time Action: Players can make decisions and place bets as the game unfolds.",
-        "High-Quality Streaming: Most live games are streamed in HD, providing a clear and immersive view of the table.",
-      ],
-    },
+    h2: "🎥 What Are Live Casino Games?",
+    p: "Live games are hosted by professional dealers and streamed directly to your device. Players can place bets, make decisions, and interact with the dealer and other players in real time, creating a social and authentic gaming atmosphere.",
   };
 
   const why = {
     id: "par-4",
-    h2: "Why Live Games Are Popular in the UK?",
+    h2: "🎮 Why Are Live Casino Games Popular in the UK?",
     ul: {
       prefix:
         "The rise of live games in the UK can be attributed to several factors:",
@@ -162,18 +154,6 @@ export default function LiveGames() {
         <div id={what.id} className="mt-4">
           <h2>{what.h2}</h2>
           <p>{what.p}</p>
-          <h3>{what.ul.prefix}</h3>
-          <ol>
-            {what.ul.list.map((li, i) => (
-              <li key={i}>
-                {li.split(":").map((sp, k) => (
-                  <span className={!k ? "fw-bold" : ""} key={k}>
-                    {sp} {!k ? ":" : ""}
-                  </span>
-                ))}
-              </li>
-            ))}
-          </ol>
         </div>
 
         <div id={why.id} className="mt-4">

@@ -1,9 +1,37 @@
 import { Accordion } from "react-bootstrap";
 
 export default function Content() {
+  const curDate = new Date();
+
+  const why = {
+    id: "why",
+    h2: "Why Choose Our Online Casino Comparison?",
+    ol: [
+      {
+        title: "Top 10 Online Casinos",
+        description:
+          "Our carefully researched list features the best online casinos in the UK. These platforms are handpicked for their exceptional games, user experience, and generous promotions.",
+      },
+      {
+        title: "Mobile and New Casinos",
+        description:
+          "Stay up-to-date with the latest mobile-friendly casinos and emerging sites in <current year>. Enjoy seamless gaming on the go with our recommendations for top-notch mobile casinos.",
+      },
+      {
+        title: "Best Casino Bonuses",
+        description:
+          "Maximize your gaming experience with exclusive deals, including sign-up bonuses, welcome offers, and ongoing promotions. We spotlight the best bonuses to boost your bankroll.",
+      },
+      {
+        title: "Real-Money Gaming",
+        description:
+          "Explore a wide range of real-money games, from classic table games like blackjack and roulette to cutting-edge slots and live casino experiences.",
+      },
+    ],
+  };
   const faq = {
-    t: "Frequently Asked Questions from UK Players",
-    p: "We conducted detailed research to create this guide on the top 10 casino sites in the UK. During our research, we discovered that British players often have common questions about online casinos. To address these, we have compiled a useful FAQ section with the answers you need.",
+    t: "Comprehensive Insights and FAQs",
+    p: "We understand that UK players often have questions about choosing the best online casinos. That’s why we’ve compiled an informative FAQ section, answering common queries about licensing, payment methods, game fairness, and more.",
     ques: [
       "Which are the top 10 online casinos in the UK?",
       "What is the best slots operator from the top 10 casino UK sites?",
@@ -19,54 +47,31 @@ export default function Content() {
       "The top-rated casino app in our guide to the 10 best online casino platforms for British players should be a priority. The recommended casino offers excellent mobile compatibility with iOS and Android devices. You can even download its advanced mobile app from the App Store or Google Play.",
     ],
   };
+
   return (
-    <div className="w-100 m-auto">
+    <div className="content-container w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Best UK Online Casinos: Top Sites, Games, and Bonuses for 2024
+        Best UK Online Casinos {curDate.getFullYear()} : Top Games & Bonuses
       </h1>
       <p>
-        Welcome to our online casino comparison site, your ultimate guide to
-        finding the best and most reliable casino sites in the UK. We are here
-        to help you discover top online casinos that offer exciting games, real
-        money prizes, and fantastic bonuses.
-      </p>
-      <p>
-        Our focus is on providing comprehensive information about casino sites,
-        including the newest and top-rated options available in 2023. We review
-        the best online casinos catering to UK players, making it easy for you
-        to navigate the vast and diverse world of online gambling.
-      </p>
-      <p>
-        We also offer valuable insights into mobile casinos and new online
-        casinos, ensuring you can enjoy the best gaming experience no matter
-        where you are. Our site keeps you updated on casino sites offering real
-        money games, including the latest and most popular online casino games.
-      </p>
-      <p>
-        Our top 10 online casinos list showcases the best options available in
-        the UK. Additionally, we provide information on top casino sites, online
-        games, and casinos. You can trust our advice to lead you to the best
-        casino sites in the UK.
-      </p>
-      <p>
-        We also feature a dedicated section for the best casino offers,
-        including sign-up bonuses, welcome offers, and other exciting
-        promotions. Our site helps players find the best deals and bonuses
-        available.
-      </p>
-      <p>
-        As the ultimate resource for finding the best casino sites in the UK, we
-        cover everything from the newest online casinos to the best real money
-        gaming experiences. Visit our online casino comparison site today and
-        start enjoying the best casino experience!
+        Welcome to the ultimate guide to the best online casinos in the UK for{" "}
+        {curDate.getFullYear()}! Whether you're a seasoned player or new to
+        online gaming, our expertly curated platform is here to help you
+        discover the finest, most trustworthy casino sites offering exciting
+        games, generous bonuses, and thrilling real-money prizes.
       </p>
 
-      <p>
-        We conducted detailed research to create this guide on the top 10 casino
-        sites in the UK. During our research, we discovered that British players
-        often have common questions about online casinos. To address these, we
-        have compiled a useful FAQ section with the answers you need.
-      </p>
+      <div id={why.id}>
+        <h2>{why.h2}</h2>
+        <ol>
+          {why.ol.map((li, i) => (
+            <li key={i}>
+              <h3>{li.title}</h3>
+              <p>{li.description}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
 
       <div className="faq">
         <h1 className="fw-bold text-white">{faq.t}</h1>

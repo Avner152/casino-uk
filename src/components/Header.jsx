@@ -17,24 +17,10 @@ export default function Header() {
 
   const menu = [
     {
-      title: "Information",
-      list: [
-        { name: "About Us", url: "/about-us" },
-        { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
-        { name: "Privacy Policy", url: "/privacy-policy" },
-      ],
-    },
-
-    {
-      title: "Information pages",
+      title: "Top Pages",
       list: [
         {
-          name: "Table Games",
-          url: "/table-games",
-        },
-        {
-          name: "Top Crash Games ",
+          name: "Crash Games ",
           url: "/top-crash-games",
         },
         {
@@ -45,6 +31,19 @@ export default function Header() {
           name: "Slots Games ",
           url: "/slots-games",
         },
+        {
+          name: "Table Games",
+          url: "/table-games",
+        },
+      ],
+    },
+    {
+      title: "Information",
+      list: [
+        { name: "About Us", url: "/about-us" },
+        { name: "Cookies Policy", url: "/cookie-consent-policy" },
+        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
   ];
@@ -76,10 +75,10 @@ export default function Header() {
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
             <NavLink to="/">
-              <img src={logo} width={220} alt="logo" height={40} />
+              <img src={logo} width={220} alt="logo" height={30} />
             </NavLink>
             <Nav className="fs-6 gap-3">
-              {menu[1].list.map((item, i) => (
+              {menu[0].list.map((item, i) => (
                 <NavLink className="my-nav text-white" to={item.url} key={i}>
                   {item.name}
                 </NavLink>
@@ -113,9 +112,9 @@ export default function Header() {
                   >
                     <img
                       src={logo}
-                      width={120}
+                      width={125}
                       alt="logo"
-                      height={25}
+                      height={20}
                       className="_mt-2"
                     />
                   </Link>
