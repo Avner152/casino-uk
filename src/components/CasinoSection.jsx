@@ -15,7 +15,7 @@ const CasinoSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
   captchaToken = true;
 
-  const location = useLocation();
+  // const location = useLocation();
   // const search =
   //   captchaToken !== undefined && !captchaToken
   //     ? "none regulated"
