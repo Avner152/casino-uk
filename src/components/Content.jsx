@@ -14,8 +14,7 @@ export default function Content() {
       },
       {
         title: "Mobile and New Casinos",
-        description:
-          "Stay up-to-date with the latest mobile-friendly casinos and emerging sites in <current year>. Enjoy seamless gaming on the go with our recommendations for top-notch mobile casinos.",
+        description: `Stay up-to-date with the latest mobile-friendly casinos and emerging sites in ${curDate.getFullYear()}. Enjoy seamless gaming on the go with our recommendations for top-notch mobile casinos.`,
       },
       {
         title: "Best Casino Bonuses",

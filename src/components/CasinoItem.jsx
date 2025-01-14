@@ -39,7 +39,7 @@ const CasinoItem = ({ item }) => {
             <div className="d-flex flex-column gap-2">
               <div
                 style={{
-                  background: `conic-gradient(rgb(252, 148, 38) ${
+                  background: `conic-gradient(rgb(255 215 42) ${
                     item.score * 10
                   }%, #de811d6a 0 100%`,
                 }}

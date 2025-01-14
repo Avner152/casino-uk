@@ -536,20 +536,6 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  body {
-    background-image: unset;
-  }
-  .casino-container {
-    background-repeat: no-repeat;
-    background-image: url(./assets/bg.webp);
-    /* background-image: url(./assets/bg-3.jpg); */
-    background-position: center 0;
-    -webkit-background-position: center 0;
-    background-attachment: fixed;
-    /* background-color: #000000; */
-  }
-}
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
   .rating {
     width: 3.7vw;
@@ -606,16 +592,36 @@ a:hover {
   font-size: 1.15rem;
 }
 
+.cookie-wrapper {
+  padding: 1.5rem 4rem !important;
+}
+
+.cookie-wrapper span {
+  width: 50%;
+}
+
 .cookie-button {
   font-size: 1rem;
   padding: 0.3rem 1.2rem;
 }
 
-.cookie-reject {
-  background: unset !important;
-  border: 2px solid #00d775;
+.cookie-accept {
+  background-color: #ffd72a;
+  color: #000;
+  font-weight: bold;
+  border: unset;
 }
 
+.cookie-reject {
+  background: unset !important;
+  border: 2px solid #ffd72a;
+}
+.cookie-accept:hover {
+  background-color: #ffd72acc;
+}
+.cookie-reject:hover {
+  border: 2px solid #ffd72a4a;
+}
 .ribbon {
   width: 140px;
   height: 140px;
@@ -883,5 +889,33 @@ a:hover {
   }
   .sticky div {
     font-size: 2.7vw;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: unset;
+  }
+
+  .cookie-wrapper {
+    padding: 7vw 8vw !important;
+  }
+
+  .cookie-button {
+    font-size: 4vw;
+  }
+
+  .cookie-wrapper span {
+    font-size: 3vw;
+    width: 60%;
+  }
+  .casino-container {
+    background-repeat: no-repeat;
+    background-image: url(./assets/bg.webp);
+    /* background-image: url(./assets/bg-3.jpg); */
+    background-position: center 0;
+    -webkit-background-position: center 0;
+    background-attachment: fixed;
+    /* background-color: #000000; */
   }
 }

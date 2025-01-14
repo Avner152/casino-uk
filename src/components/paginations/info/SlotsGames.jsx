@@ -3,94 +3,44 @@ import CasinoSection from "../../CasinoSection";
 import { Helmet } from "react-helmet";
 
 export default function LiveGames() {
+  const curDate = new Date();
   const titlePar = {
-    h1: "Best Table Games in the UK Casino Industry",
+    p: `Slot games have always been at the heart of the UK casino industry, captivating players with their exciting gameplay, stunning visuals, and huge win potential. Whether you're a newcomer to online slots or a seasoned player, ${curDate.getFullYear()} brings a wide variety of games that cater to all tastes. From classic fruit machines to modern video slots with innovative features, there’s something for everyone.`,
   };
 
-  const introduction = {
+  const why = {
     id: "par-1",
-    h2: "Introduction to Table Games in UK Casinos",
-    p: `The UK casino industry is renowned for its vibrant and diverse range of games, with table games standing as a cornerstone of this exciting world. From the elegance of roulette to the strategic depth of blackjack and poker, table games attract players seeking a blend of skill, chance, and thrilling entertainment.\nWhether you’re a seasoned pro or a newcomer, table games offer something for everyone. This guide explores the most popular table games in UK casinos, along with tips to improve your experience and maximize your chances of success.`,
+    h4: "🎰 Why Are Slot Games So Popular in the UK?",
+    ul: [
+      "Variety of Themes: Slots offer a wide range of themes, from ancient civilizations to fantasy worlds, ensuring that every player finds a game that suits their style.",
+      "Huge Jackpots: Many slot games feature progressive jackpots, where the prize pool grows with every spin, offering the chance to win life-changing amounts.",
+      "Simple to Play: With easy-to-understand mechanics, slots are perfect for players of all experience levels. Whether you’re a beginner or an expert, you can start spinning and winning in no time.",
+    ],
   };
 
   const popularGames = {
     id: "par-2",
-    h2: "Popular Table Games in UK Casinos",
-    inner: [
-      {
-        h3: "Roulette – The Iconic Casino Classic",
-        p: "Roulette is one of the most iconic games in the UK casino scene. Known for its spinning wheel and the thrill of predicting where the ball will land, roulette is a game of chance that has captivated players for centuries. UK casinos typically feature European roulette, which offers better odds compared to its American counterpart due to its single zero layout.",
-        ul: [
-          {
-            prefix: "Tips for Playing Roulette:",
-            list: [
-              "Focus on outside bets (e.g., red/black, odd/even) for a higher chance of winning.",
-              "Learn about common strategies like the Martingale or Fibonacci systems.",
-            ],
-          },
-        ],
-      },
-      {
-        h3: "Blackjack – The Game of Strategy",
-        p: "Blackjack remains a favorite among UK casino enthusiasts for its simple rules and potential for skillful play. The goal is to beat the dealer by achieving a hand value as close to 21 as possible without exceeding it.",
-        ul: [
-          {
-            prefix: "Why Blackjack Stands Out:",
-            list: [
-              "Low house edge compared to many other table games.",
-              "Opportunity to use strategies like card counting (where permitted).",
-              "Quick Tip: Practice basic strategy charts to enhance your decision-making and reduce the house edge.",
-            ],
-          },
-        ],
-      },
-      {
-        h3: "Poker – Test Your Wits",
-        p: "Poker is not just a game of cards; it’s a game of wits and psychology. From Texas Hold’em to Omaha, UK casinos host a variety of poker formats that cater to all skill levels. Many casinos also feature live poker tournaments with attractive prize pools.",
-        ul: [
-          {
-            prefix: "Essential Poker Skills:",
-            list: [
-              "Mastering the art of bluffing and reading opponents.",
-              "Knowing when to fold to minimize losses.",
-            ],
-          },
-        ],
-      },
-      {
-        h3: "Baccarat – Elegance and Simplicity",
-        p: "Baccarat is often associated with sophistication and high-stakes play, but it’s surprisingly simple to learn. The game involves betting on the banker, player, or a tie. It’s a favorite among players who enjoy straightforward gameplay with minimal decision-making.",
-        ul: [
-          {
-            prefix: "Baccarat Variations:",
-            list: [
-              "Punto Banco is the most common version in UK casinos.",
-              "Mini Baccarat offers lower stakes for casual players.",
-            ],
-          },
-        ],
-      },
+    h4: "🌟 Popular Slot Games in UK Casinos",
+    ul: [
+      "Classic Slots: For those who love nostalgia, classic fruit machines offer straightforward gameplay with big win potential.",
+      "Video Slots: Modern video slots bring exciting features like bonus rounds, free spins, and multipliers. Games like Starburst and Gonzo's Quest continue to captivate UK players with their innovative designs and mechanics.",
+      "Progressive Jackpot Slots: Chase massive payouts with popular progressive jackpots like Mega Moolah and Hall of Gods, which can turn a single spin into a life-altering win.",
     ],
   };
 
-  const responsible = {
+  const tips = {
     id: "par-3",
-    h2: "Responsible Gambling in the UK",
-    ul: {
-      prefix:
-        "While live games are thrilling, it’s important to maintain control:",
-      list: [
-        "Use tools like deposit and loss limits provided by UK casinos.",
-        "Take breaks to avoid prolonged play.",
-        "Seek support if gambling stops being enjoyable.",
-      ],
-    },
+    h4: "💡 Tips for Playing Slot Games",
+    ul: [
+      "Understand the RTP: Check the Return to Player (RTP) percentage for each slot to gauge the odds of winning over time.",
+      "Start Small: Begin with smaller bets to explore the game and learn its features before going for higher stakes.",
+      "Take Advantage of Bonuses: Look out for casino promotions like free spins or no-wagering bonuses to maximize your gameplay without spending more.",
+    ],
   };
 
   const meta = {
-    title: "Top Live Games in the UK Casino Industry: A Guide for Players",
-    description:
-      "Explore the best live games in the UK casino industry. Discover live blackjack, roulette, poker, and game shows with tips to enhance your live casino experience",
+    title: `Top Slot Games in the UK ${curDate.getFullYear()}: Big Wins & Exciting Features`,
+    description: `Explore the best slot games in the UK for ${curDate.getFullYear()}. Play exciting video slots, classic machines, and progressive jackpots. Discover tips, top games, and play responsibly for a thrilling casino experience!"`,
   };
 
   return (
@@ -99,54 +49,99 @@ export default function LiveGames() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Helmet>
-      <CasinoSection />
-      <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
-        <div className="mt-4">
-          <h1>{titlePar.h1}</h1>
-        </div>
 
-        <div id={introduction.id} className="mt-4">
-          <h2>{introduction.h2}</h2>
-          {introduction.p.split("\n").map((pi, i) => (
-            <p key={i}>{pi}</p>
-          ))}
-        </div>
+      <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
+        <h2>
+          Discover the Best Slot Games in the UK for {curDate.getFullYear()}
+        </h2>
+        <p>
+          Spin the reels and explore the exciting world of online slots with the
+          best UK casinos of the year.
+        </p>
 
-        <div id={popularGames.id} className="mt-4">
-          <h2>{popularGames.h2}</h2>
+        <p>
+          🎰 Top Slot Games: Play the latest and most popular slot games
+          featuring exciting themes, big jackpots, and innovative features.
+        </p>
+        <p>
+          💸 High Payout Potential: Unlock thrilling opportunities for big wins
+          with high RTP slots and progressive jackpots.
+        </p>
+        <p>
+          🔒 Safe & Secure: Enjoy a tips and secure gaming experience at
+          top-rated UK casinos, all licensed and regulated for fair play.
+        </p>
+        <p>
+          Start spinning today and experience the ultimate slot gaming action in
+          {curDate.getFullYear()}!
+        </p>
+        <CasinoSection />
 
-          {popularGames.inner.map((game, i) => (
-            <div key={i} className="mt-3">
-              <h3>{game.h3}</h3>
+        <div className="p-4">
+          <p>{titlePar.p}</p>
 
-              {game.ul.map((g, j) => (
-                <React.Fragment key={j}>
-                  <span className="fw-bold">{g.prefix}</span>
-                  <ul>
-                    {g.list.map((li, k) => (
-                      <li key={k}>{li}</li>
-                    ))}
-                  </ul>
-                </React.Fragment>
+          <div id={why.id} className="mt-4">
+            <h4>{why.h4}</h4>
+
+            <ul>
+              {why.ul.map((li, i) => (
+                <li key={i}>
+                  {li.split(":").map((sp, k) => (
+                    <span className={!k ? "fw-bold" : ""} key={k}>
+                      {sp} {!k ? ":" : ""}
+                    </span>
+                  ))}
+                </li>
               ))}
-            </div>
-          ))}
-        </div>
+            </ul>
+          </div>
 
-        <div id={responsible.id} className="mt-4">
-          <h2>{responsible.h2}</h2>
-          <span className="fw-bold">{responsible.ul.prefix}</span>
-          <ul>
-            {responsible.ul.list.map((li, i) => (
-              <li key={i}>
-                {li.split(":").map((sp, k) => (
-                  <span className={!k ? "fw-bold" : ""} key={k}>
-                    {sp} {!k ? ":" : ""}
-                  </span>
-                ))}
-              </li>
-            ))}
-          </ul>
+          <div id={popularGames.id} className="mt-4">
+            <h4>{popularGames.h4}</h4>
+            <ul>
+              {popularGames.ul.map((li, i) => (
+                <li key={i}>
+                  {li.split(":").map((sp, k) => (
+                    <span className={!k ? "fw-bold" : ""} key={k}>
+                      {sp} {!k ? ":" : ""}
+                    </span>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div id={tips.id} className="mt-4">
+            <h4>{tips.h4}</h4>
+
+            <ul>
+              {tips.ul.map((li, i) => (
+                <li key={i}>
+                  {li.split(":").map((sp, k) => (
+                    <span className={!k ? "fw-bold" : ""} key={k}>
+                      {sp} {!k ? ":" : ""}
+                    </span>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <p>
+              With so many options, from low-stakes casual games to high-roller
+              jackpots, {curDate.getFullYear()} is an exciting year for slot
+              enthusiasts. Dive into the vibrant world of slot games, where
+              every spin brings a new adventure, and start your journey towards
+              big wins today!
+            </p>
+            <p>
+              Play Responsibly While slots are thrilling and fun, it’s important
+              to play responsibly. Set a budget, take regular breaks, and make
+              sure to play within your limits to ensure a safe and enjoyable
+              gaming experience.
+            </p>
+          </div>
         </div>
       </div>
     </>
