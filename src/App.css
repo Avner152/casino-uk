@@ -44,7 +44,7 @@ body {
 .desktop-header {
   position: fixed !important;
   background-color: #000000dd;
-  padding: 0 50px 10px;
+  padding: 0 50px;
   z-index: 9999;
 }
 
@@ -460,6 +460,7 @@ a:hover {
   display: flex;
   position: absolute;
   top: 0;
+  height: 66px;
 }
 
 .information {
@@ -608,7 +609,6 @@ a:hover {
 .cookie-accept {
   background-color: #ffd72a;
   color: #000;
-  font-weight: bold;
   border: unset;
 }
 
@@ -616,11 +616,13 @@ a:hover {
   background: unset !important;
   border: 2px solid #ffd72a;
 }
-.cookie-accept:hover {
-  background-color: #ffd72acc;
+.cookie-accept:hover,
+.cookie-accept:focus {
+  background-color: #ffd72acc !important;
 }
-.cookie-reject:hover {
-  border: 2px solid #ffd72a4a;
+.cookie-reject:hover,
+.cookie-reject:focus {
+  border: 2px solid #ffd72a4a !important;
 }
 .ribbon {
   width: 140px;
@@ -740,10 +742,6 @@ a:hover {
 
 /* MAC */
 @media screen and (min-width: 769px) and (max-width: 1440px) {
-  .header {
-    width: 75% !important;
-  }
-
   .top-card .btn {
     padding: 0.6rem 2.05rem;
     font-size: 1.25vw;

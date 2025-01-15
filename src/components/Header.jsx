@@ -70,7 +70,7 @@ export default function Header() {
       <div
         className={`w-100 d-flex ${
           !isDesktop && "justify-content-between"
-        } align-items-center mt-3 fs-2`}
+        } align-items-center fs-2`}
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
