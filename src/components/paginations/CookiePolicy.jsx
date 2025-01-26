@@ -13,20 +13,13 @@ export default function CookiePolicy() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Helmet>
-      <div className="text-bg-dark text-white _pt-5 _pb-5 mb-3 mt-3 information">
+      <div className="text-bg-dark text-white pt-5 _pb-5 mb-3 mt-3 information">
         <div className="m-auto">
-          <div>
-            <div className="d-flex align-items-center gap-3">
-              <h1>Cookie Policy</h1>
-              <span>18+</span>
-            </div>
-            <span>
-              Last Updated:{" "}
-              {curDate.toLocaleString("default", { month: "long" })}{" "}
-              {String(curDate.getDate()).padStart(2, "0")},{" "}
-              {curDate.getFullYear()}
-            </span>
-          </div>
+          <span>
+            Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
+            {String(curDate.getDate()).padStart(2, "0")},{" "}
+            {curDate.getFullYear()}
+          </span>
 
           <p>
             This Cookie Policy ("Policy") applies to websites operated by

@@ -50,33 +50,9 @@ export default function LiveGames() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
+      <CasinoSection />
+
       <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
-        <h2>
-          Discover the Best Slot Games in the UK for {curDate.getFullYear()}
-        </h2>
-        <p>
-          Spin the reels and explore the exciting world of online slots with the
-          best UK casinos of the year.
-        </p>
-
-        <p>
-          🎰 Top Slot Games: Play the latest and most popular slot games
-          featuring exciting themes, big jackpots, and innovative features.
-        </p>
-        <p>
-          💸 High Payout Potential: Unlock thrilling opportunities for big wins
-          with high RTP slots and progressive jackpots.
-        </p>
-        <p>
-          🔒 Safe & Secure: Enjoy a tips and secure gaming experience at
-          top-rated UK casinos, all licensed and regulated for fair play.
-        </p>
-        <p>
-          Start spinning today and experience the ultimate slot gaming action in
-          {curDate.getFullYear()}!
-        </p>
-        <CasinoSection />
-
         <div className="p-4">
           <p>{titlePar.p}</p>
 

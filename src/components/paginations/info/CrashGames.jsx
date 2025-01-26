@@ -42,36 +42,9 @@ export default function CrashGames() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Helmet>
+
+      <CasinoSection />
       <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
-        <h2>
-          Explore the Top Crash Games in the UK for {curDate.getFullYear()}
-        </h2>
-        <p>
-          Take your gaming experience to the next level with the most exciting
-          crash games of the year!
-        </p>
-
-        <p>
-          🚀 Fast-Paced Thrills: Enjoy adrenaline-pumping gameplay where quick
-          decisions can lead to big wins. Perfect for those who love
-          action-packed casino fun!
-        </p>
-        <p>
-          📈 Top-Rated Platforms: Discover trusted UK casinos offering the best
-          crash games with secure and fair play.
-        </p>
-        <p>
-          🎮 Modern Innovation: Experience crash games with cutting-edge
-          features, sleek designs, and engaging mechanics tailored for UK
-          players.
-        </p>
-
-        <p>
-          Play responsibly and enjoy the rush of the top crash games in{" "}
-          {curDate.getFullYear()}!
-        </p>
-
-        <CasinoSection />
         <div className="mt-4">
           <h2>{topPar.h2}</h2>
           <p>{topPar.p}</p>

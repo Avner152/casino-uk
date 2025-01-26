@@ -57,35 +57,9 @@ export default function LiveGames() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Helmet>
-      <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
-        <div>
-          <h2>
-            Experience the Best Live Casino Games in the UK for{" "}
-            {curDate.getFullYear()}
-          </h2>
-          <p>
-            Step into the action with the most immersive live casino games,
-            bringing the thrill of a real casino straight to your screen.
-          </p>
-          <p>
-            🎥 Real-Time Gameplay: Interact with professional dealers and other
-            players in HD-streamed games like blackjack, roulette, and baccarat.
-          </p>
-          <p>
-            🎮 Top Platforms Reviewed: Discover the UK’s best online casinos
-            offering seamless live gaming experiences.
-          </p>
-          <p>
-            🔒 Safe & Secure: Enjoy fair play and responsible gaming on trusted,
-            licensed UK platforms.
-          </p>
 
-          <p>
-            Take your seat at the table and elevate your gaming experience in{" "}
-            {curDate.getFullYear()}!
-          </p>
-        </div>
-        <CasinoSection />
+      <CasinoSection />
+      <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
         <div className="p-4">
           <div>
             <h2>{topPar.h2}</h2>

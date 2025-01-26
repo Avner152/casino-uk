@@ -38,40 +38,10 @@ export default function TableGames() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Helmet>
+
+      <CasinoSection />
+
       <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
-        <h2>
-          Table Games: The Timeless Heart of UK Casinos in{" "}
-          {curDate.getFullYear()}
-        </h2>
-        <p>
-          Dive into the rich legacy and exciting future of table games, where
-          tradition meets innovation.
-        </p>
-
-        <div className="mt-2 mb-2">
-          <p>
-            🎲 Centuries of History: Explore the evolution of iconic games like
-            roulette, blackjack, and poker, from their ancient roots to their
-            place as UK casino staples.
-          </p>
-          <p>
-            🃏 Strategy Meets Social Play: Experience the perfect blend of
-            skill, chance, and camaraderie, whether at a casino table or via
-            immersive online platforms.
-          </p>
-          <p>
-            🌟 The Future Awaits: Discover how cutting-edge technology like VR,
-            AR, and live dealers are redefining the way UK players enjoy table
-            games today.
-          </p>
-
-          <p>
-            Celebrate the enduring appeal of table games-classics that continue
-            to captivate generations!
-          </p>
-        </div>
-        <CasinoSection />
-
         <div className="mt-4">
           <h4>{topPar.h4}</h4>
           {topPar.p.split("\n").map((pi, i) => (

@@ -16,7 +16,6 @@ export default function PrivacyPolicy() {
       </Helmet>
       <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="m-auto pt-3">
-          <h1>Privacy Policy</h1>
           <span>
             Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
             , {curDate.getFullYear()}
