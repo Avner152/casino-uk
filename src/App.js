@@ -36,7 +36,7 @@ const App = () => {
             body: JSON.stringify({ token }),
           })
             .then((response) => {
-              // console.log(response);
+              console.log(response);
 
               setCaptchaToken(response.ok);
             })
