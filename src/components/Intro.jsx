@@ -62,10 +62,6 @@ const Intro = observer(() => {
   };
 
   useEffect(() => {
-    headlineHandler();
-  }, [location]);
-
-  const headlineHandler = () => {
     switch (location.pathname) {
       default:
         return setPage("");
@@ -91,7 +87,7 @@ const Intro = observer(() => {
         setPage("privacy");
         break;
     }
-  };
+  }, [location]);
 
   return (
     <div className="intro mt-5 tit-n-des text-white p-3">
