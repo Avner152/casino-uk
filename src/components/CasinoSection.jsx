@@ -48,7 +48,9 @@ const CasinoSection = observer(({ captchaToken }) => {
 
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
-          myStore.updateList(res.data.list[0].brands);
+          myStore.updateList(
+            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
+          );
         })
         .catch((err) => console.log(err));
     };
