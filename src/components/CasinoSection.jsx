@@ -66,13 +66,7 @@ const CasinoSection = observer(({ captchaToken }) => {
     {
       name: "uk",
       text: "UK",
-      addOn: `${
-        myStore.type === "blanca"
-          ? "Licensed"
-          : myStore.type === "negra"
-          ? "Non-Gamstop"
-          : ""
-      }`,
+      addOn: `${myStore.type === "blanca" ? "Licensed" : ""}`,
     },
     {
       name: "security",
