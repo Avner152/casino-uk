@@ -18,7 +18,7 @@ const CasinoSection = observer(({ captchaToken }) => {
   const location = useLocation();
   const search =
     captchaToken !== undefined && !captchaToken
-      ? "none regulated"
+      ? "special-and-hard-coded"
       : location.search;
 
   // const search = "";
@@ -28,7 +28,7 @@ const CasinoSection = observer(({ captchaToken }) => {
     if (list.length) return;
 
     const url = `${process.env.REACT_APP_SERVER_URI}/uk`;
-    const headers = { safety: "daniel" };
+    const headers = { segment: "viral" };
 
     const fetchIp = async () => {
       try {
