@@ -42,10 +42,6 @@ const CasinoSection = observer(({ captchaToken }) => {
       axios
         .post(url, { search, referrer: document.referrer, userIp }, { headers })
         .then((res) => {
-          // console.log(userIp);
-
-          // console.log(res.data);
-
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
@@ -126,12 +122,7 @@ const CasinoSection = observer(({ captchaToken }) => {
         >
           {isMobile ? (
             <NavLink href={casino.href} target="_blank">
-              <CasinoItemMobile
-                key={k}
-                item={casino}
-
-                // src={brands["rolino.png"]}
-              />
+              <CasinoItemMobile key={k} item={casino} />
             </NavLink>
           ) : (
             <NavLink href={casino.url} target="_blank">
