@@ -553,12 +553,11 @@ a:hover {
   }
 }
 
-/* @media only screen and (max-width: 320px) {
-  .square img {
-    width: 40vw !important;
-    height: 15vw !important;
+@media only screen and (max-width: 320px) {
+  .ribbon-2 {
+    font-size: 3.5vw;
   }
-} */
+}
 
 /* TEST */
 
@@ -696,10 +695,10 @@ a:hover {
   background: #ffd72a;
   position: relative;
 }
-.ribbon-2:after,
+/* .ribbon-2:after, */
 .ribbon-2:before,
 .ribbon-text:before,
-.ribbon-text:after,
+/* .ribbon-text:after, */
 .ribbon-bold:before {
   content: "";
   position: absolute;
@@ -848,7 +847,7 @@ a:hover {
     padding: 5px;
   }
   .top-card {
-    min-height: 45vw;
+    min-height: 50vw;
     padding: 1vw 1.25vw 0.75vw 1.25vw;
     max-height: 400px;
     z-index: 9;

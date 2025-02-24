@@ -1,12 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
-
 import { toJS } from "mobx";
 
-const CasinoItemMobile = observer(({ item }) => {
+const CasinoItemMobile = observer(({ item, index }) => {
   const [clicked, setClicked] = useState(false);
+  const score = 10 - (index + 1) / 10;
 
   return (
     <div className="my-card" onClick={() => window.open(item.url, "_blank")}>
@@ -16,9 +16,8 @@ const CasinoItemMobile = observer(({ item }) => {
         </p>
       )}
       <div className="top-card d-flex justify-content-around align-items-center ">
-        <div className="square">
+        <div className="mt-3 d-flex flex-column justify-content-center align-items-center gap-1 square">
           <img
-            
             className="rounded"
             alt={item.name}
             width={220}
@@ -29,6 +28,17 @@ const CasinoItemMobile = observer(({ item }) => {
               ]
             }
           />
+          <div className="d-flex gap-3 w-100 align-items-center justify-content-center">
+            <div className="fs-3 fw-bold text-center">{score}</div>
+            <div className="d-flex flex-column align-items-center">
+              <span className="border-left border-white">Our score</span>
+              <div>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="star" />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="card-content text-white _d-flex _flex-column">

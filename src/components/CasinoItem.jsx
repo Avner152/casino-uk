@@ -4,7 +4,9 @@ import { useMediaQuery } from "react-responsive";
 import { importImages } from "../App";
 // import ParamItem from "./ParamItem";
 
-const CasinoItem = ({ item }) => {
+const CasinoItem = ({ item, index }) => {
+  const score = 10 - (index + 1) / 10;
+
   const srcTerm = `${item.name.toLowerCase().replaceAll(" ", "-")}.png`;
   const brands = importImages(
     require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
@@ -40,12 +42,12 @@ const CasinoItem = ({ item }) => {
               <div
                 style={{
                   background: `conic-gradient(rgb(255 215 42) ${
-                    item.score * 10
+                    score * 10
                   }%, #de811d6a 0 100%`,
                 }}
                 className="rating good"
               >
-                <span>{item.score}</span>
+                <span>{score}</span>
               </div>
               <div>Rating</div>
             </div>

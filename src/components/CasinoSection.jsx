@@ -2,7 +2,6 @@ import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
 import CasinoItemMobile from "./CasinoItemMobile";
-import { NavLink } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -120,15 +119,13 @@ const CasinoSection = observer(({ captchaToken }) => {
           cascade
           triggerOnce
         >
-          {isMobile ? (
-            <NavLink href={casino.href} target="_blank">
-              <CasinoItemMobile key={k} item={casino} />
-            </NavLink>
-          ) : (
-            <NavLink href={casino.url} target="_blank">
-              <CasinoItem key={k} item={casino} />
-            </NavLink>
-          )}
+          <div onClick={() => window.open(casino.url, "_blank")}>
+            {isMobile ? (
+              <CasinoItemMobile key={k} item={casino} index={k} />
+            ) : (
+              <CasinoItem key={k} item={casino} index={k} />
+            )}
+          </div>
         </Fade>
       ))}
     </div>
