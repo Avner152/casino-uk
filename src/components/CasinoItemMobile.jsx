@@ -4,12 +4,12 @@ import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
 import { toJS } from "mobx";
 
-const CasinoItemMobile = observer(({ item, index }) => {
+const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
   const score = 10 - (index + 1) / 10;
 
   return (
-    <div className="my-card" onClick={() => window.open(item.url, "_blank")}>
+    <div className="my-card" onClick={() => window.open(fixedURL, "_blank")}>
       {item.ribbonText && (
         <p className="ribbon-2 text-capitalize">
           <span className="ribbon-text">{item.ribbonText}</span>
@@ -52,7 +52,7 @@ const CasinoItemMobile = observer(({ item, index }) => {
           <Button
             onClick={() => {
               setClicked(!clicked);
-              window.open(item.url, "_blank");
+              window.open(fixedURL, "_blank");
             }}
           >
             {clicked ? "Visit Again" : "Get Bonus"}

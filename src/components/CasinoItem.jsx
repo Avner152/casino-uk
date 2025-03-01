@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import { importImages } from "../App";
-// import ParamItem from "./ParamItem";
 
-const CasinoItem = ({ item, index }) => {
+const CasinoItem = ({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
 
   const srcTerm = `${item.name.toLowerCase().replaceAll(" ", "-")}.png`;
@@ -54,23 +53,11 @@ const CasinoItem = ({ item, index }) => {
           </div>
         )}
 
-        {/* <div className="params">
-          <div className="row">
-            {params.map((param, k) => (
-              <ParamItem
-                key={k}
-                icon={importedIcons[`${param.icon}.svg`]}
-                text={param.text}
-              />
-            ))}
-          </div>
-        </div> */}
-
         <div className="d-flex flex-column col-md-3">
           <Button
             onClick={() => {
               setClicked(!clicked);
-              window.open(item.url, "_blank");
+              window.open(fixedURL, "_blank");
             }}
           >
             {clicked ? "Visit Again" : "Get Bonus"}

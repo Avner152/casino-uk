@@ -15,6 +15,8 @@ const CasinoSection = observer(({ captchaToken }) => {
   captchaToken = true;
 
   const location = useLocation();
+  const mid = location.search.split("msclkid=")[1] || "";
+
   const search =
     captchaToken !== undefined && !captchaToken
       ? "special-and-hard-coded"
@@ -111,23 +113,29 @@ const CasinoSection = observer(({ captchaToken }) => {
           </div>
         ))}
       </div>
-      {toJS(myStore.list).map((casino, k) => (
-        <Fade
-          key={k}
-          direction="left"
-          // delay={isDesktop ? k * 100 : 0}
-          cascade
-          triggerOnce
-        >
-          <div onClick={() => window.open(casino.url, "_blank")}>
-            {isMobile ? (
-              <CasinoItemMobile key={k} item={casino} index={k} />
-            ) : (
-              <CasinoItem key={k} item={casino} index={k} />
-            )}
-          </div>
-        </Fade>
-      ))}
+      {toJS(myStore.list).map((casino, k) => {
+        const fixedURL = casino.url.replace("{msclkid}", mid);
+
+        return (
+          <Fade
+            key={k}
+            direction="left"
+            // delay={isDesktop ? k * 100 : 0}
+            cascade
+            triggerOnce
+          >
+            {/*   const fixedURL = item.url.replace("{msclkid}", mid);
+             */}
+            <div onClick={() => window.open(fixedURL, "_blank")}>
+              {isMobile ? (
+                <CasinoItemMobile key={k} item={casino} index={k} />
+              ) : (
+                <CasinoItem key={k} item={casino} index={k} />
+              )}
+            </div>
+          </Fade>
+        );
+      })}
     </div>
   );
 });
