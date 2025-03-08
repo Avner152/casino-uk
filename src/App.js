@@ -20,11 +20,10 @@ export function importImages(r) {
 
 const App = () => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const [captchaToken, setCaptchaToken] = useState(null);
-  const [captchaToken, setCaptchaToken] = useState(true);
+  const [captchaToken, setCaptchaToken] = useState(null);
 
   const [hasCookie, setCookieStatus] = useState(
-    getCookie("uk-cookie") ? true : false
+    getCookie("uk-sefty-cookie") ? true : false
   );
 
   function TurnstileWidget() {
