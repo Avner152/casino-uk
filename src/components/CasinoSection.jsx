@@ -114,11 +114,7 @@ const CasinoSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {toJS(myStore.list).map((casino, k) => {
-        console.log(casino.url);
-        console.log(" >>");
-
         const fixedURL = casino.url.replace("{msclkid}", mid);
-        console.log(fixedURL);
 
         return (
           <Fade
