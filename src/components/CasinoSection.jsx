@@ -114,7 +114,11 @@ const CasinoSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {toJS(myStore.list).map((casino, k) => {
+        console.log(casino.url);
+        console.log(" >>");
+
         const fixedURL = casino.url.replace("{msclkid}", mid);
+        console.log(fixedURL);
 
         return (
           <Fade
@@ -124,13 +128,21 @@ const CasinoSection = observer(({ captchaToken }) => {
             cascade
             triggerOnce
           >
-            {/*   const fixedURL = item.url.replace("{msclkid}", mid);
-             */}
             <div onClick={() => window.open(fixedURL, "_blank")}>
               {isMobile ? (
-                <CasinoItemMobile key={k} item={casino} index={k} />
+                <CasinoItemMobile
+                  key={k}
+                  item={casino}
+                  index={k}
+                  fixedURL={fixedURL}
+                />
               ) : (
-                <CasinoItem key={k} item={casino} index={k} />
+                <CasinoItem
+                  key={k}
+                  item={casino}
+                  index={k}
+                  fixedURL={fixedURL}
+                />
               )}
             </div>
           </Fade>

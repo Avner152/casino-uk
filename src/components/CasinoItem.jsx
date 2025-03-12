@@ -4,6 +4,8 @@ import { useMediaQuery } from "react-responsive";
 import { importImages } from "../App";
 
 const CasinoItem = ({ item, index, fixedURL }) => {
+  console.log(fixedURL);
+
   const score = 10 - (index + 1) / 10;
 
   const srcTerm = `${item.name.toLowerCase().replaceAll(" ", "-")}.png`;
