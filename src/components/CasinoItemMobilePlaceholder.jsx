@@ -14,7 +14,7 @@ export default function CasinoItemMobilePlaceholder() {
           />
           <div className="_d-flex gap-3 w-100 align-items-center justify-content-center">
             <div className="d-flex flex-column align-items-center">
-              <span className="border-left text-white border-white">
+              <span className="border-left text-white border-white mt-2">
                 Our score
               </span>
               <Placeholder
@@ -22,11 +22,8 @@ export default function CasinoItemMobilePlaceholder() {
                 as={Card.Text}
                 animation="wave"
               >
-                <Placeholder bg="light" xs={2} />{" "}
-                <Placeholder bg="light" xs={2} />{" "}
-                <Placeholder bg="light" xs={2} />{" "}
-                <Placeholder bg="light" xs={2} />{" "}
-                <Placeholder bg="light" xs={2} />{" "}
+                <Placeholder bg="light" xs={5} />{" "}
+                <Placeholder bg="light" xs={5} />{" "}
               </Placeholder>
             </div>
           </div>
