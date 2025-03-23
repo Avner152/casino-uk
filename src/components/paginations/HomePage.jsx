@@ -18,7 +18,7 @@ export default function HomePage({ captchaToken }) {
         <title>{meta.title}</title>
       </Helmet>
       {/* {captchaToken === null ? ( */}
-      {captchaToken === null || 1 ? (
+      {captchaToken === null ? (
         <div className="mt-5 mb-4 gap-2 d-flex flex-column justify-content-center align-items-center m-auto overflow-hidden">
           {/* <Spinner style={{ color: "white" }} animation="border" /> */}
           {Array.from({ length: 5 }).map((_, i) => (
