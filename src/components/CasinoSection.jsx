@@ -114,14 +114,12 @@ const CasinoSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {toJS(myStore.list).map((casino, k) => {
-        console.log(mid);
-
         const fixedURL = casino.url.replace("{msclkid}", mid);
 
         return (
           <Fade
             key={k}
-            direction="left"
+            // direction="left"
             // delay={isDesktop ? k * 100 : 0}
             cascade
             triggerOnce

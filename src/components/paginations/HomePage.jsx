@@ -1,8 +1,10 @@
-import { Spinner } from "react-bootstrap";
 import CasinoSection from "../CasinoSection";
 import Content from "../Content";
 import { useMediaQuery } from "react-responsive";
 import { Helmet } from "react-helmet";
+import CasinoItemPlaceholder from "../CasinoItemPlaceholder";
+import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
+import React from "react";
 
 export default function HomePage({ captchaToken }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -15,10 +17,19 @@ export default function HomePage({ captchaToken }) {
       <Helmet>
         <title>{meta.title}</title>
       </Helmet>
+      {/* {captchaToken === null ? ( */}
       {captchaToken === null ? (
         <div className="mt-5 mb-4 gap-2 d-flex flex-column justify-content-center align-items-center m-auto overflow-hidden">
-          <Spinner style={{ color: "white" }} animation="border" />
-          <span className="text-white">Loading . . .</span>
+          {/* <Spinner style={{ color: "white" }} animation="border" /> */}
+          {Array.from({ length: 5 }).map((_, i) => (
+            <React.Fragment key={i}>
+              {isDesktop ? (
+                <CasinoItemPlaceholder />
+              ) : (
+                <CasinoItemMobilePlaceholder />
+              )}
+            </React.Fragment>
+          ))}
         </div>
       ) : (
         <>
