@@ -31,13 +31,31 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
           <div className="d-flex gap-3 w-100 align-items-center justify-content-center">
             <div className="fs-3 fw-bold text-center">{score}</div>
             <div className="d-flex flex-column align-items-center">
-              <span className="border-left text=white border-white">
+              <span className="border-left fs-7 text=white border-white">
                 Our score
               </span>
               <div>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="star" />
-                ))}
+                {Array.from({ length: Math.ceil(score - 5) }).map((_, i) => {
+                  return (
+                    <span
+                      key={i}
+                      style={
+                        score - 5 < i + 1
+                          ? {
+                              background: `linear-gradient(to right, #ffd600 ${
+                                (score % 1) * 100 > 50 ? 100 : 50
+                              }%, transparent ${
+                                (score % 1) * 100 <= 50 ? 50 : 50
+                              }%)`,
+                            }
+                          : score / 2 > i + 1
+                          ? { background: "#ffd600" }
+                          : null
+                      }
+                      className="star"
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>

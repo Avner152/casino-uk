@@ -219,7 +219,11 @@ ul svg {
 
 .star,
 .empty {
-  color: var(--golden);
+  /* color: var(--golden);
+   */
+  background: linear-gradient(to right, var(--golden) 65%, transparent);
+  -webkit-background-clip: text !important;
+  color: transparent;
   font-size: 1em;
 }
 
@@ -246,7 +250,7 @@ ul svg {
 .top-card .btn {
   font-weight: 600;
   background-color: #9d00ff;
-
+  background-color: #58cd36;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: #ffffff;
@@ -267,6 +271,7 @@ ul svg {
 .top-card .btn:hover,
 .top-card .btn:active {
   background: #9d00ffdd !important;
+  background: #58cd36dd !important;
 }
 
 .score h3,

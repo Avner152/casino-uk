@@ -118,13 +118,13 @@ const Intro = observer(() => {
               Check our {myStore.type === "negra" ? "Non-Gamestop" : ""} UK's
               Best Casinos Of {curDate.getFullYear()}
             </h1>
-            {isDesktop && (
+            {/* {isDesktop && (
               <p>
                 Top UK real money online casinos compared and reviewed. <br />
                 Check our list of the most popular British online casinos.
                 <br /> Play safely & responsibly
               </p>
-            )}
+            )} */}
           </div>
           {isDesktop && (
             <div>
