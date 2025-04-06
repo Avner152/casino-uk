@@ -29,7 +29,7 @@ const CasinoSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    const url = `${process.env.REACT_APP_SERVER_URI}/uk`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {
@@ -42,13 +42,22 @@ const CasinoSection = observer(({ captchaToken }) => {
     };
     const fetchData = async () => {
       axios
-        .post(url, { search, referrer: document.referrer, userIp }, { headers })
+        .post(
+          ENDPOINT,
+          { search, referrer: document.referrer, userIp },
+          { headers }
+        )
         .then((res) => {
+          console.log(res.data);
+
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
             res.data.list[0].brands.filter((brand) => !brand.isFrozen)
           );
+
+          if (res.data.list[0].content)
+            myStore.updateContent(res.data.list[0].content);
         })
         .catch((err) => console.log(err));
     };

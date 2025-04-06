@@ -46,7 +46,7 @@ const CasinoItem = ({ item, index, fixedURL }) => {
                 }}
                 className="rating good"
               >
-                <span>{score}</span>
+                <span>{score.toFixed(1)}</span>
               </div>
               <div>Rating</div>
             </div>

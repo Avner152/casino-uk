@@ -4,9 +4,11 @@ import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { toJS } from "mobx";
 
 const Intro = observer(() => {
   const curDate = new Date();
+  const fullYear = curDate.getFullYear();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const location = useLocation();
   const [page, setPage] = useState(null);
@@ -95,7 +97,7 @@ const Intro = observer(() => {
         <div className="text-white mb-5">
           <h1 className="intro-title fw-bold w-75">
             {headlineInfo[page].title}{" "}
-            {location.pathname.includes("games") && curDate.getFullYear()}
+            {location.pathname.includes("games") && fullYear}
           </h1>
           {headlineInfo[page].list && (
             <ul className="list-unstyled fw-bolder">
@@ -115,16 +117,13 @@ const Intro = observer(() => {
         >
           <div>
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              Check our {myStore.type === "negra" ? "Non-Gamestop" : ""} UK's
-              Best Casinos Of {curDate.getFullYear()}
+              {myStore.type === "blanca"
+                ? `Check our UK's Best Casinos Of ${fullYear}`
+                : toJS(myStore.content).firstTitle.replace(
+                    "{curDate}",
+                    fullYear
+                  )}
             </h1>
-            {/* {isDesktop && (
-              <p>
-                Top UK real money online casinos compared and reviewed. <br />
-                Check our list of the most popular British online casinos.
-                <br /> Play safely & responsibly
-              </p>
-            )} */}
           </div>
           {isDesktop && (
             <div>

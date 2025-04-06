@@ -2,8 +2,9 @@ import { observable, action, makeObservable } from "mobx";
 import { importImages } from "../App";
 
 class MyStore {
-  type = "";
+  type = "blanca";
   list = [];
+  content = null;
   brands = importImages(
     require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
   );
@@ -15,6 +16,8 @@ class MyStore {
       updateList: action,
       type: observable,
       updateType: action,
+      content: observable,
+      updateContent: action,
     });
   }
   updateList(newList) {
@@ -22,6 +25,9 @@ class MyStore {
   }
   updateType(newType) {
     this.type = newType;
+  }
+  updateContent(newContent) {
+    this.content = { ...newContent };
   }
 }
 

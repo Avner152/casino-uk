@@ -5,8 +5,11 @@ import { Helmet } from "react-helmet";
 import CasinoItemPlaceholder from "../CasinoItemPlaceholder";
 import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
 import React from "react";
+import { observer } from "mobx-react";
+import myStore from "../../mobX/Store";
+import ContentV2 from "../ContentV2";
 
-export default function HomePage({ captchaToken }) {
+const HomePage = observer(({ captchaToken }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const meta = {
     title:
@@ -40,8 +43,10 @@ export default function HomePage({ captchaToken }) {
         </>
       )}
       <div className="content min-vh-100 text-white p-2">
-        <Content isDesktop={isDesktop} />
+        {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
       </div>
     </>
   );
-}
+});
+
+export default HomePage;

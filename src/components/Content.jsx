@@ -47,6 +47,12 @@ export default function Content() {
     ],
   };
 
+  const advertiser = {
+    id: "advertiser",
+    h2: "18+ Advertiser Disclosure",
+    p: "This website is a free online resource dedicated to providing valuable content and comparison tools for our visitors. We receive advertising compensation from the companies featured on this site, which may influence the placement and ranking of brands (and/or their products) as well as the scores assigned to them. The inclusion of companies on this page does not imply endorsement. We do not cover all providers available in the market. Except as expressly outlined in our Terms of Use, we disclaim any representations and warranties regarding the information provided on this page. The content, including pricing, is subject to change at any time.",
+  };
+
   return (
     <div className="content-container w-100 m-auto">
       <h1 className="fw-bold text-white">
@@ -102,21 +108,9 @@ export default function Content() {
           the risks associated with gambling and provide information on where to
           find further advice and support if needed.
         </div>
-        <div>
-          <p>18+ Advertiser Disclosure</p>
-          <p>
-            This website is a free online resource dedicated to providing
-            valuable content and comparison tools for our visitors. We receive
-            advertising compensation from the companies featured on this site,
-            which may influence the placement and ranking of brands (and/or
-            their products) as well as the scores assigned to them. The
-            inclusion of companies on this page does not imply endorsement. We
-            do not cover all providers available in the market. Except as
-            expressly outlined in our Terms of Use, we disclaim any
-            representations and warranties regarding the information provided on
-            this page. The content, including pricing, is subject to change at
-            any time.
-          </p>
+        <div id={advertiser.id}>
+          <h2>{advertiser.h2}</h2>
+          <p>{advertiser.p}</p>
         </div>
       </div>
     </div>
