@@ -11,7 +11,7 @@ const ContentV2 = observer(() => {
     .filter((item) => item.sortOrder)
     .sort((a, b) => a.sortOrder - b.sortOrder);
 
-  console.log(content);
+  // console.log(content);
 
   return (
     <div className="content-container w-100 m-auto">
