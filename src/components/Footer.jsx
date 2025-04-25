@@ -54,7 +54,7 @@ export default function Footer() {
   );
 
   const regLogosData = [
-    { name: "18plus", url: "https://www.top10bestonlinecasinos.co.uk/" },
+    { name: "18plus" },
     {
       name: "raig",
       url: "https://www.raig.org/news-press/news/raig-social-responsibility-audit",
@@ -128,7 +128,7 @@ export default function Footer() {
 
         <div className="d-flex flex-wrap gap-3 mt-5 justify-content-center">
           {regLogosData.map((photo, k) => (
-            <a key={k} href={photo.url}>
+            <a key={k} href={photo.url || null}>
               <img
                 alt={photo.name}
                 height={isDesktop ? 30 : 15}
