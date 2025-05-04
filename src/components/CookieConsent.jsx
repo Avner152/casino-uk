@@ -4,12 +4,7 @@ import { setCookie } from "../json/helpers";
 const CookieConsent = ({ setCookieStatus }) => {
   const cookieHandler = (accepted) => {
     // console.log(accepted);
-    setCookie(
-      "uk-sefty-cookie",
-      accepted,
-      accepted ? 365 : 1,
-      "ukbestcasino.net"
-    );
+    setCookie("uk-consent", accepted, accepted ? 365 : 1, "ukbestcasino.net");
     setCookieStatus(true);
   };
 

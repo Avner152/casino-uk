@@ -4,6 +4,7 @@ import { importImages } from "../App";
 class MyStore {
   type = "blanca";
   list = [];
+  initialList = [];
   content = null;
   brands = importImages(
     require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
@@ -22,6 +23,10 @@ class MyStore {
   }
   updateList(newList) {
     this.list = [...newList];
+  }
+
+  updateInitialList(newList) {
+    this.initialList = [...newList];
   }
   updateType(newType) {
     this.type = newType;

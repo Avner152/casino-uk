@@ -247,9 +247,10 @@ ul svg {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.top-card .btn {
+.top-card .btn,
+.main-btn {
   font-weight: 600;
-  background-color: #9d00ff;
+  /* background-color: #9d00ff; */
   background-color: #58cd36;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
@@ -269,8 +270,10 @@ ul svg {
 }
 
 .top-card .btn:hover,
-.top-card .btn:active {
-  background: #9d00ffdd !important;
+.top-card .btn:active,
+.main-btn:hover,
+.main-btn:active {
+  /* background: #9d00ffdd !important; */
   background: #58cd36dd !important;
 }
 
@@ -920,4 +923,30 @@ a:hover {
     background-attachment: fixed;
     /* background-color: #000000; */
   }
+}
+
+.modal {
+  color: #fff;
+  --bs-modal-bg: unset;
+  --bs-modal-width: 50%;
+  --bs-modal-border-color: unset;
+}
+
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.75;
+}
+
+.modal .top-card {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  clip-path: ellipse(100% 60% at 50% 15%);
+}
+
+.modal .card-wrapper:nth-child(odd) {
+  transform: scale(0.85);
+}
+
+.flip {
+  transform: rotateX(-1);
 }
