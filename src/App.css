@@ -801,6 +801,7 @@ a:hover {
   }
 
   .intro-title {
+    margin-top: 21px;
     font-size: 5vw !important;
     text-align: center;
   }
