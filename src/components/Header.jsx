@@ -74,12 +74,16 @@ export default function Header() {
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
-            <NavLink to="/">
+            <NavLink to={`/${window.location.search}`}>
               <img src={logo} width={220} alt="logo" height={30} />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {menu[0].list.map((item, i) => (
-                <NavLink className="my-nav text-white" to={item.url} key={i}>
+                <NavLink
+                  className="my-nav text-white"
+                  to={item.url + window.location.search}
+                  key={i}
+                >
                   {item.name}
                 </NavLink>
               ))}
@@ -88,7 +92,7 @@ export default function Header() {
         ) : (
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
-              <NavLink to="/" className="ms-3">
+              <NavLink to={`/${window.location.search}`} className="ms-3">
                 <img alt="logo" src={logo} width={180} />
               </NavLink>
               {/*  */}
@@ -108,7 +112,7 @@ export default function Header() {
                       setShow("");
                       setBurgerOpen(false);
                     }}
-                    to="/"
+                    to={`/${window.location.search}`}
                   >
                     <img
                       src={logo}
@@ -131,8 +135,8 @@ export default function Header() {
                             setBurgerOpen(false);
                           }}
                           key={j}
-                          to={li.url}
-                          href={li.url}
+                          to={li.url + window.location.search}
+                          href={li.url + window.location.search}
                         >
                           {li.name}
                         </Link>

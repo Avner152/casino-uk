@@ -114,7 +114,7 @@ const App = observer(() => {
   }
 
   return (
-    <div className="casino-container">
+    <div>
       <Modal
         className="bg-transparent"
         centered
@@ -158,7 +158,7 @@ const App = observer(() => {
                 <div>
                   <div className="fs-1 fw-semibold">{scores[i]}</div>
                   {Array.from({ length: 5 }).map((_, i) => {
-                    const score = 10 - (i + 1) / 10;
+                    const score = 10;
 
                     return (
                       <span
@@ -195,6 +195,7 @@ const App = observer(() => {
         </Modal.Body>
       </Modal>
       {!captchaToken && TurnstileWidget()}
+      {!isDesktop && <div className="casino-container" />}
 
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>

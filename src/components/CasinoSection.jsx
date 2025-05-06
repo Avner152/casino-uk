@@ -111,13 +111,19 @@ const CasinoSection = observer(({ captchaToken }) => {
             className="d-flex gap-1 fs-7 flex-column align-items-center"
             key={k}
           >
-            <img
-              width={isDesktop ? 50 : 30}
-              height={isDesktop ? 30 : 20}
-              alt={icon.name}
-              src={homepageIcons[`${icon.name}-icon.svg`]}
-            />
-            <span>
+            <div
+              className={`bg-dark bg-opacity-75 py-2 rounded-circle ${
+                isMobile ? "px-1" : ""
+              }`}
+            >
+              <img
+                width={isDesktop ? 50 : 30}
+                height={isDesktop ? 30 : 20}
+                alt={icon.name}
+                src={homepageIcons[`${icon.name}-icon.svg`]}
+              />
+            </div>
+            <span className="bg-dark bg-opacity-100 px-3 rounded-1">
               {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
             </span>
           </div>

@@ -915,13 +915,15 @@ a:hover {
     width: 60%;
   }
   .casino-container {
+    background-image: url(./assets/bg-mobile.webp);
+    background-position: center;
     background-repeat: no-repeat;
-    background-image: url(./assets/bg.webp);
-    /* background-image: url(./assets/bg-3.jpg); */
-    background-position: center 0;
-    -webkit-background-position: center 0;
-    background-attachment: fixed;
-    /* background-color: #000000; */
+    background-size: cover;
+    overflow: auto;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
   }
 }
 
@@ -949,4 +951,20 @@ a:hover {
 
 .flip {
   transform: rotateX(-1);
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .modal {
+    --bs-modal-width: 65%;
+  }
+
+  .modal h2 {
+    font-size: 1.7vw;
+  }
+
+  img[alt="chips"] {
+    width: 300px;
+    height: 300px;
+  }
 }

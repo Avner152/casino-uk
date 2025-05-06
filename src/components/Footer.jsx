@@ -74,7 +74,7 @@ export default function Footer() {
           } m-auto`}
         >
           <div className="footer-logo d-flex flex-column flex-grow-0">
-            <Link to="/">
+            <Link to={`/${window.location.search}`}>
               <img
                 src={logo}
                 width={200}
@@ -112,7 +112,7 @@ export default function Footer() {
                     <Link
                       target={li.target || ""}
                       key={j}
-                      to={li.url}
+                      to={li.url + window.location.search}
                       // href={li.url}
                     >
                       {li.name}
