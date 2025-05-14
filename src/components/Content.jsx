@@ -113,6 +113,19 @@ export default function Content() {
           <p>{advertiser.p}</p>
         </div>
       </div>
+      <div>
+        <h2>Play Responsibly!</h2>
+        <p>
+          Gambling can be addictive. Please gamble responsibly. For help, visit{" "}
+          <a
+            href="https://www.gambleaware.org/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            BeGambleAware.org
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
