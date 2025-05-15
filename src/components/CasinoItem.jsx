@@ -64,7 +64,7 @@ const CasinoItem = ({ item, index, fixedURL }) => {
           </Button>
         </div>
       </div>
-      <div className="reg">{item.brandText}</div>
+      {item.brandText && <div className="reg">{item.brandText}</div>}
     </div>
   );
 };
