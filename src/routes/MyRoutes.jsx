@@ -10,7 +10,7 @@ import LiveGames from "../components/paginations/info/LiveGames";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import TableGames from "../components/paginations/info/TableGames";
 
-export default function MyRoutes({ captchaToken }) {
+export default function MyRoutes({ isBot }) {
   const location = useLocation();
 
   useEffect(() => {
@@ -23,7 +23,8 @@ export default function MyRoutes({ captchaToken }) {
         <Route
           exact
           path="/"
-          element={<HomePage captchaToken={captchaToken} />}
+          element={<HomePage isBot={isBot} />}
+          // element={<HomePage captchaToken={captchaToken} />}
         ></Route>
         <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
