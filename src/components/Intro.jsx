@@ -18,7 +18,7 @@ const Intro = observer(() => {
       title: "Discover the UK's Best Online Casinos of ",
     },
     crash: {
-      title: "Top Crash Games UK",
+      title: "Best Crash Games in the UK – Our  Casino Picks - ",
       list: [
         "🚀 Fast Thrills: Action-packed gameplay with quick wins for adrenaline lovers.",
         "📈 Trusted Platforms: Play on secure UK casinos with top-rated crash games.",
@@ -26,7 +26,8 @@ const Intro = observer(() => {
       ],
     },
     live: {
-      title: "Best Live Casino Games UK",
+      title:
+        "Best Live Casino Games UBest Live Casino Games in the UK – Our Casino Picks –K",
       list: [
         "🎥 Real-Time Action: Play HD-streamed games like blackjack, roulette, and baccarat.",
         "🎮 Top Platforms: Find the UK’s best live casinos for seamless gaming.",
@@ -34,7 +35,7 @@ const Intro = observer(() => {
       ],
     },
     slots: {
-      title: "Best Slot Games UK",
+      title: "Best Slot Games in the UK - ",
       list: [
         "🎰 Top Slots: Play the latest games with exciting themes and big jackpots.",
         "💸 High Payouts: Enjoy high RTP slots and progressive jackpots for big wins.",
@@ -42,7 +43,7 @@ const Intro = observer(() => {
       ],
     },
     table: {
-      title: "Timeless Table Games UK",
+      title: "Best Table Games in the UK – Our Casino Picks -",
       list: [
         "🎲 Iconic Classics: Play staples like roulette, blackjack, and poker with rich history.",
         "🃏 Skill & Social Play: Enjoy strategy, chance, and camaraderie in immersive settings.",
