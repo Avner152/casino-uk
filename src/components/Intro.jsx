@@ -42,7 +42,7 @@ const Intro = observer(() => {
       ],
     },
     table: {
-      title: "Best Table Games in the UK – Our Casino Picks for",
+      title: "Best Table Games in the UK – Our Casino Picks for ",
       list: [
         "🎲 Iconic Classics: Play staples like roulette, blackjack, and poker with rich history.",
         "🃏 Skill & Social Play: Enjoy strategy, chance, and camaraderie in immersive settings.",
