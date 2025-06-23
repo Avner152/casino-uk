@@ -18,7 +18,7 @@ const Intro = observer(() => {
       title: "Discover the UK's Best Online Casinos of ",
     },
     crash: {
-      title: "Best Crash Games in the UK – Our  Casino Picks - ",
+      title: "Best Crash Games in the UK – Our  Casino Picks for ",
       list: [
         "🚀 Fast Thrills: Action-packed gameplay with quick wins for adrenaline lovers.",
         "📈 Trusted Platforms: Play on secure UK casinos with top-rated crash games.",
@@ -26,8 +26,7 @@ const Intro = observer(() => {
       ],
     },
     live: {
-      title:
-        "Best Live Casino Games UBest Live Casino Games in the UK – Our Casino Picks –K",
+      title: "Best Live Casino Games in the UK – Our Casino Picks for ",
       list: [
         "🎥 Real-Time Action: Play HD-streamed games like blackjack, roulette, and baccarat.",
         "🎮 Top Platforms: Find the UK’s best live casinos for seamless gaming.",
@@ -43,7 +42,7 @@ const Intro = observer(() => {
       ],
     },
     table: {
-      title: "Best Table Games in the UK – Our Casino Picks -",
+      title: "Best Table Games in the UK – Our Casino Picks for",
       list: [
         "🎲 Iconic Classics: Play staples like roulette, blackjack, and poker with rich history.",
         "🃏 Skill & Social Play: Enjoy strategy, chance, and camaraderie in immersive settings.",
@@ -77,6 +76,9 @@ const Intro = observer(() => {
       case "/slots-games":
         setPage("slots");
         break;
+      case "/table-games":
+        setPage("table");
+        break;
       case "/about-us":
         setPage("about");
         break;
@@ -95,12 +97,12 @@ const Intro = observer(() => {
   return (
     <div className="intro mt-4 tit-n-des text-white pt-3">
       {page ? (
-        <div className="text-white mb-5">
+        <div className="text-white mb-5 mt-4">
           <h1 className="intro-title fw-bold w-75">
             {headlineInfo[page].title}{" "}
             {location.pathname.includes("games") && fullYear}
           </h1>
-          {headlineInfo[page].list && (
+          {/* {headlineInfo[page].list && (
             <ul className="list-unstyled fw-bolder">
               {headlineInfo[page].list.map((li, i) => (
                 <li className="mt-1 mb-1" key={i}>
@@ -108,7 +110,7 @@ const Intro = observer(() => {
                 </li>
               ))}
             </ul>
-          )}
+          )} */}
         </div>
       ) : (
         <div
