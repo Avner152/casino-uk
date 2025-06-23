@@ -121,7 +121,7 @@ const Intro = observer(() => {
           <div>
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
               {myStore.type === "blanca"
-                ? `Check UK's Best Casinos Of ${curDate.toLocaleString(
+                ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
                     "default",
                     {
                       month: "long",
