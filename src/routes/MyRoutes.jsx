@@ -5,12 +5,12 @@ import CookiePolicy from "../components/paginations/CookiePolicy";
 import Terms from "../components/paginations/Terms";
 import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
-import CrashGames from "../components/paginations/info/CrashGames";
+import Aviator from "../components/paginations/info/Aviator";
 import LiveGames from "../components/paginations/info/LiveGames";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import TableGames from "../components/paginations/info/TableGames";
 
-export default function MyRoutes({ isBot }) {
+export default function MyRoutes() {
   const location = useLocation();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function MyRoutes({ isBot }) {
         <Route
           exact
           path="/"
-          element={<HomePage isBot={isBot} />}
+          element={<HomePage />}
           // element={<HomePage captchaToken={captchaToken} />}
         ></Route>
         <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
@@ -37,7 +37,7 @@ export default function MyRoutes({ isBot }) {
         ></Route>
 
         <Route exact path="/table-games" element={<TableGames />}></Route>
-        <Route exact path="/top-crash-games" element={<CrashGames />}></Route>
+        <Route exact path="/aviator" element={<Aviator />}></Route>
         <Route exact path="/live-games" element={<LiveGames />}></Route>
         <Route exact path="/slots-games" element={<SlotsGames />}></Route>
       </Routes>

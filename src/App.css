@@ -22,7 +22,7 @@ body {
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
   /* background-image: url(./assets/bg.webp); */
-  background-image: url(./assets/bg.webp);
+  background-image: url(./assets/bg2.webp);
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
@@ -932,6 +932,10 @@ a:hover {
   .sm-w-100 {
     width: 100% !important;
   }
+}
+
+.bg-black-50 {
+  background-color: #000000aa;
 }
 
 .modal {

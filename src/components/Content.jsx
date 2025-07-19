@@ -5,27 +5,17 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose Our Online Casino Comparison?",
-    ol: [
-      {
-        title: "Top 10 Online Casinos",
-        description:
-          "Our carefully researched list features the best online casinos in the UK. These platforms are handpicked for their exceptional games, user experience, and generous promotions.",
-      },
-      {
-        title: "Mobile and New Casinos",
-        description: `Stay up-to-date with the latest mobile-friendly casinos and emerging sites in ${curDate.getFullYear()}. Enjoy seamless gaming on the go with our recommendations for top-notch mobile casinos.`,
-      },
-      {
-        title: "Best Casino Bonuses",
-        description:
-          "Maximize your gaming experience with exclusive deals, including sign-up bonuses, welcome offers, and ongoing promotions. We spotlight the best bonuses to boost your bankroll.",
-      },
-      {
-        title: "Real-Money Gaming",
-        description:
-          "Explore a wide range of real-money games, from classic table games like blackjack and roulette to cutting-edge slots and live casino experiences.",
-      },
+    h2: "Why Choose PlayUKCasinos.net?",
+    ul: [
+      "🎯 Expertly Curated Selection – We handpick only top-rated online casinos based on safety, game variety, and user experience, ensuring you enjoy a premium, worry-free gaming experience.",
+      "🎁 Exclusive Bonuses – Take advantage of generous welcome bonuses, no-deposit offers, free spins, and loyalty rewards designed for UK players.",
+      "📱 Mobile Compatibility – Our featured casinos are fully optimized for smartphones and tablets, so you can play your favourite games anytime, anywhere.",
+      "🔒 Safe and Regulated – Every site we recommend is licensed by the UK Gambling Commission and uses advanced encryption to protect your data and funds.",
+      "💰 Real Money Games – Explore a wide variety of games including slots, crash games, live roulette, blackjack, and innovative game shows.",
+      "📝 In-Depth Reviews – Make informed choices with unbiased reviews covering everything from welcome packages to withdrawal times and customer support.",
+      "🕵️‍♂️ Player Protection First – We promote responsible gambling and offer guides on secure payments, account verification, and self-exclusion tools.",
+      "⚠️ 18+ Only – You must be 18 years or older to play. Gamble responsibly. See our Responsible Gaming page for more info.",
+      "💬 Advertiser Disclosure – We are a free online resource. This site receives compensation from featured brands, which may affect placement. Our listings reflect editorial independence and are regularly updated, but may not include every provider.",
     ],
   };
   const faq = {
@@ -54,28 +44,30 @@ export default function Content() {
   };
 
   return (
-    <div className="content-container w-100 m-auto">
+    <>
       <h1 className="fw-bold text-white">
-        Best UK Online Casinos {curDate.getFullYear()} : Top Games & Bonuses
+        Welcome to PlayUKCasinos.net – Your Ultimate Guide to the Best UK Online
+        Casinos in {curDate.getFullYear()}
       </h1>
       <p>
-        Welcome to the ultimate guide to the best online casinos in the UK for{" "}
-        {curDate.getFullYear()}! Whether you're a seasoned player or new to
-        online gaming, our expertly curated platform is here to help you
-        discover the finest, most trustworthy casino sites offering exciting
-        games, generous bonuses, and thrilling real-money prizes.
+        Ready to experience the thrill of online gaming? At PlayUKCasinos.net,
+        we bring you the most comprehensive and up-to-date guide to the best UK
+        online casinos. Whether you’re a seasoned player or just starting your
+        online casino journey, our carefully curated platform is here to help
+        you discover the most trusted, rewarding, and entertaining casinos in
+        the UK.
       </p>
 
       <div id={why.id}>
         <h2>{why.h2}</h2>
-        <ol>
-          {why.ol.map((li, i) => (
-            <li key={i}>
-              <h3>{li.title}</h3>
-              <p>{li.description}</p>
-            </li>
-          ))}
-        </ol>
+        {why.ul.map((li, i) => {
+          const [title, text] = li.split("–");
+          return (
+            <div className="my-1" key={i}>
+              <b>{title}</b> - <span>{text}</span>
+            </div>
+          );
+        })}
       </div>
 
       <div className="faq">
@@ -113,19 +105,6 @@ export default function Content() {
           <p>{advertiser.p}</p>
         </div>
       </div>
-      <div>
-        <h2>Play Responsibly!</h2>
-        <p>
-          Gambling can be addictive. Please gamble responsibly. For help, visit{" "}
-          <a
-            href="https://www.gambleaware.org/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            BeGambleAware.org
-          </a>
-        </p>
-      </div>
-    </div>
+    </>
   );
 }

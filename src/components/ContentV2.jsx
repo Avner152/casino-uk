@@ -14,7 +14,7 @@ const ContentV2 = observer(() => {
   // console.log(content);
 
   return (
-    <div className="content-container w-100 m-auto">
+    <>
       <h1 className="fw-bold text-white">
         {topPar.h1.replace("{curDate}", curDate.getFullYear())}
       </h1>
@@ -49,7 +49,7 @@ const ContentV2 = observer(() => {
           )}
         </div>
       ))}
-    </div>
+    </>
   );
 });
 

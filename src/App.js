@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
-import Turnstile from "react-turnstile";
+// import Turnstile from "react-turnstile";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import axios from "axios";
@@ -31,7 +31,7 @@ const App = observer(() => {
   const mId = searchParams.get("msclkid");
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  const [captchaToken, setCaptchaToken] = useState(null);
+  // const [captchaToken, setCaptchaToken] = useState(null);
 
   const [showPopOut, setShowPopOut] = useState(false);
   const [initialList, setInitialList] = useState([]);
@@ -61,7 +61,7 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/manchester/prd`;
 
     const headers = { segment: "viral" };
     axios
@@ -90,28 +90,28 @@ const App = observer(() => {
     fetchPopupBrands();
   }, []);
 
-  function TurnstileWidget() {
-    return (
-      <Turnstile
-        sitekey="0x4AAAAAAA3zELOcESURpGT7"
-        onVerify={(token) => {
-          fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-            method: "POST",
-            body: JSON.stringify({ token }),
-          })
-            .then((response) => {
-              // console.log(response);q
-              setCaptchaToken(response.ok);
-            })
-            .catch((err) => setCaptchaToken(false));
-        }}
-        retry="never"
-        onError={() => {
-          setCaptchaToken(false);
-        }}
-      />
-    );
-  }
+  // function TurnstileWidget() {
+  //   return (
+  //     <Turnstile
+  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
+  //       onVerify={(token) => {
+  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
+  //           method: "POST",
+  //           body: JSON.stringify({ token }),
+  //         })
+  //           .then((response) => {
+  //             // console.log(response);q
+  //             setCaptchaToken(response.ok);
+  //           })
+  //           .catch((err) => setCaptchaToken(false));
+  //       }}
+  //       retry="never"
+  //       onError={() => {
+  //         setCaptchaToken(false);
+  //       }}
+  //     />
+  //   );
+  // }
 
   return (
     <div>
@@ -122,7 +122,6 @@ const App = observer(() => {
         onHide={() => setShowPopOut(false)}
       >
         <Modal.Body>
-          {/* <h2 className="text-center">Before you Leaving...</h2> */}
           <div className="d-flex justify-content-end pe-4 opacity-100">
             <CloseButton
               style={{ opacity: 1 }}
@@ -194,14 +193,15 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
-      {!captchaToken && TurnstileWidget()}
+      {/* {!captchaToken && TurnstileWidget()} */}
       {!isDesktop && <div className="casino-container" />}
 
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
         <Intro />
-        <MyRoutes captchaToken={captchaToken} />
+        {/* <MyRoutes captchaToken={captchaToken} /> */}
+        <MyRoutes />
       </div>
       <Footer />
 

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-transparent.png";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
@@ -20,15 +20,15 @@ export default function Header() {
       title: "Top Pages",
       list: [
         {
-          name: "Crash Games ",
-          url: "/top-crash-games",
+          name: "Aviator ",
+          url: "/aviator",
         },
         {
           name: "Live Games ",
           url: "/live-games",
         },
         {
-          name: "Slots Games ",
+          name: "Book of Dead",
           url: "/slots-games",
         },
         {
@@ -75,7 +75,7 @@ export default function Header() {
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
             <NavLink to={`/${window.location.search}`}>
-              <img src={logo} width={220} alt="logo" height={30} />
+              <img src={logo} width={150} height={60} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {menu[0].list.map((item, i) => (
@@ -93,7 +93,7 @@ export default function Header() {
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
               <NavLink to={`/${window.location.search}`} className="ms-3">
-                <img alt="logo" src={logo} width={180} />
+                <img alt="logo" src={logo} width={140} height={60} />
               </NavLink>
               {/*  */}
 
@@ -114,13 +114,7 @@ export default function Header() {
                     }}
                     to={`/${window.location.search}`}
                   >
-                    <img
-                      src={logo}
-                      width={125}
-                      alt="logo"
-                      height={20}
-                      className="_mt-2"
-                    />
+                    <img src={logo} width={125} height={55} alt="logo" />
                   </Link>
                   {menu.map((menuItem, _) => (
                     <div

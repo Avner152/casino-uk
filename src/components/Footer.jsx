@@ -34,15 +34,15 @@ export default function Footer() {
           url: "/table-games",
         },
         {
-          name: "Top Crash Games ",
-          url: "/top-crash-games",
+          name: "Aviator",
+          url: "/aviator",
         },
         {
-          name: "Live Games ",
+          name: "Live Games",
           url: "/live-games",
         },
         {
-          name: "Slots Games ",
+          name: "Book of Dead",
           url: "/slots-games",
         },
       ],
@@ -78,8 +78,8 @@ export default function Footer() {
               <img
                 src={logo}
                 width={200}
+                height={77}
                 alt="logo"
-                height={30}
                 className="_mt-2"
               />
             </Link>

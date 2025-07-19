@@ -17,49 +17,29 @@ const Intro = observer(() => {
     homePage: {
       title: "Discover the UK's Best Online Casinos of ",
     },
-    crash: {
-      title: "Best Crash Games in the UK – Our  Casino Picks for ",
-      list: [
-        "🚀 Fast Thrills: Action-packed gameplay with quick wins for adrenaline lovers.",
-        "📈 Trusted Platforms: Play on secure UK casinos with top-rated crash games.",
-        "🎮 Innovative Design: Enjoy modern features and sleek mechanics tailored for you.",
-      ],
+    aviator: {
+      title: "Aviator Game – Take Flight and Win Big in ",
     },
     live: {
-      title: "Best Live Casino Games in the UK – Our Casino Picks for ",
-      list: [
-        "🎥 Real-Time Action: Play HD-streamed games like blackjack, roulette, and baccarat.",
-        "🎮 Top Platforms: Find the UK’s best live casinos for seamless gaming.",
-        "🔒 Secure Play: Enjoy fair, safe, and responsible gaming experiences.",
-      ],
+      title: "Best Live Casino Games in the UK – Top Picks for ",
     },
     slots: {
-      title: "Best Slot Games in the UK - ",
-      list: [
-        "🎰 Top Slots: Play the latest games with exciting themes and big jackpots.",
-        "💸 High Payouts: Enjoy high RTP slots and progressive jackpots for big wins.",
-        "🔒 Secure Play: Experience safe, fair, and licensed gaming at top UK casinos.",
-      ],
+      title: "Book of Dead Slot – Explore the Adventure and Big Wins in ",
     },
     table: {
       title: "Best Table Games in the UK – Our Casino Picks for ",
-      list: [
-        "🎲 Iconic Classics: Play staples like roulette, blackjack, and poker with rich history.",
-        "🃏 Skill & Social Play: Enjoy strategy, chance, and camaraderie in immersive settings.",
-        "🌟 Innovative Future: Discover VR, AR, and live dealer experiences redefining table games.",
-      ],
     },
     cookie: {
-      title: "Cookie Policy 18+",
+      title: "Cookie Policy 18+ ",
     },
     terms: {
-      title: "Terms and Conditions",
+      title: "Terms and Conditions - ",
     },
     privacy: {
-      title: "Privacy Policy",
+      title: "Privacy Policy - ",
     },
     about: {
-      title: "About Us",
+      title: "About Us - ",
     },
   };
 
@@ -70,8 +50,8 @@ const Intro = observer(() => {
       case "/live-games":
         setPage("live");
         break;
-      case "/top-crash-games":
-        setPage("crash");
+      case "/aviator":
+        setPage("aviator");
         break;
       case "/slots-games":
         setPage("slots");
@@ -99,18 +79,10 @@ const Intro = observer(() => {
       {page ? (
         <div className="text-white mb-5_ mt-4">
           <h1 className="intro-title fw-bold w-75 sm-w-100">
-            {headlineInfo[page].title}{" "}
-            {location.pathname.includes("games") && fullYear}
+            <span className="bg-black-50 px-3 py-1">
+              {headlineInfo[page].title} {fullYear}
+            </span>
           </h1>
-          {/* {headlineInfo[page].list && (
-            <ul className="list-unstyled fw-bolder">
-              {headlineInfo[page].list.map((li, i) => (
-                <li className="mt-1 mb-1" key={i}>
-                  {li}
-                </li>
-              ))}
-            </ul>
-          )} */}
         </div>
       ) : (
         <div
@@ -127,7 +99,7 @@ const Intro = observer(() => {
                       month: "long",
                     }
                   )} ${fullYear}`
-                : toJS(myStore.content).firstTitle.replace(
+                : toJS(myStore.content)?.firstTitle.replace(
                     "{curDate}",
                     `${curDate.toLocaleString("default", {
                       month: "long",

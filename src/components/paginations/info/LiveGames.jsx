@@ -7,42 +7,37 @@ export default function LiveGames() {
 
   const topPar = {
     h2: `Experience the Best Live Casino Games in the UK for ${curDate.getFullYear()}`,
-    p: `Live casino games have redefined online gaming, offering an immersive, real-time experience that captures the thrill of a physical casino. From interacting with professional dealers to enjoying state-of-the-art streaming, live games are the pinnacle of online entertainment for UK players.`,
+    p: "Live Game Shows are a thrilling category of online casino games that blend the interactive atmosphere of a TV game show with real-money betting opportunities. They are streamed live from professional studios and hosted by charismatic presenters who keep the energy high and the experience immersive.",
   };
 
-  const what = {
-    id: "par-2",
-    h4: "🎥 What Are Live Casino Games?",
-    p: "Live games are hosted by professional dealers and streamed directly to your device. Players can place bets, make decisions, and interact with the dealer and other players in real time, creating a social and authentic gaming atmosphere.",
-  };
-
-  const why = {
-    id: "par-3",
-    h4: "🎮 Why Are Live Casino Games Popular in the UK?",
+  const par1 = {
+    id: "par-1",
+    h4: "🎲 Popular Live Game Show Titles:",
     ul: [
-      "Authenticity: Get the excitement of a real casino without leaving home.",
-      "Convenience: Accessible 24/7 on desktop, tablet, or smartphone.",
-      "Social Interaction: Chat with dealers and players, adding a community feel to the game.",
+      "Crazy Time – A vibrant, colorful wheel-based game full of random multipliers and exciting bonus rounds.",
+      "Monopoly Live – Combines the classic Monopoly board game with a live money wheel and augmented reality.",
+      "Deal or No Deal Live – Based on the iconic TV show, offering suspense-filled briefcase reveals and bonus games.",
     ],
   };
 
-  const top = {
-    id: "par-4",
-    h4: "🌟 Top Live Games in UK Casinos",
+  const par2 = {
+    id: "par-2",
+    h4: "🔍 Unique Features:",
     ul: [
-      "Live Roulette: Spin the iconic wheel and try your luck on your favorite bets.",
-      "Live Blackjack: Test your strategy against the dealer in this thrilling game of skill.",
-      "Live Game Shows: Enjoy interactive games like Crazy Time and Monopoly Live for a fun twist.",
+      "Real-time interactivity with the host and other players.",
+      "Studio-quality visuals, sound, and camera work.",
+      "Bonus rounds that require skill or timing.",
+      "Games designed for both fun and profit.",
     ],
   };
 
   const tips = {
-    id: "par-5",
-    h4: "Tips for Playing Live Casino Games",
+    id: "par-3",
+    h4: "🎯 Tips for Playing Live Casino Games",
     ul: [
-      "Learn the Rules: Familiarize yourself with the game mechanics before placing bets.",
-      "Set a Budget: Always play responsibly and stick to your limits.",
-      "Take Advantage of Bonuses: Look for live casino-specific promotions to boost your experience.",
+      "Understand the game rules and bonus features beforehand.",
+      "Some games offer side bets or bonus games with higher payouts.",
+      "Watch for patterns and player trends in community chat.",
     ],
   };
 
@@ -66,15 +61,10 @@ export default function LiveGames() {
             <p>{topPar.p}</p>
           </div>
 
-          <div id={what.id} className="mt-4">
-            <h4>{what.h4}</h4>
-            <p>{what.p}</p>
-          </div>
-
-          <div id={why.id} className="mt-4">
-            <h4>{why.h4}</h4>
+          <div id={par1.id} className="mt-4">
+            <h4>{par1.h4}</h4>
             <ul>
-              {why.ul.map((li, i) => (
+              {par1.ul.map((li, i) => (
                 <li key={i}>
                   {li.split(":").map((sp, k) => (
                     <span className={!k ? "fw-bold" : ""} key={k}>
@@ -86,11 +76,11 @@ export default function LiveGames() {
             </ul>
           </div>
 
-          <div id={top.id} className="mt-4">
-            <h4>{top.h4}</h4>
+          <div id={par2.id} className="mt-4">
+            <h4>{par2.h4}</h4>
 
             <ul>
-              {top.ul.map((li, i) => (
+              {par2.ul.map((li, i) => (
                 <li key={i}>
                   {li.split(":").map((sp, k) => (
                     <span className={!k ? "fw-bold" : ""} key={k}>
@@ -119,11 +109,10 @@ export default function LiveGames() {
 
           <div className="mt-4">
             <p>
-              With innovations like augmented reality (AR) and virtual reality
-              (VR) on the horizon, live games in the UK are set to become even
-              more immersive in the coming years. Take your seat at the table
-              today and experience the excitement of live casino games-play
-              responsibly and enjoy the journey!
+              Live Game Shows are ideal for players looking for more
+              entertainment than traditional casino games offer. Whether you're
+              here for big wins or just the fun of the show, this category
+              brings excitement and innovation to the online casino experience.
             </p>
           </div>
         </div>
