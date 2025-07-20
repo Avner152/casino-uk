@@ -41,6 +41,10 @@ body {
   width: 48%;
 }
 
+.min-vh-50 {
+  min-height: 50vh !important;
+}
+
 .desktop-header {
   position: fixed !important;
   background-color: #000000dd;

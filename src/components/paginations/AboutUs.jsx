@@ -2,13 +2,13 @@ import React from "react";
 
 export default function AboutUs() {
   return (
-    <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
+    <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information min-vh-50">
       <div className="m-auto pt-3">
-        <h2>UK Best Casino</h2>
+        <h2>Play UK Casinos</h2>
         <span>18+</span>
-        <div className="mt-3">
+        <div className="mt-3 ">
           <p>
-            At <strong>UK Best Casino</strong>, we provide you with
+            At <strong>Play UK Casinos</strong>, we provide you with
             comprehensive and up-to-date information about online casinos in the
             UK. Our expert reviews and guides help you find the safest, most
             exciting gambling platforms. Whether you're an experienced player or

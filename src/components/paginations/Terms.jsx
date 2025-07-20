@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 export default function Terms() {
   const curDate = new Date();
   const meta = {
-    title: "Terms and Conditions  | UK Best Casino",
+    title: "Terms and Conditions  | Play UK Casinos",
     description:
-      "Read the Terms and Conditions for using UK Best Casino's website and services. Learn about your rights, obligations, and the rules governing your use of our site",
+      "Read the Terms and Conditions for using Play UK Casinos's website and services. Learn about your rights, obligations, and the rules governing your use of our site",
   };
   return (
     <>
