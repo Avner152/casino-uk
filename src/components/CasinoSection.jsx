@@ -2,7 +2,7 @@ import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
 import CasinoItemMobile from "./CasinoItemMobile";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { observer } from "mobx-react";
@@ -14,16 +14,16 @@ const CasinoSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
   captchaToken = true;
 
-  const location = useLocation();
+  // const location = useLocation();
   const [searchParams] = useSearchParams();
   const mId = searchParams.get("msclkid");
 
-  const search =
-    captchaToken !== undefined && !captchaToken
-      ? "special-and-hard-coded"
-      : location.search;
+  // const search =
+  //   captchaToken !== undefined && !captchaToken
+  //     ? "special-and-hard-coded"
+  //     : location.search;
 
-  // const search = "";
+  const search = "";
   const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
