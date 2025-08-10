@@ -29,7 +29,7 @@ const CasinoSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/manchester/prd`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/liverpool/prd`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {

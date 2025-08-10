@@ -21,8 +21,7 @@ body {
   font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
-  /* background-image: url(./assets/bg.webp); */
-  background-image: url(./assets/bg2.webp);
+  background-image: url(./assets/bg.webp);
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
