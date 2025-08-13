@@ -198,7 +198,9 @@ const App = observer(() => {
       {!isDesktop && <div className="casino-container" />}
 
       <Header />
-      <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
+      <div
+        className={`w-${isDesktop ? 60 : 100} m-auto casino-main bg-black-50`}
+      >
         <br />
         <Intro />
         {/* <MyRoutes captchaToken={captchaToken} /> */}

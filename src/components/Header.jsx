@@ -20,20 +20,20 @@ export default function Header() {
       title: "Top Pages",
       list: [
         {
-          name: "Aviator ",
-          url: "/aviator",
+          name: "Starburst ",
+          url: "/starburst",
         },
         {
-          name: "Live Games ",
-          url: "/live-games",
+          name: "Casino Bonuses",
+          url: "/casino-bonuses",
         },
+        // {
+        //   name: "Book of Dead",
+        //   url: "/slots-games",
+        // },
         {
-          name: "Book of Dead",
-          url: "/slots-games",
-        },
-        {
-          name: "Table Games",
-          url: "/table-games",
+          name: "Online Slot",
+          url: "/online-slot",
         },
       ],
     },

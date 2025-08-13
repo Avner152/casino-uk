@@ -8,7 +8,9 @@ import { toJS } from "mobx";
 
 const Intro = observer(() => {
   const curDate = new Date();
-  const fullYear = curDate.getFullYear();
+  const fullYear = `${curDate.toLocaleString("default", {
+    month: "long",
+  })} ${curDate.getFullYear()}`;
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const location = useLocation();
   const [page, setPage] = useState(null);
@@ -17,14 +19,14 @@ const Intro = observer(() => {
     homePage: {
       title: "Discover the UK's Best Online Casinos of ",
     },
-    aviator: {
-      title: "Aviator Game – Take Flight and Win Big in ",
+    starburst: {
+      title: "Top UK Casinos with Starburst - ",
     },
-    live: {
-      title: "Best Live Casino Games in the UK – Top Picks for ",
+    bonuses: {
+      title: "Top Casino Bonuses in the UK - ",
     },
-    slots: {
-      title: "Book of Dead Slot – Explore the Adventure and Big Wins in ",
+    slot: {
+      title: "Top Online Slot Casinos in the UK -",
     },
     table: {
       title: "Best Table Games in the UK – Our Casino Picks for ",
@@ -47,14 +49,14 @@ const Intro = observer(() => {
     switch (location.pathname) {
       default:
         return setPage("");
-      case "/live-games":
-        setPage("live");
+      case "/casino-bonuses":
+        setPage("bonuses");
         break;
-      case "/aviator":
-        setPage("aviator");
+      case "/starburst":
+        setPage("starburst");
         break;
-      case "/slots-games":
-        setPage("slots");
+      case "/online-slot":
+        setPage("slot");
         break;
       case "/table-games":
         setPage("table");
@@ -76,29 +78,22 @@ const Intro = observer(() => {
 
   return (
     <div className="intro mt-4 tit-n-des text-white pt-3">
-      {page ? (
-        <div className="text-white mb-5_ mt-4">
-          <h1 className="intro-title fw-bold w-75 sm-w-100">
-            <span className="bg-black-50 px-3 py-1">
-              {headlineInfo[page].title} {fullYear}
-            </span>
-          </h1>
-        </div>
-      ) : (
-        <div
-          className={`d-flex align-items-center justify-content-${
-            isDesktop ? "between" : "center"
-          }`}
-        >
-          <div>
+      <div
+        className={`d-flex align-items-center justify-content-${
+          isDesktop ? "between" : "center"
+        }`}
+      >
+        <div className="px-3">
+          {page ? (
+            <h1 className="intro-title fw-bold w-75 sm-w-100">
+              <span className=" py-1">
+                {headlineInfo[page].title} {fullYear}
+              </span>
+            </h1>
+          ) : (
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
               {myStore.type === "blanca"
-                ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
-                    "default",
-                    {
-                      month: "long",
-                    }
-                  )} ${fullYear}`
+                ? `Check Our Top UK Casinos Of ${fullYear}`
                 : toJS(myStore.content)?.firstTitle.replace(
                     "{curDate}",
                     `${curDate.toLocaleString("default", {
@@ -106,19 +101,19 @@ const Intro = observer(() => {
                     })} ${fullYear}`
                   )}
             </h1>
-          </div>
-          {isDesktop && (
-            <div>
-              <img
-                className="cards"
-                alt="cards"
-                width={isDesktop ? 220 : 120}
-                src={casino}
-              />
-            </div>
           )}
         </div>
-      )}
+        {isDesktop && (
+          <div className="p-4">
+            <img
+              className="cards"
+              alt="cards"
+              width={isDesktop ? 180 : 120}
+              src={casino}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 });

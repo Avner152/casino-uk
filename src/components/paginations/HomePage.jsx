@@ -46,10 +46,12 @@ const HomePage = observer(({ captchaToken }) => {
         <div className="content-container w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
           <div className="ms-3">
-            <h2>Play Responsibly!</h2>
+            <h2>⚠️ Responsible Gaming Notice</h2>
             <p>
-              Gambling can be addictive. Please gamble responsibly. For help,
-              visit{" "}
+              Gambling is for adults aged 18+ and should be treated as a form of
+              entertainment — not income. If you ever feel it’s becoming a
+              problem, we link to professional help and support networks. Play
+              responsibly and stay in control. For help, visit
               <a
                 href="https://www.gambleaware.org/"
                 rel="noreferrer"

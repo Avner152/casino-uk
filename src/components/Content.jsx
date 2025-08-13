@@ -5,17 +5,14 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose PlayUKCasinos.net?",
+    h2: "Why Choose OnlyUKCasinos.com?",
     ul: [
-      "🎯 Expertly Curated Selection – We handpick only top-rated online casinos based on safety, game variety, and user experience, ensuring you enjoy a premium, worry-free gaming experience.",
-      "🎁 Exclusive Bonuses – Take advantage of generous welcome bonuses, no-deposit offers, free spins, and loyalty rewards designed for UK players.",
-      "📱 Mobile Compatibility – Our featured casinos are fully optimized for smartphones and tablets, so you can play your favourite games anytime, anywhere.",
-      "🔒 Safe and Regulated – Every site we recommend is licensed by the UK Gambling Commission and uses advanced encryption to protect your data and funds.",
-      "💰 Real Money Games – Explore a wide variety of games including slots, crash games, live roulette, blackjack, and innovative game shows.",
-      "📝 In-Depth Reviews – Make informed choices with unbiased reviews covering everything from welcome packages to withdrawal times and customer support.",
-      "🕵️‍♂️ Player Protection First – We promote responsible gambling and offer guides on secure payments, account verification, and self-exclusion tools.",
-      "⚠️ 18+ Only – You must be 18 years or older to play. Gamble responsibly. See our Responsible Gaming page for more info.",
-      "💬 Advertiser Disclosure – We are a free online resource. This site receives compensation from featured brands, which may affect placement. Our listings reflect editorial independence and are regularly updated, but may not include every provider.",
+      "🎯 Expertly Curated Casino Lists - Each casino we list is evaluated for trustworthiness, licensing, game selection, mobile experience, customer support, and promotional value.",
+      "🎁 Exclusive Deals - Take advantage of top-tier offers including matched deposits, no-wager bonuses, cashback, and free spin bundles — all updated regularly.",
+      "📱 Mobile & Tablet Friendly - Our recommended sites perform seamlessly across all modern devices, giving you the freedom to play from anywhere.",
+      "💰 Play with Real Winnings - Find games that offer great odds, fast payouts, and verified fairness. We help you sort between volatile jackpots, low-stake spins, and strategic table games.",
+      "🧠 Play Smarter - Our content helps you learn how bonuses really work, how to read RTPs, and how to avoid common mistakes that cost players money.",
+      "🛡️ Player Safety First - Only licensed, secure, and responsible sites make it into our lists. We also offer guides on staying in control, spotting scams, and using self-exclusion tools.",
     ],
   };
   const faq = {
@@ -44,24 +41,23 @@ export default function Content() {
   };
 
   return (
-    <>
+    <div className="px-3">
       <h1 className="fw-bold text-white">
-        Welcome to PlayUKCasinos.net – Your Ultimate Guide to the Best UK Online
+        Welcome to OnlyUKCasinos.net – Your Ultimate Guide to the Best UK Online
         Casinos in {curDate.getFullYear()}
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At PlayUKCasinos.net,
-        we bring you the most comprehensive and up-to-date guide to the best UK
-        online casinos. Whether you’re a seasoned player or just starting your
-        online casino journey, our carefully curated platform is here to help
-        you discover the most trusted, rewarding, and entertaining casinos in
-        the UK.
+        Ready to experience the thrill of online gaming? At OnlyUKCasinos.com,
+        we bring you the most comprehensive and user-friendly guide to the
+        finest online casinos available to UK players. Whether you're a seasoned
+        player or new to the scene, our expert resources, impartial reviews, and
+        updated rankings are here to elevate your gaming journey.
       </p>
 
       <div id={why.id}>
         <h2>{why.h2}</h2>
         {why.ul.map((li, i) => {
-          const [title, text] = li.split("–");
+          const [title, text] = li.split("-");
           return (
             <div className="my-1" key={i}>
               <b>{title}</b> - <span>{text}</span>
@@ -70,7 +66,7 @@ export default function Content() {
         })}
       </div>
 
-      <div className="faq">
+      <div className="faq mt-3">
         <h1 className="fw-bold text-white">{faq.t}</h1>
         <p>{faq.p}</p>
         <Accordion>
@@ -105,6 +101,6 @@ export default function Content() {
           <p>{advertiser.p}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
