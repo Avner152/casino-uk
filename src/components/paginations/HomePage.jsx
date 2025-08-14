@@ -51,7 +51,7 @@ const HomePage = observer(({ captchaToken }) => {
               Gambling is for adults aged 18+ and should be treated as a form of
               entertainment — not income. If you ever feel it’s becoming a
               problem, we link to professional help and support networks. Play
-              responsibly and stay in control. For help, visit
+              responsibly and stay in control. For help, visit{" "}
               <a
                 href="https://www.gambleaware.org/"
                 rel="noreferrer"
