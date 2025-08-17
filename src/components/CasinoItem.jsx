@@ -27,7 +27,7 @@ const CasinoItem = ({ item, index, fixedURL }) => {
         } justify-content-around border rounded align-items-center text-center`}
       >
         <div className="col-md-3 rounded _square">
-          <img alt={item.name} width={210} height={80} src={brands[srcTerm]} />
+          <img alt={item.name} width={210} height={80} src={item.name} />
         </div>
         <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
           {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
