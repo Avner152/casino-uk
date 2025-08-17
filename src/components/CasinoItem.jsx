@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
-import { importImages } from "../App";
 
 const CasinoItem = ({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
 
-  const srcTerm = `${item.name.toLowerCase().replaceAll(" ", "-")}.png`;
-  const brands = importImages(
-    require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
-  );
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
   const [clicked, setClicked] = useState(false);
@@ -27,7 +22,7 @@ const CasinoItem = ({ item, index, fixedURL }) => {
         } justify-content-around border rounded align-items-center text-center`}
       >
         <div className="col-md-3 rounded _square">
-          <img alt={item.name} width={210} height={80} src={brands[srcTerm]} />
+          <img alt={item.name} width={210} height={80} src={item.image} />
         </div>
         <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
           {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
