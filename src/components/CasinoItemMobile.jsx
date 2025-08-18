@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react";
-import myStore from "../mobX/Store";
-import { toJS } from "mobx";
 
 const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
@@ -22,11 +20,7 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
             alt={item.name}
             width={220}
             height={80}
-            src={
-              toJS(myStore.brands)[
-                `${item.name.toLocaleLowerCase().replaceAll(" ", "-")}.png`
-              ]
-            }
+            src={item.image}
           />
           <div className="d-flex gap-3 w-100 align-items-center justify-content-center">
             <div className="fs-3 fw-bold text-center">{score.toFixed(1)}</div>
