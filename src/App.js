@@ -12,8 +12,6 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import axios from "axios";
 import { observer } from "mobx-react";
-import myStore from "./mobX/Store";
-import { toJS } from "mobx";
 import chips from "./assets/golden-chips.png";
 
 import { useSearchParams } from "react-router-dom";
@@ -145,13 +143,7 @@ const App = observer(() => {
                     alt="card-logo"
                     // width={180}
                     height={70}
-                    src={
-                      toJS(myStore.brands)[
-                        `${casinoItem.name
-                          .toLocaleLowerCase()
-                          .replaceAll(" ", "-")}.png`
-                      ]
-                    }
+                    src={casinoItem.image}
                   />
                 </div>
                 <h2 className="px-4 fw-bold">{casinoItem.title}</h2>
