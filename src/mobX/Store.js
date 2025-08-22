@@ -1,14 +1,11 @@
 import { observable, action, makeObservable } from "mobx";
-import { importImages } from "../App";
 
 class MyStore {
   type = "blanca";
   list = [];
   initialList = [];
   content = null;
-  brands = importImages(
-    require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
-  );
+  brands = [];
 
   constructor() {
     makeObservable(this, {
