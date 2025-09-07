@@ -59,7 +59,7 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/liverpool/prd`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd`;
 
     const headers = { segment: "viral" };
     axios
