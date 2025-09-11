@@ -128,6 +128,16 @@ export default function CasinoBonuses() {
               ))}
             </ul>
           </div>
+          <div id={par6.id} className="mt-4">
+            <h4>{par6.h4}</h4>
+            <ul>
+              {par6.ul.map((li, i) => (
+                <li className="my-1" key={i}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="mt-4">
             <h4>📊 Why UK Players Love Bonuses </h4>

@@ -1,8 +1,6 @@
 import { Accordion } from "react-bootstrap";
 
 export default function Content() {
-  const curDate = new Date();
-
   const why = {
     id: "why",
     h2: "🔍 Why Trust TopCasinoPicksUK.com?",
