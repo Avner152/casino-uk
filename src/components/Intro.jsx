@@ -96,9 +96,7 @@ const Intro = observer(() => {
                 ? `Check Our Top UK Casinos Of ${fullYear}`
                 : toJS(myStore.content)?.firstTitle.replace(
                     "{curDate}",
-                    `${curDate.toLocaleString("default", {
-                      month: "long",
-                    })} ${fullYear}`
+                    ` ${fullYear}`
                   )}
             </h1>
           )}

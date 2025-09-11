@@ -45,7 +45,7 @@ const HomePage = observer(({ captchaToken }) => {
       <div className="content min-vh-100 text-white p-2">
         <div className="content-container w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
-          <div className="ms-3">
+          <div className="ms-3 mt-4">
             <h2>⚠️ Responsible Gaming Notice</h2>
             <p>
               Gambling is for adults aged 18+ and should be treated as a form of
