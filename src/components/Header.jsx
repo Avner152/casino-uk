@@ -20,8 +20,8 @@ export default function Header() {
       title: "Top Pages",
       list: [
         {
-          name: "Starburst ",
-          url: "/starburst",
+          name: "Big Bass Bonanza",
+          url: "/big-bass-bonanza",
         },
         {
           name: "Casino Bonuses",
@@ -32,8 +32,8 @@ export default function Header() {
         //   url: "/slots-games",
         // },
         {
-          name: "Online Slot",
-          url: "/online-slot",
+          name: "Online Slots & Jackpots",
+          url: "/online-slots",
         },
       ],
     },

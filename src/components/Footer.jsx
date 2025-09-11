@@ -30,12 +30,12 @@ export default function Footer() {
       title: "Top Pages",
       list: [
         {
-          name: "Online Slot",
-          url: "/online-slot",
+          name: "Online Slots & Jackpots",
+          url: "/online-slots",
         },
         {
-          name: "Starburst",
-          url: "/starburst",
+          name: "Big Bass Bonanza",
+          url: "/big-bass-bonanza",
         },
         {
           name: "Casino Bonuses",
@@ -146,7 +146,7 @@ export default function Footer() {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} Only UK Casinos. All rights reserved. All
+            @{curDate.getFullYear()} TopCasinoPicksUK. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>

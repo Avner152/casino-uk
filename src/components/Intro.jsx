@@ -19,14 +19,14 @@ const Intro = observer(() => {
     homePage: {
       title: "Discover the UK's Best Online Casinos of ",
     },
-    starburst: {
-      title: "Top UK Casinos with Starburst - ",
+    bigBassBonanza: {
+      title: "Top Big Bass Bonanza UK Casinos - ",
     },
     bonuses: {
-      title: "Top Casino Bonuses in the UK - ",
+      title: "Casino Bonuses – Best UK Deals ",
     },
     slot: {
-      title: "Top Online Slot Casinos in the UK -",
+      title: "Online Slots & Jackpots Top UK Sites -",
     },
     table: {
       title: "Best Table Games in the UK – Our Casino Picks for ",
@@ -52,10 +52,10 @@ const Intro = observer(() => {
       case "/casino-bonuses":
         setPage("bonuses");
         break;
-      case "/starburst":
-        setPage("starburst");
+      case "/big-bass-bonanza":
+        setPage("bigBassBonanza");
         break;
-      case "/online-slot":
+      case "/online-slots":
         setPage("slot");
         break;
       case "/table-games":
@@ -93,12 +93,10 @@ const Intro = observer(() => {
           ) : (
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
               {myStore.type === "blanca"
-                ? `Check Our Top UK Casinos Of ${fullYear}`
+                ? `Check Our Top UK Casinos Of `
                 : toJS(myStore.content)?.firstTitle.replace(
                     "{curDate}",
-                    `${curDate.toLocaleString("default", {
-                      month: "long",
-                    })} ${fullYear}`
+                    `${fullYear}`
                   )}
             </h1>
           )}

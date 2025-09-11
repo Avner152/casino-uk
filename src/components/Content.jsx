@@ -5,14 +5,14 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose OnlyUKCasinos.com?",
+    h2: "🔍 Why Trust TopCasinoPicksUK.com?",
     ul: [
-      "🎯 Expertly Curated Casino Lists - Each casino we list is evaluated for trustworthiness, licensing, game selection, mobile experience, customer support, and promotional value.",
-      "🎁 Exclusive Deals - Take advantage of top-tier offers including matched deposits, no-wager bonuses, cashback, and free spin bundles — all updated regularly.",
-      "📱 Mobile & Tablet Friendly - Our recommended sites perform seamlessly across all modern devices, giving you the freedom to play from anywhere.",
-      "💰 Play with Real Winnings - Find games that offer great odds, fast payouts, and verified fairness. We help you sort between volatile jackpots, low-stake spins, and strategic table games.",
-      "🧠 Play Smarter - Our content helps you learn how bonuses really work, how to read RTPs, and how to avoid common mistakes that cost players money.",
-      "🛡️ Player Safety First - Only licensed, secure, and responsible sites make it into our lists. We also offer guides on staying in control, spotting scams, and using self-exclusion tools.",
+      "🎯 Expert Casino Reviews – Every site featured on our platform undergoes thorough vetting. We evaluate licensing, safety, game variety, payout speed, mobile compatibility, and bonus fairness. Our review system focuses on transparency, so you always know exactly what to expect from each casino.",
+      "🎁 Exclusive Bonus Deals – Get access to no-deposit bonuses, low-wagering free spins, VIP perks, and cashback offers that are tailored for UK players. We only list bonus deals that are fair, clear, and actually beneficial to players.",
+      "📱 Play Anytime, Anywhere – All listed casinos are optimized for mobile and tablet, with lightning-fast load times and sleek interfaces for on-the-go gaming. Whether you're on Android, iOS, or desktop — you’ll enjoy consistent quality.",
+      "💰 Play with Real Winnings – Find games that offer great odds, fast payouts, and verified fairness. We help you sort between volatile jackpots, low-stake spins, and strategic table games. Learn about RTPs, variance, and bonus hit frequency for smarter play.",
+      "🧠 Learn, Compare & Win Smarter – We publish expert strategies, RTP breakdowns, and tips to avoid common traps. Our goal is to help you play smarter and make the most out of every spin or bet. From bankroll tips to bonus unlocking techniques, we guide you at every step.",
+      "🛡️ Safety & Support First – Our picks only include platforms licensed by recognized international or UK regulators. We also link to responsible gaming tools and support networks. Player safety is our top priority, and we regularly update content to reflect changing industry standards.",
     ],
   };
   const faq = {
@@ -43,15 +43,16 @@ export default function Content() {
   return (
     <div className="px-3">
       <h1 className="fw-bold text-white">
-        Welcome to OnlyUKCasinos.net – Your Ultimate Guide to the Best UK Online
-        Casinos in {curDate.getFullYear()}
+        🏆 TopCasinoPicksUK.com – Best Online Casino Picks for UK Players
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At OnlyUKCasinos.com,
-        we bring you the most comprehensive and user-friendly guide to the
-        finest online casinos available to UK players. Whether you're a seasoned
-        player or new to the scene, our expert resources, impartial reviews, and
-        updated rankings are here to elevate your gaming journey.
+        Explore the most trusted and exciting online casinos in the UK. At
+        <b>TopCasinoPicksUK.com</b>, we showcase secure, entertaining, and
+        highly rated platforms for every kind of player — from slot fans to live
+        casino lovers. Whether you're searching for exciting new casinos,
+        player-friendly bonuses, or specific game types like Megaways or Big
+        Bass Bonanza, our platform gives you all the tools to compare, play, and
+        win with confidence.
       </p>
 
       <div id={why.id}>

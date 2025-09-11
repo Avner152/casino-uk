@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 export default function CookiePolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Cookie Policy | Only UK Casinos",
+    title: "Cookie Policy | Top Casino Picks UK",
     description:
-      "Read our Cookie Policy for `Only UK Casinos`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
+      "Read our Cookie Policy for `Top Casino Picks UK`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
   };
   return (
     <>

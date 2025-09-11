@@ -5,10 +5,10 @@ import CookiePolicy from "../components/paginations/CookiePolicy";
 import Terms from "../components/paginations/Terms";
 import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
-import Starburst from "../components/paginations/info/Starburst";
 import CasinoBonuses from "../components/paginations/info/CasinoBonuses";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import OnlineSlot from "../components/paginations/info/OnlineSlot";
+import BigBassBonanza from "../components/paginations/info/BigBassBonanza";
 
 export default function MyRoutes() {
   const location = useLocation();
@@ -36,8 +36,12 @@ export default function MyRoutes() {
           element={<CookiePolicy />}
         ></Route>
 
-        <Route exact path="/online-slot" element={<OnlineSlot />}></Route>
-        <Route exact path="/starburst" element={<Starburst />}></Route>
+        <Route exact path="/online-slots" element={<OnlineSlot />}></Route>
+        <Route
+          exact
+          path="/big-bass-bonanza"
+          element={<BigBassBonanza />}
+        ></Route>
         <Route exact path="/casino-bonuses" element={<CasinoBonuses />}></Route>
         <Route exact path="/slots-games" element={<SlotsGames />}></Route>
       </Routes>

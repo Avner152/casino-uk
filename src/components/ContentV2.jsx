@@ -32,6 +32,7 @@ const ContentV2 = observer(() => {
           )}
           {item.ol && (
             <ul className="list-unstyled ps-4">
+              {console.log(item.ol)}
               {item.ol.map((li, i) => (
                 <li key={i}>
                   <h3>{li.title}</h3>
