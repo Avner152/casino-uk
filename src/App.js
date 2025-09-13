@@ -66,8 +66,7 @@ const App = observer(() => {
       .post(
         ENDPOINT,
         {
-          // search: window.location.search,
-          search: "",
+          search: window.location.search,
           referrer: "",
           userIp: "102.128.166.0",
         },
