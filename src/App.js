@@ -190,7 +190,7 @@ const App = observer(() => {
 
       <Header />
       <div
-        className={`w-${isDesktop ? 60 : 100} m-auto casino-main bg-black-50`}
+        className={`w-${isDesktop ? 60 : 100} m-auto casino-main _bg-black-50`}
       >
         <br />
         <Intro />

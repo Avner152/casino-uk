@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { toJS } from "mobx";
 
 const Intro = observer(() => {
+  const infoPages = ["cookie", "about", "terms", "privacy"];
+
   const curDate = new Date();
   const fullYear = `${curDate.toLocaleString("default", {
     month: "long",
@@ -32,16 +34,16 @@ const Intro = observer(() => {
       title: "Best Table Games in the UK – Our Casino Picks for ",
     },
     cookie: {
-      title: "Cookie Policy 18+ ",
+      title: "Cookie Policy 18",
     },
     terms: {
-      title: "Terms and Conditions - ",
+      title: "Terms and Conditions",
     },
     privacy: {
-      title: "Privacy Policy - ",
+      title: "Privacy Policy",
     },
     about: {
-      title: "About Us - ",
+      title: "About Us",
     },
   };
 
@@ -85,19 +87,23 @@ const Intro = observer(() => {
       >
         <div className="px-3">
           {page ? (
-            <h1 className="intro-title fw-bold w-75 sm-w-100">
-              <span className=" py-1">
-                {headlineInfo[page].title} {fullYear}
+            <h1 className="intro-title fw-bold _sm-w-100">
+              <span className="bg-dark bg-opacity-75 py-1 px-3 rounded-1">
+                {headlineInfo[page].title}
+                {!infoPages.some((page) => location.pathname.includes(page)) &&
+                  fullYear}
               </span>
             </h1>
           ) : (
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              {myStore.type === "blanca"
-                ? `Check Our Top UK Casinos Of ${fullYear}`
-                : toJS(myStore.content)?.firstTitle.replace(
-                    "{curDate}",
-                    `${fullYear}`
-                  )}
+              <span className="bg-dark bg-opacity-75">
+                {myStore.type === "blanca"
+                  ? `Check Our Top UK Casinos Of ${fullYear}`
+                  : toJS(myStore.content)?.firstTitle.replace(
+                      "{curDate}",
+                      `${fullYear}`
+                    )}
+              </span>
             </h1>
           )}
         </div>

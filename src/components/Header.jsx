@@ -100,22 +100,12 @@ export default function Header() {
               <div id="outer-container">
                 <Menu
                   id="elastic"
-                  right
-                  // customCrossIcon={false}
+                  right={true}
                   burgerButtonClassName={show}
                   isOpen={isBurgerOpen}
                   onOpen={hamburgerHandler}
                   onClose={hamburgerHandler}
                 >
-                  <Link
-                    onClick={() => {
-                      setShow("");
-                      setBurgerOpen(false);
-                    }}
-                    to={`/${window.location.search}`}
-                  >
-                    <img src={logo} width={125} height={55} alt="logo" />
-                  </Link>
                   {menu.map((menuItem, _) => (
                     <div
                       key={menuItem.title}
