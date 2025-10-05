@@ -92,12 +92,16 @@ const Intro = observer(() => {
             </h1>
           ) : (
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              {myStore.type === "blanca"
-                ? `Check Our Top UK Casinos Of ${fullYear}`
-                : toJS(myStore.content)?.firstTitle.replace(
-                    "{curDate}",
-                    ` ${fullYear}`
-                  )}
+              {myStore.type === "blanca" ? (
+                <span className="bg-dark">
+                  Check Our Top UK Casinos Of {fullYear}
+                </span>
+              ) : (
+                toJS(myStore.content)?.firstTitle.replace(
+                  "{curDate}",
+                  ` ${fullYear}`
+                )
+              )}
             </h1>
           )}
         </div>
