@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { toJS } from "mobx";
 
 const Intro = observer(() => {
+  const infoPages = ["cookie", "about", "terms", "privacy"];
+
   const curDate = new Date();
   const fullYear = `${curDate.toLocaleString("default", {
     month: "long",
@@ -19,29 +21,29 @@ const Intro = observer(() => {
     homePage: {
       title: "Discover the UK's Best Online Casinos of ",
     },
-    starburst: {
-      title: "Top UK Casinos with Starburst - ",
+    bigBassBonanza: {
+      title: "Top Big Bass Bonanza UK Casinos - ",
     },
     bonuses: {
-      title: "Top Casino Bonuses in the UK - ",
+      title: "Casino Bonuses – Best UK Deals ",
     },
     slot: {
-      title: "Top Online Slot Casinos in the UK -",
+      title: "Online Slots & Jackpots Top UK Sites -",
     },
     table: {
       title: "Best Table Games in the UK – Our Casino Picks for ",
     },
     cookie: {
-      title: "Cookie Policy 18+ ",
+      title: "Cookie Policy 18",
     },
     terms: {
-      title: "Terms and Conditions - ",
+      title: "Terms and Conditions",
     },
     privacy: {
-      title: "Privacy Policy - ",
+      title: "Privacy Policy",
     },
     about: {
-      title: "About Us - ",
+      title: "About Us",
     },
   };
 
@@ -52,10 +54,10 @@ const Intro = observer(() => {
       case "/casino-bonuses":
         setPage("bonuses");
         break;
-      case "/starburst":
-        setPage("starburst");
+      case "/big-bass-bonanza":
+        setPage("bigBassBonanza");
         break;
-      case "/online-slot":
+      case "/online-slots":
         setPage("slot");
         break;
       case "/table-games":
@@ -85,23 +87,23 @@ const Intro = observer(() => {
       >
         <div className="px-3">
           {page ? (
-            <h1 className="intro-title fw-bold w-75 sm-w-100">
-              <span className=" py-1">
-                {headlineInfo[page].title} {fullYear}
+            <h1 className="intro-title fw-bold _sm-w-100">
+              <span className="bg-dark bg-opacity-75 py-1 rounded-1">
+                {headlineInfo[page].title}
+                {!infoPages.some((page) => location.pathname.includes(page)) &&
+                  fullYear}
               </span>
             </h1>
           ) : (
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              {myStore.type === "blanca" ? (
-                <span className="bg-dark">
-                  Check Our Top UK Casinos Of {fullYear}
-                </span>
-              ) : (
-                toJS(myStore.content)?.firstTitle.replace(
-                  "{curDate}",
-                  ` ${fullYear}`
-                )
-              )}
+              <span className="bg-dark bg-opacity-75">
+                {myStore.type === "blanca"
+                  ? `Check Our Top UK Casinos Of ${fullYear}`
+                  : toJS(myStore.content)?.firstTitle.replace(
+                      "{curDate}",
+                      `${fullYear}`
+                    )}
+              </span>
             </h1>
           )}
         </div>

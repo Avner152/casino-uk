@@ -15,7 +15,7 @@ const ContentV2 = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold text-white">
+      <h1 className="fw-bold text-white ">
         {topPar.h1.replace("{curDate}", curDate.getFullYear())}
       </h1>
       <p>{topPar.p.replace("{curDate}", curDate.getFullYear())}</p>
