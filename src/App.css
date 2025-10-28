@@ -31,6 +31,10 @@ body {
   color: #000 !important;
 }
 
+body.sport {
+  background-image: url(./assets/bg-sport.webp);
+}
+
 .w-60 {
   width: 60%;
 }

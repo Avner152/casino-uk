@@ -9,11 +9,14 @@ import Aviator from "../components/paginations/info/Aviator";
 import LiveGames from "../components/paginations/info/LiveGames";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import TableGames from "../components/paginations/info/TableGames";
+import SportPage from "../components/paginations/SportPage";
 
 export default function MyRoutes() {
   const location = useLocation();
 
   useEffect(() => {
+    if (!location.pathname.includes("sport"))
+      document.body.classList.remove("sport");
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
@@ -26,6 +29,8 @@ export default function MyRoutes() {
           element={<HomePage />}
           // element={<HomePage captchaToken={captchaToken} />}
         ></Route>
+
+        <Route exact path="/special/sport" element={<SportPage />} />
         <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route exact path="/about-us" element={<AboutUs />}></Route>
