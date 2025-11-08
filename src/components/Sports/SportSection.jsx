@@ -27,9 +27,7 @@ const SportSection = observer(({ captchaToken }) => {
 
   useEffect(() => {
     if (list.length) return;
-
-    // const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/manchester/prd`;
-    const ENDPOINT = `http://localhost:5001/manchester/prd`;
+    const ENDPOINT = `http://localhost:5001/manchester/prd?product=betting`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {
@@ -48,10 +46,7 @@ const SportSection = observer(({ captchaToken }) => {
           { headers }
         )
         .then((res) => {
-          console.log(res.data);
-
-          // setList(res.data.list[0].brands);
-
+          // console.log("res.data", res.data);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
             res.data.list[0].brands.filter((brand) => !brand.isFrozen)
@@ -131,13 +126,7 @@ const SportSection = observer(({ captchaToken }) => {
         const fixedURL = casino.url.replace("{msclkid}", mId);
 
         return (
-          <Fade
-            key={k}
-            // direction="left"
-            // delay={isDesktop ? k * 100 : 0}
-            cascade
-            triggerOnce
-          >
+          <Fade key={k} cascade triggerOnce>
             <div onClick={() => window.open(fixedURL, "_blank")}>
               {isMobile ? (
                 <CasinoItemMobile

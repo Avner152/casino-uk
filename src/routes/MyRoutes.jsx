@@ -9,14 +9,18 @@ import Aviator from "../components/paginations/info/Aviator";
 import LiveGames from "../components/paginations/info/LiveGames";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import TableGames from "../components/paginations/info/TableGames";
-import SportPage from "../components/paginations/SportPage";
+import SportPage from "../components/Sports/SportPage";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
 
-export default function MyRoutes() {
+const MyRoutes = observer(() => {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.pathname.includes("sport"))
-      document.body.classList.remove("sport");
+    let isSport = location.pathname.includes("sport");
+    if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
+    if (!isSport) document.body.classList.remove("sport");
+
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
@@ -48,4 +52,6 @@ export default function MyRoutes() {
       </Routes>
     </>
   );
-}
+});
+
+export default MyRoutes;

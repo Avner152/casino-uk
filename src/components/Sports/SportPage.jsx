@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import CasinoItemPlaceholder from "../CasinoItemPlaceholder";
 import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
 import { useMediaQuery } from "react-responsive";
-import SportSection from "../Sports/SportSection";
+import SportSection from "./SportSection";
 import { observer } from "mobx-react";
-import ContentV2 from "../ContentV2";
 import Content from "../Content";
 
 const SportPage = observer(({ captchaToken }) => {
