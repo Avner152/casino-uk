@@ -127,7 +127,7 @@ const Intro = observer(() => {
                       month: "long",
                     }
                   )} ${fullYear}`
-                : toJS(myStore.content).firstTitle.replace(
+                : toJS(myStore.content)?.firstTitle.replace(
                     "{curDate}",
                     `${curDate.toLocaleString("default", {
                       month: "long",

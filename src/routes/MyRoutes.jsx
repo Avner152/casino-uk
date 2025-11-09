@@ -9,11 +9,19 @@ import CrashGames from "../components/paginations/info/CrashGames";
 import LiveGames from "../components/paginations/info/LiveGames";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import TableGames from "../components/paginations/info/TableGames";
+import myStore from "../mobX/Store";
+import { observer } from "mobx-react";
+import SportPage from "../components/sport/SportPage";
 
-export default function MyRoutes({ isBot }) {
+const MyRoutes = observer(({ isBot }) => {
   const location = useLocation();
 
   useEffect(() => {
+    let isSport = location.pathname.includes("sport");
+
+    if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
+    if (!isSport) document.body.classList.remove("sport");
+
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
@@ -36,6 +44,7 @@ export default function MyRoutes({ isBot }) {
           element={<CookiePolicy />}
         ></Route>
 
+        <Route exact path="/special/sport" element={<SportPage />} />
         <Route exact path="/table-games" element={<TableGames />}></Route>
         <Route exact path="/top-crash-games" element={<CrashGames />}></Route>
         <Route exact path="/live-games" element={<LiveGames />}></Route>
@@ -43,4 +52,6 @@ export default function MyRoutes({ isBot }) {
       </Routes>
     </>
   );
-}
+});
+
+export default MyRoutes;
