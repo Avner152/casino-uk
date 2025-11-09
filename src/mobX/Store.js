@@ -3,6 +3,7 @@ import { importImages } from "../App";
 
 class MyStore {
   type = "blanca";
+  product = "";
   list = [];
   initialList = [];
   content = null;
@@ -13,6 +14,8 @@ class MyStore {
   constructor() {
     makeObservable(this, {
       brands: observable,
+      product: observable,
+      updateProduct: action,
       list: observable,
       updateList: action,
       type: observable,
@@ -33,6 +36,9 @@ class MyStore {
   }
   updateContent(newContent) {
     this.content = { ...newContent };
+  }
+  updateProduct(product) {
+    this.product = product;
   }
 }
 

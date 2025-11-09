@@ -4,8 +4,10 @@ import { importImages } from "../App";
 import logo from "../assets/logo.png";
 import cards from "../assets/casino.png";
 import React from "react";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
 
-export default function Footer() {
+const Footer = observer(() => {
   const curDate = new Date();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
@@ -74,7 +76,11 @@ export default function Footer() {
           } m-auto`}
         >
           <div className="footer-logo d-flex flex-column flex-grow-0">
-            <Link to={`/${window.location.search}`}>
+            <Link
+              to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                window.location.search
+              }`}
+            >
               <img
                 src={logo}
                 width={200}
@@ -153,4 +159,6 @@ export default function Footer() {
       }
     </>
   );
-}
+});
+
+export default Footer;
