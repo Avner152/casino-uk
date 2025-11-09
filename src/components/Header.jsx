@@ -4,9 +4,11 @@ import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
 import { Nav } from "react-bootstrap";
+import myStore from "../mobX/Store";
+import { observer } from "mobx-react";
 // import { Button } from "react-bootstrap";
 
-export default function Header() {
+const Header = observer(() => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
   const [show, setShow] = useState("closed");
 
@@ -74,7 +76,11 @@ export default function Header() {
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
-            <NavLink to={`/${window.location.search}`}>
+            <NavLink
+              to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                window.location.search
+              }`}
+            >
               <img src={logo} width={150} height={60} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
@@ -92,7 +98,12 @@ export default function Header() {
         ) : (
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
-              <NavLink to={`/${window.location.search}`} className="ms-3">
+              <NavLink
+                to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                  window.location.search
+                }`}
+                className="ms-3"
+              >
                 <img alt="logo" src={logo} width={140} height={60} />
               </NavLink>
               {/*  */}
@@ -137,4 +148,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+});
+
+export default Header;

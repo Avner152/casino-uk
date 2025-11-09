@@ -15,6 +15,7 @@ import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
 
 import { useSearchParams } from "react-router-dom";
+import myStore from "./mobX/Store";
 
 export function importImages(r) {
   let images = {};
@@ -59,7 +60,8 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd`;
+    // const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=${myStore.product}`;
+    const ENDPOINT = `http://localhost:5001/birmingham/prd?product=${myStore.product}`;
 
     const headers = { segment: "viral" };
     axios

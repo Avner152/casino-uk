@@ -2,6 +2,7 @@ import { observable, action, makeObservable } from "mobx";
 
 class MyStore {
   type = "blanca";
+  product = "";
   list = [];
   initialList = [];
   content = null;
@@ -12,6 +13,8 @@ class MyStore {
       brands: observable,
       list: observable,
       updateList: action,
+      product: observable,
+      updateProduct: action,
       type: observable,
       updateType: action,
       content: observable,
@@ -30,6 +33,9 @@ class MyStore {
   }
   updateContent(newContent) {
     this.content = { ...newContent };
+  }
+  updateProduct(product) {
+    this.product = product;
   }
 }
 

@@ -9,11 +9,18 @@ import CasinoBonuses from "../components/paginations/info/CasinoBonuses";
 import SlotsGames from "../components/paginations/info/SlotsGames";
 import OnlineSlot from "../components/paginations/info/OnlineSlot";
 import BigBassBonanza from "../components/paginations/info/BigBassBonanza";
+import myStore from "../mobX/Store";
+import SportPage from "../components/sport/SportPage";
+import { observer } from "mobx-react";
 
-export default function MyRoutes() {
+const MyRoutes = observer(() => {
   const location = useLocation();
 
   useEffect(() => {
+    let isSport = location.pathname.includes("sport");
+    if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
+    if (!isSport) document.body.classList.remove("sport");
+
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
@@ -26,6 +33,7 @@ export default function MyRoutes() {
           element={<HomePage />}
           // element={<HomePage captchaToken={captchaToken} />}
         ></Route>
+        <Route exact path="/special/sport" element={<SportPage />} />
         <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route exact path="/about-us" element={<AboutUs />}></Route>
@@ -47,4 +55,6 @@ export default function MyRoutes() {
       </Routes>
     </>
   );
-}
+});
+
+export default MyRoutes;
