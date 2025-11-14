@@ -151,8 +151,16 @@ const Header = observer(() => {
                             setBurgerOpen(false);
                           }}
                           key={j}
-                          to={li.url + window.location.search}
-                          href={li.url + window.location.search}
+                          to={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
+                          href={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
                         >
                           {li.name}
                         </Link>

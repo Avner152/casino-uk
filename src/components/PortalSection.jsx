@@ -29,8 +29,8 @@ const PortalSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    // const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd?product=${myStore.product}`;
-    const ENDPOINT = `http://localhost:5001/uk/prd?product=${myStore.product}`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd?product=${myStore.product}`;
+    // const ENDPOINT = `http://localhost:5001/uk/prd?product=${myStore.product}`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {

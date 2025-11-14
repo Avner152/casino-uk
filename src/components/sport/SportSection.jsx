@@ -27,7 +27,8 @@ const SportSection = observer(({ captchaToken }) => {
 
   useEffect(() => {
     if (list.length) return;
-    const ENDPOINT = `http://localhost:5001/uk/prd?product=betting`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd?product=betting`;
+    // const ENDPOINT = `http://localhost:5001/uk/prd?product=betting`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {
