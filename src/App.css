@@ -22,13 +22,20 @@ body {
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
   /* background-image: url(./assets/bg.webp); */
-  background-image: url(./assets/bg.webp);
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   color: #000 !important;
+}
+
+body.sport {
+  background-image: url(./assets/bg-sport.webp);
+}
+
+body.casino {
+  background-image: url(./assets/bg.webp);
 }
 
 .w-60 {

@@ -6,7 +6,7 @@ import { elastic as Menu } from "react-burger-menu";
 import { Nav } from "react-bootstrap";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
-// import { Button } from "react-bootstrap";
+import { pages } from "../json/helpers";
 
 const Header = observer(() => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
@@ -84,10 +84,13 @@ const Header = observer(() => {
               <img src={logo} width={220} alt="logo" height={30} />
             </NavLink>
             <Nav className="fs-6 gap-3">
-              {menu[0].list.map((item, i) => (
+              {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
+                  onClick={() => myStore.updateInfoContent(item.name)}
                   className="my-nav text-white"
-                  to={item.url + window.location.search}
+                  to={`${
+                    myStore.product === "betting" ? "/special/sport" : ""
+                  }${item.url}${window.location.search}`}
                   key={i}
                 >
                   {item.name}

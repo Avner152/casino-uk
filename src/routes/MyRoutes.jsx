@@ -12,15 +12,15 @@ import TableGames from "../components/paginations/info/TableGames";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
 import SportPage from "../components/sport/SportPage";
+import SportTemplate from "../components/paginations/info/SportTemplate";
 
 const MyRoutes = observer(({ isBot }) => {
   const location = useLocation();
 
   useEffect(() => {
     let isSport = location.pathname.includes("sport");
-
     if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
-    if (!isSport) document.body.classList.remove("sport");
+    document.body.classList = isSport ? "sport" : "casino";
 
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -33,22 +33,37 @@ const MyRoutes = observer(({ isBot }) => {
           path="/"
           element={<HomePage isBot={isBot} />}
           // element={<HomePage captchaToken={captchaToken} />}
-        ></Route>
-        <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route exact path="/about-us" element={<AboutUs />}></Route>
+        />
+        <Route exact path="/terms-and-conditions" element={<Terms />} />
+        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
+        <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
 
+        {/*  */}
         <Route
           exact
-          path="/cookie-consent-policy"
+          path="/special/sport/terms-and-conditions"
+          element={<Terms />}
+        />
+        <Route
+          exact
+          path="/special/sport/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+        <Route
+          exact
+          path="/special/sport/cookie-consent-policy"
           element={<CookiePolicy />}
-        ></Route>
+        />
 
         <Route exact path="/special/sport" element={<SportPage />} />
-        <Route exact path="/table-games" element={<TableGames />}></Route>
-        <Route exact path="/top-crash-games" element={<CrashGames />}></Route>
-        <Route exact path="/live-games" element={<LiveGames />}></Route>
-        <Route exact path="/slots-games" element={<SlotsGames />}></Route>
+
+        <Route exact path="/special/sport/:page" element={<SportTemplate />} />
+        <Route exact path="/table-games" element={<TableGames />} />
+        <Route exact path="/top-crash-games" element={<CrashGames />} />
+        <Route exact path="/live-games" element={<LiveGames />} />
+        <Route exact path="/slots-games" element={<SlotsGames />} />
       </Routes>
     </>
   );

@@ -31,3 +31,42 @@ export function getCookie(name) {
   }
   return null;
 }
+
+export const pages = {
+  casino: [
+    {
+      name: "Table Games",
+      url: "/table-games",
+    },
+    {
+      name: "Top Crash Games ",
+      url: "/top-crash-games",
+    },
+    {
+      name: "Live Games ",
+      url: "/live-games",
+    },
+    {
+      name: "Slots Games ",
+      url: "/slots-games",
+    },
+  ],
+  betting: [
+    {
+      name: "Football",
+      url: "/football",
+    },
+    {
+      name: "Horse Racing",
+      url: "/horse-racing",
+    },
+    {
+      name: "eSports",
+      url: "/esports",
+    },
+    {
+      name: "Betting Systems",
+      url: "/systems",
+    },
+  ],
+};

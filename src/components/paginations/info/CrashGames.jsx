@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import CasinoSection from "../../CasinoSection";
+import PortalSection from "../../PortalSection";
 
 export default function CrashGames() {
   const curDate = new Date();
@@ -43,7 +43,7 @@ export default function CrashGames() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
-      <CasinoSection />
+      <PortalSection />
       <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="mt-4">
           <h2>{topPar.h2}</h2>

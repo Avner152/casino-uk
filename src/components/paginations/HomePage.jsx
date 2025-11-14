@@ -1,10 +1,7 @@
-import CasinoSection from "../CasinoSection";
+import PortalSection from "../PortalSection";
 import Content from "../Content";
 import { useMediaQuery } from "react-responsive";
 import { Helmet } from "react-helmet";
-import CasinoItemPlaceholder from "../CasinoItemPlaceholder";
-import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
-import React from "react";
 import { observer } from "mobx-react";
 import myStore from "../../mobX/Store";
 import ContentV2 from "../ContentV2";
@@ -22,22 +19,11 @@ const HomePage = observer(({ captchaToken }) => {
       </Helmet>
       {/* {captchaToken === null ? ( */}
       {captchaToken === null ? (
-        <div className="mt-5 mb-4 gap-2 d-flex flex-column justify-content-center align-items-center m-auto overflow-hidden">
-          {/* <Spinner style={{ color: "white" }} animation="border" /> */}
-          {Array.from({ length: 5 }).map((_, i) => (
-            <React.Fragment key={i}>
-              {isDesktop ? (
-                <CasinoItemPlaceholder />
-              ) : (
-                <CasinoItemMobilePlaceholder />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+        <div className="mt-5 mb-4 gap-2 d-flex flex-column justify-content-center align-items-center m-auto overflow-hidden"></div>
       ) : (
         <>
           <div className="w-100 p-2 m-auto casino-section">
-            <CasinoSection captchaToken={captchaToken} />
+            <PortalSection captchaToken={captchaToken} />
             <br />
           </div>
         </>
