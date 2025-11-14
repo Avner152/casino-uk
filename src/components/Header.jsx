@@ -4,7 +4,8 @@ import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
 import { Nav } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
+import myStore from "../mobX/Store";
+import { pages } from "../json/helpers";
 
 export default function Header() {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
@@ -18,50 +19,20 @@ export default function Header() {
   const menu = [
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Starburst ",
-          url: "/starburst",
-        },
-        {
-          name: "Casino Bonuses",
-          url: "/casino-bonuses",
-        },
-        // {
-        //   name: "Book of Dead",
-        //   url: "/slots-games",
-        // },
-        {
-          name: "Online Slot",
-          url: "/online-slot",
-        },
-      ],
+      list: [],
     },
     {
       title: "Information",
       list: [
         { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Terms & Conditions", url: "/terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
   ];
 
-  // const desktopMenu = [
-  //   "Slots",
-  //   "Jackpot",
-  //   "Roulette",
-  //   "Live Casino",
-  //   "Game Shows",
-  //   "About us",
-  // ];
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
-  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <header
@@ -74,14 +45,21 @@ export default function Header() {
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
-            <NavLink to={`/${window.location.search}`}>
+            <NavLink
+              to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                window.location.search
+              }`}
+            >
               <img src={logo} width={150} height={60} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
-              {menu[0].list.map((item, i) => (
+              {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
+                  onClick={() => myStore.updateInfoContent(item.name)}
                   className="my-nav text-white"
-                  to={item.url + window.location.search}
+                  to={`${
+                    myStore.product === "betting" ? "/special/sport" : ""
+                  }${item.url}${window.location.search}`}
                   key={i}
                 >
                   {item.name}
@@ -92,7 +70,12 @@ export default function Header() {
         ) : (
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
-              <NavLink to={`/${window.location.search}`} className="ms-3">
+              <NavLink
+                to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                  window.location.search
+                }`}
+                className="ms-3"
+              >
                 <img alt="logo" src={logo} width={140} height={60} />
               </NavLink>
               {/*  */}
@@ -112,7 +95,9 @@ export default function Header() {
                       setShow("");
                       setBurgerOpen(false);
                     }}
-                    to={`/${window.location.search}`}
+                    to={`/${
+                      myStore.product === "betting" ? "special/sport" : ""
+                    }${window.location.search}`}
                   >
                     <img src={logo} width={125} height={55} alt="logo" />
                   </Link>
@@ -129,8 +114,16 @@ export default function Header() {
                             setBurgerOpen(false);
                           }}
                           key={j}
-                          to={li.url + window.location.search}
-                          href={li.url + window.location.search}
+                          to={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
+                          href={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
                         >
                           {li.name}
                         </Link>

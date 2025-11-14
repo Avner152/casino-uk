@@ -31,3 +31,39 @@ export function getCookie(name) {
   }
   return null;
 }
+
+export const pages = {
+  casino: [
+    {
+      name: "Starburst ",
+      url: "/starburst",
+    },
+    {
+      name: "Casino Bonuses",
+      url: "/casino-bonuses",
+    },
+
+    {
+      name: "Online Slot",
+      url: "/online-slot",
+    },
+  ],
+  betting: [
+    {
+      name: "Football",
+      url: "/football",
+    },
+    {
+      name: "Horse Racing",
+      url: "/horse-racing",
+    },
+    {
+      name: "eSports",
+      url: "/esports",
+    },
+    {
+      name: "Betting Systems",
+      url: "/systems",
+    },
+  ],
+};

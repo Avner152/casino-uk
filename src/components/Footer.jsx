@@ -4,8 +4,9 @@ import { importImages } from "../App";
 import logo from "../assets/logo.png";
 import cards from "../assets/casino.png";
 import React from "react";
+import { observer } from "mobx-react";
 
-export default function Footer() {
+const Footer = observer(() => {
   const curDate = new Date();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
@@ -22,7 +23,7 @@ export default function Footer() {
       list: [
         { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Terms & Conditions", url: "/terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
@@ -153,4 +154,6 @@ export default function Footer() {
       }
     </>
   );
-}
+});
+
+export default Footer;
