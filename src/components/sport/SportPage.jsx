@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
-import CasinoItemPlaceholder from "../CasinoItemPlaceholder";
-import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
-import { useMediaQuery } from "react-responsive";
+import { useEffect } from "react";
+// import { useMediaQuery } from "react-responsive";
 import SportSection from "./SportSection";
 import { observer } from "mobx-react";
 import Content from "../Content";
 
 const SportPage = observer(({ captchaToken }) => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
   useEffect(() => {
     document.body.classList = "sport";
