@@ -1,18 +1,18 @@
 import React from "react";
-import CasinoSection from "../../CasinoSection";
+import PortalSection from "../../PortalSection";
 import { Helmet } from "react-helmet";
 
 export default function LiveGames() {
   const curDate = new Date();
   const titlePar = {
-    p: "Book of Dead is one of the most recognizable and played slot games in the UK. Developed by Play’n GO, this slot has become a flagship title due to its high volatility, straightforward gameplay, and thrilling bonus mechanics. The game's ancient Egyptian theme and classic adventurer storyline attract players from all levels.",
+    p: "Book of Dead is one of the most recognizable and played slot games in the UK. Developed by Play'n GO, this slot has become a flagship title due to its high volatility, straightforward gameplay, and thrilling bonus mechanics. The game's ancient Egyptian theme and classic adventurer storyline attract players from all levels.",
   };
 
   const par1 = {
     id: "par-1",
     h4: "📖 Game Breakdown:",
     ul: [
-      "Theme: Ancient Egypt, Rich Wilde’s treasure-hunting adventure.",
+      "Theme: Ancient Egypt, Rich Wilde's treasure-hunting adventure.",
       "Reels & Paylines: 5 reels, 10 adjustable paylines.",
       "RTP: Around 96.21%.",
       "Volatility: High – suitable for players who enjoy bigger, less frequent wins.",
@@ -53,7 +53,7 @@ export default function LiveGames() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
-      <CasinoSection />
+      <PortalSection />
 
       <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
         <div className="p-4">
@@ -110,7 +110,7 @@ export default function LiveGames() {
             <p>
               Book of Dead continues to top the popularity charts year after
               year because it blends nostalgia, high potential rewards, and
-              accessibility in a well-designed package. It’s a must-try for any
+              accessibility in a well-designed package. It's a must-try for any
               slot enthusiast.
             </p>
           </div>

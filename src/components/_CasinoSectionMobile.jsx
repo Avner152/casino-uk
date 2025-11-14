@@ -1,7 +1,7 @@
 import casinos from "../json/casino-list.json";
 import CasinoItem from "./CasinoItem";
 
-export default function CasinoSection() {
+export default function PortalSection() {
   return (
     <div className="w-75 m-auto">
       {casinos.map((casino, k) => (

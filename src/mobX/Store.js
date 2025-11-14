@@ -4,6 +4,7 @@ import { importImages } from "../App";
 class MyStore {
   type = "blanca";
   product = "";
+  infoContent = null;
   list = [];
   initialList = [];
   content = null;
@@ -22,6 +23,8 @@ class MyStore {
       updateType: action,
       content: observable,
       updateContent: action,
+      infoContent: observable,
+      updateInfoContent: action,
     });
   }
   updateList(newList) {
@@ -39,6 +42,9 @@ class MyStore {
   }
   updateProduct(product) {
     this.product = product;
+  }
+  updateInfoContent(chosen) {
+    this.infoContent = chosen;
   }
 }
 

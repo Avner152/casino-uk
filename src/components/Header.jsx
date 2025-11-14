@@ -6,6 +6,7 @@ import { elastic as Menu } from "react-burger-menu";
 import { Nav } from "react-bootstrap";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
+import { pages } from "../json/helpers";
 // import { Button } from "react-bootstrap";
 
 const Header = observer(() => {
@@ -50,15 +51,6 @@ const Header = observer(() => {
     },
   ];
 
-  // const desktopMenu = [
-  //   "Slots",
-  //   "Jackpot",
-  //   "Roulette",
-  //   "Live Casino",
-  //   "Game Shows",
-  //   "About us",
-  // ];
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",
@@ -84,10 +76,13 @@ const Header = observer(() => {
               <img src={logo} width={150} height={60} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
-              {menu[0].list.map((item, i) => (
+              {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
+                  onClick={() => myStore.updateInfoContent(item.name)}
                   className="my-nav text-white"
-                  to={item.url + window.location.search}
+                  to={`${
+                    myStore.product === "betting" ? "/special/sport" : ""
+                  }${item.url}${window.location.search}`}
                   key={i}
                 >
                   {item.name}

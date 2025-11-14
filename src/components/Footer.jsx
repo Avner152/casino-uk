@@ -6,6 +6,7 @@ import cards from "../assets/casino.png";
 import React from "react";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
+import { pages } from "../json/helpers";
 
 const Footer = observer(() => {
   const curDate = new Date();
@@ -24,30 +25,13 @@ const Footer = observer(() => {
       list: [
         { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Terms & Conditions", url: "/terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Table Games",
-          url: "/table-games",
-        },
-        {
-          name: "Aviator",
-          url: "/aviator",
-        },
-        {
-          name: "Live Games",
-          url: "/live-games",
-        },
-        {
-          name: "Book of Dead",
-          url: "/slots-games",
-        },
-      ],
+      list: pages?.[myStore.product || "casino"],
     },
   ];
 
@@ -116,10 +100,12 @@ const Footer = observer(() => {
                   <span className="fw-bold">{footerItem.title}</span>
                   {footerItem.list.map((li, j) => (
                     <Link
+                      onClick={() => myStore.updateInfoContent(li.name)}
                       target={li.target || ""}
                       key={j}
-                      to={li.url + window.location.search}
-                      // href={li.url}
+                      to={`${
+                        myStore.product === "betting" ? "/special/sport" : ""
+                      }${li.url}${window.location.search}`}
                     >
                       {li.name}
                     </Link>

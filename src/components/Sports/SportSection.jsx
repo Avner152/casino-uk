@@ -1,8 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
-import { useLocation, useSearchParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useSearchParams } from "react-router-dom";
+
 import { observer } from "mobx-react";
 import { toJS } from "mobx";
 import { importImages } from "../../App";
@@ -11,53 +10,10 @@ import CasinoItem from "../CasinoItem";
 import myStore from "../../mobX/Store";
 
 const SportSection = observer(({ captchaToken }) => {
-  const list = toJS(myStore.list);
   captchaToken = true;
 
-  const location = useLocation();
   const [searchParams] = useSearchParams();
   const mId = searchParams.get("msclkid");
-
-  const search =
-    captchaToken !== undefined && !captchaToken
-      ? "special-and-hard-coded"
-      : location.search;
-
-  const [userIp, setUserIp] = useState(null);
-
-  useEffect(() => {
-    if (list.length) return;
-    const ENDPOINT = `http://localhost:5001/manchester/prd?product=betting`;
-    const headers = { segment: "viral" };
-
-    const fetchIp = async () => {
-      try {
-        const response = await axios.get("https://api.ipify.org?format=json");
-        setUserIp(response.data.ip);
-      } catch (err) {
-        console.error("Error fetching IP:", err);
-      }
-    };
-    const fetchData = async () => {
-      axios
-        .post(
-          ENDPOINT,
-          { search, referrer: document.referrer, userIp },
-          { headers }
-        )
-        .then((res) => {
-          // console.log("res.data", res.data);
-          myStore.updateType(res.data.list[0].type);
-          myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
-          );
-        })
-        .catch((err) => console.log(err));
-    };
-
-    fetchIp();
-    userIp && fetchData();
-  }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
     require.context("../../assets/homepage-icons", false, /\.(svg)$/)
@@ -82,22 +38,13 @@ const SportSection = observer(({ captchaToken }) => {
     },
   ];
 
-  // const images = importImages(
-  //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
-  // );
-
-  // const importedIcons = importImages(
-  //   require.context("../assets/icons", false, /\.(svg)$/)
-  // );
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
+
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <div className="min-vh-100">
+      <div style={{ fontSize: 500 }}>avner</div>
       <div className="w-100 d-flex m-auto text-white justify-content-around align-items-center">
         {homepageIconsObjectList.slice(0, isDesktop ? 4 : 3).map((icon, k) => (
           <div

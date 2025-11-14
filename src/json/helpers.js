@@ -31,3 +31,42 @@ export function getCookie(name) {
   }
   return null;
 }
+
+export const pages = {
+  casino: [
+    {
+      name: "Aviator ",
+      url: "/aviator",
+    },
+    {
+      name: "Live Games ",
+      url: "/live-games",
+    },
+    {
+      name: "Book of Dead",
+      url: "/slots-games",
+    },
+    {
+      name: "Table Games",
+      url: "/table-games",
+    },
+  ],
+  betting: [
+    {
+      name: "Football",
+      url: "/football",
+    },
+    {
+      name: "Horse Racing",
+      url: "/horse-racing",
+    },
+    {
+      name: "eSports",
+      url: "/esports",
+    },
+    {
+      name: "Betting Systems",
+      url: "/systems",
+    },
+  ],
+};

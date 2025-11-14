@@ -12,6 +12,7 @@ import TableGames from "../components/paginations/info/TableGames";
 import SportPage from "../components/Sports/SportPage";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
+import SportTemplate from "../components/paginations/info/SportTemplate";
 
 const MyRoutes = observer(() => {
   const location = useLocation();
@@ -19,38 +20,52 @@ const MyRoutes = observer(() => {
   useEffect(() => {
     let isSport = location.pathname.includes("sport");
     if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
-    if (!isSport) document.body.classList.remove("sport");
+    document.body.classList = isSport ? "sport" : "casino";
+
+    // if (!isSport) document.body.classList.remove("sport");
 
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
-    <>
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={<HomePage />}
-          // element={<HomePage captchaToken={captchaToken} />}
-        ></Route>
+    <Routes>
+      <Route
+        exact
+        path="/"
+        element={<HomePage />}
+        // element={<HomePage captchaToken={captchaToken} />}
+      >
+        {" "}
+      </Route>
 
-        <Route exact path="/special/sport" element={<SportPage />} />
-        <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route exact path="/about-us" element={<AboutUs />}></Route>
+      <Route exact path="/special/sport" element={<SportPage />} />
+      <Route exact path="/special/sport/:page" element={<SportTemplate />} />
+      <Route exact path="/terms-and-conditions" element={<Terms />} />
+      <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+      <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
+      <Route
+        exact
+        path="/special/sport/terms-and-conditions"
+        element={<Terms />}
+      />
+      <Route
+        exact
+        path="/special/sport/privacy-policy"
+        element={<PrivacyPolicy />}
+      />
+      <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+      <Route
+        exact
+        path="/special/sport/cookie-consent-policy"
+        element={<CookiePolicy />}
+      />
 
-        <Route
-          exact
-          path="/cookie-consent-policy"
-          element={<CookiePolicy />}
-        ></Route>
-
-        <Route exact path="/table-games" element={<TableGames />}></Route>
-        <Route exact path="/aviator" element={<Aviator />}></Route>
-        <Route exact path="/live-games" element={<LiveGames />}></Route>
-        <Route exact path="/slots-games" element={<SlotsGames />}></Route>
-      </Routes>
-    </>
+      <Route exact path="/table-games" element={<TableGames />} />
+      <Route exact path="/aviator" element={<Aviator />} />
+      <Route exact path="/live-games" element={<LiveGames />} />
+      <Route exact path="/slots-games" element={<SlotsGames />} />
+    </Routes>
   );
 });
 

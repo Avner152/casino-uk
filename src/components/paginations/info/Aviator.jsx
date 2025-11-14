@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import CasinoSection from "../../CasinoSection";
+import PortalSection from "../../PortalSection";
 
 export default function Aviator() {
   const curDate = new Date();
@@ -24,7 +24,7 @@ export default function Aviator() {
   const par4 = {
     id: "par-4",
     h4: `Tactics & Mindset:`,
-    p: `Use a double-betting system: one small bet for early cash-out, one larger for late-game risk.\nDon’t chase losses—know your limit.\nTreat it like a game of timing and psychology, not luck alone.`,
+    p: `Use a double-betting system: one small bet for early cash-out, one larger for late-game risk.\nDon't chase losses—know your limit.\nTreat it like a game of timing and psychology, not luck alone.`,
   };
 
   const meta = {
@@ -39,7 +39,7 @@ export default function Aviator() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
-      <CasinoSection />
+      <PortalSection />
       <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="mt-4">
           <h2>{topPar.h2}</h2>

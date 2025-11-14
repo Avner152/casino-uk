@@ -67,7 +67,7 @@ export default function CookiePolicy() {
               <p>
                 Cookies can be session cookies (expire when you close your
                 browser) or persistent cookies (remain until they expire or you
-                delete them). Cookies placed by the site you’re visiting are
+                delete them). Cookies placed by the site you're visiting are
                 "first-party cookies," while those placed by other entities are
                 "third-party cookies."
               </p>
@@ -121,7 +121,7 @@ export default function CookiePolicy() {
               <div>What Are My Cookie Options?</div>
               <p>
                 You can change your browser settings to delete cookies or refuse
-                new ones. Visit your browser’s help pages for instructions. Note
+                new ones. Visit your browser's help pages for instructions. Note
                 that if you delete or refuse cookies, some features of the Site
                 may not function properly.
               </p>

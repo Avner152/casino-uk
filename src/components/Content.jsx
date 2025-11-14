@@ -20,7 +20,7 @@ export default function Content() {
   };
   const faq = {
     t: "Comprehensive Insights and FAQs",
-    p: "We understand that UK players often have questions about choosing the best online casinos. That’s why we’ve compiled an informative FAQ section, answering common queries about licensing, payment methods, game fairness, and more.",
+    p: "We understand that UK players often have questions about choosing the best online casinos. That's why we've compiled an informative FAQ section, answering common queries about licensing, payment methods, game fairness, and more.",
     ques: [
       "Which are the top 10 online casinos in the UK?",
       "What is the best slots operator from the top 10 casino UK sites?",
@@ -52,7 +52,7 @@ export default function Content() {
       <p>
         Ready to experience the thrill of online gaming? At PlayUKCasinos.net,
         we bring you the most comprehensive and up-to-date guide to the best UK
-        online casinos. Whether you’re a seasoned player or just starting your
+        online casinos. Whether you're a seasoned player or just starting your
         online casino journey, our carefully curated platform is here to help
         you discover the most trusted, rewarding, and entertaining casinos in
         the UK.

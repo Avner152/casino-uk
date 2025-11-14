@@ -15,6 +15,7 @@ import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
 
 import { useSearchParams } from "react-router-dom";
+import myStore from "./mobX/Store";
 
 export function importImages(r) {
   let images = {};
@@ -59,7 +60,7 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/manchester/prd`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/manchester/prd?product=${myStore.product}`;
 
     const headers = { segment: "viral" };
     axios
@@ -84,8 +85,9 @@ const App = observer(() => {
       })
       .catch((err) => console.log(err));
   };
+
   useEffect(() => {
-    fetchPopupBrands();
+    if (myStore.product) fetchPopupBrands();
   }, []);
 
   // function TurnstileWidget() {

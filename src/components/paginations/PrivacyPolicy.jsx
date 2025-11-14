@@ -126,7 +126,7 @@ export default function PrivacyPolicy() {
               subscribe to newsletters, participate in surveys, and engage in
               promotional activities, which may require providing Personal
               Information. Your submission of information will be governed by
-              this Privacy Policy and the third party’s privacy policy.
+              this Privacy Policy and the third party's privacy policy.
             </p>
           </div>
 
