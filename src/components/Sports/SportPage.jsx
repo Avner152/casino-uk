@@ -12,10 +12,6 @@ const SportPage = observer(({ captchaToken }) => {
       ) : (
         <>
           <PortalSection />
-          {/* <div className="w-100 p-2 m-auto casino-section">
-            <SportSection captchaToken={captchaToken} />
-            <br />
-          </div> */}
         </>
       )}
       <div className="content min-vh-100 text-white p-2">
