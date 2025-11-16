@@ -916,6 +916,10 @@ a:hover {
     background-image: unset;
   }
 
+  .header {
+    height: 66px;
+  }
+
   .cookie-wrapper {
     padding: 7vw 8vw !important;
   }
