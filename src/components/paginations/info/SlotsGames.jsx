@@ -15,7 +15,7 @@ export default function LiveGames() {
       "Theme: Ancient Egypt, Rich Wilde's treasure-hunting adventure.",
       "Reels & Paylines: 5 reels, 10 adjustable paylines.",
       "RTP: Around 96.21%.",
-      "Volatility: High – suitable for players who enjoy bigger, less frequent wins.",
+      "Volatility: High - suitable for players who enjoy bigger, less frequent wins.",
       "Top Feature: Free Spins with a special expanding symbol.",
     ],
   };

@@ -10,7 +10,7 @@ const HomePage = observer(({ captchaToken }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const meta = {
     title:
-      "Casino Rate's Top 10 Best Online Casinos in the UK - Your Ultimate Online Casino UK",
+      "Casino Rate's Top Rated Online Casinos in the UK - Your Ultimate Online Casino",
   };
   return (
     <>

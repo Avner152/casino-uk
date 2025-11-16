@@ -89,14 +89,6 @@ const PortalSection = observer(({ captchaToken }) => {
     },
   ];
 
-  // const images = importImages(
-  //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
-  // );
-
-  // const importedIcons = importImages(
-  //   require.context("../assets/icons", false, /\.(svg)$/)
-  // );
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const isTablet = useMediaQuery({
   //   query: "(min-width: 768px) and (max-width: 1023px)",

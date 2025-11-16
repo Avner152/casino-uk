@@ -35,7 +35,7 @@ body.sport {
 }
 
 body.casino {
-  background-image: url(./assets/bg2.webp);
+  background-image: url(./assets/bg.webp);
 }
 
 .w-60 {
@@ -481,7 +481,7 @@ a:hover {
   display: flex;
   position: absolute;
   top: 0;
-  height: 66px;
+  height: 90px;
 }
 
 .information {

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo-transparent.png";
+import logo from "../assets/logo.png";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
@@ -73,7 +73,7 @@ const Header = observer(() => {
                 window.location.search
               }`}
             >
-              <img src={logo} width={150} height={60} alt="logo" />
+              <img src={logo} width={180} height={90} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {pages?.[myStore.product || "casino"].map((item, i) => (

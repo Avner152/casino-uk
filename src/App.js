@@ -143,7 +143,7 @@ const App = observer(() => {
                   <img
                     alt="card-logo"
                     // width={180}
-                    height={70}
+                    height={90}
                     src={casinoItem.image}
                   />
                 </div>

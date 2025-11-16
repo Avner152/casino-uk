@@ -68,7 +68,7 @@ const Footer = observer(() => {
               <img
                 src={logo}
                 width={200}
-                height={77}
+                height={100}
                 alt="logo"
                 className="_mt-2"
               />
@@ -138,7 +138,7 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} Play UK Casinos. All rights reserved. All
+            {curDate.getFullYear()} CasinoCompareUK. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>

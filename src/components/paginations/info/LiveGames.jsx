@@ -14,9 +14,9 @@ export default function LiveGames() {
     id: "par-1",
     h4: "🎲 Popular Live Game Show Titles:",
     ul: [
-      "Crazy Time – A vibrant, colorful wheel-based game full of random multipliers and exciting bonus rounds.",
-      "Monopoly Live – Combines the classic Monopoly board game with a live money wheel and augmented reality.",
-      "Deal or No Deal Live – Based on the iconic TV show, offering suspense-filled briefcase reveals and bonus games.",
+      "Crazy Time - A vibrant, colorful wheel-based game full of random multipliers and exciting bonus rounds.",
+      "Monopoly Live - Combines the classic Monopoly board game with a live money wheel and augmented reality.",
+      "Deal or No Deal Live - Based on the iconic TV show, offering suspense-filled briefcase reveals and bonus games.",
     ],
   };
 
