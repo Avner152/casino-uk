@@ -52,7 +52,7 @@ export default function CookiePolicy() {
                 <tbody>
                   <tr>
                     <td>top-casino-consent</td>
-                    <td>casinoportaluk.net</td>
+                    <td>casinocompareuk.net</td>
                     <td>
                       Remembers that you have seen and dismissed our cookie
                       notice so it does not appear again on every visit.
