@@ -19,7 +19,7 @@ export default function CookiePolicy() {
 
           <p>
             If you have any questions, you can contact us at{" "}
-            <a href="mailto:info@simloud.net">info@casinoportaluk.net</a>
+            <a href="mailto:info@simloud.net">info@simloud.net</a>
           </p>
 
           <div className="mt-4">
@@ -52,7 +52,7 @@ export default function CookiePolicy() {
                 <tbody>
                   <tr>
                     <td>top-casino-consent</td>
-                    <td>casinoportaluk.net</td>
+                    <td>topcasinopicksuk.com</td>
                     <td>
                       Remembers that you have seen and dismissed our cookie
                       notice so it does not appear again on every visit.

@@ -5,14 +5,9 @@ import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
 
 const CookieConsent = observer(({ setCookieStatus }) => {
-  const cookieHandler = (accepted) => {
+  const cookieHandler = () => {
     // console.log(accepted);
-    setCookie(
-      "uk-consent",
-      accepted,
-      accepted ? 365 : 1,
-      "topcasinopicksuk.com"
-    );
+    setCookie("uk-consent", true, 365, "topcasinopicksuk.com");
     setCookieStatus(true);
   };
 
