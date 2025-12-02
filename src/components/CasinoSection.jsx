@@ -29,8 +29,8 @@ const CasinoSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    // const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=${myStore.product}`;
-    const ENDPOINT = `http://localhost:5001/birmingham/prd?product=${myStore.product}`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=${myStore.product}`;
+    // const ENDPOINT = `http://localhost:5001/birmingham/prd?product=${myStore.product}`;
 
     const headers = { segment: "viral" };
 
