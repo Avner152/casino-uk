@@ -193,6 +193,14 @@ const App = observer(() => {
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
+        {myStore.type.startsWith("bl") && (
+          <p
+            style={{ paddingTop: 80 }}
+            className="text-center text-white pb-0 mb-0 fs-2"
+          >
+            ADVERTORIAL
+          </p>
+        )}
         <Intro />
         {/* <MyRoutes captchaToken={captchaToken} /> */}
         <MyRoutes />
