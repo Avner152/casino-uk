@@ -585,6 +585,9 @@ a:hover {
   .ribbon-2 {
     font-size: 3.5vw;
   }
+  .content-container {
+    padding: 12px;
+  }
 }
 
 /* TEST */

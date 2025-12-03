@@ -20,7 +20,7 @@ export default function Content() {
 
   return (
     <div className="px-3_">
-      <h1 className="fw-bold text-white">
+      <h1 className="fw-bold text-white text-break">
         🏆 TopCasinoPicksUK.com – Best Online Casino Picks for UK Players
       </h1>
       <p>
