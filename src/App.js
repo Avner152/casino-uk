@@ -144,7 +144,7 @@ const App = observer(() => {
                   <img
                     alt="card-logo"
                     // width={180}
-                    height={70}
+                    height={60}
                     src={casinoItem.image}
                   />
                 </div>
@@ -196,6 +196,14 @@ const App = observer(() => {
         className={`w-${isDesktop ? 60 : 100} m-auto casino-main _bg-black-50`}
       >
         <br />
+        {myStore.type.startsWith("bl") && (
+          <p
+            style={{ paddingTop: 60 }}
+            className="text-center text-white pb-0 mb-0 fs-2"
+          >
+            ADVERTORIAL
+          </p>
+        )}
         <Intro />
         {/* <MyRoutes captchaToken={captchaToken} /> */}
         <MyRoutes />

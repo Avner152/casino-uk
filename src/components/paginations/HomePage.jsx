@@ -42,7 +42,7 @@ const HomePage = observer(({ captchaToken }) => {
           </div>
         </>
       )}
-      <div className="content min-vh-100 text-white p-2">
+      <div className="content min-vh-100 text-white p-2  text-break">
         <div className="content-container w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
           <div className="ms-3">

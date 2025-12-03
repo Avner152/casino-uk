@@ -19,7 +19,7 @@ export default function Content() {
   };
 
   return (
-    <div className="px-3">
+    <div className="px-3_">
       <h1 className="fw-bold text-white">
         🏆 TopCasinoPicksUK.com – Best Online Casino Picks for UK Players
       </h1>
