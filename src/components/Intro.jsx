@@ -80,6 +80,9 @@ const Intro = observer(() => {
 
   return (
     <div className="intro mt-4 tit-n-des text-white pt-3">
+      {/* {!location.pathname.substring(1) && myStore.type.startsWith("bl") && (
+        <h1 className="mt-2 text-center text-uppercase">Advertorial</h1>
+      )} */}
       <div
         className={`d-flex align-items-center justify-content-${
           isDesktop ? "between" : "center"
@@ -112,7 +115,8 @@ const Intro = observer(() => {
             <img
               className="cards"
               alt="cards"
-              width={isDesktop ? 180 : 120}
+              height={150}
+              // width={isDesktop ? 150 : 120}
               src={casino}
             />
           </div>

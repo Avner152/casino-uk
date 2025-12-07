@@ -7,15 +7,14 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
-// import Turnstile from "react-turnstile";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
-import axios from "axios";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
+import { autorun } from "mobx";
 
 export function importImages(r) {
   let images = {};
@@ -44,6 +43,7 @@ const App = observer(() => {
 
   useEffect(() => {
     const handleMouseOut = (e) => {
+      if (myStore.type.startsWith("bl")) return;
       if (e.clientY < 0 && !triggeredRef.current) {
         // triggeredRef.current = false;
         triggeredRef.current = true;
@@ -60,58 +60,19 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/liverpool/prd?product=${myStore.product}`;
-    // const ENDPOINT = `http://localhost:5001/liverpool/prd?product=${myStore.product}`;
+    let result = myStore.list?.slice(0, 3);
 
-    const headers = { segment: "viral" };
-    axios
-      .post(
-        ENDPOINT,
-        {
-          search: window.location.search,
-          referrer: "",
-          userIp: "102.128.166.0",
-        },
-        { headers }
-      )
-      .then((res) => {
-        // console.log(res?.data?.list[0]?.type);
-
-        if (res?.data?.list[0]?.type === "blanca") return;
-
-        let result = res?.data?.list[0]?.brands.slice(0, 3);
-
-        result.unshift(result.pop());
-        setInitialList([...result]);
-      })
-      .catch((err) => console.log(err));
+    result.unshift(result.pop());
+    setInitialList([...result]);
   };
-  useEffect(() => {
-    fetchPopupBrands();
-  }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
+  useEffect(() => {
+    const disposer = autorun(() => {
+      if (myStore.product) fetchPopupBrands();
+    });
+
+    return () => disposer();
+  }, []);
 
   return (
     <div>
@@ -137,17 +98,17 @@ const App = observer(() => {
             {initialList.map((casinoItem, i) => (
               <div
                 className="card-wrapper text-black d-flex bg-white p-2 bg-black rounded-3 flex-column align-items-center justify-content-center _gap-2 border-1 border-danger"
-                key={casinoItem.name}
+                key={casinoItem?.name}
               >
                 <div className="top-card">
                   <img
                     alt="card-logo"
                     // width={180}
                     height={70}
-                    src={casinoItem.image}
+                    src={casinoItem?.image}
                   />
                 </div>
-                <h2 className="px-4 fw-bold">{casinoItem.title}</h2>
+                <h2 className="px-4 fw-bold">{casinoItem?.title}</h2>
                 <div>
                   <div className="fs-1 fw-semibold">{scores[i]}</div>
                   {Array.from({ length: 5 }).map((_, i) => {
@@ -177,7 +138,7 @@ const App = observer(() => {
                 <Button
                   className="text-uppercase main-btn mb-3"
                   onClick={() =>
-                    window.open(casinoItem.url.replace("{msclkid}", mId))
+                    window.open(casinoItem?.url.replace("{msclkid}", mId))
                   }
                 >
                   get bonus
