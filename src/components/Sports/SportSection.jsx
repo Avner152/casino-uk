@@ -69,7 +69,7 @@ const SportSection = observer(({ captchaToken }) => {
           </div>
         ))}
       </div>
-      {toJS(myStore.list).map((casino, k) => {
+      {myStore.list.map((casino, k) => {
         const fixedURL = casino.url.replace("{msclkid}", mId);
 
         return (
