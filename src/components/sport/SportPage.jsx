@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 // import { useMediaQuery } from "react-responsive";
-import SportSection from "./SportSection";
 import { observer } from "mobx-react";
 import Content from "../Content";
+import PortalSection from "../PortalSection";
 
 const SportPage = observer(({ captchaToken }) => {
   // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -18,8 +18,7 @@ const SportPage = observer(({ captchaToken }) => {
       ) : (
         <>
           <div className="w-100 p-2 m-auto casino-section">
-            <SportSection captchaToken={captchaToken} />
-            <br />
+            <PortalSection /> <br />
           </div>
         </>
       )}

@@ -65,7 +65,7 @@ const PortalSection = observer(({ captchaToken }) => {
     };
 
     fetchIp();
-    userIp && fetchData();
+    userIp && myStore.product && fetchData();
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
