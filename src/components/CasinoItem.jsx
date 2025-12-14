@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
+import myStore from "../mobX/Store";
+import { observer } from "mobx-react";
 
-const CasinoItem = ({ item, index, fixedURL }) => {
+const CasinoItem = observer(({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-
   const [clicked, setClicked] = useState(false);
 
   return (
     <div className="my-card ">
-      {item.ribbonText && (
+      {myStore.type.startsWith("") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
-          <span className="ribbon-text">{item.ribbonText}</span>
+          <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
       )}
       <div
@@ -62,6 +62,6 @@ const CasinoItem = ({ item, index, fixedURL }) => {
       {item.brandText && <div className="reg">{item.brandText}</div>}
     </div>
   );
-};
+});
 
 export default CasinoItem;
