@@ -8,6 +8,7 @@ class MyStore {
   initialList = [];
   content = null;
   brands = [];
+  ribbonList = [];
 
   constructor() {
     makeObservable(this, {
@@ -22,6 +23,8 @@ class MyStore {
       updateContent: action,
       infoContent: observable,
       updateInfoContent: action,
+      ribbonList: observable,
+      updateRibbons: action,
     });
   }
   updateList(newList) {
@@ -42,6 +45,9 @@ class MyStore {
   }
   updateInfoContent(chosen) {
     this.infoContent = chosen;
+  }
+  updateRibbons(ribbonList) {
+    this.ribbonList = [...ribbonList];
   }
 }
 

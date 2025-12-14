@@ -56,6 +56,7 @@ const PortalSection = observer(({ captchaToken }) => {
           myStore.updateList(
             res.data.list[0].brands.filter((brand) => !brand.isFrozen)
           );
+          myStore.updateRibbons(res.data.ribbons || []);
 
           if (res.data.list[0].content)
             myStore.updateContent(res.data.list[0].content);
