@@ -1,4 +1,4 @@
-import CasinoSection from "../CasinoSection";
+import PortalSection from "../PortalSection";
 import Content from "../Content";
 import { useMediaQuery } from "react-responsive";
 import { Helmet } from "react-helmet";
@@ -37,7 +37,7 @@ const HomePage = observer(({ captchaToken }) => {
       ) : (
         <>
           <div className="w-100 p-2 m-auto casino-section">
-            <CasinoSection captchaToken={captchaToken} />
+            <PortalSection captchaToken={captchaToken} />
             <br />
           </div>
         </>

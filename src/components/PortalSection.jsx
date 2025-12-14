@@ -1,16 +1,16 @@
+import CasinoItem from "./CasinoItem";
 import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
+import CasinoItemMobile from "./CasinoItemMobile";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { observer } from "mobx-react";
 import { toJS } from "mobx";
-import { importImages } from "../../App";
-import CasinoItemMobile from "../CasinoItemMobile";
-import CasinoItem from "../CasinoItem";
-import myStore from "../../mobX/Store";
+import myStore from "../mobX/Store";
+import { importImages } from "../App";
 
-const SportSection = observer(({ captchaToken }) => {
+const PortalSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
   captchaToken = true;
 
@@ -23,12 +23,15 @@ const SportSection = observer(({ captchaToken }) => {
       ? "special-and-hard-coded"
       : location.search;
 
+  // const search = "";
   const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
     if (list.length) return;
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=betting`;
-    // const ENDPOINT = `http://localhost:5001/birmingham/prd?product=betting`;
+
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=${myStore.product}`;
+    // const ENDPOINT = `http://localhost:5001/birmingham/prd?product=${myStore.product}`;
+
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {
@@ -47,11 +50,18 @@ const SportSection = observer(({ captchaToken }) => {
           { headers }
         )
         .then((res) => {
-          console.log("res.data", res.data);
+          console.log(res.data.list);
+
+          // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
             res.data.list[0].brands.filter((brand) => !brand.isFrozen)
           );
+
+          myStore.updateRibbons(res.data.ribbons || []);
+
+          if (res.data.list[0].content)
+            myStore.updateContent(res.data.list[0].content);
         })
         .catch((err) => console.log(err));
     };
@@ -61,7 +71,7 @@ const SportSection = observer(({ captchaToken }) => {
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
-    require.context("../../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../assets/homepage-icons", false, /\.(svg)$/)
   );
   const homepageIconsObjectList = [
     {
@@ -127,7 +137,13 @@ const SportSection = observer(({ captchaToken }) => {
         const fixedURL = casino.url.replace("{msclkid}", mId);
 
         return (
-          <Fade key={k} cascade triggerOnce>
+          <Fade
+            key={k}
+            // direction="left"
+            // delay={isDesktop ? k * 100 : 0}
+            cascade
+            triggerOnce
+          >
             <div onClick={() => window.open(fixedURL, "_blank")}>
               {isMobile ? (
                 <CasinoItemMobile
@@ -152,4 +168,4 @@ const SportSection = observer(({ captchaToken }) => {
   );
 });
 
-export default SportSection;
+export default PortalSection;

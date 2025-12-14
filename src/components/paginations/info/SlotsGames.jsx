@@ -1,4 +1,4 @@
-import CasinoSection from "../../CasinoSection";
+import PortalSection from "../../PortalSection";
 import { Helmet } from "react-helmet";
 
 export default function LiveGames() {
@@ -52,7 +52,7 @@ export default function LiveGames() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
-      <CasinoSection />
+      <PortalSection />
 
       <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
         <div className="p-4">
