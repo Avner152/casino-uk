@@ -11,7 +11,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
 
   return (
     <div className="my-card ">
-      {myStore.type.startsWith("") && index < 3 && (
+      {myStore.type.startsWith("ne") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
