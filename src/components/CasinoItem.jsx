@@ -1,8 +1,8 @@
-import { observer } from "mobx-react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import myStore from "../mobX/Store";
+import { observer } from "mobx-react";
 
 const CasinoItem = observer(({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
@@ -13,7 +13,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
 
   return (
     <div className="my-card ">
-      {myStore.type.startsWith("") && index < 3 && (
+      {myStore.type.startsWith("ne") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
