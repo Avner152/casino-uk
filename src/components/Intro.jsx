@@ -80,18 +80,9 @@ const Intro = observer(() => {
 
   return (
     <div className="intro mt-4 tit-n-des text-white pt-3">
-      {myStore.type.startsWith("bl") && (
-        <>
-          <p className="text-center text-white pb-0 mb-0 fs-2">ADVERTORIAL</p>
-          <aside className="fs-8 text-white lh-1 text-center w-75 sm-w-100 mx-auto px-2">
-            We receive advertising fees from the brands we review, which may
-            influence our rankings and scores. We do not compare every service
-            provider on the market Advertiser Disclosure 18+."T&C" apply - the
-            applicable operator's terms apply for each offer below and free
-            offers may include additional terms.
-          </aside>
-        </>
-      )}
+      {/* {!location.pathname.substring(1) && myStore.type.startsWith("bl") && (
+        <h1 className="mt-2 text-center text-uppercase">Advertorial</h1>
+      )} */}
       <div
         className={`d-flex align-items-center justify-content-${
           isDesktop ? "between" : "center"
