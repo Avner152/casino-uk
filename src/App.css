@@ -401,6 +401,10 @@ ul svg {
   font-size: 0.75rem;
 }
 
+.fs-8 {
+  font-size: 0.65rem;
+}
+
 .rev-url {
   letter-spacing: 1px;
   margin-top: 4px;
@@ -896,6 +900,10 @@ a:hover {
   }
   .fs-7 {
     font-size: 3vw;
+  }
+
+  .fs-8 {
+    font-size: 2vw;
   }
 
   footer {
