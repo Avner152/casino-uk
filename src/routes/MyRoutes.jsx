@@ -7,12 +7,12 @@ import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
 import Starburst from "../components/paginations/info/Starburst";
 import CasinoBonuses from "../components/paginations/info/CasinoBonuses";
-import SlotsGames from "../components/paginations/info/SlotsGames";
 import OnlineSlot from "../components/paginations/info/OnlineSlot";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
 import SportTemplate from "../components/paginations/info/SportTemplate";
 import SportPage from "../components/sport/SportPage";
+import TableGames from "../components/paginations/info/TableGames";
 
 const MyRoutes = observer(() => {
   const location = useLocation();
@@ -58,7 +58,7 @@ const MyRoutes = observer(() => {
         <Route exact path="/online-slot" element={<OnlineSlot />} />
         <Route exact path="/starburst" element={<Starburst />} />
         <Route exact path="/casino-bonuses" element={<CasinoBonuses />} />
-        <Route exact path="/slots-games" element={<SlotsGames />} />
+        <Route exact path="/table-games" element={<TableGames />} />
       </Routes>
     </>
   );

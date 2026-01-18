@@ -24,9 +24,7 @@ const Intro = observer(() => {
     bigBassBonanza: {
       title: "Top Big Bass Bonanza UK Casinos - ",
     },
-    bonuses: {
-      title: "Casino Bonuses – Best UK Deals ",
-    },
+
     slot: {
       title: "Online Slots & Jackpots Top UK Sites -",
     },
@@ -51,18 +49,14 @@ const Intro = observer(() => {
     switch (location.pathname) {
       default:
         return setPage("");
-      case "/casino-bonuses":
-        setPage("bonuses");
-        break;
+
       case "/big-bass-bonanza":
         setPage("bigBassBonanza");
         break;
       case "/online-slots":
         setPage("slot");
         break;
-      case "/table-games":
-        setPage("table");
-        break;
+
       case "/about-us":
         setPage("about");
         break;
@@ -104,7 +98,7 @@ const Intro = observer(() => {
                   ? `Check Our Top UK Casinos Of ${fullYear}`
                   : toJS(myStore.content)?.firstTitle.replace(
                       "{curDate}",
-                      `${fullYear}`
+                      `${fullYear}`,
                     )}
               </span>
             </h1>

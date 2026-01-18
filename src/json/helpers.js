@@ -42,6 +42,10 @@ export const pages = {
       name: "Casino Bonuses",
       url: "/casino-bonuses",
     },
+    {
+      name: "Table Games",
+      url: "/table-games",
+    },
 
     {
       name: "Online Slot",

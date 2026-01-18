@@ -42,16 +42,16 @@ const Footer = observer(() => {
           name: "Casino Bonuses",
           url: "/casino-bonuses",
         },
-        // {
-        //   name: "Book of Dead",
-        //   url: "/slots-games",
-        // },
+        {
+          name: "Table Games",
+          url: "/table-games",
+        },
       ],
     },
   ];
 
   const importedRegPhotos = importImages(
-    require.context("../assets/reg", false, /\.(svg)$/)
+    require.context("../assets/reg", false, /\.(svg)$/),
   );
 
   const regLogosData = [
