@@ -27,31 +27,38 @@ const MyRoutes = observer(() => {
   return (
     <>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<HomePage />}
-          // element={<HomePage captchaToken={captchaToken} />}
-        ></Route>
+        <Route exact path="/" element={<HomePage />} />
         <Route exact path="/special/sport" element={<SportPage />} />
-        <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route exact path="/about-us" element={<AboutUs />}></Route>
+        <Route exact path="/terms-and-conditions" element={<Terms />} />
+        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
 
+        <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
+
+        <Route exact path="/online-slots" element={<OnlineSlot />} />
+        <Route exact path="/big-bass-bonanza" element={<BigBassBonanza />} />
+        <Route exact path="/casino-bonuses" element={<CasinoBonuses />} />
+        <Route exact path="/slots-games" element={<SlotsGames />} />
+
+        {/*  */}
         <Route
           exact
-          path="/cookie-consent-policy"
+          path="/special/sport/terms-and-conditions"
+          element={<Terms />}
+        />
+        <Route
+          exact
+          path="/special/sport/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+        <Route
+          exact
+          path="/special/sport/cookie-consent-policy"
           element={<CookiePolicy />}
-        ></Route>
+        />
 
-        <Route exact path="/online-slots" element={<OnlineSlot />}></Route>
-        <Route
-          exact
-          path="/big-bass-bonanza"
-          element={<BigBassBonanza />}
-        ></Route>
-        <Route exact path="/casino-bonuses" element={<CasinoBonuses />}></Route>
-        <Route exact path="/slots-games" element={<SlotsGames />}></Route>
+        {/* <Route exact path="/special/sport/:page" element={<SportTemplate />} /> */}
       </Routes>
     </>
   );
