@@ -6,6 +6,8 @@ import { elastic as Menu } from "react-burger-menu";
 import { Nav } from "react-bootstrap";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
+import { pages } from "../json/helpers";
+
 // import { Button } from "react-bootstrap";
 
 const Header = observer(() => {
@@ -84,10 +86,12 @@ const Header = observer(() => {
               <img src={logo} width={150} height={60} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
-              {menu[0].list.map((item, i) => (
+              {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
                   className="my-nav text-white"
-                  to={item.url + window.location.search}
+                  to={`${
+                    myStore.product === "betting" ? "/special/sport" : ""
+                  }${item.url}${window.location.search}`}
                   key={i}
                 >
                   {item.name}
@@ -130,8 +134,16 @@ const Header = observer(() => {
                             setBurgerOpen(false);
                           }}
                           key={j}
-                          to={li.url + window.location.search}
-                          href={li.url + window.location.search}
+                          to={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
+                          href={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
                         >
                           {li.name}
                         </Link>

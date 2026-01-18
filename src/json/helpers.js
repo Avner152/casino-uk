@@ -31,3 +31,38 @@ export function getCookie(name) {
   }
   return null;
 }
+
+export const pages = {
+  casino: [
+    {
+      name: "Big Bass Bonanza",
+      url: "/big-bass-bonanza",
+    },
+    {
+      name: "Casino Bonuses",
+      url: "/casino-bonuses",
+    },
+    {
+      name: "Online Slots & Jackpots",
+      url: "/online-slots",
+    },
+  ],
+  betting: [
+    {
+      name: "Football",
+      url: "/football",
+    },
+    {
+      name: "Horse Racing",
+      url: "/horse-racing",
+    },
+    {
+      name: "eSports",
+      url: "/esports",
+    },
+    {
+      name: "Betting Systems",
+      url: "/systems",
+    },
+  ],
+};

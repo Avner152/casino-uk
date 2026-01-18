@@ -21,13 +21,21 @@ body {
   font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
-  background-image: url(./assets/bg.webp);
+  /* background-image: url(./assets/bg.webp); */
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   color: #000 !important;
+}
+
+body.sport {
+  background-image: url(./assets/bg-sport.webp);
+}
+
+body.casino {
+  background-image: url(./assets/bg.webp);
 }
 
 .w-60 {
@@ -179,8 +187,10 @@ ul svg {
 } */
 
 .my-card:hover {
-  box-shadow: 0 0 50px 1px rgba(50, 205, 50, 0.7),
-    0 0 10px 2px rgba(34, 139, 34, 0.5), 0 0 10px 2px rgba(0, 255, 127, 0.3),
+  box-shadow:
+    0 0 50px 1px rgba(50, 205, 50, 0.7),
+    0 0 10px 2px rgba(34, 139, 34, 0.5),
+    0 0 10px 2px rgba(0, 255, 127, 0.3),
     0 0 20px 6px rgba(144, 238, 144, 0.1);
   transition: all 300ms ease-in-out;
 }

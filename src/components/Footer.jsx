@@ -6,6 +6,7 @@ import cards from "../assets/casino.png";
 import React from "react";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
+import { pages } from "../json/helpers";
 
 const Footer = observer(() => {
   const curDate = new Date();
@@ -30,29 +31,12 @@ const Footer = observer(() => {
     },
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Online Slots & Jackpots",
-          url: "/online-slots",
-        },
-        {
-          name: "Big Bass Bonanza",
-          url: "/big-bass-bonanza",
-        },
-        {
-          name: "Casino Bonuses",
-          url: "/casino-bonuses",
-        },
-        // {
-        //   name: "Book of Dead",
-        //   url: "/slots-games",
-        // },
-      ],
+      list: pages?.[myStore.product || "casino"],
     },
   ];
 
   const importedRegPhotos = importImages(
-    require.context("../assets/reg", false, /\.(svg)$/)
+    require.context("../assets/reg", false, /\.(svg)$/),
   );
 
   const regLogosData = [
@@ -118,8 +102,9 @@ const Footer = observer(() => {
                     <Link
                       target={li.target || ""}
                       key={j}
-                      to={li.url + window.location.search}
-                      // href={li.url}
+                      to={`${
+                        myStore.product === "betting" ? "/special/sport" : ""
+                      }${li.url}${window.location.search}`}
                     >
                       {li.name}
                     </Link>

@@ -12,6 +12,7 @@ import BigBassBonanza from "../components/paginations/info/BigBassBonanza";
 import myStore from "../mobX/Store";
 import SportPage from "../components/sport/SportPage";
 import { observer } from "mobx-react";
+import SportTemplate from "../components/paginations/info/SportTemplate";
 
 const MyRoutes = observer(() => {
   const location = useLocation();
@@ -19,7 +20,7 @@ const MyRoutes = observer(() => {
   useEffect(() => {
     let isSport = location.pathname.includes("sport");
     if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
-    if (!isSport) document.body.classList.remove("sport");
+    document.body.classList = isSport ? "sport" : "casino";
 
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -58,7 +59,7 @@ const MyRoutes = observer(() => {
           element={<CookiePolicy />}
         />
 
-        {/* <Route exact path="/special/sport/:page" element={<SportTemplate />} /> */}
+        <Route exact path="/special/sport/:page" element={<SportTemplate />} />
       </Routes>
     </>
   );
