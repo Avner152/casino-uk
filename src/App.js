@@ -37,7 +37,7 @@ const App = observer(() => {
   const scores = [9.7, 9.9, 9.8];
 
   const [hasCookie, setCookieStatus] = useState(
-    getCookie("uk-consent") ? true : false
+    getCookie("uk-consent") ? true : false,
   );
 
   const triggeredRef = useRef(false);
@@ -73,7 +73,7 @@ const App = observer(() => {
           referrer: "",
           userIp: "102.128.166.0",
         },
-        { headers }
+        { headers },
       )
       .then((res) => {
         // console.log(res?.data?.list[0]?.type);
@@ -167,8 +167,8 @@ const App = observer(() => {
                                 }%)`,
                               }
                             : score / 2 > i + 1
-                            ? { background: "#ffd600" }
-                            : null
+                              ? { background: "#ffd600" }
+                              : null
                         }
                         className="star fs-3"
                       />
@@ -199,7 +199,7 @@ const App = observer(() => {
         {myStore.type.startsWith("bl") && (
           <>
             <p
-              style={{ paddingTop: 80 }}
+              style={{ paddingTop: 55 }}
               className="text-center text-white pb-0 mb-0 fs-2"
             >
               ADVERTORIAL

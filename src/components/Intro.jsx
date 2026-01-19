@@ -1,5 +1,6 @@
 import { observer } from "mobx-react";
 import casino from "../assets/casino.png";
+import betting from "../assets/betting.png";
 import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
@@ -101,7 +102,7 @@ const Intro = observer(() => {
                   ? `Check Our Top UK Casinos Of ${fullYear}`
                   : toJS(myStore.content)?.firstTitle.replace(
                       "{curDate}",
-                      `${fullYear}`
+                      `${fullYear}`,
                     )}
               </span>
             </h1>
@@ -113,7 +114,7 @@ const Intro = observer(() => {
               className="cards"
               alt="cards"
               width={isDesktop ? 180 : 120}
-              src={casino}
+              src={myStore.product === "betting" ? betting : casino}
             />
           </div>
         )}
