@@ -12,13 +12,26 @@ import ContentV2 from "../ContentV2";
 const HomePage = observer(({ captchaToken }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const meta = {
-    title:
-      "Casino Rate's Top 10 Best Online Casinos in the UK - Your Ultimate Online Casino UK",
+    casino: {
+      title:
+        "Casino Rate's Top 10 Best Online Casinos in the UK - Your Ultimate Online Casino UK",
+      description:
+        "Discover the best UK online casinos through our in-depth expert reviews. Compare our top 10 casino sites and complete list of licensed UK casinos, including games, bonuses, and key features.",
+    },
+    betting: {
+      title: "UK Betting Sites - Best Online Bookmakers List 2026",
+      description:
+        "Find the best betting sites available in the UK with our in-depth comparison. Review our expert’s top 10 rankings and complete list of online bookmakers to help you choose a safe, trusted, and reliable betting site.",
+    },
   };
   return (
     <>
       <Helmet>
-        <title>{meta.title}</title>
+        <title>{meta[myStore.product || "casino"].title}</title>
+        <meta
+          name="description"
+          content={meta[myStore.product || "casino"].description}
+        />
       </Helmet>
       {/* {captchaToken === null ? ( */}
       {captchaToken === null ? (
