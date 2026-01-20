@@ -1,6 +1,8 @@
 import { observer } from "mobx-react";
 import Content from "../Content";
 import PortalSection from "../PortalSection";
+import ContentRealData from "../ContentRealData";
+import myStore from "../../mobX/Store";
 
 const SportPage = observer(({ captchaToken }) => {
   return (
@@ -12,8 +14,7 @@ const SportPage = observer(({ captchaToken }) => {
       )}
       <div className="content min-vh-100 text-white p-2">
         <div className="content-container w-100 m-auto">
-          {/* <ContentV2 /> */}
-          <Content />
+          {!myStore.content ? <Content /> : <ContentRealData />}
 
           <div className="ms-3">
             <h2>Play Responsibly!</h2>

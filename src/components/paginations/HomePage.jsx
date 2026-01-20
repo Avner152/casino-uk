@@ -7,7 +7,7 @@ import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
 import React from "react";
 import { observer } from "mobx-react";
 import myStore from "../../mobX/Store";
-import ContentV2 from "../ContentV2";
+import ContentRealData from "../ContentRealData";
 
 const HomePage = observer(({ captchaToken }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -57,7 +57,11 @@ const HomePage = observer(({ captchaToken }) => {
       )}
       <div className="content min-vh-100 text-white p-2  text-break">
         <div className="content-container w-100 m-auto">
-          {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
+          {!myStore.content ? (
+            <Content isDesktop={isDesktop} />
+          ) : (
+            <ContentRealData />
+          )}
           <div className="ms-3">
             <h2>⚠️ Responsible Gaming Notice</h2>
             <p>

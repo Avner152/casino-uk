@@ -2,7 +2,7 @@ import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
 import { toJS } from "mobx";
 
-const ContentV2 = observer(() => {
+const ContentRealData = observer(() => {
   const curDate = new Date();
 
   const topPar = toJS(myStore.content).headlineSection;
@@ -54,4 +54,4 @@ const ContentV2 = observer(() => {
   );
 });
 
-export default ContentV2;
+export default ContentRealData;
