@@ -941,7 +941,7 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   body {
-    background-image: unset;
+    background-image: unset !important;
   }
 
   .cookie-wrapper {
@@ -956,8 +956,9 @@ a:hover {
     font-size: 3vw;
     width: 60%;
   }
-  .casino-container {
-    background-image: url(./assets/bg-mobile.webp);
+
+  .casino-container,
+  .betting-container {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -966,6 +967,13 @@ a:hover {
     height: 100vh;
     width: 100vw;
     z-index: -1;
+  }
+
+  .casino-container {
+    background-image: url(./assets/bg-mobile.webp);
+  }
+  .betting-container {
+    background-image: url(./assets/bg-betting-mob.webp);
   }
 
   .sm-w-100 {

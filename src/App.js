@@ -189,7 +189,9 @@ const App = observer(() => {
         </Modal.Body>
       </Modal>
       {/* {!captchaToken && TurnstileWidget()} */}
-      {!isDesktop && <div className="casino-container" />}
+      {!isDesktop && (
+        <div className={`${myStore.product || "casino"}-container`} />
+      )}
 
       <Header />
       <div

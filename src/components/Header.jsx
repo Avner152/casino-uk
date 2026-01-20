@@ -22,24 +22,7 @@ const Header = observer(() => {
   const menu = [
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Big Bass Bonanza",
-          url: "/big-bass-bonanza",
-        },
-        {
-          name: "Casino Bonuses",
-          url: "/casino-bonuses",
-        },
-        // {
-        //   name: "Book of Dead",
-        //   url: "/slots-games",
-        // },
-        {
-          name: "Online Slots & Jackpots",
-          url: "/online-slots",
-        },
-      ],
+      list: pages?.[myStore.product || "casino"],
     },
     {
       title: "Information",
@@ -89,9 +72,7 @@ const Header = observer(() => {
               {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
                   className="my-nav text-white"
-                  to={`${
-                    myStore.product === "betting" ? "/special/sport" : ""
-                  }${item.url}${window.location.search}`}
+                  to={item.url + window.location.search}
                   key={i}
                 >
                   {item.name}
