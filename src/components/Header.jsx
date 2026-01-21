@@ -72,7 +72,9 @@ const Header = observer(() => {
               {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
                   className="my-nav text-white"
-                  to={item.url + window.location.search}
+                  to={`${
+                    myStore.product === "betting" ? "/special/sport" : ""
+                  }${item.url}${window.location.search}`}
                   key={i}
                 >
                   {item.name}

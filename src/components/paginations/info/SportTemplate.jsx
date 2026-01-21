@@ -4,19 +4,21 @@ import { observer } from "mobx-react";
 import PortalSection from "../../PortalSection";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 const SportTemplate = observer(() => {
+  const location = useLocation();
   const meta = {
     title: "UK Betting Sites - Best Online Bookmakers List 2026",
     description:
       "Find the best betting sites available in the UK with our in-depth comparison. Review our expert’s top 10 rankings and complete list of online bookmakers to help you choose a safe, trusted, and reliable betting site.",
   };
   useEffect(() => {
-    if (!myStore.infoContent)
-      myStore.updateInfoContent(
-        window.location.pathname.substring(1).split("/")[2],
-      );
-  }, []);
+    // if (!myStore.infoContent)
+    myStore.updateInfoContent(
+      window.location.pathname.substring(1).split("/")[2],
+    );
+  }, [location]);
 
   const content =
     templates?.[myStore.infoContent?.toLowerCase().replaceAll(" ", "-")];
