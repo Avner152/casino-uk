@@ -5,8 +5,8 @@ import myStore from "../mobX/Store";
 const Content = observer(() => {
   const content = contentObject[myStore.product || "casino"];
   return (
-    <div className="px-3_">
-      <h1 className="fw-bold text-white text-break">{content.top.h1}</h1>
+    <div className="w-60 sm-w-100 mx-auto">
+      <h1 className="fw-bold text-break">{content.top.h1}</h1>
       <p>{content.top.p}</p>
 
       {content.list.map((div) => (

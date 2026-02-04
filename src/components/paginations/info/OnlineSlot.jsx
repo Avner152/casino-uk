@@ -81,74 +81,73 @@ export default function OnlineSlot() {
 
       <PortalSection />
 
-      <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
-        <div className="mt-4">
-          <h4>{topPar.h4}</h4>
-          {topPar.p.split("\n").map((pi, i) => (
-            <p key={i}>{pi}</p>
-          ))}
-        </div>
-
-        <div id={par1.id} className="mt-4">
-          <h4>{par1.h4}</h4>
-          {par1.ul.map((li, i) => {
-            const [title, text] = li.split(":");
-            return (
-              <li className="my-1" key={i}>
-                <b>{title}</b>: <span>{text}</span>
-              </li>
-            );
-          })}
-        </div>
-
-        <div id={par2.id} className="mt-4">
-          <h4>{par2.h4}</h4>
-          <ul>
-            {par2.ul.map((li, i) => (
-              <li className="my-1" key={i}>
-                {li}
-              </li>
+      <div className="bg-white pt-5 pb-5 mt-3 ">
+        <div className="w-60 sm-w-100 mx-auto">
+          {" "}
+          <div className="mt-4">
+            <h4>{topPar.h4}</h4>
+            {topPar.p.split("\n").map((pi, i) => (
+              <p key={i}>{pi}</p>
             ))}
-          </ul>
-        </div>
+          </div>
+          <div id={par1.id} className="mt-4">
+            <h4>{par1.h4}</h4>
+            {par1.ul.map((li, i) => {
+              const [title, text] = li.split(":");
+              return (
+                <li className="my-1" key={i}>
+                  <b>{title}</b>: <span>{text}</span>
+                </li>
+              );
+            })}
+          </div>
+          <div id={par2.id} className="mt-4">
+            <h4>{par2.h4}</h4>
+            <ul>
+              {par2.ul.map((li, i) => (
+                <li className="my-1" key={i}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div id={par3.id} className="mt-4">
+            <h4>{par3.h4}</h4>
 
-        <div id={par3.id} className="mt-4">
-          <h4>{par3.h4}</h4>
+            <ul>
+              {par3.ul.map((li, i) => (
+                <li className="my-1" key={i}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div id={par4.id} className="mt-4">
+            <h4>{par4.h4}</h4>
 
-          <ul>
-            {par3.ul.map((li, i) => (
-              <li className="my-1" key={i}>
-                {li}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div id={par4.id} className="mt-4">
-          <h4>{par4.h4}</h4>
+            <ul>
+              {par4.ul.map((li, i) => (
+                <li className="my-1" key={i}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div id={par5.id} className="mt-4">
+            <h4>{par5.h4}</h4>
 
-          <ul>
-            {par4.ul.map((li, i) => (
-              <li className="my-1" key={i}>
-                {li}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div id={par5.id} className="mt-4">
-          <h4>{par5.h4}</h4>
-
-          <ul>
-            {par5.ul.map((li, i) => (
-              <li className="my-1" key={i}>
-                {li}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div id={par6.id} className="mt-4">
-          <h4>{par6.h4}</h4>
-          <p>{par6.p}</p>
+            <ul>
+              {par5.ul.map((li, i) => (
+                <li className="my-1" key={i}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div id={par6.id} className="mt-4">
+            <h4>{par6.h4}</h4>
+            <p>{par6.p}</p>
+          </div>
         </div>
       </div>
     </>

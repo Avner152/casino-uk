@@ -194,12 +194,10 @@ const App = observer(() => {
       )}
 
       <Header />
-      <div
-        className={`w-${isDesktop ? 60 : 100} m-auto casino-main _bg-black-50`}
-      >
+      <div className="w-100 m-auto casino-main _bg-black-50">
         <br />
         {myStore.type.startsWith("bl") && (
-          <>
+          <div className="w-60 sm-w-100 mx-auto">
             <p
               style={{ paddingTop: 55 }}
               className="text-center text-white pb-0 mb-0 fs-2"
@@ -213,10 +211,9 @@ const App = observer(() => {
               applicable operator's terms apply for each offer below and free
               offers may include additional terms.
             </aside>
-          </>
+          </div>
         )}
         <Intro />
-        {/* <MyRoutes captchaToken={captchaToken} /> */}
         <MyRoutes />
       </div>
       <Footer />

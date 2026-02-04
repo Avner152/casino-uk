@@ -68,64 +68,67 @@ export default function BigBassBonanza() {
       </Helmet>
 
       <PortalSection />
-      <div className="w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
-        <div className="mt-4">
-          <h2>{topPar.h2}</h2>
-          <p>{topPar.p}</p>
-        </div>
+      <div className="bg-white pt-5 pb-5 mt-3 ">
+        <div className="w-60 sm-w-100 mx-auto">
+          <div className="mt-4">
+            <h2>{topPar.h2}</h2>
+            <p>{topPar.p}</p>
+          </div>
 
-        <div id={par2.id} className="mt-4">
-          <h4>{par2.h4}</h4>
-          <ul>
-            {par2?.ul.map((li, i) => (
-              <li key={i}>{li}</li>
-            ))}
-          </ul>
+          <div id={par2.id} className="mt-4">
+            <h4>{par2.h4}</h4>
+            <ul>
+              {par2?.ul.map((li, i) => (
+                <li key={i}>{li}</li>
+              ))}
+            </ul>
 
-          <div className="mt-2">
-            {par2?.p.split("\n").map((li, i) => (
+            <div className="mt-2">
+              {par2?.p.split("\n").map((li, i) => (
+                <p key={i}>{li}</p>
+              ))}
+            </div>
+          </div>
+
+          <div id={par3.id} className="mt-4">
+            <h4>{par3.h4}</h4>
+            <ul>
+              {par3?.ul.map((li, i) => (
+                <li key={i}>{li}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div id={par4.id} className="mt-4">
+            <h4>{par4.h4}</h4>
+            <ul>
+              {par4?.ul.map((li, i) => (
+                <li key={i}>{li}</li>
+              ))}
+            </ul>
+            {par4?.p.split("\n").map((li, i) => (
               <p key={i}>{li}</p>
             ))}
           </div>
-        </div>
+          <div id={par5.id} className="mt-4">
+            <h4>{par5.h4}</h4>
+            <ul>
+              {par5?.ul.map((li, i) => (
+                <li key={i}>{li}</li>
+              ))}
+            </ul>
+          </div>
 
-        <div id={par3.id} className="mt-4">
-          <h4>{par3.h4}</h4>
-          <ul>
-            {par3?.ul.map((li, i) => (
-              <li key={i}>{li}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div id={par4.id} className="mt-4">
-          <h4>{par4.h4}</h4>
-          <ul>
-            {par4?.ul.map((li, i) => (
-              <li key={i}>{li}</li>
-            ))}
-          </ul>
-          {par4?.p.split("\n").map((li, i) => (
-            <p key={i}>{li}</p>
-          ))}
-        </div>
-        <div id={par5.id} className="mt-4">
-          <h4>{par5.h4}</h4>
-          <ul>
-            {par5?.ul.map((li, i) => (
-              <li key={i}>{li}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-4">
-          <h4>🎣 Final Word:</h4>
-          <p>
-            If you love thematic slots with rewarding features, Big Bass Bonanza
-            is a top pick. Its balance of high volatility and exciting bonus
-            potential makes it one of the most replayable slots in the UK
-            market. Stay hooked — this game is more than just a casual catch
-          </p>
+          <div className="mt-4">
+            <h4>🎣 Final Word:</h4>
+            <p>
+              If you love thematic slots with rewarding features, Big Bass
+              Bonanza is a top pick. Its balance of high volatility and exciting
+              bonus potential makes it one of the most replayable slots in the
+              UK market. Stay hooked — this game is more than just a casual
+              catch
+            </p>
+          </div>
         </div>
       </div>
     </>

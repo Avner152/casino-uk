@@ -80,7 +80,7 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro _mt-4 tit-n-des text-white _pt-3">
+    <div className="intro w-60 sm-w-100 mx-auto tit-n-des text-white">
       <div
         className={`d-flex align-items-center justify-content-${
           isDesktop ? "between" : "center"

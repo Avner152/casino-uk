@@ -944,6 +944,10 @@ a:hover {
     background-image: unset !important;
   }
 
+  .sm-w-100 {
+    width: 100% !important;
+  }
+
   .cookie-wrapper {
     padding: 7vw 8vw !important;
   }

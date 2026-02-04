@@ -4,18 +4,14 @@ import { toJS } from "mobx";
 
 const ContentRealData = observer(() => {
   const curDate = new Date();
-
   const topPar = toJS(myStore.content).headlineSection;
-
   const content = Object.values(toJS(myStore.content))
     .filter((item) => item.sortOrder)
     .sort((a, b) => a.sortOrder - b.sortOrder);
 
-  // console.log(content);
-
   return (
-    <>
-      <h1 className="fw-bold text-white">
+    <div className="w-60 sm-w-100 mx-auto">
+      <h1 className="fw-bold ">
         {topPar.h1.replace("{curDate}", curDate.getFullYear())}
       </h1>
       <p>{topPar.p.replace("{curDate}", curDate.getFullYear())}</p>
@@ -50,7 +46,7 @@ const ContentRealData = observer(() => {
           )}
         </div>
       ))}
-    </>
+    </div>
   );
 });
 

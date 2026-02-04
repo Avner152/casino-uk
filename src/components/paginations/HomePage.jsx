@@ -35,7 +35,7 @@ const HomePage = observer(({ captchaToken }) => {
       </Helmet>
       {/* {captchaToken === null ? ( */}
       {captchaToken === null ? (
-        <div className="mt-5 mb-4 gap-2 d-flex flex-column justify-content-center align-items-center m-auto overflow-hidden">
+        <div className="mt-5  mb-4 gap-2 d-flex flex-column justify-content-center align-items-center m-auto overflow-hidden">
           {/* <Spinner style={{ color: "white" }} animation="border" /> */}
           {Array.from({ length: 5 }).map((_, i) => (
             <React.Fragment key={i}>
@@ -55,14 +55,14 @@ const HomePage = observer(({ captchaToken }) => {
           </div>
         </>
       )}
-      <div className="content min-vh-100 text-white p-2  text-break">
-        <div className="content-container w-100 m-auto">
+      <div className="content bg-white min-vh-100 text-white  py-5  text-break">
+        <div className="text-black w-100 m-auto">
           {!myStore.content ? (
             <Content isDesktop={isDesktop} />
           ) : (
             <ContentRealData />
           )}
-          <div className="ms-3">
+          <div className="w-60 sm-w-100 mx-auto">
             <h2>⚠️ Responsible Gaming Notice</h2>
             <p>
               Gambling is for adults aged 18+ and should be treated as a form of

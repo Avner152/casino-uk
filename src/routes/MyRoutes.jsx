@@ -6,7 +6,6 @@ import Terms from "../components/paginations/Terms";
 import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
 import CasinoBonuses from "../components/paginations/info/CasinoBonuses";
-import SlotsGames from "../components/paginations/info/SlotsGames";
 import OnlineSlot from "../components/paginations/info/OnlineSlot";
 import BigBassBonanza from "../components/paginations/info/BigBassBonanza";
 import myStore from "../mobX/Store";
@@ -39,7 +38,6 @@ const MyRoutes = observer(() => {
         <Route exact path="/online-slots" element={<OnlineSlot />} />
         <Route exact path="/big-bass-bonanza" element={<BigBassBonanza />} />
         <Route exact path="/casino-bonuses" element={<CasinoBonuses />} />
-        <Route exact path="/slots-games" element={<SlotsGames />} />
 
         {/*  */}
         <Route

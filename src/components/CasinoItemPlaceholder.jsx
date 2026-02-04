@@ -5,7 +5,7 @@ export default function CasinoItemPlaceholder() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
   return (
-    <div style={{ zIndex: 1 }} className="my-card w-100 m-0 mx-5">
+    <div style={{ zIndex: 1 }} className="my-card w-100 m-0 mx-5 ">
       <div
         className={`top-card d-flex gap-${
           !isDesktop ? "2 flex-column" : "1 row"
@@ -52,7 +52,8 @@ export default function CasinoItemPlaceholder() {
       <div className="reg text-white">
         <Placeholder as="h6" animation="glow">
           <Placeholder md="3" /> <Placeholder md="4" /> <Placeholder md="3" />
-          <Placeholder md="4" /> <Placeholder md="3" /> <Placeholder md="4" />{" "}
+          <Placeholder md="4" /> <Placeholder md="3" />{" "}
+          <Placeholder md="4" />{" "}
         </Placeholder>
       </div>
     </div>

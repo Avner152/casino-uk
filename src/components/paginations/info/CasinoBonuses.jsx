@@ -75,88 +75,91 @@ export default function CasinoBonuses() {
       </Helmet>
 
       <PortalSection />
-      <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
-        <div className="p-4">
-          <div>
-            <h2>{topPar.h2}</h2>
-            <p>{topPar.p}</p>
-          </div>
+      <div className="bg-white pt-5 pb-5 mt-3 ">
+        <div className="w-60 sm-w-100 mx-auto">
+          {" "}
+          <div className="p-4">
+            <div>
+              <h2>{topPar.h2}</h2>
+              <p>{topPar.p}</p>
+            </div>
 
-          <div id={par1.id} className="mt-4">
-            <h4>{par1.h4}</h4>
-            <ul>
-              {par1.ul.map((li, i) => {
-                const [title, text] = li.split("-");
-                return (
-                  <div className="my-1" key={i}>
-                    <b>{title}</b> - <span>{text}</span>
-                  </div>
-                );
-              })}
-            </ul>
-          </div>
+            <div id={par1.id} className="mt-4">
+              <h4>{par1.h4}</h4>
+              <ul>
+                {par1.ul.map((li, i) => {
+                  const [title, text] = li.split("-");
+                  return (
+                    <div className="my-1" key={i}>
+                      <b>{title}</b> - <span>{text}</span>
+                    </div>
+                  );
+                })}
+              </ul>
+            </div>
 
-          <div id={par2.id} className="mt-4">
-            <h4>{par2.h4}</h4>
+            <div id={par2.id} className="mt-4">
+              <h4>{par2.h4}</h4>
 
-            <p>{par2.p}</p>
-          </div>
+              <p>{par2.p}</p>
+            </div>
 
-          <div id={par3.id} className="mt-4">
-            <h4>{par3.h4}</h4>
-            <ul>
-              {par3.ul.map((li, i) => (
-                <li className="my-1" key={i}>
-                  {li}
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div id={par3.id} className="mt-4">
+              <h4>{par3.h4}</h4>
+              <ul>
+                {par3.ul.map((li, i) => (
+                  <li className="my-1" key={i}>
+                    {li}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div id={par4.id} className="mt-4">
-            <h4>{par4.h4}</h4>
-            <p>{par4.p}</p>
-          </div>
+            <div id={par4.id} className="mt-4">
+              <h4>{par4.h4}</h4>
+              <p>{par4.p}</p>
+            </div>
 
-          <div id={par5.id} className="mt-4">
-            <h4>{par5.h4}</h4>
-            <ul>
-              {par5.ul.map((li, i) => (
-                <li className="my-1" key={i}>
-                  {li}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div id={par6.id} className="mt-4">
-            <h4>{par6.h4}</h4>
-            <ul>
-              {par6.ul.map((li, i) => (
-                <li className="my-1" key={i}>
-                  {li}
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div id={par5.id} className="mt-4">
+              <h4>{par5.h4}</h4>
+              <ul>
+                {par5.ul.map((li, i) => (
+                  <li className="my-1" key={i}>
+                    {li}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div id={par6.id} className="mt-4">
+              <h4>{par6.h4}</h4>
+              <ul>
+                {par6.ul.map((li, i) => (
+                  <li className="my-1" key={i}>
+                    {li}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="mt-4">
-            <h4>📊 Why UK Players Love Bonuses </h4>
-            <p>
-              Bonuses are especially valuable for UK players who want to get the
-              most out of each deposit. They also allow players to try new games
-              without committing large amounts of money. Some casinos now offer
-              wager-free bonuses — a huge plus for casual players.
-            </p>
-          </div>
-          <div className="mt-4">
-            <h4>🎁 Final Thoughts </h4>
-            <p>
-              Casino bonuses are a vital part of your online gaming strategy. By
-              understanding the types, reading the fine print, and picking the
-              right offers, you can unlock more value with every bet you make.
-              At TopCasinoPicksUK, we help you stay informed and find the best
-              bonus deals in the UK casino scene.
-            </p>
+            <div className="mt-4">
+              <h4>📊 Why UK Players Love Bonuses </h4>
+              <p>
+                Bonuses are especially valuable for UK players who want to get
+                the most out of each deposit. They also allow players to try new
+                games without committing large amounts of money. Some casinos
+                now offer wager-free bonuses — a huge plus for casual players.
+              </p>
+            </div>
+            <div className="mt-4">
+              <h4>🎁 Final Thoughts </h4>
+              <p>
+                Casino bonuses are a vital part of your online gaming strategy.
+                By understanding the types, reading the fine print, and picking
+                the right offers, you can unlock more value with every bet you
+                make. At TopCasinoPicksUK, we help you stay informed and find
+                the best bonus deals in the UK casino scene.
+              </p>
+            </div>
           </div>
         </div>
       </div>
