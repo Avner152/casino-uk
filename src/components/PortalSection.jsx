@@ -50,7 +50,7 @@ const PortalSection = observer(({ captchaToken }) => {
           { headers },
         )
         .then((res) => {
-          console.log(res.data.list);
+          // console.log(res.data.list);
 
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
