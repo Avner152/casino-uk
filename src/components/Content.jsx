@@ -1,5 +1,4 @@
 import { observer } from "mobx-react";
-import { Accordion } from "react-bootstrap";
 import myStore from "../mobX/Store";
 
 const Content = observer(() => {

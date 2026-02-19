@@ -17,8 +17,10 @@ const InfoTemplate = observer(() => {
     if (segments[index]) {
       myStore.updateInfoContent(segments[index]);
     }
-  }, [location.pathname, myStore.product]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
 
+  // Second useEffect — track only myStore.infoContent
   useEffect(() => {
     if (!myStore.infoContent) return;
 
@@ -27,13 +29,8 @@ const InfoTemplate = observer(() => {
     setContent({
       ...templates?.[key],
     });
-  }, [myStore.infoContent, templates]);
-
-  // const content =
-  //   templates?.[myStore.infoContent?.toLowerCase().replaceAll(" ", "-")];
-
-  console.log("product", myStore.product);
-  console.log("infoContent", myStore.infoContent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [myStore.infoContent]);
 
   return (
     <>

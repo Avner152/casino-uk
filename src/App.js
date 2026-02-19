@@ -37,18 +37,17 @@ const App = observer(() => {
   const scores = [9.7, 9.9, 9.8];
 
   const [hasCookie, setCookieStatus] = useState(
-    getCookie("uk-consent") ? true : false
+    getCookie("uk-consent") ? true : false,
   );
 
   const triggeredRef = useRef(false);
 
   useEffect(() => {
     const handleMouseOut = (e) => {
+      if (myStore.type.startsWith("bl")) return;
       if (e.clientY < 0 && !triggeredRef.current) {
-        // triggeredRef.current = false;
         triggeredRef.current = true;
-
-        setShowPopOut(isDesktop && initialList.length);
+        setShowPopOut(isDesktop && initialList.length); // Popup now disabled for every
       }
     };
 
@@ -152,8 +151,8 @@ const App = observer(() => {
                                 }%)`,
                               }
                             : score / 2 > i + 1
-                            ? { background: "#ffd600" }
-                            : null
+                              ? { background: "#ffd600" }
+                              : null
                         }
                         className="star fs-3"
                       />
