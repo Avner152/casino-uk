@@ -6,6 +6,7 @@ class MyStore {
   list = [];
   initialList = [];
   content = null;
+  infoContent = null;
   brands = [];
   ribbonList = [];
 
@@ -20,6 +21,8 @@ class MyStore {
       updateType: action,
       content: observable,
       updateContent: action,
+      infoContent: observable,
+      updateInfoContent: action,
       ribbonList: observable,
       updateRibbons: action,
     });
@@ -39,6 +42,9 @@ class MyStore {
   }
   updateProduct(product) {
     this.product = product;
+  }
+  updateInfoContent(chosen) {
+    this.infoContent = chosen;
   }
   updateRibbons(ribbonList) {
     this.ribbonList = [...ribbonList];

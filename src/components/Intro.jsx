@@ -47,15 +47,6 @@ const Intro = observer(() => {
     switch (location.pathname) {
       default:
         return setPage("");
-      case "/live-games":
-        setPage("live");
-        break;
-      case "/aviator":
-        setPage("aviator");
-        break;
-      case "/slots-games":
-        setPage("slots");
-        break;
       case "/table-games":
         setPage("table");
         break;
@@ -97,13 +88,13 @@ const Intro = observer(() => {
                     "default",
                     {
                       month: "long",
-                    }
+                    },
                   )} ${fullYear}`
                 : toJS(myStore.content)?.firstTitle.replace(
                     "{curDate}",
                     `${curDate.toLocaleString("default", {
                       month: "long",
-                    })} ${fullYear}`
+                    })} ${fullYear}`,
                   )}
             </h1>
           </div>

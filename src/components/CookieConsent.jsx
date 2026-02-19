@@ -1,36 +1,55 @@
 import { Button } from "react-bootstrap";
 import { setCookie } from "../json/helpers";
+import { observer } from "mobx-react";
+import { Link } from "react-router-dom";
+import myStore from "../mobX/Store";
 
-const CookieConsent = ({ setCookieStatus }) => {
-  const cookieHandler = (accepted) => {
+const CookieConsent = observer(({ setCookieStatus }) => {
+  const cookieHandler = () => {
     // console.log(accepted);
-    setCookie("uk-consent", accepted, accepted ? 365 : 1, "playukcasinos.net");
+    setCookie("uk-consent", true, 365, "ukcasinocompare.net");
     setCookieStatus(true);
   };
 
   return (
-    <div className="cookie-wrapper d-flex flex-row text-white align-items-center justify-content-between position-fixed z-3 bottom-0 w-100 vh-25 p-4 bg-dark">
+    <div className="cookie-wrapper d-flex flex-row text-white align-items-center justify-content-between position-fixed z-3 bottom-0 w-100 p-4 bg-dark fs-7">
       <span>
-        By visiting our website, you agree to our Terms of Use, our Privacy
-        Policy, and our Cookies Policy. Our website contains advertisement. You
-        must be lawfully permitted to gamble in your country of access.
+        We use cookies that are necessary to operate this website and to
+        remember your preferences (for example, that you have dismissed this
+        notice). We do not use cookies for analytics, profiling or interest-
+        based advertising. For more information, see our{" "}
+        <Link
+          to={`${
+            myStore.product === "betting" ? "/special/sport" : ""
+          }/cookie-consent-policy${window.location.search}`}
+          className="link-light text-decoration-underline"
+        >
+          Cookie Policy
+        </Link>{" "}
+        and{" "}
+        <Link
+          to={`${
+            myStore.product === "betting" ? "/special/sport" : ""
+          }/privacy-policy${window.location.search}`}
+          className="link-light text-decoration-underline"
+        >
+          Privacy Policy
+        </Link>
+        .
       </span>
       <div className="d-flex flex-column gap-2">
-        <Button
-          onClick={() => cookieHandler(true)}
-          className="cookie-accept cookie-button"
-        >
-          Accept
+        <Button onClick={cookieHandler} className="cookie-accept cookie-button">
+          OK, got it
         </Button>
         <Button
-          onClick={() => cookieHandler(false)}
-          className="cookie-reject cookie-button"
+          onClick={() => setCookieStatus(true)}
+          className="cookie-accept cookie-button"
         >
-          Close
+          Cancel
         </Button>
       </div>
     </div>
   );
-};
+});
 
 export default CookieConsent;

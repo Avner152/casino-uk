@@ -31,3 +31,38 @@ export function getCookie(name) {
   }
   return null;
 }
+
+export const pages = {
+  casino: [
+    {
+      name: "Online Slots",
+      url: "/info/online-slots",
+    },
+    {
+      name: "Roulette",
+      url: "/info/roulette",
+    },
+    {
+      name: "Table Games",
+      url: "/info/table-games",
+    },
+  ],
+  betting: [
+    {
+      name: "Betting Bonuses",
+      url: "/betting-bonuses",
+    },
+    {
+      name: "GAA",
+      url: "/gaa",
+    },
+    {
+      name: "Rugby",
+      url: "/rugby",
+    },
+    {
+      name: "Horse Racing",
+      url: "/horse-racing",
+    },
+  ],
+};

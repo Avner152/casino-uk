@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 export default function PrivacyPolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Privacy Policy | Play UK Casinos",
+    title: "Privacy Policy | UK Casino Compare",
     description:
-      "Review the Privacy Policy for Play UK Casinos. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
+      "Review the Privacy Policy for UK Casino Compare. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
   };
   return (
     <>

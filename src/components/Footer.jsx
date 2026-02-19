@@ -6,6 +6,7 @@ import cards from "../assets/casino.png";
 import React from "react";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
+import { pages } from "../json/helpers";
 
 const Footer = observer(() => {
   const curDate = new Date();
@@ -30,29 +31,12 @@ const Footer = observer(() => {
     },
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Table Games",
-          url: "/table-games",
-        },
-        {
-          name: "Aviator",
-          url: "/aviator",
-        },
-        {
-          name: "Live Games",
-          url: "/live-games",
-        },
-        {
-          name: "Book of Dead",
-          url: "/slots-games",
-        },
-      ],
+      list: pages?.[myStore.product || "casino"],
     },
   ];
 
   const importedRegPhotos = importImages(
-    require.context("../assets/reg", false, /\.(svg)$/)
+    require.context("../assets/reg", false, /\.(svg)$/),
   );
 
   const regLogosData = [
@@ -84,7 +68,7 @@ const Footer = observer(() => {
               <img
                 src={logo}
                 width={200}
-                height={77}
+                height={140}
                 alt="logo"
                 className="_mt-2"
               />
@@ -118,8 +102,9 @@ const Footer = observer(() => {
                     <Link
                       target={li.target || ""}
                       key={j}
-                      to={li.url + window.location.search}
-                      // href={li.url}
+                      to={`${
+                        myStore.product === "betting" ? "/special/sport" : ""
+                      }${li.url}${window.location.search}`}
                     >
                       {li.name}
                     </Link>
@@ -152,7 +137,7 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} Play UK Casinos. All rights reserved. All
+            @{curDate.getFullYear()} UK Casino Compare. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>

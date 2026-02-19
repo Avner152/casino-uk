@@ -5,10 +5,8 @@ import CookiePolicy from "../components/paginations/CookiePolicy";
 import Terms from "../components/paginations/Terms";
 import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
-import Aviator from "../components/paginations/info/Aviator";
-import LiveGames from "../components/paginations/info/LiveGames";
-import SlotsGames from "../components/paginations/info/SlotsGames";
-import TableGames from "../components/paginations/info/TableGames";
+import InfoTemplate from "../components/paginations/info/InfoTemplate";
+
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
 import SportPage from "../components/sport/SportPage";
@@ -27,27 +25,34 @@ const MyRoutes = observer(() => {
   return (
     <>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<HomePage />}
-          // element={<HomePage captchaToken={captchaToken} />}
-        ></Route>
+        <Route exact path="/" element={<HomePage />} />
         <Route exact path="/special/sport" element={<SportPage />} />
-        <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route exact path="/about-us" element={<AboutUs />}></Route>
+        <Route exact path="/terms-and-conditions" element={<Terms />} />
+        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
 
+        <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
+
+        {/*  */}
         <Route
           exact
-          path="/cookie-consent-policy"
+          path="/special/sport/terms-and-conditions"
+          element={<Terms />}
+        />
+        <Route
+          exact
+          path="/special/sport/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+        <Route
+          exact
+          path="/special/sport/cookie-consent-policy"
           element={<CookiePolicy />}
-        ></Route>
+        />
 
-        <Route exact path="/table-games" element={<TableGames />}></Route>
-        <Route exact path="/aviator" element={<Aviator />}></Route>
-        <Route exact path="/live-games" element={<LiveGames />}></Route>
-        <Route exact path="/slots-games" element={<SlotsGames />}></Route>
+        <Route exact path="/special/sport/:page" element={<InfoTemplate />} />
+        <Route exact path="/info/:page" element={<InfoTemplate />} />
       </Routes>
     </>
   );
