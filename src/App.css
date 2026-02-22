@@ -166,8 +166,10 @@ ul svg {
 } */
 
 .my-card:hover {
-  box-shadow: 0 0 50px 1px rgba(50, 205, 50, 0.7),
-    0 0 10px 2px rgba(34, 139, 34, 0.5), 0 0 10px 2px rgba(0, 255, 127, 0.3),
+  box-shadow:
+    0 0 50px 1px rgba(50, 205, 50, 0.7),
+    0 0 10px 2px rgba(34, 139, 34, 0.5),
+    0 0 10px 2px rgba(0, 255, 127, 0.3),
     0 0 20px 6px rgba(144, 238, 144, 0.1);
   transition: all 300ms ease-in-out;
 }
@@ -474,7 +476,7 @@ a:hover {
   display: flex;
   position: absolute;
   top: 0;
-  height: 66px;
+  height: 76px;
 }
 
 .information {
@@ -935,6 +937,14 @@ a:hover {
 
   .sm-w-100 {
     width: 100% !important;
+  }
+
+  .sm-p-0 {
+    padding: 0 !important;
+  }
+  .sm-px-1 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
   }
 }
 

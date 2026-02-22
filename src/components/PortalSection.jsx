@@ -28,8 +28,8 @@ const PortalSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/nottingham/prd?product=${myStore.product}`;
-    // const ENDPOINT = `http://localhost:5001/nottingham/prd?product=${myStore.product}`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/london/prd?product=${myStore.product}`;
+    // const ENDPOINT = `http://localhost:5001/london/prd?product=${myStore.product}`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {
@@ -45,7 +45,7 @@ const PortalSection = observer(({ captchaToken }) => {
         .post(
           ENDPOINT,
           { search, referrer: document.referrer, userIp },
-          { headers }
+          { headers },
         )
         .then((res) => {
           // console.log(res.data);
@@ -53,7 +53,7 @@ const PortalSection = observer(({ captchaToken }) => {
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
+            res.data.list[0].brands.filter((brand) => !brand.isFrozen),
           );
 
           myStore.updateRibbons(res.data.ribbons || []);
@@ -69,7 +69,7 @@ const PortalSection = observer(({ captchaToken }) => {
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
-    require.context("../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
@@ -91,18 +91,7 @@ const PortalSection = observer(({ captchaToken }) => {
     },
   ];
 
-  // const images = importImages(
-  //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
-  // );
-
-  // const importedIcons = importImages(
-  //   require.context("../assets/icons", false, /\.(svg)$/)
-  // );
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (

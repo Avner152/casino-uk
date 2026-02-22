@@ -25,7 +25,7 @@ const Footer = observer(() => {
       list: [
         { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Terms & Conditions", url: "/terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
@@ -137,7 +137,7 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} UK Casino Compare. All rights reserved. All
+            @{curDate.getFullYear()} Casino Portal UK. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>
