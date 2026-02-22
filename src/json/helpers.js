@@ -35,16 +35,20 @@ export function getCookie(name) {
 export const pages = {
   casino: [
     {
-      name: "Online Slots",
-      url: "/info/online-slots",
+      name: "Crash Games",
+      url: "/info/crash-games",
     },
     {
       name: "Roulette",
       url: "/info/roulette",
     },
     {
-      name: "Table Games",
-      url: "/info/table-games",
+      name: "Big Bass Bonanza",
+      url: "/info/big-bass-bonanza",
+    },
+    {
+      name: "Blackjack",
+      url: "/info/blackjack",
     },
   ],
   betting: [
