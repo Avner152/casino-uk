@@ -20,7 +20,6 @@ export default function PrivacyPolicy() {
             Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
             , {curDate.getFullYear()}
           </span>
-
           <p>
             We reserve the right to change this Privacy Policy at any time, at
             our sole and absolute discretion. When changes are made, we will
@@ -39,8 +38,13 @@ export default function PrivacyPolicy() {
             defined in this Privacy Policy will have the meaning given to it in
             the Terms.
           </p>
-
-          <div>
+          <h4>Data Controller</h4>
+          CasinoCompareUK.net is operated by M.B.M MANAGEMENT LTD., registered
+          in Israel For the purposes of applicable data protection laws,
+          including the UK GDPR and EU GDPR where applicable, the above entity
+          is the Data Controller of your personal data. You may contact us at:{" "}
+          <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
+          <div className="mt-3">
             <h4>Our Legal Bases for Processing Personal Data:</h4>
             <p>
               We process and use Personal Information in compliance with data
@@ -72,7 +76,6 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
           </div>
-
           <div>
             <h4>Information We Collect</h4>
             <p>
@@ -92,7 +95,6 @@ export default function PrivacyPolicy() {
               considered Personal Information.
             </p>
           </div>
-
           <div>
             <h4>Third-Party Forms and Services</h4>
             <p>
@@ -107,7 +109,6 @@ export default function PrivacyPolicy() {
               the Partner, and their privacy policy will apply.
             </p>
           </div>
-
           <div>
             <h4>Contact Us</h4>
             <p>
@@ -129,7 +130,6 @@ export default function PrivacyPolicy() {
               this Privacy Policy and the third party's privacy policy.
             </p>
           </div>
-
           <div>
             <h4>Information We Collect from You</h4>
             <p>
