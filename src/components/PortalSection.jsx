@@ -29,13 +29,14 @@ const PortalSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd?product=${myStore.product}`;
-    // const ENDPOINT = `http://localhost:5001/uk/prd?product=${myStore.product}`;
+    // const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/uk/prd?product=${myStore.product}`;
+    const ENDPOINT = `http://localhost:5001/uk/prd?product=${myStore.product}`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {
       try {
         const response = await axios.get("https://api.ipify.org?format=json");
+
         setUserIp(response.data.ip);
       } catch (err) {
         console.error("Error fetching IP:", err);
@@ -46,7 +47,7 @@ const PortalSection = observer(({ captchaToken }) => {
         .post(
           ENDPOINT,
           { search, referrer: document.referrer, userIp },
-          { headers }
+          { headers },
         )
         .then((res) => {
           // console.log(res.data);
@@ -54,7 +55,7 @@ const PortalSection = observer(({ captchaToken }) => {
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
+            res.data.list[0].brands.filter((brand) => !brand.isFrozen),
           );
           myStore.updateRibbons(res.data.ribbons || []);
 
@@ -69,7 +70,7 @@ const PortalSection = observer(({ captchaToken }) => {
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
-    require.context("../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
