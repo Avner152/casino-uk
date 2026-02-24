@@ -38,12 +38,7 @@ export default function PrivacyPolicy() {
             defined in this Privacy Policy will have the meaning given to it in
             the Terms.
           </p>
-          <h4>Data Controller</h4>
-          CasinoPortalUK.net is operated by M.B.M MANAGEMENT LTD., registered in
-          Israel For the purposes of applicable data protection laws, including
-          the UK GDPR and EU GDPR where applicable, the above entity is the Data
-          Controller of your personal data. You may contact us at:{" "}
-          <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
+
           <div className="mt-3">
             <h4>Our Legal Bases for Processing Personal Data:</h4>
             <p>
