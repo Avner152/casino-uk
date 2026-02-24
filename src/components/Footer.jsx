@@ -36,7 +36,7 @@ const Footer = observer(() => {
   ];
 
   const importedRegPhotos = importImages(
-    require.context("../assets/reg", false, /\.(svg)$/)
+    require.context("../assets/reg", false, /\.(svg)$/),
   );
 
   const regLogosData = [
@@ -74,8 +74,14 @@ const Footer = observer(() => {
               />
             </Link>
             {isDesktop && (
-              <div>
+              <div className="lh-1 fs-7">
                 <p>{footerText}</p>
+                <p>
+                  Play Responsibly! <br />
+                  Gambling can be addictive. Please gamble responsibly. For
+                  help, visit{" "}
+                  <a href="https://www.gambleaware.org/">BeGambleAware.org</a>
+                </p>
               </div>
             )}
           </div>

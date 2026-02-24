@@ -13,7 +13,7 @@ export default function CookiePolicy() {
         <meta name="description" content={meta.description} />
       </Helmet>
       <div className="text-bg-dark text-white pt-5 pb-5 mb-3 mt-3 information">
-        <span className="fw-bold">Last Updated: December 2025</span>
+        <span className="fw-bold">Last Updated: December 2026</span>
         <div className="m-auto">
           <h1>Cookie Policy</h1>
 
