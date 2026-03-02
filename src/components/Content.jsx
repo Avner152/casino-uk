@@ -13,13 +13,13 @@ const Content = observer(() => {
       h2: "🔍 What We Review and Compare",
       p: "When reviewing casino websites, we focus on areas that matter to real players, including:",
       ul: [
-        "Transparency and Operator Information – Clear details about who operates the casino and its policies.",
-        "Bonus Terms and Promotional Conditions – Wagering requirements, maximum cashouts, eligible games, time limits, withdrawal rules, and restrictions.",
-        "Payment Methods for UK Players – Visa/Mastercard, bank transfers, e-wallets, mobile payments.",
-        "Withdrawal Processing and Verification – Typical processing times, verification procedures, support availability.",
-        "Game Variety and Platform Quality – Slots, table games, live dealer games, software providers, platform stability.",
-        "Mobile Usability – Mobile website usability, game compatibility, loading speed, navigation.",
-        "Customer Support – Live chat, email support, help centre quality, responsiveness.",
+        "Transparency and Operator Information - Clear details about who operates the casino and its policies.",
+        "Bonus Terms and Promotional Conditions - Wagering requirements, maximum cashouts, eligible games, time limits, withdrawal rules, and restrictions.",
+        "Payment Methods for UK Players - Visa/Mastercard, bank transfers, e-wallets, mobile payments.",
+        "Withdrawal Processing and Verification - Typical processing times, verification procedures, support availability.",
+        "Game Variety and Platform Quality - Slots, table games, live dealer games, software providers, platform stability.",
+        "Mobile Usability - Mobile website usability, game compatibility, loading speed, navigation.",
+        "Customer Support - Live chat, email support, help centre quality, responsiveness.",
       ],
     },
     par3: {
@@ -93,9 +93,7 @@ const Content = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold text-white">
-        Online Casino Comparison for UK Players
-      </h1>
+      <h1 className="fw-bold">Online Casino Comparison for UK Players</h1>
       <p>
         Welcome to UKCasinoCompare.net, an independent comparison website
         created for players in the United Kingdom.
@@ -113,7 +111,7 @@ const Content = observer(() => {
         platforms and understand key features before registering or depositing.
       </p>
 
-      <div className="content-container w-100 m-auto">
+      <div className="content-container_ w-100 m-auto">
         <div>
           {Object.entries(
             myStore.product === "casino" ? content : contentBetting,

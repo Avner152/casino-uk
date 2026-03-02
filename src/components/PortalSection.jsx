@@ -45,15 +45,15 @@ const PortalSection = observer(({ captchaToken }) => {
         .post(
           ENDPOINT,
           { search, referrer: document.referrer, userIp },
-          { headers }
+          { headers },
         )
         .then((res) => {
-          // console.log(res.data);
+          console.log(res.data);
 
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
+            res.data.list[0].brands.filter((brand) => !brand.isFrozen),
           );
 
           myStore.updateRibbons(res.data.ribbons || []);
@@ -69,13 +69,13 @@ const PortalSection = observer(({ captchaToken }) => {
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
-    require.context("../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
       name: "uk",
       text: "UK",
-      addOn: `${myStore.type === "blanca" ? "Licensed" : ""}`,
+      addOn: `${myStore.type.startsWith("bl") ? "Licensed" : ""}`,
     },
     {
       name: "security",

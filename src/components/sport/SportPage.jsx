@@ -5,6 +5,8 @@ import { useMediaQuery } from "react-responsive";
 import { observer } from "mobx-react";
 import Content from "../Content";
 import PortalSection from "../PortalSection";
+import myStore from "../../mobX/Store";
+import ContentV2 from "../ContentV2";
 
 const SportPage = observer(({ captchaToken }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -30,16 +32,15 @@ const SportPage = observer(({ captchaToken }) => {
         </div>
       ) : (
         <>
-          <div className="w-100 p-2 m-auto casino-section">
+          <div className="w-60 sm-w-100 p-2 m-auto casino-section">
             <PortalSection />
             <br />
           </div>
         </>
       )}
-      <div className="content min-vh-100 text-white p-2">
-        <div className="content-container w-100 m-auto">
-          {/* <ContentV2 /> */}
-          <Content />
+      <div className="bg-white min-vh-100 py-4">
+        <div className="w-60 sm-w-100 m-auto">
+          {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
 
           <div className="ms-3">
             <h2>Play Responsibly!</h2>

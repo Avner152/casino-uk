@@ -14,13 +14,13 @@ const SportSection = observer(({ captchaToken }) => {
   const mId = searchParams.get("msclkid");
 
   let homepageIcons = importImages(
-    require.context("../../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
       name: "uk",
       text: "UK",
-      addOn: `${myStore.type === "blanca" ? "Licensed" : ""}`,
+      addOn: `${myStore.type.startsWith("bl") ? "Licensed" : ""}`,
     },
     {
       name: "security",

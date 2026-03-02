@@ -36,17 +36,17 @@ const HomePage = observer(({ captchaToken }) => {
         </div>
       ) : (
         <>
-          <div className="w-100 p-2 m-auto casino-section">
+          <div className="w-60 sm-w-100 p-2 m-auto casino-section">
             <PortalSection captchaToken={captchaToken} />
             <br />
           </div>
         </>
       )}
-      <div className="content min-vh-100 text-white p-2">
-        <div className="content-container w-100 m-auto">
+      <div className="bg-white min-vh-100 py-4">
+        <div className="w-60 sm-w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
           <div className="ms-3">
-            <h2>Play Responsibly!</h2>
+            <h2 className="fw-bold">Play Responsibly!</h2>
             <p>
               Gambling can be addictive. Please gamble responsibly. For help,
               visit{" "}

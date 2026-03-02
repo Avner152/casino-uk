@@ -15,10 +15,13 @@ const ContentV2 = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold text-white">
+      <h1 className="fw-bold">
         {topPar.h1.replace("{curDate}", curDate.getFullYear())}
       </h1>
-      <p>{topPar.p.replace("{curDate}", curDate.getFullYear())}</p>
+      {topPar?.p?.split("\n")?.map((pi, i) => (
+        <p key={i}>{pi}</p>
+      ))}
+      {/* <p>{topPar.p.replace("{curDate}", curDate.getFullYear())}</p> */}
 
       {content.map((item) => (
         <div className="mt-4 px-3" key={item.id}>
