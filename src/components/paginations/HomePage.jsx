@@ -45,20 +45,6 @@ const HomePage = observer(({ captchaToken }) => {
       <div className="bg-white min-vh-100 py-4 px-3">
         <div className="w-60 sm-w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
-          <div className="ms-3">
-            <h2 className="fw-bold">Play Responsibly!</h2>
-            <p>
-              Gambling can be addictive. Please gamble responsibly. For help,
-              visit{" "}
-              <a
-                href="https://www.gambleaware.org/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                BeGambleAware.org
-              </a>
-            </p>
-          </div>
         </div>
       </div>
     </>

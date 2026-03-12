@@ -144,7 +144,11 @@ const Footer = observer(() => {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
             @{curDate.getFullYear()} UK Casino Compare. All rights reserved. All
-            trademarks are the property of their respective owners.
+            trademarks are the property of their respective owners. <br />
+            <div className="fs-7 lh-1">
+              Info: Company name M.B.M Managment LTD <br />
+              Country: Israel, Petach Tikva https://mbm-mang.com/
+            </div>
           </div>
         </div>
       }
