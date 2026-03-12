@@ -32,14 +32,14 @@ const SportPage = observer(({ captchaToken }) => {
         </div>
       ) : (
         <>
-          <div className="w-60 sm-w-100 p-2 m-auto casino-section">
+          <div className="px-2 m-auto casino-section">
             <PortalSection />
             <br />
           </div>
         </>
       )}
       <div className="bg-white min-vh-100 py-4">
-        <div className="w-60 sm-w-100 m-auto">
+        <div className="px-3 w-60 sm-w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
 
           <div className="ms-3">

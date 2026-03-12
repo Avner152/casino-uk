@@ -36,13 +36,13 @@ const HomePage = observer(({ captchaToken }) => {
         </div>
       ) : (
         <>
-          <div className="w-60 sm-w-100 p-2 m-auto casino-section">
+          <div className="_w-60 sm-w-100 p-2 m-auto casino-section">
             <PortalSection captchaToken={captchaToken} />
             <br />
           </div>
         </>
       )}
-      <div className="bg-white min-vh-100 py-4">
+      <div className="bg-white min-vh-100 py-4 px-3">
         <div className="w-60 sm-w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
           <div className="ms-3">
