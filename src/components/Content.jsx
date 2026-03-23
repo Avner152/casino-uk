@@ -1,175 +1,199 @@
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
+import { Accordion } from "react-bootstrap";
 
 const Content = observer(() => {
+  const curDate = new Date();
+
   const content = {
-    par1: {
-      id: "intro",
-      h2: "🎰 A UK-Focused Casino Comparison Website",
-      p: "The UK online gambling market is highly regulated and competitive. Players have access to many casino websites, promotions, and gaming platforms. However, not all offers are equally clear, and not all websites provide the same level of service, payment efficiency, or user experience. Some promotions may include complex terms, and some casinos may not support the most common payment methods used by UK residents.*UKCasinoCompare.net exists to help UK players make informed decisions by presenting casino information in a structured, transparent format.",
-    },
-    par2: {
-      id: "review-criteria",
-      h2: "🔍 What We Review and Compare",
-      p: "When reviewing casino websites, we focus on areas that matter to real players, including:",
-      ul: [
-        "Transparency and Operator Information - Clear details about who operates the casino and its policies.",
-        "Bonus Terms and Promotional Conditions - Wagering requirements, maximum cashouts, eligible games, time limits, withdrawal rules, and restrictions.",
-        "Payment Methods for UK Players - Visa/Mastercard, bank transfers, e-wallets, mobile payments.",
-        "Withdrawal Processing and Verification - Typical processing times, verification procedures, support availability.",
-        "Game Variety and Platform Quality - Slots, table games, live dealer games, software providers, platform stability.",
-        "Mobile Usability - Mobile website usability, game compatibility, loading speed, navigation.",
-        "Customer Support - Live chat, email support, help centre quality, responsiveness.",
-      ],
-    },
-    par3: {
-      id: "rankings",
-      h2: "📊 How Our Rankings Work",
-      p: "UKCasinoCompare.net provides structured comparisons. Casinos may be ranked or listed based on:",
-      ul: [
-        "Payment reliability",
-        "Clarity of terms",
-        "Overall user experience",
-        "Game variety",
-        "Customer support availability",
-        "Promotion transparency",
-      ],
-      p2: "Rankings may change over time as casino offers and policies change. Users should always read official casino terms directly before registering or depositing.",
-    },
-    par4: {
-      id: "bonuses",
-      h2: "🎁 Bonuses and Promotions: Informational Guidance",
-      p: "Casino bonuses vary significantly between brands. Promotions often include conditions. We provide informational guidance on common promotion types:",
-      ul: [
-        "Welcome offers",
-        "Free spins promotions",
-        "Cashback offers",
-        "Reload bonuses",
-        "Loyalty or VIP rewards",
-      ],
-      p2: "We aim to describe offers clearly so players can better understand what they are signing up for.",
-    },
-    par5: {
-      id: "live-casino",
-      h2: "🃏 Live Dealer Casino Information",
-      p: "Live casino gaming is popular among UK players. We review casinos offering live dealer tables:",
-      ul: [
-        "Live roulette",
-        "Live blackjack",
-        "Live baccarat",
-        "Other live table formats",
-      ],
-      p2: "We focus on usability, streaming quality, betting limits, and overall platform experience.",
-    },
-    par6: {
-      id: "responsible-gambling",
-      h2: "🛡️ Responsible Gambling Information",
-      p: "UKCasinoCompare.net supports responsible gambling. Gambling should be treated as entertainment, not a way to make money. Players should only gamble with funds they can afford to lose.",
-      ul: [
-        "Deposit limits",
-        "Loss limits",
-        "Time reminders",
-        "Self-exclusion tools",
-      ],
-      p2: "If gambling is causing harm or stress, professional support is available through UK organisations such as GamCare and BeGambleAware.",
-    },
-    par7: {
-      id: "important-notes",
-      h2: "⚠️ Important Notes for Users",
-      p: "UKCasinoCompare.net is an informational comparison website. We do not operate a casino or provide gambling services. Casino offers and terms may change at any time.",
-      ul: [
-        "Users should always review official casino terms and conditions before registering or depositing.",
-        "Gambling is age-restricted. Users must be 18+.",
-      ],
-    },
-    par8: {
-      id: "start-comparing",
-      h2: "🚀 Start Comparing UK Casinos",
-      p: "Explore casino options by browsing our latest reviews and comparisons. UKCasinoCompare.net provides regularly updated information to help UK players compare casino platforms with greater clarity and confidence.",
-    },
+    title: "Top UK Online Casinos – March {year}",
+    sections: [
+      {
+        heading: "🔎 What Players Look For When Choosing an Online Casino",
+        type: "h2",
+        content: [
+          "Players who review casino platforms often consider several key factors before creating an account.",
+          "These factors may include promotional offers, game variety, payment methods and the general reliability of the casino platform.",
+          "Some of the most common areas that players review include:",
+          "Different players may prioritise different features depending on their preferences.",
+          "Some players may focus primarily on casino bonuses, while others may prioritise payment flexibility or the variety of available slot games.",
+        ],
+        list: [
+          "Welcome bonuses and promotional offers",
+          "Free spins promotions on slot games",
+          "Payment methods used by UK players",
+          "Withdrawal processing and verification procedures",
+          "The number and variety of available casino games",
+          "Live dealer casino availability",
+          "Mobile compatibility and usability",
+          "Customer support availability",
+        ],
+      },
+      {
+        heading: "🎮 Casino Games Available Online",
+        type: "h2",
+        content: [
+          "Modern online casino platforms usually provide a wide range of digital casino games that can be played through web browsers or mobile devices.",
+          "These games are typically developed by specialised software providers that focus on casino game development.",
+          "Some casinos work with multiple software providers, which means that players may have access to hundreds or even thousands of different games depending on the casino platform.",
+          "Game variety can vary significantly between casinos, which is why many players prefer to compare platforms before deciding where to play.",
+        ],
+        list: [
+          "Online slot games",
+          "Roulette variations",
+          "Blackjack and baccarat",
+          "Casino poker games",
+          "Live dealer casino tables",
+          "Game show style casino games",
+        ],
+      },
+      {
+        heading: "🎁 Casino Bonuses and Promotions",
+        type: "h2",
+        content: [
+          "Casino bonuses are one of the most widely promoted features of online casino platforms.",
+          "These promotions are typically offered to attract new players and to reward existing customers.",
+          "While promotional offers can increase the available playing balance, they often include specific terms and conditions such as wagering requirements, bonus expiry periods and withdrawal restrictions.",
+          "Players should always review the official terms of any promotion before participating.",
+        ],
+        list: [
+          "Welcome bonuses",
+          "Free spins promotions",
+          "Reload bonuses",
+          "Cashback offers",
+          "Loyalty or VIP programs",
+        ],
+      },
+      {
+        heading: "📱 Mobile Casino Gaming",
+        type: "h2",
+        content: [
+          "Mobile casino gaming has become increasingly popular among UK players.",
+          "Many players now access casino platforms through smartphones or tablets rather than desktop computers.",
+          "Because of this trend, modern casino websites are usually designed to function smoothly across multiple devices.",
+          "When comparing casino platforms, players may wish to review whether the platform provides a consistent experience across both desktop and mobile devices.",
+        ],
+        list: [
+          "Responsive website layouts",
+          "Mobile-friendly game controls",
+          "Fast loading speeds",
+          "Secure payment systems",
+          "Mobile live dealer streaming",
+        ],
+      },
+      {
+        heading: "💳 Payment Methods and Withdrawals",
+        type: "h2",
+        content: [
+          "Payment methods are another important factor that players may consider when choosing a casino platform.",
+          "Different casinos may support different payment options depending on their licensing and operational structure.",
+          "Players often review withdrawal policies and verification requirements before depositing funds.",
+          "Withdrawal processing times and verification procedures may vary depending on the casino platform.",
+        ],
+        list: [
+          "Debit card payments",
+          "Bank transfers",
+          "E-wallet services",
+          "Mobile payment systems",
+          "Cryptocurrency payments on some platforms",
+        ],
+      },
+      {
+        heading: "🛡️ Responsible Gambling Information",
+        type: "h2",
+        content: [
+          "UKCasinoList.net supports responsible gambling.",
+          "Gambling should be treated as entertainment, not as a way to make money. Players should only gamble with funds they can afford to lose and should avoid chasing losses.",
+          "If gambling is causing harm or stress, professional support is available through UK organisations such as GamCare and BeGambleAware.",
+        ],
+        list: [
+          "Deposit limits",
+          "Loss limits",
+          "Time reminders",
+          "Self-exclusion tools",
+        ],
+      },
+    ],
   };
 
   const contentBetting = {};
 
   return (
     <>
-      <h1 className="fw-bold">Online Casino Comparison for UK Players</h1>
-      <p>
-        Welcome to UKCasinoCompare.net, an independent comparison website
-        created for players in the United Kingdom.
-      </p>
-
-      <p>
-        Our purpose is to provide clear, factual and regularly updated
-        information about online casinos that accept UK players. We review
-        casino platforms using practical criteria such as transparency, payment
-        reliability, game selection, customer support, and overall usability.
-      </p>
-      <p>
-        UKCasinoCompare.net does not offer gambling services. We provide
-        informational content designed to help users compare different casino
-        platforms and understand key features before registering or depositing.
-      </p>
-
-      <div className="content-container_ w-100 m-auto">
-        <div>
-          {Object.entries(
-            myStore.product === "casino" ? content : contentBetting,
-          ).map(([key, section]) => {
-            const { id, h2, p, ul, p2 } = section;
-
-            // Split paragraphs on "*"
-            const paragraphs = p ? p.split("*").filter(Boolean) : [];
-
-            return (
-              <div className="mt-4" key={key} id={id}>
-                {/* H2 */}
-                <h2>{h2}</h2>
-
-                {paragraphs.map((pi, i) => (
-                  <p key={i}>{pi}</p>
-                ))}
-
-                {ul && (
-                  <ul className="ps-3 _list-unstyled">
-                    {ul.map((li, i) => (
-                      <li key={i}>
-                        <p className="mb-0">{li}</p>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                {p2 && <p>{p2}</p>}
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-4">
-          <h2>🟢 Play Responsibly!</h2>
+      <article className="bg-dark px-5_ sm-px-1 py-3 bg-white w-100">
+        <div className="mx-auto">
+          <h1 className="pe-5">
+            Independent Online Casino Comparison for UK Players{" "}
+            {curDate.getFullYear()}
+          </h1>
           <p>
-            Your wellbeing matters. We strongly encourage all players to enjoy
-            online gaming in a safe, controlled, and responsible way.
+            Welcome to UKCasinoList.net, an informational comparison website
+            created to help players explore and compare online casino platforms
+            that are available to players in the United Kingdom
           </p>
-          <ul>
-            <li>Never gamble with money you can’t afford to lose</li>
-            <li>Set personal deposit and time limits</li>
-            <li>Take regular breaks</li>
-            <li>Seek support if gaming stops being fun</li>
-          </ul>
           <p>
-            For help and professional guidance, visit{" "}
-            <a
-              href="https://www.gambleaware.org/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              BeGambleAware.org
-            </a>
+            The online casino industry has expanded significantly in recent
+            years, providing players with access to a wide variety of gaming
+            platforms, promotional offers and payment options. As a result,
+            players now have many choices when it comes to selecting a casino
+            platform that fits their preferences.
           </p>
+          <p>
+            Because there are so many casino websites available, it can
+            sometimes be difficult for players to quickly determine which
+            platforms offer the features they are looking for. This is where
+            casino comparison websites can be useful.
+          </p>
+          <p>
+            UKCasinoList.net was created to present casino information in a
+            structured and easy-to-read format so that users can better
+            understand the differences between online casino platforms.
+          </p>
+          <p>
+            This website does not operate casino games and does not provide
+            gambling services. The information provided here is designed to help
+            users review casino platforms and understand what features may be
+            available before deciding whether to register
+          </p>
+
+          <Accordion
+            alwaysOpen
+            defaultActiveKey={Object.keys(content ?? {}).map((_, i) =>
+              i.toString(),
+            )}
+          >
+            {content?.sections?.map((section, index) => (
+              <Accordion.Item
+                eventKey={index.toString()}
+                className="mt-4 bg-secondary bg-opacity-25 rounded-3 p-1"
+                key={index}
+              >
+                <section key={index}>
+                  <Accordion.Header as="h2">
+                    <span className="fs-4 fw-bold">{section?.heading}</span>
+                  </Accordion.Header>
+                  {/* {section?.type === "h2" && <h2>{section?.heading}</h2>} */}
+
+                  <Accordion.Body className="pt-0">
+                    {section?.content &&
+                      section?.content.map((p, i) => <p key={i}>{p}</p>)}
+
+                    {section?.intro && <p>{section?.intro}</p>}
+
+                    {section?.list && (
+                      <ul className="list-unstyled">
+                        {section?.list.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </Accordion.Body>
+                </section>
+              </Accordion.Item>
+            ))}
+          </Accordion>
         </div>
-      </div>
+      </article>
     </>
   );
 });

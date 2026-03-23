@@ -28,8 +28,8 @@ const PortalSection = observer(({ captchaToken }) => {
   useEffect(() => {
     if (list.length) return;
 
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/nottingham/prd?product=${myStore.product}`;
-    // const ENDPOINT = `http://localhost:5001/nottingham/prd?product=${myStore.product}`;
+    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/cambridge/prd?product=${myStore.product}`;
+    // const ENDPOINT = `http://localhost:5001/cambridge/prd?product=${myStore.product}`;
     const headers = { segment: "viral" };
 
     const fetchIp = async () => {

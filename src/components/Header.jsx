@@ -41,6 +41,7 @@ const Header = observer(() => {
             <Nav className="fs-6 gap-3">
               {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
+                  key={i}
                   onClick={() => myStore.updateInfoContent(item.name)}
                   className="my-nav text-white"
                   to={`${
