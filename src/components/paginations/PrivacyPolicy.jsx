@@ -17,144 +17,159 @@ export default function PrivacyPolicy() {
       <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="m-auto pt-3">
           <span>
-            Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
+            Last Updated: {curDate.toLocaleString("default", { month: "long" })}
             , {curDate.getFullYear()}
           </span>
-          <p>
-            We reserve the right to change this Privacy Policy at any time, at
-            our sole and absolute discretion. When changes are made, we will
-            post the updated Privacy Policy on the Site, and the "Last Updated"
-            date will reflect the new effective date. Any access or use of the
-            Site following this date indicates your consent to and acceptance of
-            the updated Privacy Policy. For significant changes, we will provide
-            prominent notice, such as a notification on the Site, at least seven
-            (7) days before the changes become effective. In such cases, the
-            changes will be effective seven (7) days after the notification is
-            published.
-          </p>
-          <p className="mt-3">
-            <strong>Terms of Use</strong>: This Privacy Policy is an integral
-            part of the Site's Terms of Use ("Terms"). Any capitalized term not
-            defined in this Privacy Policy will have the meaning given to it in
-            the Terms.
-          </p>
 
-          <div className="mt-3">
-            <h4>Our Legal Bases for Processing Personal Data:</h4>
+          {/* DATA CONTROLLER */}
+          <div className="mt-4">
+            <h4>Data Controller</h4>
+            <p>The data controller responsible for your personal data is:</p>
             <p>
-              We process and use Personal Information in compliance with data
-              protection laws. Our legal grounds for processing your Personal
-              Information typically include:
+              <strong>Casino Portal UK</strong>
+              <br />
+              New Legins LTD, Petah Tikva, Israel
+              <br />
+              Email: <a href="mailto:info@newlegins.com">info@newlegins.com</a>
             </p>
+          </div>
+
+          {/* POLICY CHANGES */}
+          <div className="mt-4">
+            <h4>Changes to This Policy</h4>
+            <p>
+              We may update this Privacy Policy from time to time. When we do,
+              we will revise the "Last Updated" date above. Where required by
+              law, we will notify you of significant changes.
+            </p>
+          </div>
+
+          {/* LEGAL BASES */}
+          <div className="mt-4">
+            <h4>Legal Bases for Processing</h4>
+            <p>We process personal data under the following lawful bases:</p>
             <ul>
               <li>
-                <strong>Performance of a Contract</strong>: By using the Site,
-                you request us to provide services in accordance with our Terms
-                of Use, which requires processing some of your Personal
-                Information (e.g., your IP address).
+                <strong>Consent</strong> - for newsletters and marketing.
               </li>
               <li>
-                <strong>Legitimate Interests</strong>: We may use your Personal
-                Information for legitimate business purposes, such as operating,
-                improving, and promoting the Services, customizing your
-                experience, conducting analytics, and ensuring Site security.
+                <strong>Legitimate Interests</strong> - to operate, improve, and
+                secure the Site.
               </li>
               <li>
-                <strong>Legal Obligations</strong>: In some cases, processing
-                your Personal Information is necessary to comply with regulatory
-                obligations or legal requirements (e.g., addressing complaints
-                from users or authorities).
+                <strong>Contract</strong> - where processing is necessary to
+                provide requested services.
               </li>
               <li>
-                <strong>Consent</strong>: When you provide or submit certain
-                Personal Information to use specific Services.
+                <strong>Legal Obligation</strong> - to comply with applicable
+                laws.
               </li>
             </ul>
           </div>
-          <div>
+
+          {/* DATA COLLECTION */}
+          <div className="mt-4">
             <h4>Information We Collect</h4>
+
             <p>
-              When you visit the Site or use the Services, we may collect
-              certain information in the following ways:
+              <strong>Information you provide:</strong>
+            </p>
+            <p>
+              This includes name, email address, and any information submitted
+              via forms, newsletters, or contact requests.
+            </p>
+
+            <p>
+              <strong>Automatically collected data:</strong>
+            </p>
+            <ul>
+              <li>IP address</li>
+              <li>Device and browser information</li>
+              <li>Usage data (pages visited, interactions)</li>
+              <li>Cookies and tracking technologies</li>
+            </ul>
+          </div>
+
+          {/* HOW DATA IS USED */}
+          <div className="mt-4">
+            <h4>How We Use Your Data</h4>
+            <ul>
+              <li>Provide and operate the Site</li>
+              <li>Respond to inquiries</li>
+              <li>Improve user experience and analytics</li>
+              <li>Send marketing communications (with consent)</li>
+              <li>Ensure security and prevent fraud</li>
+            </ul>
+          </div>
+
+          {/* THIRD PARTIES */}
+          <div className="mt-4">
+            <h4>Third-Party Services</h4>
+            <p>
+              We may link to third-party partners. If you submit personal data
+              on third-party websites, their privacy policies apply. We are not
+              responsible for their practices.
             </p>
           </div>
-          <div>
-            <h4>Information You Provide to Us</h4>
+
+          {/* DATA RETENTION */}
+          <div className="mt-4">
+            <h4>Data Retention</h4>
             <p>
-              Some Services require you to provide Personal Information to use
-              them. This may include newsletters, promotional material, and
-              forms, subject to your specific and active consent. Personal
-              Information includes data that can personally identify an
-              individual, such as name, email address, phone number, home
-              address, etc. In some jurisdictions, your IP address may also be
-              considered Personal Information.
+              We retain personal data only as long as necessary for the purposes
+              described in this policy, including legal, accounting, or
+              reporting requirements. Retention periods vary depending on the
+              nature of the data.
             </p>
           </div>
-          <div>
-            <h4>Third-Party Forms and Services</h4>
+
+          {/* INTERNATIONAL TRANSFERS */}
+          <div className="mt-4">
+            <h4>International Data Transfers</h4>
             <p>
-              The Site lists, rates, and compares various third-party
-              businesses, brands, and commercial entities ("Partners") and their
-              products/services ("Products"). We may offer you services and
-              Products from Partners via an online form, which you can fill out
-              upon your consent. If you seek more information or want to pursue
-              a transaction with a Partner, you may be directed to a Partner's
-              Landing Page, where you might need to submit Personal Information
-              ("Landing Page Info"). This information is collected directly by
-              the Partner, and their privacy policy will apply.
+              Your data may be transferred outside the UK. Where this occurs, we
+              ensure appropriate safeguards are in place, such as adequacy
+              decisions or standard contractual clauses.
             </p>
           </div>
-          <div>
+
+          {/* USER RIGHTS */}
+          <div className="mt-4">
+            <h4>Your Rights Under UK GDPR</h4>
+            <p>You have the right to:</p>
+            <ul>
+              <li>Access your personal data</li>
+              <li>Correct inaccurate data</li>
+              <li>Request deletion of your data</li>
+              <li>Restrict or object to processing</li>
+              <li>Data portability</li>
+              <li>Withdraw consent at any time</li>
+            </ul>
+          </div>
+
+          {/* ICO */}
+          <div className="mt-4">
+            <h4>Complaints</h4>
+            <p>
+              You have the right to lodge a complaint with the UK supervisory
+              authority:
+            </p>
+            <p>
+              Information Commissioner's Office (ICO)
+              <br />
+              Website: <a href="https://ico.org.uk/">https://ico.org.uk/</a>
+            </p>
+          </div>
+
+          {/* CONTACT */}
+          <div className="mt-4">
             <h4>Contact Us</h4>
             <p>
-              If you contact us via a form, email, feedback feature, or other
-              means, you may need to provide Personal Information, such as your
-              name and email address. This information, along with the content
-              of your request, will be used to process and address your request
-              and for our legitimate business purposes.
+              If you have any questions about this Privacy Policy or your data,
+              please contact us at:
             </p>
-          </div>
-          <div>
-            <h4>Blogs, Newsletters, Surveys, and Promotions</h4>
             <p>
-              The Site may contain blogs, reviews, and articles about our
-              services, Partners, Products, and relevant markets. You may
-              subscribe to newsletters, participate in surveys, and engage in
-              promotional activities, which may require providing Personal
-              Information. Your submission of information will be governed by
-              this Privacy Policy and the third party’s privacy policy.
-            </p>
-          </div>
-          <div>
-            <h4>Information We Collect from You</h4>
-            <p>
-              We collect information about your use of the Services and
-              interactions with the Site, including:
-            </p>
-            <ul>
-              <li>
-                Device Information: Information such as device type, operating
-                system, language, geographic location, and time zone.
-              </li>
-              <li>
-                Interactions and Usage: Data about your interaction with the
-                Services, including URLs, actions, timestamps, and page views.
-              </li>
-              <li>
-                Log Files: Information collected through server log files and
-                tracking technologies, including IP addresses.
-              </li>
-              <li>
-                Cookies and Similar Technologies: The Site may use cookies and
-                other web tracking technologies to store preferences and track
-                Site usage. Refer to our Cookie Policy for more details.
-              </li>
-            </ul>
-          </div>
-          <div className="mt-3">
-            <p>
-              For any further details or specific queries, please contact us
-              directly.
+              Email: <a href="mailto:info@newlegins.com">info@newlegins.com</a>
             </p>
           </div>
         </div>

@@ -18,16 +18,16 @@ const Intro = observer(() => {
       title: "Discover the UK's Best Online Casinos of ",
     },
     aviator: {
-      title: "Aviator Game – Take Flight and Win Big in ",
+      title: "Aviator Game - Take Flight and Win Big in ",
     },
     live: {
-      title: "Best Live Casino Games in the UK – Top Picks for ",
+      title: "Best Live Casino Games in the UK - Top Picks for ",
     },
     slots: {
-      title: "Book of Dead Slot – Explore the Adventure and Big Wins in ",
+      title: "Book of Dead Slot - Explore the Adventure and Big Wins in ",
     },
     table: {
-      title: "Best Table Games in the UK – Our Casino Picks for ",
+      title: "Best Table Games in the UK - Our Casino Picks for ",
     },
     cookie: {
       title: "Cookie Policy 18+ ",
