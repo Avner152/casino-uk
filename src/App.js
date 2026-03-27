@@ -37,7 +37,7 @@ const App = observer(() => {
   const scores = [9.7, 9.9, 9.8];
 
   const [hasCookie, setCookieStatus] = useState(
-    getCookie("uk-consent") ? true : false
+    getCookie("uk-consent") ? true : false,
   );
 
   const triggeredRef = useRef(false);
@@ -71,7 +71,7 @@ const App = observer(() => {
           referrer: "",
           userIp: "102.128.166.0",
         },
-        { headers }
+        { headers },
       )
       .then((res) => {
         // console.log(res?.data?.list[0]?.type);
@@ -166,8 +166,8 @@ const App = observer(() => {
                                 }%)`,
                               }
                             : score / 2 > i + 1
-                            ? { background: "#ffd600" }
-                            : null
+                              ? { background: "#ffd600" }
+                              : null
                         }
                         className="star fs-3"
                       />
@@ -193,23 +193,22 @@ const App = observer(() => {
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
-        {myStore.type.startsWith("bl") && (
-          <>
-            <p
-              style={{ paddingTop: 80 }}
-              className="text-center text-white pb-0 mb-0 fs-2"
-            >
-              ADVERTORIAL
-            </p>
-            <aside className="fs-8 text-white lh-1 text-center w-75 sm-w-100 mx-auto px-2">
-              We receive advertising fees from the brands we review, which may
-              influence our rankings and scores. We do not compare every service
-              provider on the market Advertiser Disclosure 18+."T&C" apply - the
-              applicable operator's terms apply for each offer below and free
-              offers may include additional terms.
-            </aside>
-          </>
-        )}
+        <div style={{ paddingTop: 80 }}>
+          {myStore.type.startsWith("bl") && (
+            <>
+              <p className="text-center text-white pb-0 mb-0 fs-2">
+                ADVERTORIAL
+              </p>
+              <aside className="fs-8 text-white lh-1 text-center w-75 sm-w-100 mx-auto px-2">
+                We receive advertising fees from the brands we review, which may
+                influence our rankings and scores. We do not compare every
+                service provider on the market Advertiser Disclosure 18+."T&C"
+                apply - the applicable operator's terms apply for each offer
+                below and free offers may include additional terms.
+              </aside>
+            </>
+          )}
+        </div>
         <Intro />
         {/* <MyRoutes captchaToken={captchaToken} /> */}
         <MyRoutes />
