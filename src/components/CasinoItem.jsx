@@ -52,10 +52,9 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
 
         <div className="d-flex flex-column col-md-3">
           <Button
-            onClick={() => {
-              setClicked(!clicked);
-              window.open(fixedURL, "_blank");
-            }}
+            onClick={() => setClicked(!clicked)}
+            href={fixedURL}
+            target="_blank"
           >
             {clicked ? "Visit Again" : "Get Bonus"}
           </Button>
