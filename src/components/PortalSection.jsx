@@ -9,6 +9,7 @@ import { observer } from "mobx-react";
 import { toJS } from "mobx";
 import myStore from "../mobX/Store";
 import { importImages } from "../App";
+import { appendQueryParams } from "../json/helpers";
 
 const PortalSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
@@ -16,7 +17,7 @@ const PortalSection = observer(({ captchaToken }) => {
 
   const location = useLocation();
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  // const mId = searchParams.get("msclkid");
 
   const search =
     captchaToken !== undefined && !captchaToken
@@ -46,7 +47,7 @@ const PortalSection = observer(({ captchaToken }) => {
         .post(
           ENDPOINT,
           { search, referrer: document.referrer, userIp },
-          { headers }
+          { headers },
         )
         .then((res) => {
           // console.log(res.data.list[0].brands);
@@ -54,7 +55,7 @@ const PortalSection = observer(({ captchaToken }) => {
           // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
+            res.data.list[0].brands.filter((brand) => !brand.isFrozen),
           );
           myStore.updateRibbons(res.data.ribbons || []);
 
@@ -69,7 +70,7 @@ const PortalSection = observer(({ captchaToken }) => {
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
-    require.context("../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
@@ -132,7 +133,8 @@ const PortalSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {toJS(myStore.list).map((casino, k) => {
-        const fixedURL = casino.url.replace("{msclkid}", mId);
+        // const fixedURL = casino.url.replace("{msclkid}", mId);
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
 
         return (
           <Fade

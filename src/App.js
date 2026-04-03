@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
-import { getCookie } from "./json/helpers";
+import { appendQueryParams, getCookie } from "./json/helpers";
 import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
@@ -26,7 +26,7 @@ export function importImages(r) {
 
 const App = observer(() => {
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  // const mId = searchParams.get("msclkid");
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const [captchaToken, setCaptchaToken] = useState(null);
@@ -36,7 +36,7 @@ const App = observer(() => {
   const scores = [9.7, 9.9, 9.8];
 
   const [hasCookie, setCookieStatus] = useState(
-    getCookie("uk-consent") ? true : false
+    getCookie("uk-consent") ? true : false,
   );
 
   const triggeredRef = useRef(false);
@@ -127,8 +127,8 @@ const App = observer(() => {
                                 }%)`,
                               }
                             : score / 2 > i + 1
-                            ? { background: "#ffd600" }
-                            : null
+                              ? { background: "#ffd600" }
+                              : null
                         }
                         className="star fs-3"
                       />
@@ -137,9 +137,8 @@ const App = observer(() => {
                 </div>
                 <Button
                   className="text-uppercase main-btn mb-3"
-                  onClick={() =>
-                    window.open(casinoItem?.url.replace("{msclkid}", mId))
-                  }
+                  href={`${casinoItem?.url}${appendQueryParams(searchParams)}`}
+                  target="_blank"
                 >
                   get bonus
                 </Button>
