@@ -2,11 +2,11 @@ import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-awesome-reveal";
 import { useSearchParams } from "react-router-dom";
 import { observer } from "mobx-react";
-import { toJS } from "mobx";
 import { importImages } from "../../App";
 import CasinoItemMobile from "../CasinoItemMobile";
 import CasinoItem from "../CasinoItem";
 import myStore from "../../mobX/Store";
+import { appendQueryParams } from "../../json/helpers";
 
 const SportSection = observer(({ captchaToken }) => {
   captchaToken = true;
@@ -15,7 +15,7 @@ const SportSection = observer(({ captchaToken }) => {
   const mId = searchParams.get("msclkid");
 
   let homepageIcons = importImages(
-    require.context("../../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
@@ -78,11 +78,13 @@ const SportSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {myStore.list.map((casino, k) => {
-        const fixedURL = casino.url.replace("{msclkid}", mId);
+        // const fixedURL = casino.url.replace("{msclkid}", mId);
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
+        console.log(appendQueryParams(searchParams));
 
         return (
           <Fade key={k} cascade triggerOnce>
-            <div onClick={() => window.open(fixedURL, "_blank")}>
+            <a href={fixedURL} target="_blank">
               {isMobile ? (
                 <CasinoItemMobile
                   key={k}
@@ -98,7 +100,7 @@ const SportSection = observer(({ captchaToken }) => {
                   fixedURL={fixedURL}
                 />
               )}
-            </div>
+            </a>
           </Fade>
         );
       })}
