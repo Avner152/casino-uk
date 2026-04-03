@@ -43,8 +43,8 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
                               }%)`,
                             }
                           : score / 2 > i + 1
-                          ? { background: "#ffd600" }
-                          : null
+                            ? { background: "#ffd600" }
+                            : null
                       }
                       className="star"
                     />
@@ -64,10 +64,9 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
             style={{ fontSize: "1.25vw" }}
           ></div>
           <Button
-            onClick={() => {
-              setClicked(!clicked);
-              window.open(fixedURL, "_blank");
-            }}
+            onClick={() => setClicked(!clicked)}
+            href={fixedURL}
+            target="_blank"
           >
             {clicked ? "Visit Again" : "Get Bonus"}
           </Button>

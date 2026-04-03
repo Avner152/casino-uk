@@ -13,10 +13,10 @@ const SportSection = observer(({ captchaToken }) => {
   captchaToken = true;
 
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  // const mId = searchParams.get("msclkid");
 
   let homepageIcons = importImages(
-    require.context("../../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
@@ -70,7 +70,8 @@ const SportSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {myStore.list.map((casino, k) => {
-        const fixedURL = casino.url.replace("{msclkid}", mId);
+        // const fixedURL = casino.url.replace("{msclkid}", mId);
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
 
         return (
           <Fade key={k} cascade triggerOnce>

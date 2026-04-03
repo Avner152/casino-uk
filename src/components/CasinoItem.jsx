@@ -8,7 +8,6 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -52,10 +51,9 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
 
         <div className="d-flex flex-column col-md-3">
           <Button
-            onClick={() => {
-              setClicked(!clicked);
-              window.open(fixedURL, "_blank");
-            }}
+            onClick={() => setClicked(!clicked)}
+            href={fixedURL}
+            target="_blank"
           >
             {clicked ? "Visit Again" : "Get Bonus"}
           </Button>
