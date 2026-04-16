@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
+import { getScoreByIndex } from "../json/helpers";
 
 const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
-  const score = 10 - (index + 1) / 10;
+  const score = getScoreByIndex(index);
 
   return (
     <div className="my-card" onClick={() => window.open(fixedURL, "_blank")}>
