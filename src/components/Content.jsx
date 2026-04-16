@@ -1,5 +1,4 @@
 import { observer } from "mobx-react";
-import myStore from "../mobX/Store";
 import { Accordion } from "react-bootstrap";
 
 const Content = observer(() => {
@@ -115,8 +114,6 @@ const Content = observer(() => {
       },
     ],
   };
-
-  const contentBetting = {};
 
   return (
     <>
