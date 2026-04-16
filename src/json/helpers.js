@@ -99,3 +99,19 @@ export function appendQueryParams(searchParams) {
 
   return queryParams;
 }
+
+export function getScoreByIndex(index) {
+  if (index < 3) return 10 - (index + 1) / 10;
+  const maxScore = 9.7;
+  const minScore = 7.5;
+  const groupSize = 3;
+  const totalItems = 50;
+
+  const maxGroups = Math.ceil(totalItems / groupSize);
+  const step = (maxScore - minScore) / maxGroups;
+  const group = Math.floor(index / groupSize);
+
+  const score = maxScore - group * step;
+
+  return Number(Math.max(minScore, score).toFixed(1));
+}

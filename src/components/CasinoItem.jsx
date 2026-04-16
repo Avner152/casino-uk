@@ -3,9 +3,11 @@ import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
+import { getScoreByIndex } from "../json/helpers";
 
 const CasinoItem = observer(({ item, index, fixedURL }) => {
-  const score = 10 - (index + 1) / 10;
+  // const score = 10 - (index + 1) / 10;
+  const score = getScoreByIndex(index);
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 

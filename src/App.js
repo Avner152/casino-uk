@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
-import { appendQueryParams, getCookie } from "./json/helpers";
+import { appendQueryParams, getCookie, getScoreByIndex } from "./json/helpers";
 import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
@@ -150,9 +150,9 @@ const App = observer(() => {
                 </div>
                 <h2 className="px-4 fw-bold">{casinoItem.title}</h2>
                 <div>
-                  <div className="fs-1 fw-semibold">{scores[i]}</div>
+                  <div className="fs-1 fw-semibold">{getScoreByIndex(i)}</div>
                   {Array.from({ length: 5 }).map((_, i) => {
-                    const score = 10;
+                    const score = getScoreByIndex(i);
 
                     return (
                       <span
