@@ -29,7 +29,5 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-# END Cloudflare Managed Content
-
 User-agent: *
 Disallow: /
