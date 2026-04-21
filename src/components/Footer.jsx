@@ -147,7 +147,7 @@ const Footer = observer(() => {
             trademarks are the property of their respective owners. <br />
             <div className="fs-7 lh-1">
               Info: Company name M.B.M Managment LTD <br />
-              Country: Israel, Petach Tikva https://mbm-mang.com/
+              Country: Israel, Petah-Tikva https://mbm-mang.com/
             </div>
           </div>
         </div>
