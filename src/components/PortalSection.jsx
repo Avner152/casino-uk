@@ -9,6 +9,7 @@ import { observer } from "mobx-react";
 import { toJS } from "mobx";
 import myStore from "../mobX/Store";
 import { importImages } from "../App";
+import { appendQueryParams } from "../json/helpers";
 
 const PortalSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
@@ -16,7 +17,7 @@ const PortalSection = observer(({ captchaToken }) => {
 
   const location = useLocation();
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  // const mId = searchParams.get("msclkid");
 
   const search =
     captchaToken !== undefined && !captchaToken
@@ -132,7 +133,8 @@ const PortalSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {toJS(myStore.list).map((casino, k) => {
-        const fixedURL = casino.url.replace("{msclkid}", mId);
+        // const fixedURL = casino.url.replace("{msclkid}", mId);
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
 
         return (
           <Fade

@@ -67,6 +67,39 @@ export const pages = {
   ],
 };
 
+export function appendQueryParams(searchParams) {
+  const list = [
+    "msclkid",
+    "campaignid",
+    "adgroupid",
+    "adid",
+    "keyword",
+    "querystring",
+    "matchtype",
+    "network",
+    "placement",
+    "targetid",
+    "adposition",
+    "utm_term",
+    "utm_source",
+    "utm_medium",
+    "ad_campaign_id",
+  ];
+  let queryParams = "";
+
+  list.forEach((key) => {
+    let found = searchParams.get(key);
+    if (found) queryParams += `&${key}=${found}`;
+  });
+
+  if (document.referrer) {
+    const parent_referer = new URL(document.referrer).hostname;
+    queryParams += `&parent_referer=${parent_referer}`;
+  }
+
+  return queryParams;
+}
+
 export function getScoreByIndex(index) {
   if (index < 3) return 10 - (index + 1) / 10;
   const maxScore = 9.7;

@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
-import { getCookie } from "./json/helpers";
+import { appendQueryParams, getCookie } from "./json/helpers";
 import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
@@ -12,7 +12,6 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
-
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
 import { autorun } from "mobx";
@@ -27,7 +26,7 @@ export function importImages(r) {
 
 const App = observer(() => {
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  // const mId = searchParams.get("msclkid");
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const [captchaToken, setCaptchaToken] = useState(null);
@@ -161,9 +160,8 @@ const App = observer(() => {
                 </div>
                 <Button
                   className="text-uppercase main-btn mb-3"
-                  onClick={() =>
-                    window.open(casinoItem?.url.replace("{msclkid}", mId))
-                  }
+                  href={`${casinoItem?.url}${appendQueryParams(searchParams)}`}
+                  target="_blank"
                 >
                   get bonus
                 </Button>
