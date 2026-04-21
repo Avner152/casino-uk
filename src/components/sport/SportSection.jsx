@@ -6,15 +6,16 @@ import { importImages } from "../../App";
 import CasinoItemMobile from "../CasinoItemMobile";
 import CasinoItem from "../CasinoItem";
 import myStore from "../../mobX/Store";
+import { appendQueryParams } from "../../json/helpers";
 
 const SportSection = observer(({ captchaToken }) => {
   captchaToken = true;
 
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  // const mId = searchParams.get("msclkid");
 
   let homepageIcons = importImages(
-    require.context("../../assets/homepage-icons", false, /\.(svg)$/)
+    require.context("../../assets/homepage-icons", false, /\.(svg)$/),
   );
   const homepageIconsObjectList = [
     {
@@ -36,18 +37,8 @@ const SportSection = observer(({ captchaToken }) => {
     },
   ];
 
-  // const images = importImages(
-  //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
-  // );
-
-  // const importedIcons = importImages(
-  //   require.context("../assets/icons", false, /\.(svg)$/)
-  // );
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
+
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
@@ -77,7 +68,8 @@ const SportSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {myStore.list.map((casino, k) => {
-        const fixedURL = casino.url.replace("{msclkid}", mId);
+        // const fixedURL = casino.url.replace("{msclkid}", mId);
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
 
         return (
           <Fade key={k} cascade triggerOnce>
