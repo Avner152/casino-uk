@@ -3,7 +3,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose CasinoPortalUK.net?",
+    h2: "Why Choose CompareCasinosUK.net?",
     ul: [
       "🎯 Expertly Curated Selection - Handpicked online casinos based on trust, game variety, and player satisfaction, ensuring a premium gaming experience every time.",
       "🎁 Exclusive Bonuses - Boost your bankroll with generous welcome bonuses, free spins, and ongoing promotions tailored for UK players.",
@@ -20,16 +20,16 @@ export default function Content() {
   return (
     <div className="content-container_ px-5 sm-p-0 w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Welcome to CasinoPortalUK.net - Your Ultimate Guide to the Best UK
+        Welcome to CompareCasinosUK.net - Your Ultimate Guide to the Best UK
         Online Casinos in {curDate.getFullYear()}!
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At CasinoPortalUK.net,
-        we bring you the most comprehensive and up-to-date guide to the best UK
-        online casinos. Whether you're a seasoned player or just starting your
-        online casino journey, our carefully curated site is designed to help
-        you discover the top-rated, most trusted, and rewarding casinos in the
-        UK.
+        Ready to experience the thrill of online gaming? At
+        CompareCasinosUK.net, we bring you the most comprehensive and up-to-date
+        guide to the best UK online casinos. Whether you're a seasoned player or
+        just starting your online casino journey, our carefully curated site is
+        designed to help you discover the top-rated, most trusted, and rewarding
+        casinos in the UK.
       </p>
 
       <div id={why.id}>
