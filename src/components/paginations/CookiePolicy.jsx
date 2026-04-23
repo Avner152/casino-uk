@@ -22,9 +22,9 @@ export default function CookiePolicy() {
           </span>
 
           <p>
-            This Cookie Policy ("Policy") applies to websites operated by
-            Natural Intelligence Ltd. ("NI", "us", or "we"). By using the Site,
-            you agree to the use of cookies as described in this Policy.
+            This Cookie Policy ("Policy") applies to websites operated by Casino
+            Portal UK ("NI", "us", or "we"). By using the Site, you agree to the
+            use of cookies as described in this Policy.
           </p>
           <p>
             We reserve the right to modify this Policy at any time. If there are
