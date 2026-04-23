@@ -31,6 +31,27 @@ body {
   color: #000 !important;
 }
 
+.marker {
+  display: inline;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 45, 85, 0.6) 0%,
+    rgba(255, 45, 85, 0.6) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 0% 60%;
+  background-position: 0 80%;
+
+  animation: marker-fill 1s ease forwards;
+}
+
+@keyframes marker-fill {
+  to {
+    background-size: 100% 60%;
+  }
+}
+
 .w-60 {
   width: 60%;
 }
@@ -47,13 +68,13 @@ body {
 
 .desktop-header {
   position: fixed !important;
-  background-color: #000000dd;
+  background-color: #ffffffee;
   padding: 0 50px;
   z-index: 9999;
 }
 
 .my-nav:hover {
-  color: #de811d !important;
+  color: #ff2d55 !important;
 }
 
 .params .row {
@@ -138,14 +159,12 @@ ul svg {
 }
 
 .my-card {
-  background-color: #000;
+  background-color: #fff;
+  color: #000;
   margin: 1rem 0;
   cursor: pointer;
-  /* color: #000; */
-  /* border: 1px solid #00bd68; */
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease;
   border-radius: 6px;
-  /* padding: 0 1rem; */
 }
 
 .top-card {
@@ -165,18 +184,88 @@ ul svg {
   max-width: 28%;
 } */
 
-.my-card:hover {
-  box-shadow:
-    0 0 50px 1px rgba(50, 205, 50, 0.7),
-    0 0 10px 2px rgba(34, 139, 34, 0.5),
-    0 0 10px 2px rgba(0, 255, 127, 0.3),
-    0 0 20px 6px rgba(144, 238, 144, 0.1);
-  transition: all 300ms ease-in-out;
+/* .my-card:hover {
+  border: 8px solid #ff2d55 !important  ;
+} */
+
+.text-theme {
+  color: #ff2d55 !important;
 }
 
-.color-green {
-  color: #00bd68;
+.my-card {
+  position: relative;
 }
+
+.my-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 5px;
+  border-radius: 4px;
+  background:
+    linear-gradient(#ff2d55 0 0) top left,
+    linear-gradient(#ff2d55 0 0) top right,
+    linear-gradient(#ff2d55 0 0) bottom right,
+    linear-gradient(#ff2d55 0 0) bottom left;
+
+  background-size:
+    0% 5px,
+    5px 0%,
+    0% 5px,
+    5px 0%;
+
+  background-repeat: no-repeat;
+  pointer-events: none;
+
+  transition: background-size 0.5s linear;
+}
+
+.my-card:hover::before {
+  background-size:
+    100% 5px,
+    3px 100%,
+    100% 5px,
+    3px 100%;
+}
+
+@keyframes border-draw {
+  0% {
+    background-size:
+      0% 5px,
+      5px 0%,
+      0% 5px,
+      5px 0%;
+  }
+  25% {
+    background-size:
+      100% 5px,
+      5px 0%,
+      0% 5px,
+      5px 0%;
+  }
+  50% {
+    background-size:
+      100% 5px,
+      3px 100%,
+      0% 5px,
+      5px 0%;
+  }
+  75% {
+    background-size:
+      100% 5px,
+      3px 100%,
+      100% 5px,
+      5px 0%;
+  }
+  100% {
+    background-size:
+      100% 5px,
+      3px 100%,
+      100% 5px,
+      3px 100%;
+  }
+}
+
 .accordion {
   --bs-accordion-bg: #0000009a;
 }
@@ -258,11 +347,11 @@ ul svg {
 .top-card .btn,
 .main-btn {
   font-weight: 600;
-  /* background-color: #9d00ff; */
-  background-color: #58cd36;
+  background-color: #ffd72a;
+  /* background-color: #58cd36; */
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-  color: #ffffff;
+  color: #000;
   outline: 0;
   overflow: hidden;
   pointer-events: auto;
@@ -282,7 +371,7 @@ ul svg {
 .main-btn:hover,
 .main-btn:active {
   /* background: #9d00ffdd !important; */
-  background: #58cd36dd !important;
+  background: #ffd72add !important;
 }
 
 .score h3,
@@ -404,16 +493,9 @@ ul svg {
 }
 
 .reg {
-  /* padding: 0 1rem 1rem; */
   background-color: #2e2e2eaa;
-  line-height: 1.3;
-  padding: 10px 120px;
   font-size: 0.68rem;
   color: #fff;
-  text-align: center;
-
-  /* background-color: #1134540d; */
-  /* color: #000;  */
 }
 
 .welcome-bonus {
@@ -476,7 +558,7 @@ a:hover {
   display: flex;
   position: absolute;
   top: 0;
-  height: 76px;
+  height: 66px;
 }
 
 .information {
@@ -622,22 +704,22 @@ a:hover {
 }
 
 .cookie-accept {
-  background-color: #ffd72a;
+  background-color: #ff2d55;
   color: #000;
   border: unset;
 }
 
 .cookie-reject {
   background: unset !important;
-  border: 2px solid #ffd72a;
+  border: 2px solid #ff2d55;
 }
 .cookie-accept:hover,
 .cookie-accept:focus {
-  background-color: #ffd72acc !important;
+  background-color: #ff2d55cc !important;
 }
 .cookie-reject:hover,
 .cookie-reject:focus {
-  border: 2px solid #ffd72a4a !important;
+  border: 2px solid #ff2d554a !important;
 }
 .ribbon {
   width: 140px;
@@ -939,6 +1021,9 @@ a:hover {
     width: 100% !important;
   }
 
+  .sm-m-0 {
+    margin: 0 !important;
+  }
   .sm-p-0 {
     padding: 0 !important;
   }

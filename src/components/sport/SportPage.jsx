@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import CasinoItemPlaceholder from "../CasinoItemPlaceholder";
-import CasinoItemMobilePlaceholder from "../CasinoItemMobilePlaceholder";
+import CasinoItemPlaceholder from "../_CasinoItemPlaceholder";
+import CasinoItemMobilePlaceholder from "../_CasinoItemMobilePlaceholder";
 import { useMediaQuery } from "react-responsive";
 import { observer } from "mobx-react";
 import Content from "../Content";

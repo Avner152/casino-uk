@@ -27,7 +27,7 @@ const Header = observer(() => {
       <div
         className={`w-100 d-flex ${
           !isDesktop && "justify-content-between"
-        } align-items-center fs-2`}
+        } fs-2`}
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
@@ -36,14 +36,14 @@ const Header = observer(() => {
                 window.location.search
               }`}
             >
-              <img src={logo} width={110} height={75} alt="logo" />
+              <img src={logo} width={200} height={60} alt="logo" />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
                   key={i}
                   onClick={() => myStore.updateInfoContent(item.name)}
-                  className="my-nav text-white"
+                  className="my-nav text-black fw-bold"
                   to={`${
                     myStore.product === "betting" ? "/special/sport" : ""
                   }${item.url}${window.location.search}`}
@@ -55,14 +55,14 @@ const Header = observer(() => {
           </div>
         ) : (
           <>
-            <div className="d-flex w-100 align-items-center justify-content-between">
+            <div className="d-flex bg-white w-100 align-items-center justify-content-between">
               <NavLink
                 to={`/${myStore.product === "betting" ? "special/sport" : ""}${
                   window.location.search
                 }`}
                 className="ms-3"
               >
-                <img alt="logo" src={logo} width={130} height={75} />
+                <img alt="logo" src={logo} width={150} height={40} />
               </NavLink>
               {/*  */}
 

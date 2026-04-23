@@ -68,9 +68,9 @@ const Footer = observer(() => {
               <img
                 src={logo}
                 width={200}
-                height={140}
+                height={60}
                 alt="logo"
-                className="_mt-2"
+                className="bg-white p-1 rounded mb-1"
               />
             </Link>
             {isDesktop && (
@@ -143,8 +143,8 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} Casino Portal UK. All rights reserved. All
-            trademarks are the property of their respective owners.
+            @{curDate.getFullYear()} Compare Casinos UK. All rights reserved.
+            All trademarks are the property of their respective owners.
           </div>
         </div>
       }

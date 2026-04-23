@@ -42,7 +42,11 @@ const InfoTemplate = observer(() => {
           </h1>
           {content?.sections?.map((section, index) => (
             <section key={index} className="mt-3">
-              {section?.type === "h2" && <h2>{section?.heading}</h2>}
+              {section?.type === "h2" && (
+                <h2 className="text-theme_ fw-medium marker">
+                  {section?.heading?.replace("{year}", curDate.getFullYear())}
+                </h2>
+              )}
 
               {section?.content &&
                 section?.content.map((p, i) => <p key={i}>{p}</p>)}

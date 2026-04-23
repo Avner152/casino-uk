@@ -25,9 +25,9 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
         <div className="col-md-3 rounded _square">
           <img alt={item.name} width={210} height={80} src={item.image} />
         </div>
-        <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
+        <div className="welcome-bonus text-black d-flex flex-column gap-2 col-md-3">
           {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
-          <span className="text-center">Welcome Bonus:</span>
+          <span className="text-center ">Welcome Bonus:</span>
           <h1 className="golden text-center">{item.title}</h1>
         </div>
 
@@ -36,9 +36,9 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
             <div className="d-flex flex-column gap-2">
               <div
                 style={{
-                  background: `conic-gradient(rgb(255 215 42) ${
+                  background: `conic-gradient(#FF2D55 ${
                     score * 10
-                  }%, #de811d6a 0 100%`,
+                  }%, #FF2D5533 0 100%`,
                 }}
                 className="rating good"
               >
@@ -59,7 +59,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
           </Button>
         </div>
       </div>
-      {item.brandText && <div className="reg">{item.brandText}</div>}
+      {item.brandText && <div className="reg p-2">{item.brandText}</div>}
     </div>
   );
 });

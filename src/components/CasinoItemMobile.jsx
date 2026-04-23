@@ -57,7 +57,7 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
           </div>
         </div>
 
-        <div className="card-content text-white _d-flex _flex-column">
+        <div className="card-content ">
           <h1 className="">{item.title}</h1>
           <p className="mb-2">{item.brandText}</p>
 

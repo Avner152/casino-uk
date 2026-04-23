@@ -33,7 +33,7 @@ export default function Content() {
       </p>
 
       <div id={why.id}>
-        <h2>{why.h2}</h2>
+        <h2 className="marker fw-bold">{why.h2}</h2>
         <p>{why.p}</p>
         <ul className="list-unstyled">
           {why.ul.map((li, i) => (
@@ -45,7 +45,7 @@ export default function Content() {
       </div>
 
       <div className="mt-4">
-        <h2>Start Your Casino Journey Today</h2>
+        <h2 className="marker fw-bold">Start Your Casino Journey Today</h2>
         <p>
           Ready to discover the best UK online casinos of
           {curDate.getFullYear()}? Browse our expertly curated lists and find

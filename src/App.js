@@ -75,29 +75,6 @@ const App = observer(() => {
     return () => dispose(); // cleanup
   }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
-
   return (
     <div>
       <Modal
@@ -125,12 +102,7 @@ const App = observer(() => {
                 key={casinoItem?.name || i}
               >
                 <div className="top-card">
-                  <img
-                    alt="card-logo"
-                    // width={180}
-                    height={70}
-                    src={casinoItem?.image}
-                  />
+                  <img alt="card-logo" height={70} src={casinoItem?.image} />
                 </div>
                 <h2 className="px-4 fw-bold">{casinoItem?.title}</h2>
                 <div>
@@ -174,17 +146,18 @@ const App = observer(() => {
       {!isDesktop && <div className="casino-container" />}
 
       <Header />
+
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
         {myStore.type.startsWith("bl") && (
           <>
             <p
-              style={{ paddingTop: 80 }}
-              className="text-center text-white pb-0 mb-0 fs-2"
+              style={{ paddingTop: 50 }}
+              className="text-center  text-white pb-0 mb-0 fs-2 "
             >
               ADVERTORIAL
             </p>
-            <aside className="fs-7 text-white bg-black py-1 bg-opacity-50 lh-1 text-center w-75 sm-w-100 mx-auto px-2">
+            <aside className="fs-7 text-white _bg-black _py-1 marker bg-opacity-50 lh-1 text-center w-50 sm-w-100 mx-auto ">
               We receive advertising fees from the brands we review, which may
               influence our rankings and scores. We do not compare every service
               provider on the market Advertiser Disclosure 18+."T&C" apply - the

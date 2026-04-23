@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 export default function PrivacyPolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Privacy Policy | Casino Portal UK",
+    title: "Privacy Policy | Compare Casinos UK",
     description:
-      "Review the Privacy Policy for Casino Portal UK. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
+      "Review the Privacy Policy for Compare Casinos UK. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
   };
   return (
     <>
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             <h4>Data Controller</h4>
             <p>The data controller responsible for your personal data is:</p>
             <p>
-              <strong>Casino Portal UK</strong>
+              <strong>Compare Casinos UK</strong>
               <br />
               New Legins LTD, Petah Tikva, Israel
               <br />

@@ -121,38 +121,33 @@ const PortalSection = observer(({ captchaToken }) => {
           </div>
         ))}
       </div>
-      {toJS(myStore.list).map((casino, k) => {
-        // const fixedURL = casino.url.replace("{msclkid}", mId);
-        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
+      <div className="mx-5 sm-m-0">
+        {toJS(myStore.list).map((casino, k) => {
+          const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
 
-        return (
-          <Fade
-            key={k}
-            // direction="left"
-            // delay={isDesktop ? k * 100 : 0}
-            cascade
-            triggerOnce
-          >
-            <div onClick={() => window.open(fixedURL, "_blank")}>
-              {isMobile ? (
-                <CasinoItemMobile
-                  key={k}
-                  item={casino}
-                  index={k}
-                  fixedURL={fixedURL}
-                />
-              ) : (
-                <CasinoItem
-                  key={k}
-                  item={casino}
-                  index={k}
-                  fixedURL={fixedURL}
-                />
-              )}
-            </div>
-          </Fade>
-        );
-      })}
+          return (
+            <Fade key={k} cascade triggerOnce>
+              <div onClick={() => window.open(fixedURL, "_blank")}>
+                {isMobile ? (
+                  <CasinoItemMobile
+                    key={k}
+                    item={casino}
+                    index={k}
+                    fixedURL={fixedURL}
+                  />
+                ) : (
+                  <CasinoItem
+                    key={k}
+                    item={casino}
+                    index={k}
+                    fixedURL={fixedURL}
+                  />
+                )}
+              </div>
+            </Fade>
+          );
+        })}
+      </div>
     </div>
   );
 });
