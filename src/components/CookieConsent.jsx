@@ -7,7 +7,7 @@ import { observer } from "mobx-react";
 const CookieConsent = observer(({ setCookieStatus }) => {
   const cookieHandler = () => {
     // console.log(accepted);
-    setCookie("uk-consent", true, 365, "ukbestcasino.net");
+    setCookie("uk-consent", true, 365, "ukcasinohub.net");
     setCookieStatus(true);
   };
 

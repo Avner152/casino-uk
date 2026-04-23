@@ -36,7 +36,7 @@ const Footer = observer(() => {
   ];
 
   const importedRegPhotos = importImages(
-    require.context("../assets/reg", false, /\.(svg)$/)
+    require.context("../assets/reg", false, /\.(svg)$/),
   );
 
   const regLogosData = [
@@ -69,7 +69,7 @@ const Footer = observer(() => {
                 src={logo}
                 width={200}
                 alt="logo"
-                height={30}
+                height={27}
                 className="_mt-2"
               />
             </Link>
@@ -138,7 +138,7 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} UK Best Casino. All rights reserved. All
+            @{curDate.getFullYear()} UK CasinoHub. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>

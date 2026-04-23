@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 export default function CookiePolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Cookie Policy | UK Best Casino",
+    title: "Cookie Policy | UK CasinoHub",
     description:
-      "Read our Cookie Policy for `UK Best Casino`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
+      "Read our Cookie Policy for `UK CasinoHub`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
   };
   return (
     <>
@@ -23,8 +23,8 @@ export default function CookiePolicy() {
 
           <p>
             This Cookie Policy ("Policy") applies to websites operated by
-            Natural Intelligence Ltd. ("NI", "us", or "we"). By using the Site,
-            you agree to the use of cookies as described in this Policy.
+            UKCasinoHub ("NI", "us", or "we"). By using the Site, you agree to
+            the use of cookies as described in this Policy.
           </p>
           <p>
             We reserve the right to modify this Policy at any time. If there are
