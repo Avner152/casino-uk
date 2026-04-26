@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
-import Turnstile from "react-turnstile";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
@@ -27,10 +26,7 @@ export function importImages(r) {
 
 const App = observer(() => {
   const [searchParams] = useSearchParams();
-  // const mId = searchParams.get("msclkid");
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  const [captchaToken, setCaptchaToken] = useState(null);
 
   const [showPopOut, setShowPopOut] = useState(false);
   const [initialList, setInitialList] = useState([]);
@@ -74,29 +70,6 @@ const App = observer(() => {
 
     return () => disposer();
   }, []);
-
-  function TurnstileWidget() {
-    return (
-      <Turnstile
-        sitekey="0x4AAAAAAA3zELOcESURpGT7"
-        onVerify={(token) => {
-          fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-            method: "POST",
-            body: JSON.stringify({ token }),
-          })
-            .then((response) => {
-              // console.log(response);q
-              setCaptchaToken(response.ok);
-            })
-            .catch((err) => setCaptchaToken(false));
-        }}
-        retry="never"
-        onError={() => {
-          setCaptchaToken(false);
-        }}
-      />
-    );
-  }
 
   return (
     <div>
@@ -172,14 +145,31 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
-      {!captchaToken && TurnstileWidget()}
+
       {!isDesktop && <div className="casino-container" />}
 
       <Header />
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
+        {myStore.type.startsWith("bl") && (
+          <div className="w-60 sm-w-100 mx-auto">
+            <p
+              style={{ paddingTop: 40 }}
+              className="text-center text-white pb-0 mb-0 fs-2"
+            >
+              ADVERTORIAL
+            </p>
+            <aside className="fs-8 text-white lh-1 text-center w-75 sm-w-100 mx-auto px-2">
+              We receive advertising fees from the brands we review, which may
+              influence our rankings and scores. We do not compare every service
+              provider on the market Advertiser Disclosure 18+."T&C" apply - the
+              applicable operator's terms apply for each offer below and free
+              offers may include additional terms.
+            </aside>
+          </div>
+        )}
         <Intro />
-        <MyRoutes captchaToken={captchaToken} />
+        <MyRoutes />
       </div>
       <Footer />
 

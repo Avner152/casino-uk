@@ -1,13 +1,5 @@
-import { Accordion } from "react-bootstrap";
-
 export default function Content() {
   const curDate = new Date();
-
-  const advertiser = {
-    id: "advertiser",
-    h2: "18+ Advertiser Disclosure",
-    p: "This website is a free online resource dedicated to providing valuable content and comparison tools for our visitors. We receive advertising compensation from the companies featured on this site, which may influence the placement and ranking of brands (and/or their products) as well as the scores assigned to them. The inclusion of companies on this page does not imply endorsement. We do not cover all providers available in the market. Except as expressly outlined in our Terms of Use, we disclaim any representations and warranties regarding the information provided on this page. The content, including pricing, is subject to change at any time.",
-  };
 
   return (
     <div className="content-container w-100 m-auto">
@@ -21,7 +13,7 @@ export default function Content() {
         </p>
 
         <p>
-          That’s why we review and rank casinos based on what actually matters
+          That's why we review and rank casinos based on what actually matters
           to UK players.
         </p>
 
@@ -94,7 +86,7 @@ export default function Content() {
         <h2>📱 Mobile Casino Experience</h2>
 
         <p>
-          Most UK players prefer playing on mobile devices. That’s why we
+          Most UK players prefer playing on mobile devices. That's why we
           recommend casinos that provide:
         </p>
 
@@ -121,7 +113,7 @@ export default function Content() {
 
         <h2>🚀 How to Choose the Right Casino</h2>
 
-        <ul className="list-unstyled ps-2">
+        <ul className="list-unstyled">
           <li>What games you prefer (slots vs table games)</li>
           <li>Whether the bonus is realistic to use</li>
           <li>How fast withdrawals are processed</li>
@@ -131,28 +123,26 @@ export default function Content() {
         <p>Making the right choice can improve your overall experience.</p>
 
         <h2>⚠️ Advertiser Disclosure</h2>
-
         <p>
           We may receive compensation from casino brands listed on this website.
           This may influence how and where operators appear, including their
           ranking and position.
         </p>
-
         <p>
           We aim to feature relevant and trusted options, but we do not compare
           all available providers.
         </p>
 
         <h2>🔥 Start Playing Today</h2>
-
         <p>
-          Scroll up to explore the top UK online casinos for April 2026, compare
-          offers, and choose the best option for your style.
+          Scroll up to explore the top UK online casinos for{" "}
+          {curDate.getFullYear()}, compare offers, and choose the best option
+          for your style.
         </p>
 
         <p>
           ⚠️ Important Information: Players must be 18+ and reside in the United
-          Kingdom 🇬🇧
+          Kingdom
         </p>
 
         <p>

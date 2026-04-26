@@ -74,7 +74,7 @@ const Footer = observer(() => {
               />
             </Link>
             {isDesktop && (
-              <div>
+              <div className="fs-7">
                 <p>{footerText}</p>
               </div>
             )}
@@ -135,11 +135,18 @@ const Footer = observer(() => {
           ))}
         </div>
       </footer>
+
       {
         <div className="sticky">
-          <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} UK CasinoHub. All rights reserved. All
-            trademarks are the property of their respective owners.
+          <div className="p-1 m-auto text-white text-center">
+            <div className="">
+              @{curDate.getFullYear()} UK CasinoHub. All rights reserved. All
+              trademarks are the property of their respective owners.
+            </div>
+            <div className="fs-7 lh-1">
+              Info: Company name M.B.M Managment LTD <br />
+              Country: Israel, Petah-Tikva https://mbm-mang.com/
+            </div>
           </div>
         </div>
       }

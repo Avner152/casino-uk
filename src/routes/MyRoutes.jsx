@@ -28,12 +28,7 @@ const MyRoutes = observer(({ isBot }) => {
   return (
     <>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<HomePage isBot={isBot} />}
-          // element={<HomePage captchaToken={captchaToken} />}
-        />
+        <Route exact path="/" element={<HomePage isBot={isBot} />} />
         <Route exact path="/terms-and-conditions" element={<Terms />} />
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route exact path="/about-us" element={<AboutUs />} />
