@@ -3,50 +3,6 @@ import { Accordion } from "react-bootstrap";
 export default function Content() {
   const curDate = new Date();
 
-  const why = {
-    id: "why",
-    h2: "Why Choose Our Online Casino Comparison?",
-    ol: [
-      {
-        title: "Top 10 Online Casinos",
-        description:
-          "Our carefully researched list features the best online casinos in the UK. These platforms are handpicked for their exceptional games, user experience, and generous promotions.",
-      },
-      {
-        title: "Mobile and New Casinos",
-        description: `Stay up-to-date with the latest mobile-friendly casinos and emerging sites in ${curDate.getFullYear()}. Enjoy seamless gaming on the go with our recommendations for top-notch mobile casinos.`,
-      },
-      {
-        title: "Best Casino Bonuses",
-        description:
-          "Maximize your gaming experience with exclusive deals, including sign-up bonuses, welcome offers, and ongoing promotions. We spotlight the best bonuses to boost your bankroll.",
-      },
-      {
-        title: "Real-Money Gaming",
-        description:
-          "Explore a wide range of real-money games, from classic table games like blackjack and roulette to cutting-edge slots and live casino experiences.",
-      },
-    ],
-  };
-  const faq = {
-    t: "Comprehensive Insights and FAQs",
-    p: "We understand that UK players often have questions about choosing the best online casinos. That’s why we’ve compiled an informative FAQ section, answering common queries about licensing, payment methods, game fairness, and more.",
-    ques: [
-      "Which are the top 10 online casinos in the UK?",
-      "What is the best slots operator from the top 10 casino UK sites?",
-      "Can I play the best roulette at the top 10 casino sites in the UK?",
-      "Do the top 10 online casino UK platforms offer the best welcome bonuses?",
-      "How to find the best app among the top 10 casino sites in the UK?",
-    ],
-    ans: [
-      "Our list of the top 10 UK online casinos provides a comprehensive analysis of the best-rated operators. All recommended operators are licensed by the UK Gambling Commission (UKGC) and are safe for British players. Our top 10 rating is based on detailed reviews, assessing games, payouts, bonuses, and other key categories.",
-      "Each of the top 10 online casinos offers excellent game portfolios, but the highest-rated site for video slots features titles from world-renowned software platforms and offers the most diverse slot themes. It also includes progressive jackpot games and classic slots with single paylines, featuring wide betting limits and attractive bonus rounds.",
-      "Yes, the top 10 UK online casinos offer some of the best options for playing RNG roulette. Examples include tables from IGT, Microgaming, Play'n GO, and Evolution Gaming's First Person Roulette variant. The top casino for roulette also offers wide table limits and innovative variations that are hard to find at other gaming sites.",
-      "Yes, the top 10 casinos included in our guide offer some of the best welcome bonuses for new players. Each of them provides a welcome bonus exclusively for new players. You should read their promotional terms to identify which bonus suits your budget and playing style, but they are among the best available for new players.",
-      "The top-rated casino app in our guide to the 10 best online casino platforms for British players should be a priority. The recommended casino offers excellent mobile compatibility with iOS and Android devices. You can even download its advanced mobile app from the App Store or Google Play.",
-    ],
-  };
-
   const advertiser = {
     id: "advertiser",
     h2: "18+ Advertiser Disclosure",
@@ -55,72 +11,168 @@ export default function Content() {
 
   return (
     <div className="content-container w-100 m-auto">
-      <h1 className="fw-bold text-white">
-        Best UK Online Casinos {curDate.getFullYear()} : Top Games & Bonuses
-      </h1>
-      <p>
-        Welcome to the ultimate guide to the best online casinos in the UK for{" "}
-        {curDate.getFullYear()}! Whether you're a seasoned player or new to
-        online gaming, our expertly curated platform is here to help you
-        discover the finest, most trustworthy casino sites offering exciting
-        games, generous bonuses, and thrilling real-money prizes.
-      </p>
+      <div className="casino-guide  ">
+        <h2>UK Casino Comparison Guide for 2026</h2>
 
-      <div id={why.id}>
-        <h2>{why.h2}</h2>
-        <ol>
-          {why.ol.map((li, i) => (
-            <li key={i}>
-              <h3>{li.title}</h3>
-              <p>{li.description}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
-
-      <div className="faq">
-        <h1 className="fw-bold text-white">{faq.t}</h1>
-        <p>{faq.p}</p>
-        <Accordion>
-          {faq.ques.map((qNa, i) => {
-            return (
-              <Accordion.Item key={i} eventKey={i}>
-                <Accordion.Header as="h3">
-                  <p>{qNa}</p>
-                </Accordion.Header>
-                <Accordion.Body>
-                  <p>{faq.ans[i]}</p>
-                </Accordion.Body>
-              </Accordion.Item>
-            );
-          })}
-        </Accordion>
-      </div>
-      <div className="mt-5 d-flex flex-column gap-3">
-        <div>
-          According to the British Gambling Commission, the statutory gambling
-          regulator, "Safe and responsible gambling comes from an industry that
-          takes care of its customers, customers who are empowered with the
-          knowledge to manage their gambling, and a regulator that ensures the
-          consumer is at the heart of everything we do." This information aims
-          to address the first two criteria. As we promote gambling services on
-          this site, we believe it is important to inform our customers about
-          the risks associated with gambling and provide information on where to
-          find further advice and support if needed.
-        </div>
-        <div id={advertiser.id}>
-          <h2>{advertiser.h2}</h2>
-          <p>{advertiser.p}</p>
-        </div>
-      </div>
-      <div>
-        <h2>Play Responsibly!</h2>
         <p>
-          Gambling can be addictive. Please gamble responsibly. For help, visit{" "}
+          With so many online casinos available, choosing the right one can feel
+          overwhelming. Each site offers different bonuses, games, and payment
+          options — and not all of them are equal.
+        </p>
+
+        <p>
+          That’s why we review and rank casinos based on what actually matters
+          to UK players.
+        </p>
+
+        <h2>🔒 Safe & Trusted UK Casinos</h2>
+
+        <p>
+          Security is always the top priority. We highlight casino sites that
+          offer:
+        </p>
+
+        <ul className="list-unstyled">
+          <li>Secure platforms with SSL encryption 🔐</li>
+          <li>Transparent operator information</li>
+          <li>Strong reputation among players</li>
+        </ul>
+
+        <p>
+          Choosing a trusted casino helps ensure a smoother and safer
+          experience.
+        </p>
+
+        <h2>🎁 Bonuses & Free Spins</h2>
+
+        <p>Most UK casino sites offer welcome deals such as:</p>
+
+        <ul className="list-unstyled ps-2">
+          <li>Deposit match bonuses</li>
+          <li>Free spins on selected slots</li>
+          <li>Reload offers and ongoing promotions</li>
+        </ul>
+
+        <p>Before claiming any offer, always check:</p>
+
+        <ul className="list-unstyled ps-2">
+          <li>Wagering requirements</li>
+          <li>Time limits</li>
+          <li>Eligible games</li>
+        </ul>
+
+        <h2>⚡ Fast Withdrawals & Payments</h2>
+
+        <p>Reliable withdrawals are essential. Top casino sites provide:</p>
+
+        <ul className="list-unstyled ps-2">
+          <li>Fast payout processing</li>
+          <li>Secure banking methods</li>
+          <li>Clear withdrawal policies</li>
+        </ul>
+
+        <p>
+          Common payment options include debit cards, bank transfers, and
+          e-wallets depending on the operator.
+        </p>
+
+        <h2>🎮 Games Available for UK Players</h2>
+
+        <ul className="list-unstyled ps-2">
+          <li>🎰 Slots (e.g. Gates of Olympus, Starburst, Bonanza)</li>
+          <li>🃏 Blackjack</li>
+          <li>🎡 Roulette</li>
+          <li>🎥 Live dealer games</li>
+          <li>♠️ Poker variants</li>
+        </ul>
+
+        <p>
+          The best casinos work with leading software providers and ensure
+          smooth gameplay across devices.
+        </p>
+
+        <h2>📱 Mobile Casino Experience</h2>
+
+        <p>
+          Most UK players prefer playing on mobile devices. That’s why we
+          recommend casinos that provide:
+        </p>
+
+        <ul className="list-unstyled ps-2">
+          <li>Mobile-optimised platforms</li>
+          <li>Fast loading speeds</li>
+          <li>Smooth gameplay on iOS and Android</li>
+        </ul>
+
+        <h2>🧠 How We Rank UK Casinos</h2>
+
+        <ul className="list-unstyled ps-2">
+          <li>Trust and reputation</li>
+          <li>Bonus value and fairness</li>
+          <li>Withdrawal reliability</li>
+          <li>Game variety</li>
+          <li>Mobile performance</li>
+          <li>Customer support</li>
+        </ul>
+
+        <p>
+          We aim to keep our rankings clear, simple, and useful for UK players.
+        </p>
+
+        <h2>🚀 How to Choose the Right Casino</h2>
+
+        <ul className="list-unstyled ps-2">
+          <li>What games you prefer (slots vs table games)</li>
+          <li>Whether the bonus is realistic to use</li>
+          <li>How fast withdrawals are processed</li>
+          <li>Which payment methods are available</li>
+        </ul>
+
+        <p>Making the right choice can improve your overall experience.</p>
+
+        <h2>⚠️ Advertiser Disclosure</h2>
+
+        <p>
+          We may receive compensation from casino brands listed on this website.
+          This may influence how and where operators appear, including their
+          ranking and position.
+        </p>
+
+        <p>
+          We aim to feature relevant and trusted options, but we do not compare
+          all available providers.
+        </p>
+
+        <h2>🔥 Start Playing Today</h2>
+
+        <p>
+          Scroll up to explore the top UK online casinos for April 2026, compare
+          offers, and choose the best option for your style.
+        </p>
+
+        <p>
+          ⚠️ Important Information: Players must be 18+ and reside in the United
+          Kingdom 🇬🇧
+        </p>
+
+        <p>
+          Some details, including bonuses and promotions, may change without
+          notice. This content is for informational purposes only and not
+          financial or legal advice.
+        </p>
+
+        <h2>🔞 Play Responsibly</h2>
+
+        <p>
+          Gambling can be addictive. Please play responsibly and set limits.
+        </p>
+
+        <p>
+          If you need help or support in the UK, visit:{" "}
           <a
-            href="https://www.gambleaware.org/"
-            rel="noreferrer"
+            href="https://www.begambleaware.org"
             target="_blank"
+            rel="noreferrer"
           >
             BeGambleAware.org
           </a>

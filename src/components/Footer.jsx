@@ -67,9 +67,9 @@ const Footer = observer(() => {
             >
               <img
                 src={logo}
-                width={200}
+                width={160}
                 alt="logo"
-                height={27}
+                height={50}
                 className="_mt-2"
               />
             </Link>
