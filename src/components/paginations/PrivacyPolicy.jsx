@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 export default function PrivacyPolicy() {
   const curDate = new Date();
@@ -21,147 +22,123 @@ export default function PrivacyPolicy() {
             , {curDate.getFullYear()}
           </span>
           <p>
-            We reserve the right to change this Privacy Policy at any time, at
-            our sole and absolute discretion. When changes are made, we will
-            post the updated Privacy Policy on the Site, and the "Last Updated"
-            date will reflect the new effective date. Any access or use of the
-            Site following this date indicates your consent to and acceptance of
-            the updated Privacy Policy. For significant changes, we will provide
-            prominent notice, such as a notification on the Site, at least seven
-            (7) days before the changes become effective. In such cases, the
-            changes will be effective seven (7) days after the notification is
-            published.
+            Welcome to Casino Compare UK (accessible at{" "}
+            <Link to="/">https://www.casinocompareuk.net/</Link>
+            ). We respect your privacy and are committed to protecting your
+            personal data. This privacy policy will inform you as to how we look
+            after your personal data when you visit our website and tell you
+            about your privacy rights and how the law protects you under the UK
+            General Data Protection Regulation (UK GDPR) and the Data Protection
+            Act 2018.
           </p>
+
+          <h2>2. Who We Are</h2>
           <p>
-            <strong>Terms of Use</strong>: This Privacy Policy is an integral
-            part of the Site's Terms of Use ("Terms"). Any capitalized term not
-            defined in this Privacy Policy will have the meaning given to it in
-            the Terms.
+            M.B.M MANAGEMENT LTD is the data controller and is responsible for
+            your personal data (collectively referred to as "the Company", "we",
+            "us" or "our" in this privacy policy). If you have any questions
+            about this privacy policy, including any requests to exercise your
+            legal rights, please contact us using the details set out below:
           </p>
-          <h4>Data Controller</h4>
-          CasinoCompareUK.net is operated by M.B.M MANAGEMENT LTD., registered
-          in Israel For the purposes of applicable data protection laws,
-          including the UK GDPR and EU GDPR where applicable, the above entity
-          is the Data Controller of your personal data. You may contact us at:{" "}
-          <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
-          <div className="mt-3">
-            <h4>Our Legal Bases for Processing Personal Data:</h4>
-            <p>
-              We process and use Personal Information in compliance with data
-              protection laws. Our legal grounds for processing your Personal
-              Information typically include:
-            </p>
-            <ul>
-              <li>
-                <strong>Performance of a Contract</strong>: By using the Site,
-                you request us to provide services in accordance with our Terms
-                of Use, which requires processing some of your Personal
-                Information (e.g., your IP address).
-              </li>
-              <li>
-                <strong>Legitimate Interests</strong>: We may use your Personal
-                Information for legitimate business purposes, such as operating,
-                improving, and promoting the Services, customizing your
-                experience, conducting analytics, and ensuring Site security.
-              </li>
-              <li>
-                <strong>Legal Obligations</strong>: In some cases, processing
-                your Personal Information is necessary to comply with regulatory
-                obligations or legal requirements (e.g., addressing complaints
-                from users or authorities).
-              </li>
-              <li>
-                <strong>Consent</strong>: When you provide or submit certain
-                Personal Information to use specific Services.
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>Information We Collect</h4>
-            <p>
-              When you visit the Site or use the Services, we may collect
-              certain information in the following ways:
-            </p>
-          </div>
-          <div>
-            <h4>Information You Provide to Us</h4>
-            <p>
-              Some Services require you to provide Personal Information to use
-              them. This may include newsletters, promotional material, and
-              forms, subject to your specific and active consent. Personal
-              Information includes data that can personally identify an
-              individual, such as name, email address, phone number, home
-              address, etc. In some jurisdictions, your IP address may also be
-              considered Personal Information.
-            </p>
-          </div>
-          <div>
-            <h4>Third-Party Forms and Services</h4>
-            <p>
-              The Site lists, rates, and compares various third-party
-              businesses, brands, and commercial entities ("Partners") and their
-              products/services ("Products"). We may offer you services and
-              Products from Partners via an online form, which you can fill out
-              upon your consent. If you seek more information or want to pursue
-              a transaction with a Partner, you may be directed to a Partner's
-              Landing Page, where you might need to submit Personal Information
-              ("Landing Page Info"). This information is collected directly by
-              the Partner, and their privacy policy will apply.
-            </p>
-          </div>
-          <div>
-            <h4>Contact Us</h4>
-            <p>
-              If you contact us via a form, email, feedback feature, or other
-              means, you may need to provide Personal Information, such as your
-              name and email address. This information, along with the content
-              of your request, will be used to process and address your request
-              and for our legitimate business purposes.
-            </p>
-          </div>
-          <div>
-            <h4>Blogs, Newsletters, Surveys, and Promotions</h4>
-            <p>
-              The Site may contain blogs, reviews, and articles about our
-              services, Partners, Products, and relevant markets. You may
-              subscribe to newsletters, participate in surveys, and engage in
-              promotional activities, which may require providing Personal
-              Information. Your submission of information will be governed by
-              this Privacy Policy and the third party's privacy policy.
-            </p>
-          </div>
-          <div>
-            <h4>Information We Collect from You</h4>
-            <p>
-              We collect information about your use of the Services and
-              interactions with the Site, including:
-            </p>
-            <ul>
-              <li>
-                Device Information: Information such as device type, operating
-                system, language, geographic location, and time zone.
-              </li>
-              <li>
-                Interactions and Usage: Data about your interaction with the
-                Services, including URLs, actions, timestamps, and page views.
-              </li>
-              <li>
-                Log Files: Information collected through server log files and
-                tracking technologies, including IP addresses.
-              </li>
-              <li>
-                Cookies and Similar Technologies: The Site may use cookies and
-                other web tracking technologies to store preferences and track
-                Site usage. Refer to our Cookie Policy for more details.
-              </li>
-            </ul>
-          </div>
-          <div className="mt-3">
-            <p>
-              For any further details or specific queries, please contact us
-              directly.
-            </p>
-          </div>
+          <ul>
+            <li>Full name of legal entity: M.B.M MANAGEMENT LTD</li>
+            <li>
+              Email address:{" "}
+              <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
+            </li>
+          </ul>
+
+          <h2>3. The Data We Collect About You</h2>
+          <p>
+            We may collect, use, store and transfer different kinds of personal
+            data about you, which we have grouped together as follows:
+          </p>
+          <ul>
+            <li>
+              <strong>Identity & Contact Data:</strong> May include your name
+              and email address if you contact us directly or subscribe to a
+              newsletter.
+            </li>
+            <li>
+              <strong>Technical Data:</strong> Includes IP address, browser type
+              and version, time zone setting, operating system, and platform.
+            </li>
+            <li>
+              <strong>Usage Data:</strong> Includes information about how you
+              use our website and which affiliate links you click.
+            </li>
+            <li>
+              <strong>Tracking Data:</strong> Information collected via cookies
+              to attribute referrals to our casino partners.
+            </li>
+          </ul>
+          <p>
+            We do not collect any Special Categories of Personal Data (race,
+            religion, health, etc.). This website is strictly for users aged
+            18+.
+          </p>
+
+          <h2>4. How We Use Your Personal Data</h2>
+          <p>We rely on the following lawful bases to process your data:</p>
+          <ul>
+            <li>
+              <strong>Consent:</strong> For cookies and marketing
+              communications.
+            </li>
+            <li>
+              <strong>Legitimate Interests:</strong> To improve our website,
+              analyze traffic, and ensure the performance of our affiliate
+              marketing business.
+            </li>
+          </ul>
+
+          <h2>5. Affiliate Disclosure & Cookies</h2>
+          <p>
+            Casino Compare UK is an affiliate website. When you click on links
+            to online casinos on our site, a tracking cookie may be placed on
+            your device. This allows the operator to know that you were referred
+            by us. This process is essential for our business operations. You
+            can manage your cookie preferences through your browser settings or
+            our cookie banner.
+          </p>
+
+          <h2>6. Data Security</h2>
+          <p>
+            We have put in place appropriate security measures to prevent your
+            personal data from being accidentally lost, used, or accessed in an
+            unauthorized way. We limit access to your personal data to those
+            employees and partners who have a business need to know.
+          </p>
+
+          <h2>7. Your Legal Rights</h2>
+          <p>Under the UK GDPR, you have the right to:</p>
+          <ul>
+            <li>Request access to your personal data.</li>
+            <li>Request correction or erasure of your personal data.</li>
+            <li>Object to processing of your personal data.</li>
+            <li>Request restriction of processing.</li>
+            <li>Request transfer of your data.</li>
+            <li>Withdraw consent at any time.</li>
+          </ul>
+          <p>
+            If you wish to exercise any of these rights, please contact us at{" "}
+            <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>.
+          </p>
+
+          <h2>8. Third-Party Links</h2>
+          <p>
+            This website includes links to third-party websites (casinos).
+            Clicking on those links may allow third parties to collect data
+            about you. We do not control these third-party websites and are not
+            responsible for their privacy statements.
+          </p>
+
+          <h2>9. Contact Us</h2>
+          <p>
+            If you have any questions about this Privacy Policy, please contact
+            M.B.M MANAGEMENT LTD at: <br />
+            Email: <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
+          </p>
         </div>
       </div>
     </>
