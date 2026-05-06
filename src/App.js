@@ -160,7 +160,7 @@ const App = observer(() => {
                 </div>
                 <Button
                   className="text-uppercase main-btn mb-3"
-                  href={`${casinoItem?.url}${appendQueryParams(searchParams)}`}
+                  href={`${casinoItem?.url}${appendQueryParams(searchParams, 0)}`}
                   target="_blank"
                 >
                   get bonus
