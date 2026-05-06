@@ -99,7 +99,7 @@ export function appendQueryParams(searchParams, index) {
   if (document.referrer) {
     const parent_referer = new URL(document.referrer).hostname;
     queryParams += `&sub_id_10=${parent_referer}`;
-    if (index) queryParams += `&sub_id_10=${index}`;
+    if (index) queryParams += `&sub_id_11=${index}`;
   }
 
   return queryParams;
