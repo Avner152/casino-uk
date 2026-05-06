@@ -71,7 +71,7 @@ export const pages = {
   ],
 };
 
-export function appendQueryParams(searchParams) {
+export function appendQueryParams(searchParams, index) {
   const list = [
     "msclkid",
     "campaignid",
@@ -98,7 +98,8 @@ export function appendQueryParams(searchParams) {
 
   if (document.referrer) {
     const parent_referer = new URL(document.referrer).hostname;
-    queryParams += `&parent_referer=${parent_referer}`;
+    queryParams += `&sub_id_10=${parent_referer}`;
+    if (index) queryParams += `&sub_id_11=${index}`;
   }
 
   return queryParams;
