@@ -68,7 +68,7 @@ const SportSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {myStore.list.map((casino, k) => {
-        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams, k + 1)}`;
 
         return (
           <Fade key={k} cascade triggerOnce>
