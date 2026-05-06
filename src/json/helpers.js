@@ -86,3 +86,37 @@ export function getScoreByIndex(index) {
 
   return Number(Math.max(minScore, score).toFixed(1));
 }
+
+export function appendQueryParams(searchParams, index) {
+  const list = [
+    "msclkid",
+    "campaignid",
+    "adgroupid",
+    "adid",
+    "keyword",
+    "querystring",
+    "matchtype",
+    "network",
+    "placement",
+    "targetid",
+    "adposition",
+    "utm_term",
+    "utm_source",
+    "utm_medium",
+    "ad_campaign_id",
+  ];
+  let queryParams = "";
+
+  list.forEach((key) => {
+    let found = searchParams.get(key);
+    if (found) queryParams += `&${key}=${found}`;
+  });
+
+  if (document.referrer) {
+    const parent_referer = new URL(document.referrer).hostname;
+    queryParams += `&sub_id_10=${parent_referer}`;
+    if (index) queryParams += `&sub_id_11=${index}`;
+  }
+
+  return queryParams;
+}

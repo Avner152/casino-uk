@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
-import { getCookie } from "./json/helpers";
+import { appendQueryParams, getCookie } from "./json/helpers";
 import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
@@ -27,7 +27,6 @@ export function importImages(r) {
 
 const App = observer(() => {
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const [captchaToken, setCaptchaToken] = useState(null);
@@ -161,9 +160,8 @@ const App = observer(() => {
                 </div>
                 <Button
                   className="text-uppercase main-btn mb-3"
-                  onClick={() =>
-                    window.open(casinoItem?.url.replace("{msclkid}", mId))
-                  }
+                  href={`${casinoItem?.url}${appendQueryParams(searchParams, 0)}`}
+                  target="_blank"
                 >
                   get bonus
                 </Button>
