@@ -124,8 +124,7 @@ const PortalSection = observer(({ captchaToken }) => {
         ))}
       </div>
       {toJS(myStore.list).map((casino, k) => {
-        // const fixedURL = casino.url.replace("{msclkid}", mId);
-        const fixedURL = `${casino.url}${appendQueryParams(searchParams)}`;
+        const fixedURL = `${casino.url}${appendQueryParams(searchParams, k + 1)}`;
 
         return (
           <Fade key={k} cascade triggerOnce>
