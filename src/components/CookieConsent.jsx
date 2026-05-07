@@ -43,7 +43,7 @@ const CookieConsent = observer(({ setCookieStatus }) => {
         </Button>
         <Button
           onClick={() => setCookieStatus(false)}
-          className="cookie-button"
+          className="cookie-accept cookie-button"
         >
           Cancel
         </Button>
