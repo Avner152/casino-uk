@@ -35,6 +35,7 @@ const App = observer(() => {
   const [showPopOut, setShowPopOut] = useState(false);
   const [initialList, setInitialList] = useState([]);
   const scores = [9.7, 9.9, 9.8];
+  const indexes = [3, 1, 2];
 
   const [hasCookie, setCookieStatus] = useState(
     getCookie("uk-consent") ? true : false,
@@ -176,7 +177,7 @@ const App = observer(() => {
                 </div>
                 <Button
                   className="text-uppercase main-btn mb-3"
-                  href={`${casinoItem?.url}${appendQueryParams(searchParams, 0)}`}
+                  href={`${casinoItem?.url}${appendQueryParams(searchParams, indexes[i], "exit-popup")}`}
                   target="_blank"
                 >
                   get bonus
