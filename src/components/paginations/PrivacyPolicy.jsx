@@ -1,6 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import React from "react";
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+
 export default function PrivacyPolicy() {
   const curDate = new Date();
   const meta = {
@@ -17,161 +21,127 @@ export default function PrivacyPolicy() {
       <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="m-auto pt-3">
           <span>
-            Last Updated: {curDate.toLocaleString("default", { month: "long" })}
+            Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
             , {curDate.getFullYear()}
           </span>
+          <p>
+            Welcome to Compare Casinos UK (accessible at{" "}
+            <Link to="/">https://www.comparecasinosuk.net /</Link>
+            ). We respect your privacy and are committed to protecting your
+            personal data. This privacy policy will inform you as to how we look
+            after your personal data when you visit our website and tell you
+            about your privacy rights and how the law protects you under the UK
+            General Data Protection Regulation (UK GDPR) and the Data Protection
+            Act 2018.
+          </p>
 
-          {/* DATA CONTROLLER */}
-          <div className="mt-4">
-            <h4>Data Controller</h4>
-            <p>The data controller responsible for your personal data is:</p>
-            <p>
-              <strong>Compare Casinos UK</strong>
-              <br />
-              New Legins LTD, Petah Tikva, Israel
-              <br />
-              Email: <a href="mailto:info@newlegins.com">info@newlegins.com</a>
-            </p>
-          </div>
+          <h2>2. Who We Are</h2>
+          <p>
+            M.B.M MANAGEMENT LTD is the data controller and is responsible for
+            your personal data (collectively referred to as "the Company", "we",
+            "us" or "our" in this privacy policy). If you have any questions
+            about this privacy policy, including any requests to exercise your
+            legal rights, please contact us using the details set out below:
+          </p>
+          <ul>
+            <li>Full name of legal entity: M.B.M MANAGEMENT LTD</li>
+            <li>
+              Email address:{" "}
+              <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
+            </li>
+          </ul>
 
-          {/* POLICY CHANGES */}
-          <div className="mt-4">
-            <h4>Changes to This Policy</h4>
-            <p>
-              We may update this Privacy Policy from time to time. When we do,
-              we will revise the "Last Updated" date above. Where required by
-              law, we will notify you of significant changes.
-            </p>
-          </div>
+          <h2>3. The Data We Collect About You</h2>
+          <p>
+            We may collect, use, store and transfer different kinds of personal
+            data about you, which we have grouped together as follows:
+          </p>
+          <ul>
+            <li>
+              <strong>Identity & Contact Data:</strong> May include your name
+              and email address if you contact us directly or subscribe to a
+              newsletter.
+            </li>
+            <li>
+              <strong>Technical Data:</strong> Includes IP address, browser type
+              and version, time zone setting, operating system, and platform.
+            </li>
+            <li>
+              <strong>Usage Data:</strong> Includes information about how you
+              use our website and which affiliate links you click.
+            </li>
+            <li>
+              <strong>Tracking Data:</strong> Information collected via cookies
+              to attribute referrals to our casino partners.
+            </li>
+          </ul>
+          <p>
+            We do not collect any Special Categories of Personal Data (race,
+            religion, health, etc.). This website is strictly for users aged
+            18+.
+          </p>
 
-          {/* LEGAL BASES */}
-          <div className="mt-4">
-            <h4>Legal Bases for Processing</h4>
-            <p>We process personal data under the following lawful bases:</p>
-            <ul>
-              <li>
-                <strong>Consent</strong> - for newsletters and marketing.
-              </li>
-              <li>
-                <strong>Legitimate Interests</strong> - to operate, improve, and
-                secure the Site.
-              </li>
-              <li>
-                <strong>Contract</strong> - where processing is necessary to
-                provide requested services.
-              </li>
-              <li>
-                <strong>Legal Obligation</strong> - to comply with applicable
-                laws.
-              </li>
-            </ul>
-          </div>
+          <h2>4. How We Use Your Personal Data</h2>
+          <p>We rely on the following lawful bases to process your data:</p>
+          <ul>
+            <li>
+              <strong>Consent:</strong> For cookies and marketing
+              communications.
+            </li>
+            <li>
+              <strong>Legitimate Interests:</strong> To improve our website,
+              analyze traffic, and ensure the performance of our affiliate
+              marketing business.
+            </li>
+          </ul>
 
-          {/* DATA COLLECTION */}
-          <div className="mt-4">
-            <h4>Information We Collect</h4>
+          <h2>5. Affiliate Disclosure & Cookies</h2>
+          <p>
+            Compare Casino UK is an affiliate website. When you click on links
+            to online casinos on our site, a tracking cookie may be placed on
+            your device. This allows the operator to know that you were referred
+            by us. This process is essential for our business operations. You
+            can manage your cookie preferences through your browser settings or
+            our cookie banner.
+          </p>
 
-            <p>
-              <strong>Information you provide:</strong>
-            </p>
-            <p>
-              This includes name, email address, and any information submitted
-              via forms, newsletters, or contact requests.
-            </p>
+          <h2>6. Data Security</h2>
+          <p>
+            We have put in place appropriate security measures to prevent your
+            personal data from being accidentally lost, used, or accessed in an
+            unauthorized way. We limit access to your personal data to those
+            employees and partners who have a business need to know.
+          </p>
 
-            <p>
-              <strong>Automatically collected data:</strong>
-            </p>
-            <ul>
-              <li>IP address</li>
-              <li>Device and browser information</li>
-              <li>Usage data (pages visited, interactions)</li>
-              <li>Cookies and tracking technologies</li>
-            </ul>
-          </div>
+          <h2>7. Your Legal Rights</h2>
+          <p>Under the UK GDPR, you have the right to:</p>
+          <ul>
+            <li>Request access to your personal data.</li>
+            <li>Request correction or erasure of your personal data.</li>
+            <li>Object to processing of your personal data.</li>
+            <li>Request restriction of processing.</li>
+            <li>Request transfer of your data.</li>
+            <li>Withdraw consent at any time.</li>
+          </ul>
+          <p>
+            If you wish to exercise any of these rights, please contact us at{" "}
+            <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>.
+          </p>
 
-          {/* HOW DATA IS USED */}
-          <div className="mt-4">
-            <h4>How We Use Your Data</h4>
-            <ul>
-              <li>Provide and operate the Site</li>
-              <li>Respond to inquiries</li>
-              <li>Improve user experience and analytics</li>
-              <li>Send marketing communications (with consent)</li>
-              <li>Ensure security and prevent fraud</li>
-            </ul>
-          </div>
+          <h2>8. Third-Party Links</h2>
+          <p>
+            This website includes links to third-party websites (casinos).
+            Clicking on those links may allow third parties to collect data
+            about you. We do not control these third-party websites and are not
+            responsible for their privacy statements.
+          </p>
 
-          {/* THIRD PARTIES */}
-          <div className="mt-4">
-            <h4>Third-Party Services</h4>
-            <p>
-              We may link to third-party partners. If you submit personal data
-              on third-party websites, their privacy policies apply. We are not
-              responsible for their practices.
-            </p>
-          </div>
-
-          {/* DATA RETENTION */}
-          <div className="mt-4">
-            <h4>Data Retention</h4>
-            <p>
-              We retain personal data only as long as necessary for the purposes
-              described in this policy, including legal, accounting, or
-              reporting requirements. Retention periods vary depending on the
-              nature of the data.
-            </p>
-          </div>
-
-          {/* INTERNATIONAL TRANSFERS */}
-          <div className="mt-4">
-            <h4>International Data Transfers</h4>
-            <p>
-              Your data may be transferred outside the UK. Where this occurs, we
-              ensure appropriate safeguards are in place, such as adequacy
-              decisions or standard contractual clauses.
-            </p>
-          </div>
-
-          {/* USER RIGHTS */}
-          <div className="mt-4">
-            <h4>Your Rights Under UK GDPR</h4>
-            <p>You have the right to:</p>
-            <ul>
-              <li>Access your personal data</li>
-              <li>Correct inaccurate data</li>
-              <li>Request deletion of your data</li>
-              <li>Restrict or object to processing</li>
-              <li>Data portability</li>
-              <li>Withdraw consent at any time</li>
-            </ul>
-          </div>
-
-          {/* ICO */}
-          <div className="mt-4">
-            <h4>Complaints</h4>
-            <p>
-              You have the right to lodge a complaint with the UK supervisory
-              authority:
-            </p>
-            <p>
-              Information Commissioner's Office (ICO)
-              <br />
-              Website: <a href="https://ico.org.uk/">https://ico.org.uk/</a>
-            </p>
-          </div>
-
-          {/* CONTACT */}
-          <div className="mt-4">
-            <h4>Contact Us</h4>
-            <p>
-              If you have any questions about this Privacy Policy or your data,
-              please contact us at:
-            </p>
-            <p>
-              Email: <a href="mailto:info@newlegins.com">info@newlegins.com</a>
-            </p>
-          </div>
+          <h2>9. Contact Us</h2>
+          <p>
+            If you have any questions about this Privacy Policy, please contact
+            M.B.M MANAGEMENT LTD at: <br />
+            Email: <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
+          </p>
         </div>
       </div>
     </>
