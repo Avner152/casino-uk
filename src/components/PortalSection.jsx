@@ -125,13 +125,7 @@ const PortalSection = observer(({ captchaToken }) => {
         const fixedURL = `${casino.url}${appendQueryParams(searchParams, k + 1)}`;
 
         return (
-          <Fade
-            key={k}
-            // direction="left"
-            // delay={isDesktop ? k * 100 : 0}
-            cascade
-            triggerOnce
-          >
+          <Fade key={k} cascade triggerOnce>
             <div onClick={() => window.open(fixedURL, "_blank")}>
               {isMobile ? (
                 <CasinoItemMobile
