@@ -87,7 +87,7 @@ export function getScoreByIndex(index) {
   return Number(Math.max(minScore, score).toFixed(1));
 }
 
-export function appendQueryParams(searchParams, index) {
+export function appendQueryParams(searchParams, index, ref = "main") {
   const list = [
     "msclkid",
     "campaignid",
@@ -115,8 +115,9 @@ export function appendQueryParams(searchParams, index) {
   if (document.referrer) {
     const parent_referer = new URL(document.referrer).hostname;
     queryParams += `&sub_id_10=${parent_referer}`;
-    if (index) queryParams += `&sub_id_11=${index}`;
   }
+  queryParams += `&sub_id_11=${index}`;
+  queryParams += `&sub_id_12=${ref}`;
 
   return queryParams;
 }
