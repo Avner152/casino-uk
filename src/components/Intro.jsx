@@ -113,7 +113,7 @@ const Intro = observer(() => {
             <img
               className="cards"
               alt="cards"
-              width={isDesktop ? 180 : 120}
+              width={isDesktop ? 250 : 120}
               src={myStore.product === "betting" ? betting : casino}
             />
           </div>
