@@ -36,9 +36,9 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
             <div className="d-flex flex-column gap-2">
               <div
                 style={{
-                  background: `conic-gradient(#FF2D55 ${
+                  background: `conic-gradient(#7F7FB3 ${
                     score * 10
-                  }%, #FF2D5533 0 100%`,
+                  }%, #7F7FB333 0 100%`,
                 }}
                 className="rating good"
               >

@@ -33,10 +33,11 @@ body {
 
 .marker {
   display: inline;
+
   background: linear-gradient(
     90deg,
-    rgba(255, 45, 85, 0.6) 0%,
-    rgba(255, 45, 85, 0.6) 100%
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
   );
 
   background-repeat: no-repeat;
@@ -74,7 +75,7 @@ body {
 }
 
 .my-nav:hover {
-  color: #ff2d55 !important;
+  color: #7f7fb3 !important;
 }
 
 .params .row {
@@ -185,11 +186,11 @@ ul svg {
 } */
 
 /* .my-card:hover {
-  border: 8px solid #ff2d55 !important  ;
+  border: 8px solid #7F7FB3 !important  ;
 } */
 
 .text-theme {
-  color: #ff2d55 !important;
+  color: #7f7fb3 !important;
 }
 
 .my-card {
@@ -203,10 +204,10 @@ ul svg {
   padding: 5px;
   border-radius: 4px;
   background:
-    linear-gradient(#ff2d55 0 0) top left,
-    linear-gradient(#ff2d55 0 0) top right,
-    linear-gradient(#ff2d55 0 0) bottom right,
-    linear-gradient(#ff2d55 0 0) bottom left;
+    linear-gradient(#7f7fb3 0 0) top left,
+    linear-gradient(#7f7fb3 0 0) top right,
+    linear-gradient(#7f7fb3 0 0) bottom right,
+    linear-gradient(#7f7fb3 0 0) bottom left;
 
   background-size:
     0% 5px,
@@ -704,22 +705,22 @@ a:hover {
 }
 
 .cookie-accept {
-  background-color: #ff2d55;
+  background-color: #7f7fb3;
   color: #000;
   border: unset;
 }
 
 .cookie-reject {
   background: unset !important;
-  border: 2px solid #ff2d55;
+  border: 2px solid #7f7fb3;
 }
 .cookie-accept:hover,
 .cookie-accept:focus {
-  background-color: #ff2d55cc !important;
+  background-color: #7f7fb3cc !important;
 }
 .cookie-reject:hover,
 .cookie-reject:focus {
-  border: 2px solid #ff2d554a !important;
+  border: 2px solid #7f7fb34a !important;
 }
 .ribbon {
   width: 140px;

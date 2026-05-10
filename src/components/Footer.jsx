@@ -67,10 +67,10 @@ const Footer = observer(() => {
             >
               <img
                 src={logo}
-                width={200}
-                height={60}
+                width={120}
+                height={110}
                 alt="logo"
-                className="bg-white p-1 rounded mb-1"
+                className="bg-white_ rounded mb-1"
               />
             </Link>
             {isDesktop && (
@@ -143,8 +143,8 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} Casino Empire UK. All rights reserved.
-            All trademarks are the property of their respective owners.
+            @{curDate.getFullYear()} Casino Empire UK. All rights reserved. All
+            trademarks are the property of their respective owners.
           </div>
         </div>
       }

@@ -36,7 +36,13 @@ const Header = observer(() => {
                 window.location.search
               }`}
             >
-              <img src={logo} width={200} height={60} alt="logo" />
+              <img
+                src={logo}
+                width={75}
+                height={75}
+                alt="logo"
+                className="mb-2"
+              />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {pages?.[myStore.product || "casino"].map((item, i) => (
@@ -62,7 +68,7 @@ const Header = observer(() => {
                 }`}
                 className="ms-3"
               >
-                <img alt="logo" src={logo} width={150} height={40} />
+                <img alt="logo" src={logo} width={90} height={80} />
               </NavLink>
               {/*  */}
 
