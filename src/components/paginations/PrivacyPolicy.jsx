@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default function PrivacyPolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Privacy Policy | Compare Casinos UK",
+    title: "Privacy Policy | Casino Empire UK",
     description:
-      "Review the Privacy Policy for Compare Casinos UK. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
+      "Review the Privacy Policy for Casino Empire UK. Learn how we collect, use and protect your personal information, including data use and third-party services.",
   };
   return (
     <>
@@ -21,8 +21,8 @@ export default function PrivacyPolicy() {
             , {curDate.getFullYear()}
           </span>
           <p>
-            Welcome to Compare Casinos UK (accessible at{" "}
-            <Link to="/">https://www.comparecasinosuk.net /</Link>
+            Welcome to Casino Empire UK (accessible at{" "}
+            <Link to="/">https://casinoempireuk.com</Link>
             ). We respect your privacy and are committed to protecting your
             personal data. This privacy policy will inform you as to how we look
             after your personal data when you visit our website and tell you
@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
 
           <h2>5. Affiliate Disclosure & Cookies</h2>
           <p>
-            Compare Casino UK is an affiliate website. When you click on links
+            Casino Empire UK is an affiliate website. When you click on links
             to online casinos on our site, a tracking cookie may be placed on
             your device. This allows the operator to know that you were referred
             by us. This process is essential for our business operations. You

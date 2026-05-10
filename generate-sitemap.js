@@ -12,7 +12,7 @@ const routes = [
 
 const generateSitemap = async () => {
   const sitemap = new SitemapStream({
-    hostname: "https://casino-uk.pages.dev",
+    hostname: "https://casinoempireuk.com",
   });
   const path = resolve(__dirname, "public", "sitemap.xml");
   const writeStream = createWriteStream(path);

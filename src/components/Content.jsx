@@ -3,33 +3,31 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose CompareCasinosUK.net?",
+    h2: "Why Choose Casino Empire UK?",
+    p: "We focus on practical information that helps UK players compare sites quickly and choose with confidence.",
     ul: [
-      "🎯 Expertly Curated Selection - Handpicked online casinos based on trust, game variety, and player satisfaction, ensuring a premium gaming experience every time.",
-      "🎁 Exclusive Bonuses - Boost your bankroll with generous welcome bonuses, free spins, and ongoing promotions tailored for UK players.",
-      "📱 Mobile Compatibility - Play anytime, anywhere, with our top mobile-friendly casino picks for 2025, optimized for smooth gameplay on all devices.",
-      "🔒 Secure and Fair Play - All our recommended sites are fully licensed and regulated by the UK Gambling Commission, ensuring a safe, fair, and responsible gaming environment.",
-      "💰 Real Money Games - From classic table games like blackjack and roulette to cutting-edge video slots and immersive live dealer experiences, find it all in one place.",
-      "📝 In-Depth Reviews - Make confident decisions with our detailed, unbiased reviews covering bonuses, game selection, payment options, and customer support.",
-      "🕵️‍♂️ Player Protection - We prioritize your safety with guides on responsible gaming, secure payments, and player support.",
-      "⚠️ 18+ Only - You must be 18 years or older to participate. Please gamble responsibly and read our responsible gaming guidelines.",
-      "💬 Advertiser Disclosure - This website is a free online resource dedicated to providing valuable content and comparison tools for our visitors. We receive advertising compensation from the companies featured on this site, which may influence the placement and ranking of brands (and/or their products) as well as the scores assigned to them. The inclusion of companies on this page does not imply endorsement. We do not cover all providers available in the market. Except as expressly outlined in our Terms of Use, we disclaim any representations and warranties regarding the information provided on this page. The content, including pricing, is subject to change at any time.",
+      "Trusted UK Focus - Our recommendations prioritise sites that are licensed, reputable, and suitable for players in the UK.",
+      "Straightforward Bonus Comparisons - We explain welcome offers in plain language, including key terms such as wagering requirements and validity periods.",
+      "Mobile-Ready Casino Picks - We highlight platforms that perform well on modern phones and tablets, with smooth gameplay and easy navigation.",
+      "Balanced Game Coverage - Compare slots, table games, live casino titles, and other popular categories in one place.",
+      "Clear Payment Information - We review common deposit and withdrawal methods, processing times, and practical limits.",
+      "Independent Review Approach - Our write-ups are designed to be useful and transparent, helping you compare options fairly.",
+      "Responsible Gambling First - This site is for adults aged 18+ and encourages safe play, budgeting, and regular breaks.",
+      "Advertising Disclosure - We may receive compensation from selected partners, which can affect placement. This does not change our commitment to clear and helpful information.",
     ],
   };
 
   return (
     <div className="content-container_ px-5 sm-p-0 w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Welcome to CompareCasinosUK.net - Your Ultimate Guide to the Best UK
-        Online Casinos in {curDate.getFullYear()}!
+        Casino Empire UK: compare top UK online casinos for{" "}
+        {curDate.getFullYear()}.
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At
-        CompareCasinosUK.net, we bring you the most comprehensive and up-to-date
-        guide to the best UK online casinos. Whether you're a seasoned player or
-        just starting your online casino journey, our carefully curated site is
-        designed to help you discover the top-rated, most trusted, and rewarding
-        casinos in the UK.
+        Casino Empire UK is built to help you compare online casinos without the
+        noise. We keep our guides clear and current, so you can quickly
+        understand where to play, what each site offers, and what to check
+        before signing up.
       </p>
 
       <div id={why.id}>
@@ -47,9 +45,9 @@ export default function Content() {
       <div className="mt-4">
         <h2 className="marker fw-bold">Start Your Casino Journey Today</h2>
         <p>
-          Ready to discover the best UK online casinos of
-          {curDate.getFullYear()}? Browse our expertly curated lists and find
-          your next favorite gaming site. Your winning streak starts here!
+          Browse our latest UK casino comparisons for {curDate.getFullYear()}.
+          Choose a platform that fits your preferences, read the key terms, and
+          always play responsibly.
         </p>
       </div>
     </div>

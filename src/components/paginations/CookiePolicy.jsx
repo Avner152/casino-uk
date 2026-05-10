@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 export default function CookiePolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Cookie Policy | Compare Casinos UK",
+    title: "Cookie Policy | Casino Empire UK",
     description:
-      "Read our Cookie Policy for `Compare Casinos UK`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
+      "Read the Cookie Policy for Casino Empire UK. Learn which cookies we use, why we use them, and how you can manage your cookie preferences.",
   };
   return (
     <>
@@ -22,9 +22,9 @@ export default function CookiePolicy() {
           </span>
 
           <p>
-            This Cookie Policy ("Policy") applies to websites operated by Casino
-            Portal UK ("NI", "us", or "we"). By using the Site, you agree to the
-            use of cookies as described in this Policy.
+            This Cookie Policy ("Policy") applies to websites operated by
+            Casino Empire UK ("we", "us", or "our"). By using the Site, you
+            agree to the use of cookies as described in this Policy.
           </p>
           <p>
             We reserve the right to modify this Policy at any time. If there are

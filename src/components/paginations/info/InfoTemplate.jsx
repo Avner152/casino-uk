@@ -54,9 +54,11 @@ const InfoTemplate = observer(() => {
               {section?.intro && <p>{section?.intro}</p>}
 
               {section?.list && (
-                <ul className="list-unstyled">
+                <ul className="list-unstyled_ ps-4">
                   {section?.list.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li className="ps-3_" key={i}>
+                      {item}
+                    </li>
                   ))}
                 </ul>
               )}

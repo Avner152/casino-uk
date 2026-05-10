@@ -143,7 +143,7 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            @{curDate.getFullYear()} Compare Casinos UK. All rights reserved.
+            @{curDate.getFullYear()} Casino Empire UK. All rights reserved.
             All trademarks are the property of their respective owners.
           </div>
         </div>
