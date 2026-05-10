@@ -69,7 +69,7 @@ const Intro = observer(() => {
     <div className="intro mt-4 tit-n-des text-white pt-3">
       {page ? (
         <div className="text-white mb-5_ mt-4">
-          <h1 className="intro-title fw-bold w-75 sm-w-100">
+          <h1 className="intro-title marker fw-bold w-75 sm-w-100">
             <span className="bg-black-50 px-3 py-1">
               {headlineInfo[page].title} {fullYear}
             </span>
@@ -82,8 +82,10 @@ const Intro = observer(() => {
           }`}
         >
           <div>
-            <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              {myStore.type === "blanca"
+            <h1
+              className={`intro-title marker fw-bold w-${isDesktop ? 75 : 100}`}
+            >
+              {myStore.type.startsWith("b")
                 ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
                     "default",
                     {

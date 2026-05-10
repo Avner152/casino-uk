@@ -76,7 +76,7 @@ const PortalSection = observer(({ captchaToken }) => {
     {
       name: "uk",
       text: "UK",
-      addOn: `${myStore.type === "blanca" ? "Licensed" : ""}`,
+      addOn: `${myStore.type.startsWith("b") ? "Licensed" : ""}`,
     },
     {
       name: "security",
