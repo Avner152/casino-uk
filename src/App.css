@@ -157,13 +157,7 @@ ul svg {
   border: unset !important;
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
-  /* color: #113454; */
 }
-
-/* .top-card > div {
-  min-width: 15%;
-  max-width: 28%;
-} */
 
 .my-card:hover {
   box-shadow:
