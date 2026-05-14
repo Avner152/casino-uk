@@ -6,7 +6,7 @@ import { getScoreByIndex } from "../json/helpers";
 
 const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
-  const score = 10 - getScoreByIndex(index);
+  const score = getScoreByIndex(index);
 
   return (
     <div className="my-card" onClick={() => window.open(fixedURL, "_blank")}>
