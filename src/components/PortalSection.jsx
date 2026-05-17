@@ -40,6 +40,7 @@ const PortalSection = observer(({ captchaToken }) => {
 
         setUserIp(response.data.ip);
       } catch (err) {
+        setUserIp("0.0.0.0");
         console.error("Error fetching IP:", err);
       }
     };
