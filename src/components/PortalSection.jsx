@@ -40,6 +40,8 @@ const PortalSection = observer(({ captchaToken }) => {
         const response = await axios.get("https://api.ipify.org?format=json");
         setUserIp(response.data.ip);
       } catch (err) {
+        setUserIp("0.0.0.0");
+
         console.error("Error fetching IP:", err);
       }
     };
