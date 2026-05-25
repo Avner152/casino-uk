@@ -66,7 +66,7 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro mt-4_ tit-n-des text-white pt-3 w-60 sm-w-100 mx-auto">
+    <div className="intro mt-4_ tit-n-des text-white pt-3 w-60 md-w-75 sm-w-100 mx-auto">
       {page ? (
         <div className="text-white mb-5_ mt-4">
           <h1 className="intro-title fw-bold w-75 sm-w-100">

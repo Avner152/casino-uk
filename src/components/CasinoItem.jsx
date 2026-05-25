@@ -49,7 +49,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
           </div>
         )}
 
-        <div className="d-flex flex-column col-md-3">
+        <div className="d-flex flex-column tab-w-75 col-md-3 ">
           <Button
             onClick={() => setClicked(!clicked)}
             href={fixedURL}
