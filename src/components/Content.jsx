@@ -5,12 +5,12 @@ const Content = observer(() => {
   const content = {
     par1: {
       id: "intro",
-      h2: "🎰 A UK-Focused Casino Comparison Website",
+      h2: "A UK-Focused Casino Comparison Website",
       p: "The UK online gambling market is highly regulated and competitive. Players have access to many casino websites, promotions, and gaming platforms. However, not all offers are equally clear, and not all websites provide the same level of service, payment efficiency, or user experience. Some promotions may include complex terms, and some casinos may not support the most common payment methods used by UK residents.*UKCasinoCompare.net exists to help UK players make informed decisions by presenting casino information in a structured, transparent format.",
     },
     par2: {
       id: "review-criteria",
-      h2: "🔍 What We Review and Compare",
+      h2: "What We Review and Compare",
       p: "When reviewing casino websites, we focus on areas that matter to real players, including:",
       ul: [
         "Transparency and Operator Information - Clear details about who operates the casino and its policies.",
@@ -24,7 +24,7 @@ const Content = observer(() => {
     },
     par3: {
       id: "rankings",
-      h2: "📊 How Our Rankings Work",
+      h2: "How Our Rankings Work",
       p: "UKCasinoCompare.net provides structured comparisons. Casinos may be ranked or listed based on:",
       ul: [
         "Payment reliability",
@@ -38,7 +38,7 @@ const Content = observer(() => {
     },
     par4: {
       id: "bonuses",
-      h2: "🎁 Bonuses and Promotions: Informational Guidance",
+      h2: "Bonuses and Promotions: Informational Guidance",
       p: "Casino bonuses vary significantly between brands. Promotions often include conditions. We provide informational guidance on common promotion types:",
       ul: [
         "Welcome offers",
@@ -51,7 +51,7 @@ const Content = observer(() => {
     },
     par5: {
       id: "live-casino",
-      h2: "🃏 Live Dealer Casino Information",
+      h2: "Live Dealer Casino Information",
       p: "Live casino gaming is popular among UK players. We review casinos offering live dealer tables:",
       ul: [
         "Live roulette",
@@ -63,7 +63,7 @@ const Content = observer(() => {
     },
     par6: {
       id: "responsible-gambling",
-      h2: "🛡️ Responsible Gambling Information",
+      h2: "Responsible Gambling Information",
       p: "UKCasinoCompare.net supports responsible gambling. Gambling should be treated as entertainment, not a way to make money. Players should only gamble with funds they can afford to lose.",
       ul: [
         "Deposit limits",
@@ -75,7 +75,7 @@ const Content = observer(() => {
     },
     par7: {
       id: "important-notes",
-      h2: "⚠️ Important Notes for Users",
+      h2: "Important Notes for Users",
       p: "UKCasinoCompare.net is an informational comparison website. We do not operate a casino or provide gambling services. Casino offers and terms may change at any time.",
       ul: [
         "Users should always review official casino terms and conditions before registering or depositing.",
@@ -84,7 +84,7 @@ const Content = observer(() => {
     },
     par8: {
       id: "start-comparing",
-      h2: "🚀 Start Comparing UK Casinos",
+      h2: "Start Comparing UK Casinos",
       p: "Explore casino options by browsing our latest reviews and comparisons. UKCasinoCompare.net provides regularly updated information to help UK players compare casino platforms with greater clarity and confidence.",
     },
   };
@@ -147,7 +147,7 @@ const Content = observer(() => {
         </div>
 
         <div className="mt-4">
-          <h2>🟢 Play Responsibly!</h2>
+          <h2>Play Responsibly!</h2>
           <p>
             Your wellbeing matters. We strongly encourage all players to enjoy
             online gaming in a safe, controlled, and responsible way.
