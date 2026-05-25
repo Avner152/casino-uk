@@ -11,8 +11,8 @@ import SlotsGames from "../components/paginations/info/SlotsGames";
 import TableGames from "../components/paginations/info/TableGames";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
-import SportPage from "../components/sport/SportPage";
 import SportTemplate from "../components/paginations/info/SportTemplate";
+import SportPage from "../components/paginations/sport/SportPage";
 
 const MyRoutes = observer(({ isBot }) => {
   const location = useLocation();

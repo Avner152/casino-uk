@@ -1,5 +1,6 @@
 import { observer } from "mobx-react";
 import casino from "../assets/casino.png";
+import sport from "../assets/sport.png";
 import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
@@ -95,22 +96,13 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro tit-n-des text-white pt-3">
+    <div className="intro tit-n-des text-white mt-5">
       {page ? (
         <div className="text-white mb-5_ mt-4">
-          <h1 className="intro-title fw-bold w-75 sm-w-100">
+          <h1 className="intro-title fw-bold w-75 sm-w-100 ">
             {headlineInfo[page].title}{" "}
             {location.pathname.includes("games") && fullYear}
           </h1>
-          {/* {headlineInfo[page].list && (
-            <ul className="list-unstyled fw-bolder">
-              {headlineInfo[page].list.map((li, i) => (
-                <li className="mt-1 mb-1" key={i}>
-                  {li}
-                </li>
-              ))}
-            </ul>
-          )} */}
         </div>
       ) : (
         <div
@@ -119,8 +111,8 @@ const Intro = observer(() => {
           }`}
         >
           <div>
-            <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              {myStore.type === "blanca"
+            <h1 className={`intro-title  fw-bold w-${isDesktop ? 75 : 100} `}>
+              {myStore.type.startsWith("b")
                 ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
                     "default",
                     {
@@ -141,7 +133,7 @@ const Intro = observer(() => {
                 className="cards"
                 alt="cards"
                 width={isDesktop ? 220 : 120}
-                src={casino}
+                src={myStore.product === "casino" ? casino : sport}
               />
             </div>
           )}

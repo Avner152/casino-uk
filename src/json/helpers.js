@@ -53,8 +53,8 @@ export const pages = {
   ],
   betting: [
     {
-      name: "Football",
-      url: "/football",
+      name: "Mundial 2026",
+      url: "/mundial-2026",
     },
     {
       name: "Horse Racing",

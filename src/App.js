@@ -11,10 +11,12 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import hero from "./assets/hero.jpg";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
 import { autorun } from "mobx";
+import SportIntro from "./components/SportIntro";
 
 export function importImages(r) {
   let images = {};
@@ -72,8 +74,8 @@ const App = observer(() => {
     return () => disposer();
   }, []);
 
-  return (
-    <div>
+  const raisePopOut = () => {
+    return (
       <Modal
         className="bg-transparent"
         centered
@@ -135,7 +137,7 @@ const App = observer(() => {
                   })}
                 </div>
                 <Button
-                  className="text-uppercase main-btn mb-3"
+                  className="text-uppercase bg-warning _main-btn mb-3"
                   href={`${casinoItem?.url}${appendQueryParams(searchParams, indexes[i], "exit-popup")}`}
                   target="_blank"
                 >
@@ -146,34 +148,52 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
+    );
+  };
 
-      {!isDesktop && <div className="casino-container" />}
+  const advertorialSection = () => {
+    return (
+      <div className="advertorial-wrap w-50 sm-w-100 ">
+        <p className="text-start text-white pb-0 mb-0 fs-5">ADVERTORIAL</p>
+        <aside className="fs-8 text-white lh-1_ text-start ">
+          We receive advertising fees from the brands we review, which may
+          influence our rankings and scores. We do not compare every service
+          provider on the market Advertiser Disclosure 18+."T&C" apply - the
+          applicable operator's terms apply for each offer below and free offers
+          may include additional terms.
+        </aside>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      {!isDesktop && <div className={`myStore.${myStore.product}-container`} />}
 
       <Header />
-      <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
-        <br />
-        {myStore.type.startsWith("bl") && (
-          <div className="w-60 sm-w-100 mx-auto">
-            <p
-              style={{ paddingTop: 40 }}
-              className="text-center text-white pb-0 mb-0 fs-2"
-            >
-              ADVERTORIAL
-            </p>
-            <aside className="fs-8 text-white lh-1 text-center w-75 sm-w-100 mx-auto px-2">
-              We receive advertising fees from the brands we review, which may
-              influence our rankings and scores. We do not compare every service
-              provider on the market Advertiser Disclosure 18+."T&C" apply - the
-              applicable operator's terms apply for each offer below and free
-              offers may include additional terms.
-            </aside>
+      {myStore.product === "betting" && (
+        <img
+          className="hero position-absolute z-n1 end-0"
+          src={hero}
+          alt="hero"
+        />
+      )}
+      <div className="w-75 sm-w-100 _px-5 sm-px-0 m-auto casino-main">
+        <div className="row_">
+          <div
+            className="md-col-6 col-12"
+            style={{ paddingTop: isDesktop ? 80 : 60 }}
+          >
+            {myStore.type.startsWith("b") && advertorialSection()}
+            {myStore.product === "betting" ? <SportIntro /> : <Intro />}
           </div>
-        )}
-        <Intro />
+
+          {/* {myStore.product === "casino" && <Intro />} */}
+        </div>
         <MyRoutes />
       </div>
       <Footer />
-
+      {showPopOut && raisePopOut()}
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
     </div>
   );

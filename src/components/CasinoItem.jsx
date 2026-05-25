@@ -13,7 +13,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className="my-card ">
+    <div className="my-card border-1 border-warning border rounded-2">
       {myStore.type.startsWith("ne") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>
@@ -22,7 +22,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
       <div
         className={`top-card d-flex gap-${
           !isDesktop ? "2 flex-column" : "1 row"
-        } justify-content-around border rounded align-items-center text-center`}
+        } justify-content-around align-items-center text-center`}
       >
         <div className="col-md-3 rounded _square">
           <img alt={item.name} width={210} height={80} src={item.image} />
@@ -51,17 +51,34 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
           </div>
         )}
 
-        <div className="d-flex flex-column col-md-3">
+        <div className="d-flex flex-column col-md-3 ">
           <Button
+            className="text-black d-flex justify-content-center align-items-center gap-2"
             href={fixedURL}
             target="_blank"
             onClick={() => setClicked(!clicked)}
           >
             {clicked ? "Visit Again" : "Get Bonus"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              />
+            </svg>
           </Button>
         </div>
       </div>
-      {item.brandText && <div className="reg">{item.brandText}</div>}
+      {item.brandText && (
+        <div className="reg border-warning border-top">{item.brandText}</div>
+      )}
     </div>
   );
 });

@@ -15,7 +15,7 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
       )}
-      <div className="top-card d-flex justify-content-around align-items-center ">
+      <div className="top-card d-flex justify-content-around align-items-center border border-1 border-warning rounded-2">
         <div className="mt-3 d-flex flex-column justify-content-center align-items-center gap-1 square">
           <img
             className="rounded"

@@ -31,11 +31,44 @@ body {
 }
 
 body.sport {
-  background-image: url(./assets/bg-sport.webp);
+  background-color: #000 !important;
+  /* background-image: url(./assets/hero.jpg); */
 }
 
 body.casino {
   background-image: url(./assets/bg.webp);
+}
+
+.hero {
+  max-height: 750px;
+}
+
+.sport-hero-intro {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.advertorial-wrap {
+  position: relative;
+  top: 0;
+  z-index: 4;
+}
+
+.sport-hero-copy {
+  max-width: 520px;
+}
+
+.sport-hero-title {
+  font-size: clamp(2rem, 4.1vw, 3.7rem);
+  line-height: 1.05;
+}
+
+.sport-hero-subtitle {
+  max-width: 500px;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  font-weight: 500;
 }
 
 .w-60 {
@@ -151,9 +184,8 @@ ul svg {
   z-index: 9;
   position: relative;
   width: 100%;
-  border: unset !important;
-  border-bottom-left-radius: unset !important;
-  border-bottom-right-radius: unset !important;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
   /* color: #113454; */
 }
 
@@ -168,6 +200,11 @@ ul svg {
     0 0 10px 2px rgba(34, 139, 34, 0.5),
     0 0 10px 2px rgba(0, 255, 127, 0.3),
     0 0 20px 6px rgba(144, 238, 144, 0.1);
+  transition: all 300ms ease-in-out;
+}
+
+.sport .my-card:hover {
+  box-shadow: unset !important;
   transition: all 300ms ease-in-out;
 }
 
@@ -411,14 +448,10 @@ ul svg {
   font-size: 0.68rem;
   color: #fff;
   text-align: center;
-
-  /* background-color: #1134540d; */
-  /* color: #000;  */
 }
 
 .welcome-bonus {
   width: auto;
-  /* padding: 0 1rem; */
   text-align: left;
 }
 
@@ -427,11 +460,9 @@ ul svg {
   min-width: 200px;
   max-width: 200px;
   font-weight: 700;
-  /* text-align: center; */
 }
 
 footer {
-  /* background-color: #242424; */
   background: linear-gradient(to top, #242424e0 60%, transparent 100%);
   padding: 2.5rem 3rem 3rem;
   color: #fff;
@@ -801,6 +832,40 @@ a:hover {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .sport-hero-intro {
+    min-height: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .advertorial-wrap {
+    position: static;
+    width: 100% !important;
+    padding: 0.5rem 1rem;
+    margin: 0 !important;
+  }
+
+  .sport-hero-copy {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .sport-hero-title {
+    background-color: #000000cc;
+    padding: 5px;
+    font-size: 2rem;
+  }
+
+  .sport-hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin-bottom: 1rem !important;
+  }
+
+  .sport-hero-copy .btn {
+    width: 100%;
+  }
+
   .ribbon-text {
     min-width: 35vw;
     max-width: 40vw;
@@ -911,6 +976,19 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .advertorial-wrap {
+    position: static;
+    width: 100% !important;
+    padding: 0.5rem 1rem;
+    margin: 0 !important;
+  }
+
+  .sport-hero-intro {
+    min-height: auto;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
   body {
     background-image: unset;
   }
@@ -939,8 +1017,25 @@ a:hover {
     z-index: -1;
   }
 
+  .sm-flex-column {
+    flex-direction: column !important;
+  }
+
+  .sm-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .sm-px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .sm-w-100 {
     width: 100% !important;
+  }
+  .hero {
+    padding-top: 20px;
+    max-height: 80vw;
   }
 }
 
