@@ -1027,6 +1027,10 @@ a:hover {
     --bs-modal-width: 65%;
   }
 
+  .md-w-100 {
+    width: 100% !important;
+  }
+
   .modal h2 {
     font-size: 1.7vw;
   }
