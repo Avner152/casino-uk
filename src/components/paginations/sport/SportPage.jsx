@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 // import { useMediaQuery } from "react-responsive";
 import { observer } from "mobx-react";
-import Content from "../../Content";
 import PortalSection from "../../PortalSection";
 import SportContent from "./SportContent";
-import hero from "../../../assets/hero.jpg";
 
 const SportPage = observer(({ captchaToken }) => {
   // const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
