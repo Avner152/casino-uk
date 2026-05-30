@@ -1029,6 +1029,10 @@ a:hover {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .sm-px-1 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
 
   .sm-w-100 {
     width: 100% !important;

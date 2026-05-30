@@ -20,24 +20,7 @@ const Header = observer(() => {
   const menu = [
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Crash Games ",
-          url: "/top-crash-games",
-        },
-        {
-          name: "Live Games ",
-          url: "/live-games",
-        },
-        {
-          name: "Slots Games ",
-          url: "/slots-games",
-        },
-        {
-          name: "Table Games",
-          url: "/table-games",
-        },
-      ],
+      list: pages?.[myStore.product || "casino"],
     },
     {
       title: "Information",

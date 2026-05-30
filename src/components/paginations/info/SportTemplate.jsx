@@ -8,7 +8,7 @@ const SportTemplate = observer(() => {
   useEffect(() => {
     if (!myStore.infoContent)
       myStore.updateInfoContent(
-        window.location.pathname.substring(1).split("/")[2]
+        window.location.pathname.substring(1).split("/")[2],
       );
   }, []);
 
@@ -18,7 +18,7 @@ const SportTemplate = observer(() => {
   return (
     <>
       <PortalSection />
-      <article className="bg-dark px-5 py-3 bg-opacity-75 text-white w-100 m-auto">
+      <article className="bg-dark px-5 py-3 bg-opacity-75 text-white w-100 m-auto sm-px-1">
         <h1 className="pe-5">{content?.title}</h1>
         {content?.sections?.map((section, index) => (
           <section key={index} className="mt-3">
