@@ -67,10 +67,10 @@ const Footer = observer(() => {
             >
               <img
                 src={logo}
-                width={200}
-                height={100}
+                width={220}
+                height={110}
                 alt="logo"
-                className="_mt-2"
+                className="rounded-4"
               />
             </Link>
             {isDesktop && (

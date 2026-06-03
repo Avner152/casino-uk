@@ -77,7 +77,7 @@ const Header = observer(() => {
                 className="p-1"
                 src={logo}
                 width={180}
-                height={90}
+                height={100}
                 alt="logo"
               />
             </NavLink>
@@ -98,14 +98,14 @@ const Header = observer(() => {
           </div>
         ) : (
           <>
-            <div className="d-flex w-100 align-items-center justify-content-between">
+            <div className="d-flex w-100 align-items-center justify-content-between bg-black py-2">
               <NavLink
                 to={`/${myStore.product === "betting" ? "special/sport" : ""}${
                   window.location.search
                 }`}
-                className="ms-3"
+                className="ms-1 mt-2"
               >
-                <img alt="logo" src={logo} width={140} height={60} />
+                <img alt="logo" src={logo} width={130} height={70} />
               </NavLink>
               {/*  */}
 
@@ -119,17 +119,6 @@ const Header = observer(() => {
                   onOpen={hamburgerHandler}
                   onClose={hamburgerHandler}
                 >
-                  <Link
-                    onClick={() => {
-                      setShow("");
-                      setBurgerOpen(false);
-                    }}
-                    to={`/${
-                      myStore.product === "betting" ? "special/sport" : ""
-                    }${window.location.search}`}
-                  >
-                    <img src={logo} width={125} height={55} alt="logo" />
-                  </Link>
                   {menu.map((menuItem, _) => (
                     <div
                       key={menuItem.title}
