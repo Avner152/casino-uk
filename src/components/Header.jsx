@@ -43,7 +43,7 @@ const Header = observer(() => {
     {
       title: "Information",
       list: [
-        { name: "About Us", url: "/about-us" },
+        { name: "About Us", url: "/about" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
         { name: "Terms & Conditions", url: "terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },

@@ -43,35 +43,22 @@ const Intro = observer(() => {
     },
   };
 
+  const getPageFromPath = (pathname) => {
+    if (pathname.includes("live-games")) return "live";
+    if (pathname.includes("aviator")) return "aviator";
+    if (pathname.includes("slots-games")) return "slots";
+    if (pathname.includes("table-games")) return "table";
+    if (pathname.includes("about-us")) return "about";
+    if (pathname.includes("cookie-consent-policy")) return "cookie";
+    if (pathname.includes("terms-and-conditions")) return "terms";
+    if (pathname.includes("privacy-policy")) return "privacy";
+    return "";
+  };
+
   useEffect(() => {
-    switch (location.pathname) {
-      default:
-        return setPage("");
-      case "/live-games":
-        setPage("live");
-        break;
-      case "/aviator":
-        setPage("aviator");
-        break;
-      case "/slots-games":
-        setPage("slots");
-        break;
-      case "/table-games":
-        setPage("table");
-        break;
-      case "/about-us":
-        setPage("about");
-        break;
-      case "/cookie-consent-policy":
-        setPage("cookie");
-        break;
-      case "/terms-and-conditions":
-        setPage("terms");
-        break;
-      case "/privacy-policy":
-        setPage("privacy");
-        break;
-    }
+    console.log(">>", getPageFromPath(location.pathname));
+
+    setPage(getPageFromPath(location.pathname));
   }, [location]);
 
   return (

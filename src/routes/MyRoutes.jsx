@@ -42,7 +42,7 @@ const MyRoutes = observer(() => {
       <Route exact path="/special/sport/:page" element={<SportTemplate />} />
       <Route exact path="/terms-and-conditions" element={<Terms />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+      <Route exact path="/about-us" element={<AboutUs />} />
       <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
       <Route
         exact
