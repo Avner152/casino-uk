@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "./css/ui.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
 import { appendQueryParams, getCookie, getScoreByIndex } from "./json/helpers";
@@ -7,15 +8,16 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
-// import Turnstile from "react-turnstile";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import axios from "axios";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import hero from "./assets/hero.jpg";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
+import SportIntro from "./components/sport/SportIntro";
 
 export function importImages(r) {
   let images = {};
@@ -92,31 +94,8 @@ const App = observer(() => {
     fetchPopupBrands();
   }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
-
-  return (
-    <div>
+  const raisePopOut = () => {
+    return (
       <Modal
         className="bg-transparent"
         centered
@@ -149,7 +128,9 @@ const App = observer(() => {
                     src={casinoItem.image}
                   />
                 </div>
-                <h2 className="px-4 fw-bold">{casinoItem.title}</h2>
+                <h2 className="px-4 fw-bold lh-1" style={{ height: 50 }}>
+                  {casinoItem.title}
+                </h2>
                 <div>
                   <div className="fs-1 fw-semibold">{getScoreByIndex(i)}</div>
                   {Array.from({ length: 5 }).map((_, i) => {
@@ -188,34 +169,52 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
+    );
+  };
+
+  const advertorialSection = () => {
+    return (
+      <div className="advertorial-wrap w-50 sm-w-100 ">
+        <p className="text-start text-white pb-0 mb-0 fs-5">ADVERTORIAL</p>
+        <aside className="fs-8 text-white lh-1_ text-start ">
+          We receive advertising fees from the brands we review, which may
+          influence our rankings and scores. We do not compare every service
+          provider on the market Advertiser Disclosure 18+."T&C" apply - the
+          applicable operator's terms apply for each offer below and free offers
+          may include additional terms.
+        </aside>
+      </div>
+    );
+  };
+
+  return (
+    <div>
       {/* {!captchaToken && TurnstileWidget()} */}
       {!isDesktop && (
         <div className={`${myStore.product || "casino"}-container`} />
       )}
 
       <Header />
-      <div className="w-100 m-auto casino-main _bg-black-50">
-        <br />
-        {myStore.type.startsWith("bl") && (
-          <div className="w-60 sm-w-100 mx-auto">
-            <p
-              style={{ paddingTop: 55 }}
-              className="text-center text-white pb-0 mb-0 fs-2"
-            >
-              ADVERTORIAL
-            </p>
-            <aside className="fs-8 text-white lh-1 text-center w-75 sm-w-100 mx-auto px-2">
-              We receive advertising fees from the brands we review, which may
-              influence our rankings and scores. We do not compare every service
-              provider on the market Advertiser Disclosure 18+."T&C" apply - the
-              applicable operator's terms apply for each offer below and free
-              offers may include additional terms.
-            </aside>
-          </div>
-        )}
-        <Intro />
+      {myStore.product === "betting" && (
+        <img
+          className="hero position-absolute z-n1 end-0"
+          src={hero}
+          alt="hero"
+        />
+      )}
+      <div className="w-75 sm-w-100 _px-5 sm-px-1 m-auto casino-main">
+        <div
+          className="md-col-6 col-12"
+          style={{ paddingTop: isDesktop ? 80 : 60 }}
+        >
+          {myStore.type.startsWith("b") && advertorialSection()}
+          {myStore.product === "betting" ? <SportIntro /> : <Intro />}
+        </div>
+      </div>
+      <div className="w-60 md-w-100 sm-w-100 px-3 sm-px-0 m-auto">
         <MyRoutes />
       </div>
+      {showPopOut && raisePopOut()}
       <Footer />
 
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}

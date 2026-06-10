@@ -30,10 +30,6 @@ body {
   color: #000 !important;
 }
 
-body.sport {
-  background-image: url(./assets/bg-sport.webp);
-}
-
 body.casino {
   background-image: url(./assets/bg.webp);
 }
@@ -162,8 +158,18 @@ ul svg {
   background-color: #000;
   margin: 1rem 0;
   cursor: pointer;
-  /* color: #000; */
-  /* border: 1px solid #00bd68; */
+  background:
+    radial-gradient(
+      circle at left top,
+      rgba(37, 99, 235, 0.333),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(37, 99, 235, 0.333),
+      transparent 10%
+    ),
+    linear-gradient(135deg, rgb(5, 5, 5), rgb(20, 20, 20));
   transition: all 300ms ease-in-out;
   border-radius: 6px;
   /* padding: 0 1rem; */
@@ -187,12 +193,8 @@ ul svg {
 } */
 
 .my-card:hover {
-  box-shadow:
-    0 0 50px 1px rgba(50, 205, 50, 0.7),
-    0 0 10px 2px rgba(34, 139, 34, 0.5),
-    0 0 10px 2px rgba(0, 255, 127, 0.3),
-    0 0 20px 6px rgba(144, 238, 144, 0.1);
-  transition: all 300ms ease-in-out;
+  transform: translateY(-4px) translateX(-1px);
+  transition: all 200ms ease-in-out;
 }
 
 .color-green {
@@ -830,6 +832,19 @@ a:hover {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h1,
+  h2 {
+    line-height: 1 !important;
+  }
+
+  .sport h1 {
+    font-size: 5vw;
+  }
+
+  .sport h2 {
+    font-size: 4vw;
+  }
+
   .ribbon-text {
     min-width: 35vw;
     max-width: 40vw;
@@ -839,6 +854,15 @@ a:hover {
     margin-top: 21px;
     font-size: 5vw !important;
     text-align: center;
+  }
+
+  .sm-p-0 {
+    padding: 0 !important;
+  }
+
+  .sm-px-1 {
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
   }
   .tit-n-des {
     margin: auto;
@@ -894,7 +918,7 @@ a:hover {
   }
   .top-card {
     min-height: 50vw;
-    padding: 1vw 1.25vw 0.75vw 1.25vw;
+    /* padding: 1vw 1.25vw 0.75vw 1.25vw; */
     max-height: 400px;
     z-index: 9;
   }
@@ -902,9 +926,9 @@ a:hover {
     display: flex;
     justify-content: space-between;
     /* padding: 1rem 0 1rem 2vw; */
-    padding: 1vw 0 1vw 2vw;
     flex-direction: column;
-    min-width: 50vw;
+
+    width: 45vw;
     max-height: 100%;
   }
   /*  */
@@ -919,7 +943,7 @@ a:hover {
     padding: 0.45rem 0rem;
   }
   .fs-7 {
-    font-size: 3vw;
+    font-size: 2.2vw;
   }
 
   .fs-8 {
@@ -976,9 +1000,6 @@ a:hover {
   .casino-container {
     background-image: url(./assets/bg-mobile.webp);
   }
-  .betting-container {
-    background-image: url(./assets/bg-betting-mob.webp);
-  }
 
   .sm-w-100 {
     width: 100% !important;
@@ -1009,12 +1030,14 @@ a:hover {
 .modal .card-wrapper:nth-child(even) {
   min-width: 300px;
   max-width: 340px;
+  /* height: fit-content; */
 }
 
 .modal .card-wrapper:nth-child(odd) {
   transform: scale(0.85);
   min-width: 280px;
   max-width: 320px;
+  /* height: fit-content; */
 }
 
 .flip {

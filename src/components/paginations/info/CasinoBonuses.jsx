@@ -5,13 +5,13 @@ export default function CasinoBonuses() {
   const curDate = new Date();
 
   const topPar = {
-    h2: `🎁 Casino Bonuses – More Value for Every Bet`,
+    h2: `Casino Bonuses – More Value for Every Bet`,
     p: "Casino bonuses are one of the most exciting parts of playing at online casinos. They give players more chances to win, let you try games with minimal risk, and can even extend your playtime significantly. But the key to maximizing value is understanding how each bonus works.",
   };
 
   const par1 = {
     id: "par-1",
-    h4: "🎉 Types of Casino Bonuses ",
+    h4: "Types of Casino Bonuses ",
     ul: [
       "Welcome Bonuses - Usually include match deposit offers and free spins for new players",
       "No Deposit Bonuses - Free funds or spins just for signing up, no deposit needed",
@@ -23,13 +23,13 @@ export default function CasinoBonuses() {
 
   const par2 = {
     id: "par-2",
-    h4: "🎰 Understanding Free Spins:",
+    h4: "Understanding Free Spins:",
     p: "Free spins are often included in welcome packages and loyalty rewards. You can use them on selected slots, usually with predefined bet values. Some free spins are tied to wagering, while others are wager-free — meaning what you win, you keep.",
   };
 
   const par3 = {
     id: "par-3",
-    h4: "🎁 Types of Bonuses",
+    h4: "Types of Bonuses",
     ul: [
       "No deposit free spins",
       "Match deposit offers",
@@ -39,12 +39,12 @@ export default function CasinoBonuses() {
   };
   const par4 = {
     id: "par-4",
-    h4: "🧮 Wagering Requirements Explained ",
+    h4: "Wagering Requirements Explained ",
     p: "Wagering determines how many times you must play through a bonus before withdrawing winnings. For example, a 30x wagering requirement on a £100 bonus means you must bet £3,000 before cashing out. Lower wagering = better value. Some casinos now offer wager-free bonuses where your winnings are instantly withdrawable.",
   };
   const par5 = {
     id: "par-5",
-    h4: "🎯 How to Choose the Best Bonuses ",
+    h4: "How to Choose the Best Bonuses ",
     ul: [
       "Look for bonuses with low wagering (under 35x preferred)",
       "Make sure terms are transparent — no hidden max win limits",
@@ -53,7 +53,7 @@ export default function CasinoBonuses() {
   };
   const par6 = {
     id: "par-6",
-    h4: "💡 Tips to Maximize Bonus Value",
+    h4: "Tips to Maximize Bonus Value",
     ul: [
       "Stick to low volatility slots if you’re trying to meet wagering easily",
       "Combine cashback offers with your usual play to soften losing streaks",
@@ -76,7 +76,7 @@ export default function CasinoBonuses() {
 
       <PortalSection />
       <div className="bg-white pt-5 pb-5 mt-3 ">
-        <div className="w-60 sm-w-100 mx-auto">
+        <div className="w-60_sm-w-100 mx-auto">
           {" "}
           <div className="p-4">
             <div>
@@ -142,7 +142,7 @@ export default function CasinoBonuses() {
             </div>
 
             <div className="mt-4">
-              <h4>📊 Why UK Players Love Bonuses </h4>
+              <h4>Why UK Players Love Bonuses </h4>
               <p>
                 Bonuses are especially valuable for UK players who want to get
                 the most out of each deposit. They also allow players to try new
@@ -151,7 +151,7 @@ export default function CasinoBonuses() {
               </p>
             </div>
             <div className="mt-4">
-              <h4>🎁 Final Thoughts </h4>
+              <h4>Final Thoughts </h4>
               <p>
                 Casino bonuses are a vital part of your online gaming strategy.
                 By understanding the types, reading the fine print, and picking

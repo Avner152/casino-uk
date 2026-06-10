@@ -55,29 +55,27 @@ const HomePage = observer(({ captchaToken }) => {
           </div>
         </>
       )}
-      <div className="content bg-white min-vh-100 text-white  py-5  text-break">
+      <div className="content bg-white  text-white p-3  text-break">
         <div className="text-black w-100 m-auto">
           {!myStore.content ? (
             <Content isDesktop={isDesktop} />
           ) : (
             <ContentRealData />
           )}
-          <div className="w-60 sm-w-100 mx-auto">
-            <h2>⚠️ Responsible Gaming Notice</h2>
-            <p>
-              Gambling is for adults aged 18+ and should be treated as a form of
-              entertainment — not income. If you ever feel it’s becoming a
-              problem, we link to professional help and support networks. Play
-              responsibly and stay in control. For help, visit{" "}
-              <a
-                href="https://www.gambleaware.org/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                BeGambleAware.org
-              </a>
-            </p>
-          </div>
+          <h2>Responsible Gaming Notice</h2>
+          <p>
+            Gambling is for adults aged 18+ and should be treated as a form of
+            entertainment — not income. If you ever feel it’s becoming a
+            problem, we link to professional help and support networks. Play
+            responsibly and stay in control. For help, visit{" "}
+            <a
+              href="https://www.gambleaware.org/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              BeGambleAware.org
+            </a>
+          </p>
         </div>
       </div>
     </>

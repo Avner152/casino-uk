@@ -5,13 +5,13 @@ export default function BigBassBonanza() {
   const curDate = new Date();
 
   const topPar = {
-    h2: `🐟 Big Bass Bonanza – Reel in the Wins`,
+    h2: `Big Bass Bonanza – Reel in the Wins`,
     p: "Big Bass Bonanza has become a fan-favourite among UK slot players, delivering classic fishing fun with high volatility and great bonus potential. Developed by Pragmatic Play, this colourful slot brings a refreshing outdoor vibe to the online casino scene.",
   };
 
   const par2 = {
     id: "par-2",
-    h4: "🎣 Why It’s Popular",
+    h4: "Why It’s Popular",
     ul: [
       "Medium hit frequency (1 in 5-6 spins often pays out)",
       "No complex scatter symbols or mini-games — ideal for beginners",
@@ -22,7 +22,7 @@ export default function BigBassBonanza() {
 
   const par3 = {
     id: "par-3",
-    h4: "📊 Slot Specs Overview",
+    h4: "Slot Specs Overview",
     ul: [
       "Reels: 5",
       "Paylines: 10",
@@ -30,24 +30,24 @@ export default function BigBassBonanza() {
       "Volatility: High",
       "Max Win: Over 2,100x your bet",
     ],
-    p: "💰 Bonus Round Mechanics Land three or more scatter symbols (fishing bobbers) to trigger the Free Spins bonus. During this round, every wild fisherman symbol you land collects the visible fish cash prizes. Every fourth wild you collect re-triggers the bonus and increases the multiplier to 2x, 3x, and 10x.",
+    p: "Bonus Round Mechanics Land three or more scatter symbols (fishing bobbers) to trigger the Free Spins bonus. During this round, every wild fisherman symbol you land collects the visible fish cash prizes. Every fourth wild you collect re-triggers the bonus and increases the multiplier to 2x, 3x, and 10x.",
   };
 
   const par4 = {
     id: "par-4",
-    h4: `🐠 What Makes It so Unique? `,
+    h4: `What Makes It so Unique? `,
     ul: [
       "Retro-meets-modern theme with nostalgic graphics and smooth animations",
       "Easy-to-follow gameplay suitable for both beginners and seasoned spinners",
       "Big win potential during re-triggered free spins",
       "Audio and design evoke a relaxing, outdoor fishing trip",
     ],
-    p: "📱 Mobile-Ready Design Big Bass Bonanza plays smoothly across all devices, including smartphones and tablets. Its clean layout and large symbols are ideal for mobile play, even in portrait mode. No lag, no loading issues — just fast fishing action.",
+    p: "Mobile-Ready Design Big Bass Bonanza plays smoothly across all devices, including smartphones and tablets. Its clean layout and large symbols are ideal for mobile play, even in portrait mode. No lag, no loading issues — just fast fishing action.",
   };
 
   const par5 = {
     id: "par-5",
-    h4: `🎯 Pro Tips for Players `,
+    h4: `Pro Tips for Players `,
     ul: [
       "Use bonuses or free spins from UK casinos to try Big Bass Bonanza with minimal risk",
       "Manage your bankroll carefully – high volatility means fewer small wins but bigger paydays when they hit",
@@ -69,7 +69,7 @@ export default function BigBassBonanza() {
 
       <PortalSection />
       <div className="bg-white pt-5 pb-5 mt-3 ">
-        <div className="w-60 sm-w-100 mx-auto">
+        <div className="w-60_sm-w-100 mx-auto">
           <div className="mt-4">
             <h2>{topPar.h2}</h2>
             <p>{topPar.p}</p>
@@ -120,7 +120,7 @@ export default function BigBassBonanza() {
           </div>
 
           <div className="mt-4">
-            <h4>🎣 Final Word:</h4>
+            <h4>Final Word:</h4>
             <p>
               If you love thematic slots with rewarding features, Big Bass
               Bonanza is a top pick. Its balance of high volatility and exciting

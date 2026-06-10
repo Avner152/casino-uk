@@ -25,9 +25,11 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
             src={item.image}
           />
           <div className="d-flex gap-3 w-100 align-items-center justify-content-center">
-            <div className="fs-3 fw-bold text-center">{score.toFixed(1)}</div>
+            <div className="fs-3 fw-bold text-white text-center">
+              {score.toFixed(1)}
+            </div>
             <div className="d-flex flex-column align-items-center">
-              <span className="border-left fs-7 text=white border-white">
+              <span className="border-left fs-7 text-white border-white">
                 Our score
               </span>
               <div>

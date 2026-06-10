@@ -100,7 +100,7 @@ const PortalSection = observer(({ captchaToken }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
-    <div className="min-vh-100 w-60 md-w-100 sm-w-100 mx-auto">
+    <div className="min-vh-75">
       <div className="w-100 d-flex m-auto text-white justify-content-around align-items-center">
         {homepageIconsObjectList.slice(0, isDesktop ? 4 : 3).map((icon, k) => (
           <div
@@ -119,7 +119,7 @@ const PortalSection = observer(({ captchaToken }) => {
                 src={homepageIcons[`${icon.name}-icon.svg`]}
               />
             </div>
-            <span className="bg-dark bg-opacity-100 px-3 rounded-1">
+            <span className="bg-dark bg-opacity-100 px-3 fs-7 rounded-1">
               {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
             </span>
           </div>

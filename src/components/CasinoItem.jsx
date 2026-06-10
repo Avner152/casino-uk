@@ -14,7 +14,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className="my-card ">
+    <div className="my-card border-1 border-warning border rounded-2">
       {myStore.type.startsWith("ne") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>

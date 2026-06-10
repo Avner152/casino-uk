@@ -12,7 +12,7 @@ const SportPage = observer(({ captchaToken }) => {
       ) : (
         <PortalSection />
       )}
-      <div className="content min-vh-100 text-white p-2">
+      <div className="content min-vh-100 text-white p-2 sm-p-0">
         <div className="content-container w-100 m-auto">
           {!myStore.content ? <Content /> : <ContentRealData />}
 

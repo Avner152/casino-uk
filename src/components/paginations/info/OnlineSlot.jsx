@@ -11,7 +11,7 @@ export default function OnlineSlot() {
 
   const par1 = {
     id: "par-1",
-    h4: "🎮 Types of Slots Available",
+    h4: "Types of Slots Available",
     ul: [
       "Classic Slots – Simple fruit machines with 3 reels and traditional symbols. Great for nostalgic players.",
       "Video Slots – Feature-rich games with animated graphics, bonus rounds, and cinematic audio.",
@@ -22,7 +22,7 @@ export default function OnlineSlot() {
 
   const par2 = {
     id: "par-2",
-    h4: "🌟 Top Providers in the UK Slot Market",
+    h4: "Top Providers in the UK Slot Market",
     ul: [
       "NetEnt – Known for iconic titles like Starburst and Gonzo’s Quest.",
       "Play’n GO – Creators of Book of Dead and countless mythology-themed slots.",
@@ -33,7 +33,7 @@ export default function OnlineSlot() {
 
   const par3 = {
     id: "par-3",
-    h4: "💡 Features That Enhance Your Play",
+    h4: "Features That Enhance Your Play",
     ul: [
       "Cascading symbols and chain wins",
       "Free spins with retriggers",
@@ -43,7 +43,7 @@ export default function OnlineSlot() {
   };
   const par4 = {
     id: "par-4",
-    h4: "📱 Mobile Slot Experience",
+    h4: "Mobile Slot Experience",
     p: "Every slot game listed on our site is fully mobile-optimized, allowing you to spin the reels on your smartphone or tablet. The best slot sites offer:",
     ul: [
       "Touch-friendly interfaces",
@@ -53,7 +53,7 @@ export default function OnlineSlot() {
   };
   const par5 = {
     id: "par-5",
-    h4: "🎯 Tips for Smarter Slot Play",
+    h4: "Tips for Smarter Slot Play",
     ul: [
       "Choose high RTP (Return to Player) games — 96% and above is ideal",
       "Start in demo mode to learn game mechanics",
@@ -63,7 +63,7 @@ export default function OnlineSlot() {
   };
   const par6 = {
     id: "par-6",
-    h4: "💰 Jackpot Highlights",
+    h4: "Jackpot Highlights",
     p: "Look for featured slots offering linked jackpots across multiple casinos. These games can trigger massive wins even on low-stake bets. Progressive jackpots like Mega Moolah or WowPot can reach multi-million-pound totals.",
   };
 
@@ -82,7 +82,7 @@ export default function OnlineSlot() {
       <PortalSection />
 
       <div className="bg-white pt-5 pb-5 mt-3 ">
-        <div className="w-60 sm-w-100 mx-auto">
+        <div className="w-60_sm-w-100 mx-auto">
           {" "}
           <div className="mt-4">
             <h4>{topPar.h4}</h4>

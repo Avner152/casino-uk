@@ -30,8 +30,10 @@ const SportTemplate = observer(() => {
         <meta name="description" content={meta.description} />
       </Helmet>
       <PortalSection />
-      <article className="bg-dark px-5 py-3 bg-opacity-75 text-white w-100 m-auto">
-        <h1 className="pe-5">{content?.title}</h1>
+      <article className="bg-dark px-5 sm-px-1 py-3 bg-opacity-75 text-white w-100 m-auto">
+        <h1 className="pe-5">
+          <span>{content?.title}</span>
+        </h1>
         {content?.sections?.map((section, index) => (
           <section key={index} className="mt-3">
             {section?.type === "h2" && <h2>{section?.heading}</h2>}
