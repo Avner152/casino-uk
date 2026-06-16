@@ -7,12 +7,12 @@ export default function Content() {
     id: "why",
     h2: "Why Choose OnlyUKCasinos.com?",
     ul: [
-      "🎯 Expertly Curated Casino Lists - Each casino we list is evaluated for trustworthiness, licensing, game selection, mobile experience, customer support, and promotional value.",
-      "🎁 Exclusive Deals - Take advantage of top-tier offers including matched deposits, no-wager bonuses, cashback, and free spin bundles — all updated regularly.",
-      "📱 Mobile & Tablet Friendly - Our recommended sites perform seamlessly across all modern devices, giving you the freedom to play from anywhere.",
-      "💰 Play with Real Winnings - Find games that offer great odds, fast payouts, and verified fairness. We help you sort between volatile jackpots, low-stake spins, and strategic table games.",
-      "🧠 Play Smarter - Our content helps you learn how bonuses really work, how to read RTPs, and how to avoid common mistakes that cost players money.",
-      "🛡️ Player Safety First - Only licensed, secure, and responsible sites make it into our lists. We also offer guides on staying in control, spotting scams, and using self-exclusion tools.",
+      "Expertly Curated Casino Lists - Each casino we list is evaluated for trustworthiness, licensing, game selection, mobile experience, customer support, and promotional value.",
+      "Exclusive Deals - Take advantage of top-tier offers including matched deposits, no-wager bonuses, cashback, and free spin bundles — all updated regularly.",
+      "Mobile & Tablet Friendly - Our recommended sites perform seamlessly across all modern devices, giving you the freedom to play from anywhere.",
+      "Play with Real Winnings - Find games that offer great odds, fast payouts, and verified fairness. We help you sort between volatile jackpots, low-stake spins, and strategic table games.",
+      "Play Smarter - Our content helps you learn how bonuses really work, how to read RTPs, and how to avoid common mistakes that cost players money.",
+      "Player Safety First - Only licensed, secure, and responsible sites make it into our lists. We also offer guides on staying in control, spotting scams, and using self-exclusion tools.",
     ],
   };
   const faq = {
