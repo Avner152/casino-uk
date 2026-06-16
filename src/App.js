@@ -10,7 +10,7 @@ import MyRoutes from "./routes/MyRoutes";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
-import chips from "./assets/golden-chips.png";
+import chips from "./assets/winner.png";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
