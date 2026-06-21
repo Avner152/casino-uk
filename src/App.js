@@ -102,7 +102,7 @@ const App = observer(() => {
   return (
     <div>
       <Modal
-        className="bg-transparent"
+        className="bg-transparent d-flex"
         centered
         show={showPopOut}
         onHide={() => setShowPopOut(false)}
