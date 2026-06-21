@@ -23,7 +23,7 @@ export default function TableGames() {
 
   const par2 = {
     id: "par-2",
-    h4: "🏆 How We Compare the Best UK Online Casinos for Table Games:",
+    h4: "How We Compare the Best UK Online Casinos for Table Games:",
     ul: [
       "Game selection & table variety: Blackjack, roulette, baccarat, casino poker, live tables, and optional game shows.",
       "Live casino table quality: HD streaming, smooth gameplay, minimal delays, and tables running 24/7.",
@@ -36,7 +36,7 @@ export default function TableGames() {
 
   const par3 = {
     id: "par-3",
-    h4: "♠️ Best Table Games in the UK (Top Categories We Compare):",
+    h4: "Best Table Games in the UK (Top Categories We Compare):",
     ul: [
       "Best online blackjack: Classic, European, multi-hand, infinite live, and VIP tables.",
       "Best online roulette: European (best standard odds), French (often player-friendly rules), and American (higher edge).",
@@ -48,7 +48,7 @@ export default function TableGames() {
 
   const par4 = {
     id: "par-4",
-    h4: "🎁 Table Game Bonuses in the UK (Important Note):",
+    h4: "Table Game Bonuses in the UK (Important Note):",
     ul: [
       "Table game contribution: Some casinos count table games at a lower percentage toward wagering.",
       "Live games included: Live dealer tables may be excluded from bonus play on certain sites.",
@@ -59,7 +59,7 @@ export default function TableGames() {
 
   const par5 = {
     id: "par-5",
-    h4: "🛡️ Responsible Gambling in the UK:",
+    h4: "Responsible Gambling in the UK:",
     ul: [
       "Set deposit and session limits before you start.",
       "Avoid chasing losses and take regular breaks.",

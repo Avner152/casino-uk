@@ -6,12 +6,12 @@ export default function Starburst() {
 
   const topPar = {
     h2: `Starburst Slot – A UK Favourite That Still Shines`,
-    p: `Starburst remains a go-to game across UK casinos, beloved for its simplicity, elegance, and high frequency of small-to-medium wins. Unlike high-volatility games that can drain your bankroll, Starburst is ideal for extended play and meeting wagering requirements on bonuses.\n🎨 Design and Sound With a cosmic theme and vibrant jewel symbols, Starburst’s visuals are both classic and contemporary. Its upbeat soundtrack and quick animations add energy without being overwhelming — ideal for players seeking light, fast-paced fun.`,
+    p: `Starburst remains a go-to game across UK casinos, beloved for its simplicity, elegance, and high frequency of small-to-medium wins. Unlike high-volatility games that can drain your bankroll, Starburst is ideal for extended play and meeting wagering requirements on bonuses.\nDesign and Sound With a cosmic theme and vibrant jewel symbols, Starburst’s visuals are both classic and contemporary. Its upbeat soundtrack and quick animations add energy without being overwhelming — ideal for players seeking light, fast-paced fun.`,
   };
 
   const par2 = {
     id: "par-2",
-    h4: "📊 Gameplay Breakdown:",
+    h4: "Gameplay Breakdown:",
     ul: [
       "Medium hit frequency (1 in 5-6 spins often pays out)",
       "No complex scatter symbols or mini-games — ideal for beginners",
@@ -22,7 +22,7 @@ export default function Starburst() {
 
   const par3 = {
     id: "par-3",
-    h4: "🎇 Key Features",
+    h4: "Key Features",
     ul: [
       "Expanding wilds that trigger respins",
       "10 fixed paylines with both-ways win potential",
@@ -32,7 +32,7 @@ export default function Starburst() {
 
   const par4 = {
     id: "par-4",
-    h4: `💸 Why It’s Often Used in Bonuses:`,
+    h4: `Why It’s Often Used in Bonuses:`,
     ul: [
       "Easy to understand, perfect for new players",
       "Low minimum bet sizes",
@@ -43,7 +43,7 @@ export default function Starburst() {
 
   const par5 = {
     id: "par-5",
-    h4: `📘 Gameplay Tips:`,
+    h4: `Gameplay Tips:`,
     ul: [
       "Use it to meet wagering with low volatility",
       "Ideal as a ‘warm-up’ game during longer sessions",

@@ -6,12 +6,12 @@ export default function OnlineSlot() {
   const curDate = new Date();
   const topPar = {
     h4: `Online Slot Casinos UK – Spin the Reels with Confidence`,
-    p: `UK slot sites continue to lead the global market, offering thrilling gameplay, sleek interfaces, and robust mobile experiences. Whether you’re playing for fun or aiming for a big jackpot, slot casinos bring unmatched entertainment value.\n🧬 How Online Slots Work Each slot uses a Random Number Generator (RNG) to ensure fairness and unpredictability. Slots are audited by independent labs like eCOGRA to verify accuracy. RTP (Return to Player) percentages give players a statistical estimate of long-term payouts, but short-term outcomes are always luck-based.`,
+    p: `UK slot sites continue to lead the global market, offering thrilling gameplay, sleek interfaces, and robust mobile experiences. Whether you’re playing for fun or aiming for a big jackpot, slot casinos bring unmatched entertainment value.\nHow Online Slots Work Each slot uses a Random Number Generator (RNG) to ensure fairness and unpredictability. Slots are audited by independent labs like eCOGRA to verify accuracy. RTP (Return to Player) percentages give players a statistical estimate of long-term payouts, but short-term outcomes are always luck-based.`,
   };
 
   const par1 = {
     id: "par-1",
-    h4: "🏅 Top UK Providers",
+    h4: "Top UK Providers",
     ul: [
       "NetEnt: Known for smooth gameplay and iconic designs",
       "Play’n GO: Creators of the famous Book of Dead",
@@ -22,7 +22,7 @@ export default function OnlineSlot() {
 
   const par2 = {
     id: "par-2",
-    h4: "📌 Slot Extras Worth Noting",
+    h4: "Slot Extras Worth Noting",
     ul: [
       "Time-limited tournaments for leaderboard prizes",
       "Achievements and missions built into games",
@@ -33,7 +33,7 @@ export default function OnlineSlot() {
 
   const par3 = {
     id: "par-3",
-    h4: "🎰 Slot Categories",
+    h4: "Slot Categories",
     ul: [
       "Classic 3-reel slots",
       "5-reel video slots with bonus rounds",
@@ -43,7 +43,7 @@ export default function OnlineSlot() {
   };
   const par4 = {
     id: "par-4",
-    h4: "🎮 Advanced Features",
+    h4: "Advanced Features",
     ul: [
       "Cascading wins and cluster pays",
       "Interactive bonus mini-games",
@@ -52,7 +52,7 @@ export default function OnlineSlot() {
   };
   const par5 = {
     id: "par-5",
-    h4: "🧠 Maximizing Your Experience",
+    h4: "Maximizing Your Experience",
     ul: [
       "Choose games with high RTPs (above 96%)",
       "Play in demo mode to test features",
