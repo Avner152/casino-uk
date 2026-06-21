@@ -91,33 +91,10 @@ const App = observer(() => {
     if (myStore.product) fetchPopupBrands();
   }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
-
   return (
     <div>
       <Modal
-        className="bg-transparent"
+        className="bg-transparent d-flex"
         centered
         show={showPopOut}
         onHide={() => setShowPopOut(false)}

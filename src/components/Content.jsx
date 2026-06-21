@@ -7,15 +7,15 @@ export default function Content() {
     id: "why",
     h2: "Why Choose CasinoCompareUK.net?",
     ul: [
-      "🎯 Expertly Curated Selection - We handpick only top-rated online casinos based on safety, game variety, and user experience, ensuring you enjoy a premium, worry-free gaming experience.",
-      "🎁 Exclusive Bonuses - Take advantage of generous welcome bonuses, no-deposit offers, free spins, and loyalty rewards designed for UK players.",
-      "📱 Mobile Compatibility - Our featured casinos are fully optimized for smartphones and tablets, so you can play your favourite games anytime, anywhere.",
-      "🔒 Safe and Regulated - Every site we recommend is licensed by the UK Gambling Commission and uses advanced encryption to protect your data and funds.",
-      "💰 Real Money Games - Explore a wide variety of games including slots, crash games, live roulette, blackjack, and innovative game shows.",
-      "📝 In-Depth Reviews - Make informed choices with unbiased reviews covering everything from welcome packages to withdrawal times and customer support.",
-      "🕵️‍♂️ Player Protection First - We promote responsible gambling and offer guides on secure payments, account verification, and self-exclusion tools.",
-      "⚠️ 18+ Only - You must be 18 years or older to play. Gamble responsibly. See our Responsible Gaming page for more info.",
-      "💬 Advertiser Disclosure - We are a free online resource. This site receives compensation from featured brands, which may affect placement. Our listings reflect editorial independence and are regularly updated, but may not include every provider.",
+      "Expertly Curated Selection - We handpick only top-rated online casinos based on safety, game variety, and user experience, ensuring you enjoy a premium, worry-free gaming experience.",
+      "Exclusive Bonuses - Take advantage of generous welcome bonuses, no-deposit offers, free spins, and loyalty rewards designed for UK players.",
+      "Mobile Compatibility - Our featured casinos are fully optimized for smartphones and tablets, so you can play your favourite games anytime, anywhere.",
+      "Safe and Regulated - Every site we recommend is licensed by the UK Gambling Commission and uses advanced encryption to protect your data and funds.",
+      "Real Money Games - Explore a wide variety of games including slots, crash games, live roulette, blackjack, and innovative game shows.",
+      "In-Depth Reviews - Make informed choices with unbiased reviews covering everything from welcome packages to withdrawal times and customer support.",
+      "Player Protection First - We promote responsible gambling and offer guides on secure payments, account verification, and self-exclusion tools.",
+      "18+ Only - You must be 18 years or older to play. Gamble responsibly. See our Responsible Gaming page for more info.",
+      "Advertiser Disclosure - We are a free online resource. This site receives compensation from featured brands, which may affect placement. Our listings reflect editorial independence and are regularly updated, but may not include every provider.",
     ],
   };
   const faq = {
@@ -34,6 +34,41 @@ export default function Content() {
       "Yes, the top 10 UK online casinos offer some of the best options for playing RNG roulette. Examples include tables from IGT, Microgaming, Play'n GO, and Evolution Gaming's First Person Roulette variant. The top casino for roulette also offers wide table limits and innovative variations that are hard to find at other gaming sites.",
       "Yes, the top 10 casinos included in our guide offer some of the best welcome bonuses for new players. Each of them provides a welcome bonus exclusively for new players. You should read their promotional terms to identify which bonus suits your budget and playing style, but they are among the best available for new players.",
       "The top-rated casino app in our guide to the 10 best online casino platforms for British players should be a priority. The recommended casino offers excellent mobile compatibility with iOS and Android devices. You can even download its advanced mobile app from the App Store or Google Play.",
+    ],
+  };
+
+  const howWeRate = {
+    h2: "How We Rank UK Online Casinos",
+    ul: [
+      "Licensing and Compliance - Every recommended operator is verified for proper UK-facing regulatory standards and transparent legal terms.",
+      "Game Quality and Providers - We prioritize casinos with strong software lineups, reliable game performance, and fair gameplay standards.",
+      "Bonuses and Terms - We assess real offer value by reviewing wagering rules, game contribution rates, and withdrawal restrictions.",
+      "Payments and Withdrawals - We compare deposit methods, payout speed, limits, and verification workflows to reduce friction for players.",
+      "Mobile Experience - We test performance on iOS and Android for speed, usability, and account management quality.",
+      "Player Support and Safety - We evaluate customer support responsiveness and responsible gambling tools such as limits and timeouts.",
+    ],
+  };
+
+  const categories = {
+    h2: "Popular Casino Categories We Cover",
+    ul: [
+      "Online Slots - From classic reels to Megaways and progressive jackpot titles.",
+      "Live Casino - Dealer-led roulette, blackjack, baccarat, and interactive game show formats.",
+      "Table Games - Strategy-focused blackjack, roulette, baccarat, and casino poker variants.",
+      "Crash and Instant Games - Fast-paced titles for players who prefer short, high-intensity sessions.",
+      "Bonus Guides - Welcome offers, no-deposit deals, free spins, cashback, and loyalty rewards.",
+      "Mobile Casino Play - App and browser-based experiences for gaming on the go.",
+    ],
+  };
+
+  const startSmart = {
+    h2: "Start Smart: Tips for New UK Casino Players",
+    ul: [
+      "Set a Budget First - Decide your session spend before you deposit and stick to it.",
+      "Read Bonus Terms Carefully - Check wagering, expiry windows, and eligible games before claiming offers.",
+      "Choose Licensed Brands - Play only on trusted sites with clear policies and player protections.",
+      "Use Responsible Gambling Tools - Apply deposit limits, reality checks, and timeout options when needed.",
+      "Focus on Entertainment - Treat casino play as paid entertainment, not guaranteed income.",
     ],
   };
 
@@ -57,10 +92,54 @@ export default function Content() {
         you discover the most trusted, rewarding, and entertaining casinos in
         the UK.
       </p>
+      <p>
+        Our mission is simple: make it easier for UK players to compare casino
+        sites with confidence. From licensing checks and payout speed to game
+        variety and mobile quality, we focus on the details that matter most in
+        real-world play. Every recommendation is designed to help you find a
+        casino that matches your budget, game preferences, and safety
+        expectations.
+      </p>
+
+      <div>
+        <h2>{howWeRate.h2}</h2>
+        {howWeRate.ul.map((li, i) => {
+          const [title, text] = li.split("-");
+          return (
+            <div className="my-1" key={i}>
+              <b>{title}</b> - <span>{text}</span>
+            </div>
+          );
+        })}
+      </div>
 
       <div id={why.id}>
         <h2>{why.h2}</h2>
         {why.ul.map((li, i) => {
+          const [title, text] = li.split("-");
+          return (
+            <div className="my-1" key={i}>
+              <b>{title}</b> - <span>{text}</span>
+            </div>
+          );
+        })}
+      </div>
+
+      <div>
+        <h2>{categories.h2}</h2>
+        {categories.ul.map((li, i) => {
+          const [title, text] = li.split("-");
+          return (
+            <div className="my-1" key={i}>
+              <b>{title}</b> - <span>{text}</span>
+            </div>
+          );
+        })}
+      </div>
+
+      <div>
+        <h2>{startSmart.h2}</h2>
+        {startSmart.ul.map((li, i) => {
           const [title, text] = li.split("-");
           return (
             <div className="my-1" key={i}>

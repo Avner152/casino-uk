@@ -10,7 +10,7 @@ export default function LiveGames() {
 
   const par1 = {
     id: "par-1",
-    h4: "📖 Game Breakdown:",
+    h4: "Game Breakdown:",
     ul: [
       "Theme: Ancient Egypt, Rich Wilde's treasure-hunting adventure.",
       "Reels & Paylines: 5 reels, 10 adjustable paylines.",
@@ -22,7 +22,7 @@ export default function LiveGames() {
 
   const par2 = {
     id: "par-2",
-    h4: "🧭 Why UK Players Love It:",
+    h4: "Why UK Players Love It:",
     ul: [
       "Massive win potential during the free spins round.",
       "Easy-to-follow mechanics appeal to all player levels.",
@@ -32,7 +32,7 @@ export default function LiveGames() {
 
   const par3 = {
     id: "par-3",
-    h4: "🎯 How to Play Smart:",
+    h4: "How to Play Smart:",
     ul: [
       "Always activate all paylines for the best chance of winning.",
       "Try a lower stake per spin with all lines covered.",
