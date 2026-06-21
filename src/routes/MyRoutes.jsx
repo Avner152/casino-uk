@@ -5,13 +5,10 @@ import CookiePolicy from "../components/paginations/CookiePolicy";
 import Terms from "../components/paginations/Terms";
 import PrivacyPolicy from "../components/paginations/PrivacyPolicy";
 import AboutUs from "../components/paginations/AboutUs";
-import CasinoBonuses from "../components/paginations/info/CasinoBonuses";
-import OnlineSlot from "../components/paginations/info/OnlineSlot";
-import BigBassBonanza from "../components/paginations/info/BigBassBonanza";
 import myStore from "../mobX/Store";
 import SportPage from "../components/sport/SportPage";
 import { observer } from "mobx-react";
-import SportTemplate from "../components/paginations/info/SportTemplate";
+import InfoTemplate from "../components/paginations/info/InfoTemplate";
 
 const MyRoutes = observer(() => {
   const location = useLocation();
@@ -35,10 +32,6 @@ const MyRoutes = observer(() => {
 
         <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
 
-        <Route exact path="/online-slots" element={<OnlineSlot />} />
-        <Route exact path="/big-bass-bonanza" element={<BigBassBonanza />} />
-        <Route exact path="/casino-bonuses" element={<CasinoBonuses />} />
-
         {/*  */}
         <Route
           exact
@@ -57,7 +50,8 @@ const MyRoutes = observer(() => {
           element={<CookiePolicy />}
         />
 
-        <Route exact path="/special/sport/:page" element={<SportTemplate />} />
+        <Route exact path="/special/sport/:page" element={<InfoTemplate />} />
+        <Route exact path="/:page" element={<InfoTemplate />} />
       </Routes>
     </>
   );

@@ -97,7 +97,7 @@ const App = observer(() => {
   const raisePopOut = () => {
     return (
       <Modal
-        className="bg-transparent"
+        className="bg-transparent d-flex"
         centered
         show={showPopOut}
         onHide={() => setShowPopOut(false)}
@@ -128,9 +128,7 @@ const App = observer(() => {
                     src={casinoItem.image}
                   />
                 </div>
-                <h2 className="px-4 fw-bold lh-1" style={{ height: 50 }}>
-                  {casinoItem.title}
-                </h2>
+                <h2 className="px-4 fw-bold lh-1">{casinoItem.title}</h2>
                 <div>
                   <div className="fs-1 fw-semibold">{getScoreByIndex(i)}</div>
                   {Array.from({ length: 5 }).map((_, i) => {

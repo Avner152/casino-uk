@@ -1,8 +1,8 @@
-{
+﻿{
   "casino": {
     "top": {
       "h1": "TopCasinoPicksUK.com - Best Online Casino Picks for UK Players",
-      "p": "Explore the most trusted and exciting online casinos in the UK. At TopCasinoPicksUK.com, we showcase secure, entertaining, and highly rated platforms for every kind of player — from slot fans to live casino lovers. Whether you're searching for exciting new casinos, player-friendly bonuses, or specific game types like Megaways or Big Bass Bonanza, our platform gives you all the tools to compare, play, and win with confidence."
+      "p": "Explore the most trusted and exciting online casinos in the UK. At TopCasinoPicksUK.com, we showcase secure, entertaining, and highly rated platforms for every kind of player — from slot fans to live casino lovers. Whether you're searching for exciting new casinos, player-friendly bonuses, or specific game types like Megaways or Big Bass Bonanza, our platform gives you all the tools to compare, play, and win with confidence. Every casino we feature is fully licensed by the UK Gambling Commission (UKGC), ensuring your funds are protected and play is always fair."
     },
     "list": [
       {
@@ -11,10 +11,75 @@
         "ul": [
           "Expert Casino Reviews - Every site featured on our platform undergoes thorough vetting. We evaluate licensing, safety, game variety, payout speed, mobile compatibility, and bonus fairness. Our review system focuses on transparency, so you always know exactly what to expect from each casino.",
           "Exclusive Bonus Deals - Get access to no-deposit bonuses, low-wagering free spins, VIP perks, and cashback offers that are tailored for UK players. We only list bonus deals that are fair, clear, and actually beneficial to players.",
-          "Play Anytime, Anywhere - All listed casinos are optimized for mobile and tablet, with lightning-fast load times and sleek interfaces for on-the-go gaming. Whether you're on Android, iOS, or desktop — you’ll enjoy consistent quality.",
+          "Play Anytime, Anywhere - All listed casinos are optimized for mobile and tablet, with lightning-fast load times and sleek interfaces for on-the-go gaming. Whether you're on Android, iOS, or desktop — you'll enjoy consistent quality.",
           "Play with Real Winnings - Find games that offer great odds, fast payouts, and verified fairness. We help you sort between volatile jackpots, low-stake spins, and strategic table games. Learn about RTPs, variance, and bonus hit frequency for smarter play.",
           "Learn, Compare & Win Smarter - We publish expert strategies, RTP breakdowns, and tips to avoid common traps. Our goal is to help you play smarter and make the most out of every spin or bet. From bankroll tips to bonus unlocking techniques, we guide you at every step.",
           "Safety & Support First - Our picks only include platforms licensed by recognized international or UK regulators. We also link to responsible gaming tools and support networks. Player safety is our top priority, and we regularly update content to reflect changing industry standards."
+        ]
+      },
+      {
+        "id": "slots",
+        "h2": "Best Online Slots at UK Casinos",
+        "p": "Online slots are the most popular casino game in the UK, accounting for the majority of real-money play across all UKGC-licensed platforms. At TopCasinoPicksUK.com, we cover the full spectrum — from classic 3-reel fruit machines to modern video slots with cinematic graphics, Megaways engines, and buy-feature bonuses. Our featured casinos host libraries from the industry's leading developers, including Pragmatic Play, NetEnt, Microgaming, Play'n GO, and Evolution Gaming. Whether you're chasing a progressive jackpot worth millions or simply enjoying a low-stakes spin on a fan favourite like Big Bass Bonanza, you'll find the right game — and the right casino — right here.",
+        "ul": [
+          "Megaways Slots - Titles like Bonanza and Extra Chilli with up to 117,649 ways to win.",
+          "High Volatility Slots - Big Bass Bonanza, Gates of Olympus, and Sweet Bonanza for high-risk, high-reward play.",
+          "Low Volatility Slots - Steady payouts and extended sessions ideal for casual players.",
+          "Progressive Jackpot Slots - Life-changing prizes from Mega Moolah, Divine Fortune, and more.",
+          "Live Dealer Slot Shows - Immersive hybrid game shows like Crazy Time and Lightning Roulette.",
+          "New Slot Releases - We track monthly releases so you're always first to play the latest titles."
+        ]
+      },
+      {
+        "id": "bonuses",
+        "h2": "UK Casino Bonuses & Promotions Explained",
+        "p": "Casino bonuses are one of the biggest draws for UK players — but not all offers are created equal. Welcome bonuses, free spins, reload deals, and loyalty programmes can add significant value to your play when the terms are fair. At TopCasinoPicksUK.com, we break down every offer in plain English: wagering requirements, eligible games, time limits, and minimum odds. We highlight the bonuses that deliver genuine player value and flag the ones to approach with caution.",
+        "ul": [
+          "Welcome Bonuses - Matched deposit offers for new players, typically ranging from 50% to 200% of your first deposit.",
+          "No-Deposit Bonuses - Free bonus credit or spins with no deposit required — ideal for testing a new casino risk-free.",
+          "Free Spins Offers - Spins on popular slots like Big Bass Bonanza, Starburst, or Book of Dead, often bundled with a deposit match.",
+          "Reload Bonuses - Ongoing deposit bonuses for existing players to reward continued loyalty.",
+          "Cashback Deals - A percentage of net losses returned as bonus credit or real cash.",
+          "VIP & Loyalty Programmes - Tiered reward schemes offering exclusive perks, faster withdrawals, and personal account managers."
+        ]
+      },
+      {
+        "id": "live-casino",
+        "h2": "Live Casino Games at UK Online Casinos",
+        "p": "Live casino brings the atmosphere of a real casino floor directly to your screen. Hosted by professional dealers and streamed in HD from dedicated studios, live casino games offer the most immersive online gambling experience available. All featured casinos on TopCasinoPicksUK.com offer a full suite of live dealer titles, with Evolution Gaming powering the majority of premium live rooms available to UK players.",
+        "ul": [
+          "Live Roulette - European, American, and Lightning Roulette variants with real dealers.",
+          "Live Blackjack - Classic and Infinite Blackjack tables to suit all bet sizes.",
+          "Live Baccarat - Fast-paced card game popular with UK high rollers.",
+          "Live Game Shows - Crazy Time, Monopoly Live, Deal or No Deal, and more.",
+          "Live Poker - Three Card Poker, Casino Hold'em, and Ultimate Texas Hold'em.",
+          "Speed Baccarat & Lightning Dice - Quick-play live titles for fast-paced sessions."
+        ]
+      },
+      {
+        "id": "payments",
+        "h2": "Casino Deposits & Withdrawals for UK Players",
+        "p": "Fast, secure, and convenient payments are a non-negotiable for any top UK online casino. Our featured platforms support the most trusted deposit and withdrawal methods available to UK players, with processing times clearly outlined in each review. All listed casinos comply with UKGC payment processing standards, which require player verification (KYC) and prohibit the use of credit cards for gambling deposits under UK law.",
+        "ul": [
+          "Debit Cards - Visa and Mastercard debit cards are the most widely used deposit method for UK players.",
+          "PayPal - One of the fastest and most trusted e-wallets, widely accepted across UK casinos.",
+          "Paysafecard - Prepaid voucher option for players who prefer to manage spend without linking a bank account.",
+          "Bank Transfer - Direct transfers for larger deposits and withdrawals.",
+          "Apple Pay & Google Pay - Instant mobile payment options growing in availability at UK casinos.",
+          "Withdrawal Speed - We compare processing times from instant e-wallet payouts to 1–5 business day bank transfers."
+        ]
+      },
+      {
+        "id": "responsible",
+        "h2": "Responsible Gambling at UK Online Casinos",
+        "p": "Responsible gambling is a core part of what we do at TopCasinoPicksUK.com. Every casino we list must hold a valid UKGC licence and offer a full suite of responsible gambling tools. We believe that gambling should always be an enjoyable and controlled activity — never a source of financial stress or harm. If you or someone you know needs support, free help is available 24/7 via GamCare (gamcare.org.uk) and BeGambleAware (begambleaware.org).",
+        "ul": [
+          "Deposit Limits - Set daily, weekly, or monthly deposit caps directly in your account settings.",
+          "Loss Limits - Restrict the amount you can lose within a given period.",
+          "Session Time Limits - Set reminders or hard limits on session duration.",
+          "Self-Exclusion (GAMSTOP) - Exclude yourself from all UKGC-licensed casinos simultaneously via the free GAMSTOP scheme.",
+          "Reality Checks - Periodic pop-up notifications showing your session time and net wins/losses.",
+          "Account Cooling-Off Periods - Temporarily suspend your account for 24 hours up to 6 weeks."
         ]
       },
       {

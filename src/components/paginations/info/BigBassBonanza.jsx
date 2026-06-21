@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import PortalSection from "../../PortalSection";
 
 export default function BigBassBonanza() {
@@ -11,13 +11,13 @@ export default function BigBassBonanza() {
 
   const par2 = {
     id: "par-2",
-    h4: "Why It’s Popular",
+    h4: "Why It's Popular",
     ul: [
       "Medium hit frequency (1 in 5-6 spins often pays out)",
       "No complex scatter symbols or mini-games — ideal for beginners",
       "Triggering expanding wilds in the centre reels can lead to impressive chains of wins",
     ],
-    p: "Big Bass Bonanza offers a perfect blend of simplicity and thrill. It’s a 5-reel, 10-payline slot with a lucrative free spins feature where players can collect fish symbols with cash values. During bonus rounds, the bearded fisherman appears to net those fish and boost your winnings.",
+    p: "Big Bass Bonanza offers a perfect blend of simplicity and thrill. It's a 5-reel, 10-payline slot with a lucrative free spins feature where players can collect fish symbols with cash values. During bonus rounds, the bearded fisherman appears to net those fish and boost your winnings.",
   };
 
   const par3 = {

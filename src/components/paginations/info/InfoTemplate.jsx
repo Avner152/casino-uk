@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
-const SportTemplate = observer(() => {
+const InfoTemplate = observer(() => {
   const location = useLocation();
   const meta = {
     title: "UK Betting Sites - Best Online Bookmakers List 2026",
@@ -15,9 +15,8 @@ const SportTemplate = observer(() => {
   };
   useEffect(() => {
     // if (!myStore.infoContent)
-    myStore.updateInfoContent(
-      window.location.pathname.substring(1).split("/")[2],
-    );
+    let splitted = window.location.pathname.substring(1).split("/");
+    myStore.updateInfoContent(splitted[splitted.length - 1]);
   }, [location]);
 
   const content =
@@ -32,7 +31,9 @@ const SportTemplate = observer(() => {
       <PortalSection />
       <article className="bg-dark px-5 sm-px-1 py-3 bg-opacity-75 text-white w-100 m-auto">
         <h1 className="pe-5">
-          <span>{content?.title}</span>
+          <span>
+            {content?.title.replaceAll("{curYear}", new Date().getFullYear())}
+          </span>
         </h1>
         {content?.sections?.map((section, index) => (
           <section key={index} className="mt-3">
@@ -57,4 +58,4 @@ const SportTemplate = observer(() => {
   );
 });
 
-export default SportTemplate;
+export default InfoTemplate;
