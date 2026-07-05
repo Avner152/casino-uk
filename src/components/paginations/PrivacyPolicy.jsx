@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
           </span>
           <p>
             Welcome to Compare Casinos UK (accessible at{" "}
-            <Link to="/">https://www.comparecasinosuk.net /</Link>
+            <Link to="/">https://www.casinochoiceuk.net /</Link>
             ). We respect your privacy and are committed to protecting your
             personal data. This privacy policy will inform you as to how we look
             after your personal data when you visit our website and tell you
