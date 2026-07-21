@@ -2,7 +2,7 @@ import { Button, Card, Placeholder } from "react-bootstrap";
 
 export default function CasinoItemMobilePlaceholder() {
   return (
-    <div style={{ zIndex: 1 }} className="my-card m-0">
+    <div style={{ zIndex: 1 }} className="my-card my-1">
       <div className="top-card d-flex justify-content-around align-items-center ">
         <div className="d-flex flex-column justify-content-center align-items-center gap-1 square">
           <Placeholder

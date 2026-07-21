@@ -507,6 +507,10 @@ a:hover {
   z-index: 999;
 }
 
+.z-99 {
+  z-index: 99 !important;
+}
+
 .information {
   background-color: #13161fea !important;
   /* width: 55%; */

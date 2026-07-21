@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
-import axios from "axios";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
 import hero from "./assets/hero.jpg";
@@ -63,36 +62,14 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=${myStore.product}`;
-
-    // const ENDPOINT = `http://localhost:5001/birmingham/prd?product=${myStore.product}`;
-
-    const headers = { segment: "viral" };
-    axios
-      .post(
-        ENDPOINT,
-        {
-          search: window.location.search,
-          referrer: "",
-          userIp: "102.128.166.0",
-        },
-        { headers },
-      )
-      .then((res) => {
-        // console.log(res?.data?.list[0]?.type);
-
-        if (res?.data?.list[0]?.type === "blanca") return;
-
-        let result = res?.data?.list[0]?.brands.slice(0, 3);
-
-        result.unshift(result.pop());
-        setInitialList([...result]);
-      })
-      .catch((err) => console.log(err));
+    if (!myStore.list.length || myStore.type.startsWith("b")) return;
+    let result = myStore?.list?.slice(0, 3);
+    result.unshift(result.pop());
+    setInitialList([...result]);
   };
   useEffect(() => {
-    fetchPopupBrands();
-  }, []);
+    if (myStore.product) fetchPopupBrands();
+  }, [myStore.list]);
 
   const raisePopOut = () => {
     return (
@@ -209,7 +186,7 @@ const App = observer(() => {
           {myStore.product === "betting" ? <SportIntro /> : <Intro />}
         </div>
       </div>
-      <div className="w-60 md-w-100 sm-w-100 px-3 sm-px-0 m-auto">
+      <div className="w-60 md-w-100 sm-w-100 px-3 sm-p-0 m-auto">
         <MyRoutes />
       </div>
       {showPopOut && raisePopOut()}

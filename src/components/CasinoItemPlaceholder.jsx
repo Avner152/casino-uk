@@ -9,7 +9,7 @@ export default function CasinoItemPlaceholder() {
       <div
         className={`top-card d-flex gap-${
           !isDesktop ? "2 flex-column" : "1 row"
-        } justify-content-around border rounded align-items-center text-center`}
+        } justify-content-around border mt-3 rounded align-items-center text-center`}
       >
         <div className="col-md-3 rounded _square">
           <Placeholder

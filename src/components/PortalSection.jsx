@@ -10,6 +10,8 @@ import { toJS } from "mobx";
 import myStore from "../mobX/Store";
 import { importImages } from "../App";
 import { appendQueryParams } from "../json/helpers";
+import CasinoItemMobilePlaceholder from "./CasinoItemMobilePlaceholder";
+import CasinoItemPlaceholder from "./CasinoItemPlaceholder";
 
 const PortalSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
@@ -125,31 +127,39 @@ const PortalSection = observer(({ captchaToken }) => {
           </div>
         ))}
       </div>
-      {toJS(myStore.list).map((casino, k) => {
-        const fixedURL = `${casino.url}${appendQueryParams(searchParams, k + 1)}`;
+      {toJS(myStore.list).length === 0
+        ? Array.from({ length: 5 }).map((_, k) =>
+            isMobile ? (
+              <CasinoItemMobilePlaceholder key={k} />
+            ) : (
+              <CasinoItemPlaceholder key={k} />
+            ),
+          )
+        : toJS(myStore.list).map((casino, k) => {
+            const fixedURL = `${casino.url}${appendQueryParams(searchParams, k + 1)}`;
 
-        return (
-          <Fade key={k} cascade triggerOnce>
-            <div onClick={() => window.open(fixedURL, "_blank")}>
-              {isMobile ? (
-                <CasinoItemMobile
-                  key={k}
-                  item={casino}
-                  index={k}
-                  fixedURL={fixedURL}
-                />
-              ) : (
-                <CasinoItem
-                  key={k}
-                  item={casino}
-                  index={k}
-                  fixedURL={fixedURL}
-                />
-              )}
-            </div>
-          </Fade>
-        );
-      })}
+            return (
+              <Fade key={k} cascade triggerOnce>
+                <div onClick={() => window.open(fixedURL, "_blank")}>
+                  {isMobile ? (
+                    <CasinoItemMobile
+                      key={k}
+                      item={casino}
+                      index={k}
+                      fixedURL={fixedURL}
+                    />
+                  ) : (
+                    <CasinoItem
+                      key={k}
+                      item={casino}
+                      index={k}
+                      fixedURL={fixedURL}
+                    />
+                  )}
+                </div>
+              </Fade>
+            );
+          })}
     </div>
   );
 });

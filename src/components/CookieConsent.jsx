@@ -12,7 +12,7 @@ const CookieConsent = observer(({ setCookieStatus }) => {
   };
 
   return (
-    <div className="cookie-wrapper d-flex flex-row text-white align-items-center justify-content-between position-fixed z-3 bottom-0 w-100 p-4 bg-dark fs-7">
+    <div className="cookie-wrapper d-flex flex-row text-white align-items-center justify-content-between position-fixed z-99 bottom-0 w-100 p-4 bg-dark fs-7">
       <span>
         We use cookies that are necessary to operate this website and to
         remember your preferences (for example, that you have dismissed this
