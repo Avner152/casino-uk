@@ -67,13 +67,13 @@ const SportIntro = observer(() => {
             {isBettingHome ? (
               <>
                 <h1 className="sport-hero-title fw-bold mb-3">
-                  UK Sports Betting Brands for{" "}
-                  <span className="_text-warning">Mundial 2026</span>
+                  Top UK Sports{" "}
+                  <span className="_text-warning">Betting Brands</span> for 2026
                 </h1>
                 <p className="sport-hero-subtitle mb-4">
                   Compare trusted UK betting brands, welcome offers, football
-                  markets and matchday features ahead of the world's biggest
-                  tournament.
+                  markets, live betting options, and matchday features to find
+                  the best sportsbook for your needs.
                 </p>
                 {/* <Button
                   className="btn-warning fw-bold px-4 py-2 text-uppercase d-flex justify-content-center align-items-center gap-2"

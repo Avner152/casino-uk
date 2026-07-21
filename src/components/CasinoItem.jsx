@@ -47,7 +47,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
               >
                 <span>{score.toFixed(1)}</span>
               </div>
-              <div>Rating</div>
+              <div className="text-white">Rating</div>
             </div>
           </div>
         )}
