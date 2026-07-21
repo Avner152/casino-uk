@@ -17,6 +17,7 @@ import hero from "./assets/hero.jpg";
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
 import SportIntro from "./components/sport/SportIntro";
+import { autorun } from "mobx";
 
 export function importImages(r) {
   let images = {};
@@ -46,6 +47,7 @@ const App = observer(() => {
 
   useEffect(() => {
     const handleMouseOut = (e) => {
+      if (myStore.type.startsWith("bl")) return;
       if (e.clientY < 0 && !triggeredRef.current) {
         // triggeredRef.current = false;
         triggeredRef.current = true;
@@ -62,14 +64,21 @@ const App = observer(() => {
   }, [isDesktop, initialList]);
 
   const fetchPopupBrands = () => {
-    if (!myStore.list.length || myStore.type.startsWith("b")) return;
-    let result = myStore?.list?.slice(0, 3);
+    let result = myStore.list?.slice(0, 3);
+
     result.unshift(result.pop());
     setInitialList([...result]);
   };
   useEffect(() => {
-    if (myStore.product) fetchPopupBrands();
-  }, [myStore.list]);
+    const dispose = autorun(() => {
+      // any observable read here becomes a dependency
+      if (myStore.list && myStore.product) {
+        fetchPopupBrands();
+      }
+    });
+
+    return () => dispose(); // cleanup
+  }, []);
 
   const raisePopOut = () => {
     return (
