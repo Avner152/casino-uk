@@ -9,11 +9,8 @@ import { observer } from "mobx-react";
 import { pages } from "../json/helpers";
 
 const Footer = observer(() => {
-  const curDate = new Date();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
+
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const footerText =
@@ -135,21 +132,6 @@ const Footer = observer(() => {
           ))}
         </div>
       </footer>
-
-      {
-        <div className="sticky">
-          <div className="p-1 m-auto text-white text-center">
-            <div className="">
-              @{curDate.getFullYear()} UK CasinoHub. All rights reserved. All
-              trademarks are the property of their respective owners.
-            </div>
-            <div className="fs-7 lh-1">
-              Info: Company name M.B.M Managment LTD <br />
-              Country: Israel, Petah-Tikva https://mbm-mang.com/
-            </div>
-          </div>
-        </div>
-      }
     </>
   );
 });
