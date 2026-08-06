@@ -57,8 +57,9 @@ export default function AboutUs() {
           <p>
             Did you find our site helpful? Do you have suggestions for
             improvement? We would love to hear from you. Your feedback helps us
-            improve Top Casino Picks UK for players in England, Scotland, and
-            Wales.
+            improve Top Casino Picks UK for players in UK. Please reach out via
+            our contact page or email us directly. We value your input and look
+            forward to making your online casino experience better.
           </p>
         </div>
       </div>
