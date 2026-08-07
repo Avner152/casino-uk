@@ -3,7 +3,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose Casino Empire UK?",
+    h2: "Why Choose UK CasinoScout?",
     p: "We focus on practical information that helps UK players compare sites quickly and choose with confidence.",
     ul: [
       "Trusted UK Focus - Our recommendations prioritise sites that are licensed, reputable, and suitable for players in the UK.",
@@ -71,7 +71,7 @@ export default function Content() {
     {
       id: "important-info",
       h2: "Important Information",
-      p: "Casino Empire UK may receive compensation from some listed brands, which can influence placement. We do not review every provider in the market.",
+      p: "UK CasinoScout may receive compensation from some listed brands, which can influence placement. We do not review every provider in the market.",
       ul: [
         "This content is for informational purposes only.",
         "It is not financial or legal advice.",
@@ -84,11 +84,11 @@ export default function Content() {
   return (
     <div className="content-container_ px-5 sm-p-0 w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Casino Empire UK: compare top UK online casinos for{" "}
+        UK CasinoScout: compare top UK online casinos for{" "}
         {curDate.getFullYear()}.
       </h1>
       <p>
-        Casino Empire UK is built to help you compare online casinos without the
+        UK CasinoScout is built to help you compare online casinos without the
         noise. We keep our guides clear and current, so you can quickly
         understand where to play, what each site offers, and what to check
         before signing up.

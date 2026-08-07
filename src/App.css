@@ -47,13 +47,27 @@ body {
 
 .desktop-header {
   position: fixed !important;
-  background-color: #000000dd;
+  background-color: #fff;
   padding: 0 50px;
   z-index: 9999;
 }
 
+.my-nav {
+  transition: all 300ms ease-in-out;
+}
+
 .my-nav:hover {
-  color: #de811d !important;
+  background-color: #58cd36 !important;
+  color: #fff !important;
+  padding: 0px 7px;
+  border-radius: 5px;
+}
+
+.my-nav.active {
+  background-color: #58cd36 !important;
+  color: #fff !important;
+  padding: 0px 7px;
+  border-radius: 5px;
 }
 
 .params .row {
@@ -616,22 +630,22 @@ a:hover {
 }
 
 .cookie-accept {
-  background-color: #ffd72a;
+  background-color: #58cd36;
   color: #000;
   border: unset;
 }
 
 .cookie-reject {
   background: unset !important;
-  border: 2px solid #ffd72a;
+  border: 2px solid #58cd36;
 }
 .cookie-accept:hover,
 .cookie-accept:focus {
-  background-color: #ffd72acc !important;
+  background-color: #58cd36cc !important;
 }
 .cookie-reject:hover,
 .cookie-reject:focus {
-  border: 2px solid #ffd72a4a !important;
+  border: 2px solid #58cd364a !important;
 }
 .ribbon {
   width: 140px;
@@ -646,14 +660,14 @@ a:hover {
   z-index: -1;
   content: "";
   display: block;
-  border: 5px solid #de811d;
+  border: 5px solid #58cd36;
 }
 .ribbon span {
   position: absolute;
   display: block;
   width: 255px;
   padding: 2.5px 0;
-  background-color: #de811d;
+  background-color: #58cd36;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -884,7 +898,7 @@ a:hover {
     padding: 0.45rem 0rem;
   }
   .fs-7 {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 
   footer {
@@ -940,6 +954,11 @@ a:hover {
     padding-right: 1rem !important;
     padding-left: 1rem !important;
   }
+}
+
+.bg-white-fade {
+  padding: 5px 0;
+  /* background: linear-(to bottom, #fff 50%, transparent 100%) !important; */
 }
 
 .bg-black-50 {
