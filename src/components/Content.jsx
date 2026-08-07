@@ -5,7 +5,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose OnlyUKCasinos.com?",
+    h2: "Why Choose UKCasinoNova.com?",
     ul: [
       "Expertly Curated Casino Lists - Each casino we list is evaluated for trustworthiness, licensing, game selection, mobile experience, customer support, and promotional value.",
       "Exclusive Deals - Take advantage of top-tier offers including matched deposits, no-wager bonuses, cashback, and free spin bundles — all updated regularly.",
@@ -43,14 +43,14 @@ export default function Content() {
   return (
     <div className="px-3">
       <h1 className="fw-bold text-white">
-        Welcome to OnlyUKCasinos.net – Your Ultimate Guide to the Best UK Online
+        Welcome to UKCasinoNova.com - Your Ultimate Guide to the Best UK Online
         Casinos in {curDate.getFullYear()}
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At OnlyUKCasinos.com,
-        we bring you the most comprehensive and user-friendly guide to the
-        finest online casinos available to UK players. Whether you're a seasoned
-        player or new to the scene, our expert resources, impartial reviews, and
+        Ready to experience the thrill of online gaming? At UKCasinoNova.com, we
+        bring you the most comprehensive and user-friendly guide to the finest
+        online casinos available to UK players. Whether you're a seasoned player
+        or new to the scene, our expert resources, impartial reviews, and
         updated rankings are here to elevate your gaming journey.
       </p>
 

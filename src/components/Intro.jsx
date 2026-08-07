@@ -29,7 +29,7 @@ const Intro = observer(() => {
       title: "Online Slots & Jackpots Top UK Sites -",
     },
     table: {
-      title: "Best Table Games in the UK – Our Casino Picks for ",
+      title: "Best Table Games in the UK - Our Casino Picks for ",
     },
     cookie: {
       title: "Cookie Policy 18",

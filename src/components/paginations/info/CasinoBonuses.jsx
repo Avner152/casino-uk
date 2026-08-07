@@ -5,7 +5,7 @@ export default function CasinoBonuses() {
   const curDate = new Date();
 
   const topPar = {
-    h2: `Casino Bonuses – Stretch Your Play, Maximize Your Value - ${curDate.getFullYear()}`,
+    h2: `Casino Bonuses - Stretch Your Play, Maximize Your Value - ${curDate.getFullYear()}`,
     p: `Casino bonuses are more than a marketing gimmick — they’re a real opportunity to test new games, extend playtime, and even win big without spending much. But smart players know it’s not just about the biggest number; it’s about terms, wagering, and how well a bonus matches your playstyle. UK players should always compare the full value of a promotion, including wagering rules, game restrictions, expiry windows, and payout limits before claiming any offer.\nWagering Explained: A 30x wagering requirement on a £100 bonus means you must wager £3,000 before withdrawing winnings. Some sites now offer low-wager or wager-free bonuses, which can be a strong option for casual players who want clearer terms and faster withdrawals.`,
   };
 

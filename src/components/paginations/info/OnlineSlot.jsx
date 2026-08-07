@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 export default function OnlineSlot() {
   const curDate = new Date();
   const topPar = {
-    h4: `Online Slot Casinos UK – Spin the Reels with Confidence`,
+    h4: `Online Slot Casinos UK - Spin the Reels with Confidence`,
     p: `UK slot sites continue to lead the global market, offering thrilling gameplay, sleek interfaces, and robust mobile experiences. Whether you’re playing for fun or aiming for a big jackpot, slot casinos bring unmatched entertainment value.\nHow Online Slots Work Each slot uses a Random Number Generator (RNG) to ensure fairness and unpredictability. Slots are audited by independent labs like eCOGRA to verify accuracy. RTP (Return to Player) percentages give players a statistical estimate of long-term payouts, but short-term outcomes are always luck-based.`,
   };
 

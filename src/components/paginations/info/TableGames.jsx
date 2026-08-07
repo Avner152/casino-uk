@@ -6,7 +6,7 @@ export default function TableGames() {
 
   const titlePar = {
     h1: "Check our best Table Games in the UK",
-    p: "Table games are a top choice for UK players who want a more strategic casino experience. Unlike slots, table games offer a mix of skill, odds, and decision-making, which is why they remain a core part of every high-quality online casino. At OnlyUKCasinos.com, we compare and rank the best UK-friendly casinos for table games — helping you find the right platform based on game variety, live dealer quality, betting limits, and trusted payouts.",
+    p: "Table games are a top choice for UK players who want a more strategic casino experience. Unlike slots, table games offer a mix of skill, odds, and decision-making, which is why they remain a core part of every high-quality online casino. At UKCasinoNova.com, we compare and rank the best UK-friendly casinos for table games — helping you find the right platform based on game variety, live dealer quality, betting limits, and trusted payouts.",
   };
 
   const par1 = {

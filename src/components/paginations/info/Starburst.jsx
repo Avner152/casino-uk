@@ -5,7 +5,7 @@ export default function Starburst() {
   const curDate = new Date();
 
   const topPar = {
-    h2: `Starburst Slot – A UK Favourite That Still Shines`,
+    h2: `Starburst Slot - A UK Favourite That Still Shines`,
     p: `Starburst remains a go-to game across UK casinos, beloved for its simplicity, elegance, and high frequency of small-to-medium wins. Unlike high-volatility games that can drain your bankroll, Starburst is ideal for extended play and meeting wagering requirements on bonuses.\nDesign and Sound With a cosmic theme and vibrant jewel symbols, Starburst’s visuals are both classic and contemporary. Its upbeat soundtrack and quick animations add energy without being overwhelming — ideal for players seeking light, fast-paced fun.`,
   };
 
