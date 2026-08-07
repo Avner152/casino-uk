@@ -46,24 +46,43 @@ export default function PrivacyPolicy() {
               Under UK GDPR, the legal entity responsible as the Data Controller
               for processing your personal data on this Website is:
             </p>
-            <ul>
-              <li>
-                <strong>Data Controller:</strong> ADM Ltd.
-              </li>
-              <li>
-                <strong>Registered Address:</strong> Via Dante 16, 20121 Milan
-                (MI), Italy
-              </li>
-              <li>
-                <strong>VAT / Tax ID:</strong> IT 09876543210
-              </li>
-              <li>
-                <strong>Privacy & GDPR Enquiries:</strong>{" "}
-                <a href="mailto:privacy@ukcasinohub.net" className="text-white">
-                  privacy@ukcasinohub.net
-                </a>
-              </li>
-            </ul>
+            <div className="table-responsive">
+              <table className="table table-dark table-bordered align-middle mb-0">
+                <tbody>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Data Controller
+                    </th>
+                    <td>ADM Ltd.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Registered Address
+                    </th>
+                    <td>Via Dante 16, 20121 Milan (MI), Italy</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      VAT / Tax ID
+                    </th>
+                    <td>IT 09876543210</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Privacy & GDPR Enquiries
+                    </th>
+                    <td>
+                      <a
+                        href="mailto:privacy@ukcasinohub.net"
+                        className="text-white"
+                      >
+                        privacy@ukcasinohub.net
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div className="mt-4">
