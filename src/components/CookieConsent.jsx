@@ -39,7 +39,7 @@ const CookieConsent = observer(({ setCookieStatus }) => {
       </span>
       <div className="d-flex flex-column gap-2">
         <Button onClick={cookieHandler} className="cookie-accept cookie-button">
-          OK, got it
+          Accept
         </Button>
         <Button
           onClick={() => setCookieStatus(true)}
