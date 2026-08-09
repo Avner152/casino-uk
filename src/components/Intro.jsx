@@ -1,5 +1,4 @@
 import { observer } from "mobx-react";
-import casino from "../assets/casino.png";
 import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
