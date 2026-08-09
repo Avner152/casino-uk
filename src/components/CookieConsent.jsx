@@ -48,7 +48,10 @@ const CookieConsent = observer(({ setCookieStatus }) => {
   ];
 
   return (
-    <div className="position-fixed z-3 bottom-0 start-0 w-100 p-2">
+    <div
+      style={{ zIndex: 1030 }}
+      className="position-fixed bottom-0 start-0 w-100 p-2"
+    >
       <div className="cookie-consent-shell ms-auto">
         <div className="bg-dark text-white border border-secondary-subtle rounded-2 shadow-lg overflow-hidden">
           <div className="p-3 p-md-4 ">
