@@ -98,16 +98,6 @@ const Intro = observer(() => {
                   )}
             </h1>
           </div>
-          {isDesktop && (
-            <div>
-              <img
-                className="cards"
-                alt="cards"
-                width={isDesktop ? 220 : 120}
-                src={casino}
-              />
-            </div>
-          )}
         </div>
       )}
     </div>

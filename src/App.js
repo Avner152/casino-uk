@@ -12,6 +12,7 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import hero from "./assets/hero.png";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
@@ -76,31 +77,8 @@ const App = observer(() => {
     return () => dispose(); // cleanup
   }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
-
-  return (
-    <div>
+  const triggerPopout = () => {
+    return (
       <Modal
         className="bg-transparent d-flex"
         centered
@@ -171,10 +149,21 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
-      {/* {!captchaToken && TurnstileWidget()} */}
-      {!isDesktop && <div className="casino-container" />}
+    );
+  };
 
+  return (
+    <div>
       <Header />
+
+      <img
+        className="hero position-absolute z-n1 end-0"
+        src={hero}
+        alt="hero"
+      />
+      {!isDesktop && (
+        <div className={`${myStore.product}-container p-wrapper`} />
+      )}
       {myStore.type.startsWith("b") && (
         <div className="bg-white-fade w-100 text-white bg-gradient position-relative start-0 px-3 sm-p-0 border-bottom">
           <p
@@ -192,6 +181,7 @@ const App = observer(() => {
           </aside>
         </div>
       )}
+
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <Intro />
         <MyRoutes />
@@ -199,6 +189,7 @@ const App = observer(() => {
       <Footer />
 
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
+      {showPopOut && triggerPopout()}
     </div>
   );
 });

@@ -21,14 +21,45 @@ body {
   font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
-  /* background-image: url(./assets/bg.webp); */
-  background-image: url(./assets/bg2.webp);
+
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   color: #000 !important;
+}
+
+.hero {
+  height: 650px;
+}
+
+.hero-intro {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.advertorial-wrap {
+  position: relative;
+  top: 0;
+  z-index: 4;
+}
+
+.hero-copy {
+  max-width: 520px;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.1vw, 3.7rem);
+  line-height: 1.05;
+}
+
+.hero-subtitle {
+  max-width: 500px;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  font-weight: 500;
 }
 
 .w-60 {
@@ -937,15 +968,41 @@ a:hover {
     width: 60%;
   }
   .casino-container {
-    background-image: url(./assets/bg-mobile.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: auto;
     position: fixed;
-    height: 100vh;
-    width: 100vw;
     z-index: -1;
+  }
+
+  .sport-hero-intro {
+    min-height: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .advertorial-wrap {
+    position: static;
+    /* width: 100% !important; */
+    margin: 0 !important;
+  }
+
+  .sport-hero-copy {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .hero-title {
+    /* background-color: #000000cc; */
+    padding: 10px 0px;
+    /* font-size: 2rem; */
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    /* line-height: 1.35; */
+    /* margin-bottom: 1rem !important; */
+  }
+
+  .hero-copy .btn {
+    width: 100%;
   }
 
   .sm-w-100 {
