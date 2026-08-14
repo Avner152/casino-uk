@@ -690,36 +690,30 @@ a:hover {
   font-size: 1.15rem;
 }
 
-.cookie-wrapper {
-  padding: 1.5rem 4rem !important;
+.cookie-consent-shell {
+  max-width: 920px;
 }
-
-.cookie-wrapper span {
-  width: 50%;
-}
-
-.cookie-button {
-  font-size: 1rem;
-  padding: 0.3rem 1.2rem;
-}
-
-.cookie-accept {
+.cookie-consent-shell input[type="checkbox"]:checked {
   background-color: #ff2d55;
-  color: #000;
-  border: unset;
+  border-color: #ff2d55;
 }
 
-.cookie-reject {
-  background: unset !important;
-  border: 2px solid #ff2d55;
+.cookie-settings-list {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.35s ease,
+    opacity 0.25s ease;
 }
-.cookie-accept:hover,
-.cookie-accept:focus {
-  background-color: #ff2d55cc !important;
+
+.cookie-settings-list--open {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
-.cookie-reject:hover,
-.cookie-reject:focus {
-  border: 2px solid #ff2d554a !important;
+
+.cookie-settings-list__inner {
+  overflow: hidden;
 }
 .ribbon {
   width: 140px;
