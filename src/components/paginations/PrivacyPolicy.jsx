@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 
 export default function PrivacyPolicy() {
   const curDate = new Date();
@@ -16,128 +15,327 @@ export default function PrivacyPolicy() {
       </Helmet>
       <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="m-auto pt-3">
-          <span>
-            Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
-            , {curDate.getFullYear()}
-          </span>
+          <span>Last Updated: {curDate.getFullYear()}</span>
+          <h2 className="mt-3 mb-3">Privacy & Cookie Policy (UK GDPR)</h2>
           <p>
-            Welcome to Compare Casinos UK (accessible at{" "}
-            <Link to="/">https://www.casinochoiceuk.net /</Link>
-            ). We respect your privacy and are committed to protecting your
-            personal data. This privacy policy will inform you as to how we look
-            after your personal data when you visit our website and tell you
-            about your privacy rights and how the law protects you under the UK
-            General Data Protection Regulation (UK GDPR) and the Data Protection
-            Act 2018.
+            Website:{" "}
+            <a
+              href="https://www.casinochoiceuk.net/"
+              className="text-white"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://www.casinochoiceuk.net/
+            </a>
+          </p>
+          <p>
+            This Privacy Policy explains how ADM Ltd. (&quot;we&quot;,
+            &quot;us&quot;, &quot;our&quot;, or &quot;Data Controller&quot;)
+            collects, uses, stores, and protects your personal data when you
+            visit www.casinochoiceuk.net (the &quot;Website&quot;). This
+            document has been prepared in accordance with Article 13 and Article
+            14 of the UK General Data Protection Regulation (UK GDPR), the Data
+            Protection Act 2018 (DPA 2018), and the Privacy and Electronic
+            Communications Regulations (PECR).
           </p>
 
-          <h2>2. Who We Are</h2>
-          <p>
-            M.B.M MANAGEMENT LTD is the data controller and is responsible for
-            your personal data (collectively referred to as "the Company", "we",
-            "us" or "our" in this privacy policy). If you have any questions
-            about this privacy policy, including any requests to exercise your
-            legal rights, please contact us using the details set out below:
-          </p>
-          <ul>
-            <li>Full name of legal entity: M.B.M MANAGEMENT LTD</li>
-            <li>
-              Email address:{" "}
-              <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
-            </li>
-          </ul>
+          <div className="mt-4">
+            <h4>1. Data Controller & Contact Details</h4>
+            <p>
+              Under UK GDPR, the legal entity responsible as the Data Controller
+              for processing your personal data on this Website is:
+            </p>
+            <div className="table-responsive">
+              <table className="table table-dark table-bordered align-middle mb-0">
+                <tbody>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Data Controller
+                    </th>
+                    <td>UK Digital Media Group Ltd.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Registered Address
+                    </th>
+                    <td>100 Bishopsgate, London, EC2N 4AG, United Kingdom</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      VAT / Tax ID
+                    </th>
+                    <td>GB 349602647</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Privacy & GDPR Enquiries
+                    </th>
+                    <td>
+                      <a
+                        href="mailto:privacy@casinochoiceuk.net"
+                        className="text-white"
+                      >
+                        privacy@casinochoiceuk.net
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-          <h2>3. The Data We Collect About You</h2>
-          <p>
-            We may collect, use, store and transfer different kinds of personal
-            data about you, which we have grouped together as follows:
-          </p>
-          <ul>
-            <li>
-              <strong>Identity & Contact Data:</strong> May include your name
-              and email address if you contact us directly or subscribe to a
-              newsletter.
-            </li>
-            <li>
-              <strong>Technical Data:</strong> Includes IP address, browser type
-              and version, time zone setting, operating system, and platform.
-            </li>
-            <li>
-              <strong>Usage Data:</strong> Includes information about how you
-              use our website and which affiliate links you click.
-            </li>
-            <li>
-              <strong>Tracking Data:</strong> Information collected via cookies
-              to attribute referrals to our casino partners.
-            </li>
-          </ul>
-          <p>
-            We do not collect any Special Categories of Personal Data (race,
-            religion, health, etc.). This website is strictly for users aged
-            18+.
-          </p>
+          <div className="mt-4">
+            <h4>2. Categories of Personal Data We Collect</h4>
+            <p>
+              We process the following categories of personal data when you
+              access or interact with our Website:
+            </p>
+            <ul>
+              <li>
+                <strong>Technical & Navigation Data:</strong> Internet Protocol
+                (IP) address, browser type and version, operating system, time
+                zone settings, referring URLs, device information, and site
+                interaction logs.
+              </li>
+              <li>
+                <strong>Affiliate & Click Data:</strong> Outbound link referral
+                IDs, click timestamps, and tracking codes used to attribute
+                clicks from our Website to third-party casino operators.
+              </li>
+              <li>
+                <strong>Contact & Communication Data:</strong> Email address and
+                name provided voluntarily when submitting contact forms or
+                subscribing to newsletters.
+              </li>
+              <li>
+                <strong>Cookie & Device Identifiers:</strong> Identifiers
+                collected via necessary, analytical, and marketing cookies (see
+                Section 6).
+              </li>
+            </ul>
+          </div>
 
-          <h2>4. How We Use Your Personal Data</h2>
-          <p>We rely on the following lawful bases to process your data:</p>
-          <ul>
-            <li>
-              <strong>Consent:</strong> For cookies and marketing
-              communications.
-            </li>
-            <li>
-              <strong>Legitimate Interests:</strong> To improve our website,
-              analyze traffic, and ensure the performance of our affiliate
-              marketing business.
-            </li>
-          </ul>
+          <div className="mt-4">
+            <h4>3. Lawful Bases and Purposes of Processing</h4>
+            <p>
+              We process your personal data under the following legal bases
+              pursuant to Article 6 of the UK GDPR:
+            </p>
+            <ul>
+              <li>
+                <strong>Legitimate Interests:</strong> To operate, secure,
+                troubleshoot, and optimize our Website; to analyze aggregate
+                traffic patterns; and to prevent fraudulent activities. (Art.
+                6(1)(f) UK GDPR)
+              </li>
+              <li>
+                <strong>Consent:</strong> To place non-essential cookies (such
+                as performance and analytics tools) on your device, and to
+                deliver direct newsletter marketing. You may revoke consent at
+                any time. (Art. 6(1)(a) UK GDPR)
+              </li>
+              <li>
+                <strong>Legal Obligations:</strong> To comply with legal
+                reporting requirements or lawful demands from regulatory bodies
+                or authorities. (Art. 6(1)(c) UK GDPR)
+              </li>
+            </ul>
+          </div>
 
-          <h2>5. Affiliate Disclosure & Cookies</h2>
-          <p>
-            Compare Casino UK is an affiliate website. When you click on links
-            to online casinos on our site, a tracking cookie may be placed on
-            your device. This allows the operator to know that you were referred
-            by us. This process is essential for our business operations. You
-            can manage your cookie preferences through your browser settings or
-            our cookie banner.
-          </p>
+          <div className="mt-4">
+            <h4>4. Affiliate Recipients & Transparency</h4>
+            <p>
+              casinochoiceuk.net is an independent affiliate comparison portal
+              and does not operate real-money online casino services. Your data
+              may be disclosed to or processed by the following third-party
+              recipients acting as Data Processors (Art. 28 UK GDPR) or
+              independent Data Controllers:
+            </p>
+            <ul>
+              <li>
+                Unique tracking identifiers are passed to verify referral
+                traffic when you click on outbound partner links.
+              </li>
+              <li>
+                Google Analytics (configured with IP anonymization enabled) to
+                analyze aggregate site traffic.
+              </li>
+              <li>
+                Hosting and content delivery networks (CDNs) providing website
+                infrastructure and cybersecurity.
+              </li>
+              <li>Where required by law or judicial order.</li>
+            </ul>
+            <p>
+              We do not sell, rent, or trade your personal information to any
+              third parties.
+            </p>
+          </div>
 
-          <h2>6. Data Security</h2>
-          <p>
-            We have put in place appropriate security measures to prevent your
-            personal data from being accidentally lost, used, or accessed in an
-            unauthorized way. We limit access to your personal data to those
-            employees and partners who have a business need to know.
-          </p>
+          <div className="mt-4">
+            <h4>5. International Data Transfers</h4>
+            <p>
+              As ADM Ltd. is headquartered within the European Economic Area
+              (EEA), and our technological service providers operate globally,
+              your personal data may be transferred outside the United Kingdom.
+              Where transfers occur, we enforce recognized legal safeguards:
+            </p>
+            <ul>
+              <li>
+                Transfers to the EEA rely on the UK Government&apos;s formal
+                Adequacy Regulations for European Economic Area territories.
+              </li>
+              <li>
+                Transfers to non-adequate third countries rely on approved
+                mechanisms, including the UK International Data Transfer
+                Agreement (IDTA) or the UK Addendum to the EU Standard
+                Contractual Clauses (SCCs) pursuant to Article 46 of the UK
+                GDPR.
+              </li>
+            </ul>
+          </div>
 
-          <h2>7. Your Legal Rights</h2>
-          <p>Under the UK GDPR, you have the right to:</p>
-          <ul>
-            <li>Request access to your personal data.</li>
-            <li>Request correction or erasure of your personal data.</li>
-            <li>Object to processing of your personal data.</li>
-            <li>Request restriction of processing.</li>
-            <li>Request transfer of your data.</li>
-            <li>Withdraw consent at any time.</li>
-          </ul>
-          <p>
-            If you wish to exercise any of these rights, please contact us at{" "}
-            <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>.
-          </p>
+          <div className="mt-4">
+            <h4>6. Cookies and Tracking Technologies (PECR Compliance)</h4>
+            <p>
+              In compliance with PECR and UK GDPR, our Website operates an
+              active Cookie Management Banner that requires explicit opt-in
+              consent prior to setting non-essential cookies:
+            </p>
+            <ul>
+              <li>
+                <strong>Strictly Necessary Cookies:</strong> Essential for
+                website navigation and technical security. These cannot be
+                disabled.
+              </li>
+              <li>
+                <strong>Analytical & Performance Cookies:</strong> Used to
+                gather anonymous statistical metrics on user interaction and
+                site usage. Loaded strictly following your explicit consent.
+              </li>
+              <li>
+                <strong>Affiliate Tracking Cookies:</strong> Used to verify
+                click-through transactions with affiliate casino partners.
+              </li>
+            </ul>
+            <p>
+              You can modify or withdraw your cookie consent at any time via the
+              &quot;Cookie Preferences&quot; link in our Website footer.
+            </p>
+          </div>
 
-          <h2>8. Third-Party Links</h2>
-          <p>
-            This website includes links to third-party websites (casinos).
-            Clicking on those links may allow third parties to collect data
-            about you. We do not control these third-party websites and are not
-            responsible for their privacy statements.
-          </p>
+          <div className="mt-4">
+            <h4>7. Data Retention Periods</h4>
+            <p>
+              Personal data is retained only as long as necessary to fulfill its
+              designated processing purpose:
+            </p>
+            <ul>
+              <li>
+                <strong>Technical & Server Logs:</strong> Retained for up to 12
+                months from the date of collection.
+              </li>
+              <li>
+                <strong>Affiliate Click Identifiers:</strong> Retained for up to
+                90 days depending on partner attribution policies.
+              </li>
+              <li>
+                <strong>Newsletter & Subscriber Data:</strong> Retained until
+                you withdraw consent or click &quot;Unsubscribe&quot;.
+              </li>
+              <li>
+                <strong>Contact Form Submissions:</strong> Retained for up to 24
+                months following resolution of the query.
+              </li>
+              <li>
+                <strong>Legal & Statutory Records:</strong> Retained for up to 6
+                years in accordance with statutory requirements.
+              </li>
+            </ul>
+          </div>
 
-          <h2>9. Contact Us</h2>
-          <p>
-            If you have any questions about this Privacy Policy, please contact
-            M.B.M MANAGEMENT LTD at: <br />
-            Email: <a href="mailto:info@mbm-mang.com">info@mbm-mang.com</a>
-          </p>
+          <div className="mt-4">
+            <h4>8. Your Data Subject Rights</h4>
+            <p>
+              Under the UK GDPR, you hold the following statutory rights
+              regarding your personal data:
+            </p>
+            <ul>
+              <li>
+                <strong>Right of Access (Art. 15):</strong> Request access to a
+                copy of your personal data.
+              </li>
+              <li>
+                <strong>Right to Rectification (Art. 16):</strong> Request
+                correction of inaccurate or incomplete data.
+              </li>
+              <li>
+                <strong>Right to Erasure (Art. 17):</strong> Request erasure of
+                your personal data (&quot;Right to be Forgotten&quot;).
+              </li>
+              <li>
+                <strong>Right to Restrict Processing (Art. 18):</strong> Request
+                restriction of processing under specified conditions.
+              </li>
+              <li>
+                <strong>Right to Data Portability (Art. 20):</strong> Receive
+                your data in a structured, machine-readable format.
+              </li>
+              <li>
+                <strong>Right to Object (Art. 21):</strong> Object to processing
+                based on legitimate interests or direct marketing.
+              </li>
+              <li>
+                <strong>Right to Withdraw Consent (Art. 7(3)):</strong> Withdraw
+                consent at any time without affecting prior lawful processing.
+              </li>
+            </ul>
+            <p>
+              To exercise any of these rights, please email us at{" "}
+              <a
+                href="mailto:privacy@casinochoiceuk.net"
+                className="text-white"
+              >
+                privacy@casinochoiceuk.net
+              </a>
+              . We will respond within one calendar month.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h4>9. Age Restriction (18+ Only)</h4>
+            <p>
+              This Website is strictly intended for individuals who are 18 years
+              of age or older. We do not knowingly process data from minors. If
+              we discover that an individual under 18 has submitted personal
+              data to us, it will be deleted immediately.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h4>10. Right to Lodge a Complaint with the ICO</h4>
+            <p>
+              If you believe our processing of your personal data infringes UK
+              data protection law, you have the statutory right to file a
+              complaint with the United Kingdom supervisory authority:
+            </p>
+            <p>
+              <strong>Information Commissioner&apos;s Office (ICO)</strong>
+              <br />
+              Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, United
+              Kingdom
+              <br />
+              Helpline: 0303 123 1113 | Website:{" "}
+              <a
+                href="https://ico.org.uk"
+                className="text-white"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://ico.org.uk
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </>
