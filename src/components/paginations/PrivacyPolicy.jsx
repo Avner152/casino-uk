@@ -16,150 +16,325 @@ export default function PrivacyPolicy() {
       </Helmet>
       <div className="_w-100 text-bg-dark text-white pt-5 pb-5 mt-3 information">
         <div className="m-auto pt-3">
-          <span>
-            Last Updated: {curDate.toLocaleString("default", { month: "long" })}{" "}
-            , {curDate.getFullYear()}
-          </span>
-
+          <span>Last Updated: {curDate.getFullYear()}</span>
+          <h2 className="mt-3 mb-3">Privacy & Cookie Policy (UK GDPR)</h2>
           <p>
-            We reserve the right to change this Privacy Policy at any time, at
-            our sole and absolute discretion. When changes are made, we will
-            post the updated Privacy Policy on the Site, and the "Last Updated"
-            date will reflect the new effective date. Any access or use of the
-            Site following this date indicates your consent to and acceptance of
-            the updated Privacy Policy. For significant changes, we will provide
-            prominent notice, such as a notification on the Site, at least seven
-            (7) days before the changes become effective. In such cases, the
-            changes will be effective seven (7) days after the notification is
-            published.
+            Website:{" "}
+            <a
+              href="https://www.ukcasinocompare.com/"
+              className="text-white"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://www.ukcasinocompare.com/
+            </a>
           </p>
           <p>
-            <strong>Terms of Use</strong>: This Privacy Policy is an integral
-            part of the Site's Terms of Use ("Terms"). Any capitalized term not
-            defined in this Privacy Policy will have the meaning given to it in
-            the Terms.
+            This Privacy Policy explains how ADM Ltd. (&quot;we&quot;,
+            &quot;us&quot;, &quot;our&quot;, or &quot;Data Controller&quot;)
+            collects, uses, stores, and protects your personal data when you
+            visit www.ukcasinocompare.com (the &quot;Website&quot;). This
+            document has been prepared in accordance with Article 13 and Article
+            14 of the UK General Data Protection Regulation (UK GDPR), the Data
+            Protection Act 2018 (DPA 2018), and the Privacy and Electronic
+            Communications Regulations (PECR).
           </p>
 
-          <div>
-            <h4>Our Legal Bases for Processing Personal Data:</h4>
+          <div className="mt-4">
+            <h4>1. Data Controller & Contact Details</h4>
             <p>
-              We process and use Personal Information in compliance with data
-              protection laws. Our legal grounds for processing your Personal
-              Information typically include:
+              Under UK GDPR, the legal entity responsible as the Data Controller
+              for processing your personal data on this Website is:
+            </p>
+            <div className="table-responsive">
+              <table className="table table-dark table-bordered align-middle mb-0">
+                <tbody>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Data Controller
+                    </th>
+                    <td>UK Digital Media Group Ltd.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Registered Address
+                    </th>
+                    <td>100 Bishopsgate, London, EC2N 4AG, United Kingdom</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      VAT / Tax ID
+                    </th>
+                    <td>GB 349602647</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-light">
+                      Privacy & GDPR Enquiries
+                    </th>
+                    <td>
+                      <a
+                        href="mailto:privacy@ukcasinocompare.com"
+                        className="text-white"
+                      >
+                        privacy@ukcasinocompare.com
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <h4>2. Categories of Personal Data We Collect</h4>
+            <p>
+              We process the following categories of personal data when you
+              access or interact with our Website:
             </p>
             <ul>
               <li>
-                <strong>Performance of a Contract</strong>: By using the Site,
-                you request us to provide services in accordance with our Terms
-                of Use, which requires processing some of your Personal
-                Information (e.g., your IP address).
+                <strong>Technical & Navigation Data:</strong> Internet Protocol
+                (IP) address, browser type and version, operating system, time
+                zone settings, referring URLs, device information, and site
+                interaction logs.
               </li>
               <li>
-                <strong>Legitimate Interests</strong>: We may use your Personal
-                Information for legitimate business purposes, such as operating,
-                improving, and promoting the Services, customizing your
-                experience, conducting analytics, and ensuring Site security.
+                <strong>Affiliate & Click Data:</strong> Outbound link referral
+                IDs, click timestamps, and tracking codes used to attribute
+                clicks from our Website to third-party casino operators.
               </li>
               <li>
-                <strong>Legal Obligations</strong>: In some cases, processing
-                your Personal Information is necessary to comply with regulatory
-                obligations or legal requirements (e.g., addressing complaints
-                from users or authorities).
+                <strong>Contact & Communication Data:</strong> Email address and
+                name provided voluntarily when submitting contact forms or
+                subscribing to newsletters.
               </li>
               <li>
-                <strong>Consent</strong>: When you provide or submit certain
-                Personal Information to use specific Services.
+                <strong>Cookie & Device Identifiers:</strong> Identifiers
+                collected via necessary, analytical, and marketing cookies (see
+                Section 6).
               </li>
             </ul>
           </div>
 
-          <div>
-            <h4>Information We Collect</h4>
+          <div className="mt-4">
+            <h4>3. Lawful Bases and Purposes of Processing</h4>
             <p>
-              When you visit the Site or use the Services, we may collect
-              certain information in the following ways:
-            </p>
-          </div>
-          <div>
-            <h4>Information You Provide to Us</h4>
-            <p>
-              Some Services require you to provide Personal Information to use
-              them. This may include newsletters, promotional material, and
-              forms, subject to your specific and active consent. Personal
-              Information includes data that can personally identify an
-              individual, such as name, email address, phone number, home
-              address, etc. In some jurisdictions, your IP address may also be
-              considered Personal Information.
-            </p>
-          </div>
-
-          <div>
-            <h4>Third-Party Forms and Services</h4>
-            <p>
-              The Site lists, rates, and compares various third-party
-              businesses, brands, and commercial entities ("Partners") and their
-              products/services ("Products"). We may offer you services and
-              Products from Partners via an online form, which you can fill out
-              upon your consent. If you seek more information or want to pursue
-              a transaction with a Partner, you may be directed to a Partner's
-              Landing Page, where you might need to submit Personal Information
-              ("Landing Page Info"). This information is collected directly by
-              the Partner, and their privacy policy will apply.
-            </p>
-          </div>
-
-          <div>
-            <h4>Contact Us</h4>
-            <p>
-              If you contact us via a form, email, feedback feature, or other
-              means, you may need to provide Personal Information, such as your
-              name and email address. This information, along with the content
-              of your request, will be used to process and address your request
-              and for our legitimate business purposes.
-            </p>
-          </div>
-          <div>
-            <h4>Blogs, Newsletters, Surveys, and Promotions</h4>
-            <p>
-              The Site may contain blogs, reviews, and articles about our
-              services, Partners, Products, and relevant markets. You may
-              subscribe to newsletters, participate in surveys, and engage in
-              promotional activities, which may require providing Personal
-              Information. Your submission of information will be governed by
-              this Privacy Policy and the third party’s privacy policy.
-            </p>
-          </div>
-
-          <div>
-            <h4>Information We Collect from You</h4>
-            <p>
-              We collect information about your use of the Services and
-              interactions with the Site, including:
+              We process your personal data under the following legal bases
+              pursuant to Article 6 of the UK GDPR:
             </p>
             <ul>
               <li>
-                Device Information: Information such as device type, operating
-                system, language, geographic location, and time zone.
+                <strong>Legitimate Interests:</strong> To operate, secure,
+                troubleshoot, and optimize our Website; to analyze aggregate
+                traffic patterns; and to prevent fraudulent activities. (Art.
+                6(1)(f) UK GDPR)
               </li>
               <li>
-                Interactions and Usage: Data about your interaction with the
-                Services, including URLs, actions, timestamps, and page views.
+                <strong>Consent:</strong> To place non-essential cookies (such
+                as performance and analytics tools) on your device, and to
+                deliver direct newsletter marketing. You may revoke consent at
+                any time. (Art. 6(1)(a) UK GDPR)
               </li>
               <li>
-                Log Files: Information collected through server log files and
-                tracking technologies, including IP addresses.
-              </li>
-              <li>
-                Cookies and Similar Technologies: The Site may use cookies and
-                other web tracking technologies to store preferences and track
-                Site usage. Refer to our Cookie Policy for more details.
+                <strong>Legal Obligations:</strong> To comply with legal
+                reporting requirements or lawful demands from regulatory bodies
+                or authorities. (Art. 6(1)(c) UK GDPR)
               </li>
             </ul>
           </div>
-          <div className="mt-3">
+
+          <div className="mt-4">
+            <h4>4. Affiliate Recipients & Transparency</h4>
             <p>
-              For any further details or specific queries, please contact us
-              directly.
+              ukcasinocompare.com is an independent affiliate comparison portal
+              and does not operate real-money online casino services. Your data
+              may be disclosed to or processed by the following third-party
+              recipients acting as Data Processors (Art. 28 UK GDPR) or
+              independent Data Controllers:
+            </p>
+            <ul>
+              <li>
+                Unique tracking identifiers are passed to verify referral
+                traffic when you click on outbound partner links.
+              </li>
+              <li>
+                Google Analytics (configured with IP anonymization enabled) to
+                analyze aggregate site traffic.
+              </li>
+              <li>
+                Hosting and content delivery networks (CDNs) providing website
+                infrastructure and cybersecurity.
+              </li>
+              <li>Where required by law or judicial order.</li>
+            </ul>
+            <p>
+              We do not sell, rent, or trade your personal information to any
+              third parties.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h4>5. International Data Transfers</h4>
+            <p>
+              As ADM Ltd. is headquartered within the European Economic Area
+              (EEA), and our technological service providers operate globally,
+              your personal data may be transferred outside the United Kingdom.
+              Where transfers occur, we enforce recognized legal safeguards:
+            </p>
+            <ul>
+              <li>
+                Transfers to the EEA rely on the UK Government&apos;s formal
+                Adequacy Regulations for European Economic Area territories.
+              </li>
+              <li>
+                Transfers to non-adequate third countries rely on approved
+                mechanisms, including the UK International Data Transfer
+                Agreement (IDTA) or the UK Addendum to the EU Standard
+                Contractual Clauses (SCCs) pursuant to Article 46 of the UK
+                GDPR.
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <h4>6. Cookies and Tracking Technologies (PECR Compliance)</h4>
+            <p>
+              In compliance with PECR and UK GDPR, our Website operates an
+              active Cookie Management Banner that requires explicit opt-in
+              consent prior to setting non-essential cookies:
+            </p>
+            <ul>
+              <li>
+                <strong>Strictly Necessary Cookies:</strong> Essential for
+                website navigation and technical security. These cannot be
+                disabled.
+              </li>
+              <li>
+                <strong>Analytical & Performance Cookies:</strong> Used to
+                gather anonymous statistical metrics on user interaction and
+                site usage. Loaded strictly following your explicit consent.
+              </li>
+              <li>
+                <strong>Affiliate Tracking Cookies:</strong> Used to verify
+                click-through transactions with affiliate casino partners.
+              </li>
+            </ul>
+            <p>
+              You can modify or withdraw your cookie consent at any time via the
+              &quot;Cookie Preferences&quot; link in our Website footer.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h4>7. Data Retention Periods</h4>
+            <p>
+              Personal data is retained only as long as necessary to fulfill its
+              designated processing purpose:
+            </p>
+            <ul>
+              <li>
+                <strong>Technical & Server Logs:</strong> Retained for up to 12
+                months from the date of collection.
+              </li>
+              <li>
+                <strong>Affiliate Click Identifiers:</strong> Retained for up to
+                90 days depending on partner attribution policies.
+              </li>
+              <li>
+                <strong>Newsletter & Subscriber Data:</strong> Retained until
+                you withdraw consent or click &quot;Unsubscribe&quot;.
+              </li>
+              <li>
+                <strong>Contact Form Submissions:</strong> Retained for up to 24
+                months following resolution of the query.
+              </li>
+              <li>
+                <strong>Legal & Statutory Records:</strong> Retained for up to 6
+                years in accordance with statutory requirements.
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <h4>8. Your Data Subject Rights</h4>
+            <p>
+              Under the UK GDPR, you hold the following statutory rights
+              regarding your personal data:
+            </p>
+            <ul>
+              <li>
+                <strong>Right of Access (Art. 15):</strong> Request access to a
+                copy of your personal data.
+              </li>
+              <li>
+                <strong>Right to Rectification (Art. 16):</strong> Request
+                correction of inaccurate or incomplete data.
+              </li>
+              <li>
+                <strong>Right to Erasure (Art. 17):</strong> Request erasure of
+                your personal data (&quot;Right to be Forgotten&quot;).
+              </li>
+              <li>
+                <strong>Right to Restrict Processing (Art. 18):</strong> Request
+                restriction of processing under specified conditions.
+              </li>
+              <li>
+                <strong>Right to Data Portability (Art. 20):</strong> Receive
+                your data in a structured, machine-readable format.
+              </li>
+              <li>
+                <strong>Right to Object (Art. 21):</strong> Object to processing
+                based on legitimate interests or direct marketing.
+              </li>
+              <li>
+                <strong>Right to Withdraw Consent (Art. 7(3)):</strong> Withdraw
+                consent at any time without affecting prior lawful processing.
+              </li>
+            </ul>
+            <p>
+              To exercise any of these rights, please email us at{" "}
+              <a
+                href="mailto:privacy@ukcasinocompare.com"
+                className="text-white"
+              >
+                privacy@ukcasinocompare.com
+              </a>
+              . We will respond within one calendar month.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h4>9. Age Restriction (18+ Only)</h4>
+            <p>
+              This Website is strictly intended for individuals who are 18 years
+              of age or older. We do not knowingly process data from minors. If
+              we discover that an individual under 18 has submitted personal
+              data to us, it will be deleted immediately.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h4>10. Right to Lodge a Complaint with the ICO</h4>
+            <p>
+              If you believe our processing of your personal data infringes UK
+              data protection law, you have the statutory right to file a
+              complaint with the United Kingdom supervisory authority:
+            </p>
+            <p>
+              <strong>Information Commissioner&apos;s Office (ICO)</strong>
+              <br />
+              Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, United
+              Kingdom
+              <br />
+              Helpline: 0303 123 1113 | Website:{" "}
+              <a
+                href="https://ico.org.uk"
+                className="text-white"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://ico.org.uk
+              </a>
             </p>
           </div>
         </div>
