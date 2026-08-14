@@ -1,4 +1,3 @@
-import { Button } from "react-bootstrap";
 import { setCookie } from "../json/helpers";
 import { observer } from "mobx-react";
 import { Link } from "react-router-dom";
