@@ -642,37 +642,30 @@ a:hover {
   padding: 0.3rem 1.2rem;
   font-size: 1.15rem;
 }
-
-.cookie-wrapper {
-  padding: 1.5rem 4rem !important;
+.cookie-consent-shell {
+  max-width: 920px;
+}
+.cookie-consent-shell input[type="checkbox"]:checked {
+  background-color: #58cd36;
+  border-color: #58cd36;
 }
 
-.cookie-wrapper span {
-  width: 50%;
+.cookie-settings-list {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.35s ease,
+    opacity 0.25s ease;
 }
 
-.cookie-button {
-  font-size: 1rem;
-  padding: 0.3rem 1.2rem;
+.cookie-settings-list--open {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
 
-.cookie-accept {
-  background-color: #ffd72a;
-  color: #000;
-  border: unset;
-}
-
-.cookie-reject {
-  background: unset !important;
-  border: 2px solid #ffd72a;
-}
-.cookie-accept:hover,
-.cookie-accept:focus {
-  background-color: #ffd72acc !important;
-}
-.cookie-reject:hover,
-.cookie-reject:focus {
-  border: 2px solid #ffd72a4a !important;
+.cookie-settings-list__inner {
+  overflow: hidden;
 }
 .ribbon {
   width: 140px;
