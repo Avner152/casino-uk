@@ -158,13 +158,13 @@ const App = observer(() => {
             >
               ADVERTORIAL
             </p>
-            <aside className="fs-7 text-white _bg-black _py-1 marker bg-opacity-50 lh-1 text-center w-50 sm-w-100 mx-auto ">
+            <small className="fs-7 text-white _bg-black py-1 marker bg-opacity-50 lh-1 text-center w-50 sm-w-100 mx-auto ">
               We receive advertising fees from the brands we review, which may
               influence our rankings and scores. We do not compare every service
               provider on the market Advertiser Disclosure 18+."T&C" apply - the
               applicable operator's terms apply for each offer below and free
               offers may include additional terms.
-            </aside>
+            </small>
           </>
         )}
         <Intro />

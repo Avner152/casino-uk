@@ -67,6 +67,10 @@ body {
   min-height: 50vh !important;
 }
 
+.mobile-header > div > div {
+  background-color: unset !important;
+}
+
 .desktop-header {
   position: fixed !important;
   background-color: #ffffffee;
@@ -858,9 +862,6 @@ a:hover {
     max-width: 140px;
     font-weight: 700;
     /* text-align: center; */
-  }
-  .nav {
-    gap: 1rem !important;
   }
 
   .params {

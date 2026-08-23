@@ -30,7 +30,7 @@ const Header = observer(() => {
         } fs-2`}
       >
         {isDesktop ? (
-          <div className="d-flex align-items-center justify-content-between w-100">
+          <div className="d-flex align-items-center justify-content-between w-75 sm-w-100 mx-auto">
             <NavLink
               to={`/${myStore.product === "betting" ? "special/sport" : ""}${
                 window.location.search
@@ -44,12 +44,12 @@ const Header = observer(() => {
                 className="mb-2"
               />
             </NavLink>
-            <Nav className="fs-6 gap-3">
+            <Nav className="fs-7 gap-2">
               {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
                   key={i}
                   onClick={() => myStore.updateInfoContent(item.name)}
-                  className="my-nav text-black fw-bold"
+                  className="my-nav text-black fw-medium"
                   to={`${
                     myStore.product === "betting" ? "/special/sport" : ""
                   }${item.url}${window.location.search}`}
