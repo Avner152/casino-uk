@@ -13,7 +13,7 @@ export default function CookiePolicy() {
         <meta name="description" content={meta.description} />
       </Helmet>
       <div className="text-bg-dark text-white pt-5 pb-5 mb-3 mt-3 information">
-        <span className="fw-bold">Last Updated: December 2026</span>
+        <span className="fw-bold">Last Updated: January 2026</span>
         <div className="m-auto">
           <h1>Cookie Policy</h1>
 
@@ -51,7 +51,7 @@ export default function CookiePolicy() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>top-casino-consent</td>
+                    <td>casino-consent</td>
                     <td>ukcasinoselect.com</td>
                     <td>
                       Remembers that you have seen and dismissed our cookie
