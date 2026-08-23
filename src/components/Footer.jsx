@@ -67,8 +67,8 @@ const Footer = observer(() => {
             >
               <img
                 src={logo}
-                width={220}
-                height={110}
+                width={250}
+                height={90}
                 alt="logo"
                 className="rounded-4"
               />
@@ -144,7 +144,7 @@ const Footer = observer(() => {
       {
         <div className="sticky">
           <div className="p-3 m-auto text-white text-center">
-            {curDate.getFullYear()} CasinoCompareUK. All rights reserved. All
+            {curDate.getFullYear()} UKCasinoSelect. All rights reserved. All
             trademarks are the property of their respective owners.
           </div>
         </div>

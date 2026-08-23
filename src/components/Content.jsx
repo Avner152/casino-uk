@@ -5,7 +5,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose CasinoCompareUK.net?",
+    h2: "Why Choose UKCasinoSelect.com?",
     ul: [
       "Expertly Curated Selection - We handpick only top-rated online casinos based on safety, game variety, and user experience, ensuring you enjoy a premium, worry-free gaming experience.",
       "Exclusive Bonuses - Take advantage of generous welcome bonuses, no-deposit offers, free spins, and loyalty rewards designed for UK players.",
@@ -81,11 +81,11 @@ export default function Content() {
   return (
     <>
       <h1 className="fw-bold text-white">
-        Welcome to CasinoCompareUK! - The ultimate destination for discovering
+        Welcome to UKCasinoSelect! - The ultimate destination for discovering
         the top UK online casinos of {curDate.getFullYear()}
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At CasinoCompareUK.net,
+        Ready to experience the thrill of online gaming? At UKCasinoSelect.com,
         we bring you the most comprehensive and up-to-date guide to the best UK
         online casinos. Whether you're a seasoned player or just starting your
         online casino journey, our carefully curated platform is here to help

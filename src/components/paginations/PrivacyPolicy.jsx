@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 export default function PrivacyPolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Privacy Policy | CasinoCompareUK",
+    title: "Privacy Policy | UKCasinoSelect",
     description:
-      "Review the Privacy Policy for CasinoCompareUK. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
+      "Review the Privacy Policy for UKCasinoSelect. Learn how we collect, use, and protect your personal information, including data usage and third-party services",
   };
   return (
     <>
@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
           </span>
           <p>
             Welcome to Casino Compare UK (accessible at{" "}
-            <Link to="/">https://www.casinocompareuk.net/</Link>
+            <Link to="/">https://www.ukcasinoselect.com/</Link>
             ). We respect your privacy and are committed to protecting your
             personal data. This privacy policy will inform you as to how we look
             after your personal data when you visit our website and tell you

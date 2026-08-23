@@ -76,8 +76,8 @@ const Header = observer(() => {
               <img
                 className="p-1"
                 src={logo}
-                width={180}
-                height={100}
+                width={220}
+                height={90}
                 alt="logo"
               />
             </NavLink>
@@ -103,9 +103,9 @@ const Header = observer(() => {
                 to={`/${myStore.product === "betting" ? "special/sport" : ""}${
                   window.location.search
                 }`}
-                className="ms-1 mt-2"
+                className="ms-1 mt-2_"
               >
-                <img alt="logo" src={logo} width={130} height={70} />
+                <img alt="logo" src={logo} width={200} height={70} />
               </NavLink>
               {/*  */}
 

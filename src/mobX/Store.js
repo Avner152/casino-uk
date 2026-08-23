@@ -1,4 +1,4 @@
-import { observable, action, makeObservable } from "mobx";
+import { makeAutoObservable } from "mobx";
 
 class MyStore {
   type = "blanca";
@@ -11,21 +11,7 @@ class MyStore {
   ribbonList = [];
 
   constructor() {
-    makeObservable(this, {
-      brands: observable,
-      product: observable,
-      updateProduct: action,
-      list: observable,
-      updateList: action,
-      type: observable,
-      updateType: action,
-      content: observable,
-      updateContent: action,
-      infoContent: observable,
-      updateInfoContent: action,
-      ribbonList: observable,
-      updateRibbons: action,
-    });
+    makeAutoObservable(this);
   }
   updateList(newList) {
     this.list = [...newList];

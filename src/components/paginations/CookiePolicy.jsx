@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet";
 
 export default function CookiePolicy() {
   const meta = {
-    title: "Cookie Policy | CasinoCompareUK",
+    title: "Cookie Policy | UKCasinoSelect",
     description:
-      "Read our Cookie Policy for `CasinoCompareUK`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
+      "Read our Cookie Policy for `UKCasinoSelect`. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site",
   };
   return (
     <>
@@ -52,7 +52,7 @@ export default function CookiePolicy() {
                 <tbody>
                   <tr>
                     <td>top-casino-consent</td>
-                    <td>casinocompareuk.net</td>
+                    <td>ukcasinoselect.com</td>
                     <td>
                       Remembers that you have seen and dismissed our cookie
                       notice so it does not appear again on every visit.

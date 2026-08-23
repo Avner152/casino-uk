@@ -7,7 +7,7 @@ import myStore from "../mobX/Store";
 const CookieConsent = observer(({ setCookieStatus }) => {
   const cookieHandler = () => {
     // console.log(accepted);
-    setCookie("uk-consent", true, 365, "casinocompareuk.net");
+    setCookie("uk-consent", true, 365, "ukcasinoselect.com");
     setCookieStatus(true);
   };
 
