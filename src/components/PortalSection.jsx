@@ -31,9 +31,7 @@ const PortalSection = observer(({ captchaToken }) => {
 
   useEffect(() => {
     if (list.length) return;
-
     const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/birmingham/prd?product=${myStore.product}`;
-    // const ENDPOINT = `http://localhost:5001/birmingham/prd?product=${myStore.product}`;
 
     const headers = { segment: "viral" };
 
@@ -55,12 +53,15 @@ const PortalSection = observer(({ captchaToken }) => {
           { headers },
         )
         .then((res) => {
-          // console.log(res.data.list);
-
-          // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen),
+            res.data.list[0].brands
+              .filter((brand) => !brand.isFrozen)
+              .filter(
+                (b) =>
+                  b.device.startsWith("A") ||
+                  (b.device.startsWith("M") && isMobile),
+              ),
           );
 
           myStore.updateRibbons(res.data.ribbons || []);
