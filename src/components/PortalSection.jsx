@@ -14,6 +14,9 @@ import CasinoItemMobilePlaceholder from "./CasinoItemMobilePlaceholder";
 import CasinoItemPlaceholder from "./CasinoItemPlaceholder";
 
 const PortalSection = observer(({ captchaToken }) => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
   const list = toJS(myStore.list);
   captchaToken = true;
 
@@ -56,7 +59,7 @@ const PortalSection = observer(({ captchaToken }) => {
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
             res.data.list[0].brands
-              .filter((brand) => !brand.isFrozen)
+              // .filter((brand) => !brand.isFrozen)
               .filter(
                 (b) =>
                   b.device.startsWith("A") ||
@@ -74,7 +77,7 @@ const PortalSection = observer(({ captchaToken }) => {
 
     fetchIp();
     userIp && fetchData();
-  }, [search, list.length, userIp]);
+  }, [search, list.length, userIp, isMobile]);
 
   let homepageIcons = importImages(
     require.context("../assets/homepage-icons", false, /\.(svg)$/),
@@ -98,9 +101,6 @@ const PortalSection = observer(({ captchaToken }) => {
       text: "Advertiser Disclosure",
     },
   ];
-
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <div className="min-vh-75">
