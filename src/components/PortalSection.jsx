@@ -59,7 +59,7 @@ const PortalSection = observer(({ captchaToken }) => {
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
             res.data.list[0].brands
-              // .filter((brand) => !brand.isFrozen)
+              .filter((brand) => !brand.isFrozen)
               .filter(
                 (b) =>
                   b.device.startsWith("A") ||
