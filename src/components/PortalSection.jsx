@@ -12,19 +12,20 @@ import { importImages } from "../App";
 import { appendQueryParams } from "../json/helpers";
 
 const PortalSection = observer(({ captchaToken }) => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
   const list = toJS(myStore.list);
   captchaToken = true;
 
   const location = useLocation();
   const [searchParams] = useSearchParams();
-  // const mId = searchParams.get("msclkid");
 
   const search =
     captchaToken !== undefined && !captchaToken
       ? "special-and-hard-coded"
       : location.search;
 
-  // const search = "";
   const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
@@ -52,12 +53,15 @@ const PortalSection = observer(({ captchaToken }) => {
           { headers },
         )
         .then((res) => {
-          // console.log(res.data);
-
-          // setList(res.data.list[0].brands);
           myStore.updateType(res.data.list[0].type);
           myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen),
+            res.data.list[0].brands
+              .filter((brand) => !brand.isFrozen)
+              .filter(
+                (b) =>
+                  b.device.startsWith("A") ||
+                  (b.device.startsWith("M") && isMobile),
+              ),
           );
           myStore.updateRibbons(res.data.ribbons || []);
 
@@ -69,7 +73,7 @@ const PortalSection = observer(({ captchaToken }) => {
 
     fetchIp();
     userIp && myStore.product && fetchData();
-  }, [search, list.length, userIp]);
+  }, [search, list.length, userIp, isMobile]);
 
   let homepageIcons = importImages(
     require.context("../assets/homepage-icons", false, /\.(svg)$/),
@@ -93,20 +97,6 @@ const PortalSection = observer(({ captchaToken }) => {
       text: "Advertiser Disclosure",
     },
   ];
-
-  // const images = importImages(
-  //   require.context("../assets/logos", false, /\.(png|jpe?g|svg)$/)
-  // );
-
-  // const importedIcons = importImages(
-  //   require.context("../assets/icons", false, /\.(svg)$/)
-  // );
-
-  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <div className="min-vh-75">
