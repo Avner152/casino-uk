@@ -19,9 +19,7 @@ h1 {
 
 body {
   font-size: 14px;
-  background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
-
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
@@ -30,7 +28,16 @@ body {
   color: #000 !important;
 }
 
+body:has(.hero-casino) {
+  background-color: #13161f !important;
+}
+
+body:has(.hero-betting) {
+  background-color: #000 !important;
+}
+
 .hero {
+  margin-top: 150px;
   height: 650px;
 }
 
