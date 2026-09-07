@@ -165,27 +165,25 @@ const App = observer(() => {
       {!isDesktop && (
         <div className={`${myStore.product}-container p-wrapper`} />
       )}
-      {myStore.type.startsWith("b") && (
-        <div className="bg-white-fade w-100 text-white bg-gradient position-relative start-0 px-3 sm-p-0 border-bottom">
-          <p
-            style={{ paddingTop: isDesktop ? 70 : 64 }}
-            className="text-start pb-0 mb-0 fs-4"
-          >
-            ADVERTORIAL
-          </p>
-          <aside className="fs-7 bg-dark black py-1 bg-opacity-50 lh-1 text-start px-2">
-            We receive advertising fees from the brands we review, which may
-            influence our rankings and scores. We do not compare every service
-            provider on the market Advertiser Disclosure 18+."T&C" apply - the
-            applicable operator's terms apply for each offer below and free
-            offers may include additional terms.
-          </aside>
-        </div>
-      )}
 
-      <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
-        <Intro />
-        <MyRoutes />
+      <div style={{ paddingTop: isDesktop ? 70 : 64 }}>
+        {myStore.type.startsWith("b") && (
+          <div className="bg-white-fade w-100 text-white bg-gradient position-relative start-0 px-3 sm-p-0 border-bottom">
+            <p className="text-start pb-0 mb-0 fs-4">ADVERTORIAL</p>
+            <aside className="fs-7 bg-dark black py-1 bg-opacity-50 lh-1 text-start px-2">
+              We receive advertising fees from the brands we review, which may
+              influence our rankings and scores. We do not compare every service
+              provider on the market Advertiser Disclosure 18+."T&C" apply - the
+              applicable operator's terms apply for each offer below and free
+              offers may include additional terms.
+            </aside>
+          </div>
+        )}
+
+        <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
+          <Intro />
+          <MyRoutes />
+        </div>
       </div>
       <Footer />
 
