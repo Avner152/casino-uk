@@ -70,7 +70,7 @@ const Footer = observer(() => {
                 width={200}
                 height={70}
                 alt="logo"
-                className="mb-2 bg-white p-2 rounded-3"
+                className="mb-2 p-2 rounded-3"
               />
             </Link>
             {isDesktop && (

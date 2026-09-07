@@ -64,10 +64,10 @@ const Header = observer(() => {
               >
                 <img
                   alt="logo"
-                  className="bg-white rounded-3 p-2"
+                  className="rounded-3 p-2"
                   src={logo}
                   width={150}
-                  height={45}
+                  height={65}
                 />
               </NavLink>
               {/*  */}

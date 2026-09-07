@@ -85,7 +85,7 @@ body:has(.hero-betting) {
 
 .desktop-header {
   position: fixed !important;
-  background-color: #fff;
+  backdrop-filter: blur(12px);
   padding: 0 50px;
   z-index: 9999;
 }
