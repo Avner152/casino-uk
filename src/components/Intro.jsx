@@ -83,7 +83,7 @@ const Intro = observer(() => {
         >
           <div>
             <h1
-              className={`intro-title bg-dark bg-opacity-50 px-4 py-1 fw-bold w-${isDesktop ? 75 : 100}`}
+              className={`intro-title bg-dark bg-opacity-50 px-4 mt-${myStore.type.startsWith("bl") ? 0 : 5} py-1 fw-bold w-${isDesktop ? 75 : 100}`}
             >
               {myStore.type.startsWith("bl")
                 ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
@@ -100,7 +100,7 @@ const Intro = observer(() => {
                   )}
             </h1>
           </div>
-          {isDesktop && (
+          {isDesktop && myStore.product.startsWith("c") && (
             <div>
               <img
                 className="cards"

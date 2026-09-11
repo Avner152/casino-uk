@@ -15,6 +15,7 @@ import chips from "./assets/golden-chips.png";
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
 import { autorun } from "mobx";
+import hero from "./assets/hero.jpg";
 
 export function importImages(r) {
   let images = {};
@@ -26,10 +27,7 @@ export function importImages(r) {
 
 const App = observer(() => {
   const [searchParams] = useSearchParams();
-  // const mId = searchParams.get("msclkid");
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const [captchaToken, setCaptchaToken] = useState(null);
 
   const [showPopOut, setShowPopOut] = useState(false);
   const [initialList, setInitialList] = useState([]);
@@ -154,7 +152,13 @@ const App = observer(() => {
   return (
     <div className={`${myStore.product}-wrapper`}>
       {!isDesktop && <div className={`${myStore.product}-container`} />}
-
+      {myStore.product === "betting" && (
+        <img
+          className="hero position-absolute z-n1 end-0"
+          src={hero}
+          alt="hero"
+        />
+      )}
       <Header />
       <div>
         <br />

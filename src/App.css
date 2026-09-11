@@ -21,7 +21,7 @@ body {
   font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
-  background-image: url(./assets/bg2.webp);
+  background-image: unset;
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
@@ -30,7 +30,17 @@ body {
   color: #000 !important;
 }
 
-body .betting-wrapper {
+.hero {
+  max-height: 750px;
+  z-index: 9999;
+}
+
+body:has(.casino-wrapper) {
+  background-image: url(./assets/bg2.webp);
+}
+
+body:has(.betting-wrapper) {
+  background: #000 !important;
 }
 
 .w-60 {
