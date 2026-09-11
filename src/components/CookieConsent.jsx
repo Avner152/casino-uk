@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const CookieConsent = observer(({ setCookieStatus }) => {
   const cookieHandler = () => {
-    // console.log(accepted);
     setCookie("uk-consent", true, 365, "ukcasinocompare.net");
     setCookieStatus(true);
   };

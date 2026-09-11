@@ -26,7 +26,6 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
           <img alt={item.name} width={210} height={80} src={item.image} />
         </div>
         <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
-          {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
           <span className="text-center">Welcome Bonus:</span>
           <h1 className="golden text-center">{item.title}</h1>
         </div>

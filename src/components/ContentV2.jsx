@@ -11,8 +11,6 @@ const ContentV2 = observer(() => {
     .filter((item) => item.sortOrder)
     .sort((a, b) => a.sortOrder - b.sortOrder);
 
-  // console.log(content);
-
   return (
     <>
       <h1 className="fw-bold">
