@@ -21,7 +21,6 @@ body {
   font-size: 14px;
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
-  /* background-image: url(./assets/bg.webp); */
   background-image: url(./assets/bg2.webp);
   background-size: 100%;
   background-attachment: fixed;
@@ -29,6 +28,9 @@ body {
   background-repeat: no-repeat;
   position: relative;
   color: #000 !important;
+}
+
+body .betting-wrapper {
 }
 
 .w-60 {

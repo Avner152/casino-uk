@@ -75,31 +75,8 @@ const App = observer(() => {
     return () => dispose(); // cleanup
   }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
-
-  return (
-    <div>
+  const raisePopOut = () => {
+    return (
       <Modal
         className="bg-transparent"
         centered
@@ -171,8 +148,12 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
-      {/* {!captchaToken && TurnstileWidget()} */}
-      {!isDesktop && <div className="casino-container" />}
+    );
+  };
+
+  return (
+    <div className={`${myStore.product}-wrapper`}>
+      {!isDesktop && <div className={`${myStore.product}-container`} />}
 
       <Header />
       <div>
@@ -200,6 +181,7 @@ const App = observer(() => {
       <Footer />
 
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
+      {showPopOut && raisePopOut()}
     </div>
   );
 });
