@@ -11,19 +11,19 @@ export default function TableGames() {
 
   const rich = {
     id: "par-1",
-    h4: "✅ Rich History and Cultural Significance",
+    h4: "Rich History and Cultural Significance",
     p: "From their roots in ancient civilizations to their rise in elegant British gaming houses, table games have a storied past that continues to inspire. Rediscover the tradition and sophistication that make these games a cornerstone of the UK casino industry.",
   };
 
   const unmatched = {
     id: "par-2",
-    h4: "✅ Unmatched Variety and Thrill",
+    h4: "Unmatched Variety and Thrill",
     p: "Whether you're spinning the roulette wheel, strategizing in blackjack, or bluffing your way to a poker victory, table games offer something for every player. Online platforms now bring these experiences to life with live dealers, HD streaming, and customizable tables for all preferences.",
   };
 
   const future = {
     id: "par-3",
-    h4: "✅ Future-Focused Entertainment",
+    h4: "Future-Focused Entertainment",
     p: "The future of table games is brighter than ever. Virtual and augmented reality are transforming gameplay, while AI tools are enhancing strategies for both novices and pros. Safe, responsible gaming remains a priority, ensuring that the thrill of the game is always balanced with player protection.",
   };
 

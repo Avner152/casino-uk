@@ -25,7 +25,7 @@ export default function Content() {
         </p>
 
         <ul className="list-unstyled">
-          <li>Secure platforms with SSL encryption 🔐</li>
+          <li>Secure platforms with SSL encryption</li>
           <li>Transparent operator information</li>
           <li>Strong reputation among players</li>
         </ul>

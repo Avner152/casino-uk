@@ -10,7 +10,7 @@ export default function LiveGames() {
 
   const why = {
     id: "par-1",
-    h4: "🎰 Why Are Slot Games So Popular in the UK?",
+    h4: "Why Are Slot Games So Popular in the UK?",
     ul: [
       "Variety of Themes: Slots offer a wide range of themes, from ancient civilizations to fantasy worlds, ensuring that every player finds a game that suits their style.",
       "Huge Jackpots: Many slot games feature progressive jackpots, where the prize pool grows with every spin, offering the chance to win life-changing amounts.",
@@ -20,7 +20,7 @@ export default function LiveGames() {
 
   const popularGames = {
     id: "par-2",
-    h4: "🌟 Popular Slot Games in UK Casinos",
+    h4: "Popular Slot Games in UK Casinos",
     ul: [
       "Classic Slots: For those who love nostalgia, classic fruit machines offer straightforward gameplay with big win potential.",
       "Video Slots: Modern video slots bring exciting features like bonus rounds, free spins, and multipliers. Games like Starburst and Gonzo's Quest continue to captivate UK players with their innovative designs and mechanics.",
@@ -30,7 +30,7 @@ export default function LiveGames() {
 
   const tips = {
     id: "par-3",
-    h4: "💡 Tips for Playing Slot Games",
+    h4: "Tips for Playing Slot Games",
     ul: [
       "Understand the RTP: Check the Return to Player (RTP) percentage for each slot to gauge the odds of winning over time.",
       "Start Small: Begin with smaller bets to explore the game and learn its features before going for higher stakes.",

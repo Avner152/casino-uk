@@ -21,33 +21,33 @@ const Intro = observer(() => {
     crash: {
       title: "Best Crash Games in the UK – Our  Casino Picks for ",
       list: [
-        "🚀 Fast Thrills: Action-packed gameplay with quick wins for adrenaline lovers.",
-        "📈 Trusted Platforms: Play on secure UK casinos with top-rated crash games.",
-        "🎮 Innovative Design: Enjoy modern features and sleek mechanics tailored for you.",
+        "Fast Thrills: Action-packed gameplay with quick wins for adrenaline lovers.",
+        "Trusted Platforms: Play on secure UK casinos with top-rated crash games.",
+        "Innovative Design: Enjoy modern features and sleek mechanics tailored for you.",
       ],
     },
     live: {
       title: "Best Live Casino Games in the UK – Our Casino Picks for ",
       list: [
-        "🎥 Real-Time Action: Play HD-streamed games like blackjack, roulette, and baccarat.",
-        "🎮 Top Platforms: Find the UK’s best live casinos for seamless gaming.",
-        "🔒 Secure Play: Enjoy fair, safe, and responsible gaming experiences.",
+        "Real-Time Action: Play HD-streamed games like blackjack, roulette, and baccarat.",
+        "Top Platforms: Find the UK’s best live casinos for seamless gaming.",
+        "Secure Play: Enjoy fair, safe, and responsible gaming experiences.",
       ],
     },
     slots: {
       title: "Best Slot Games in the UK - ",
       list: [
-        "🎰 Top Slots: Play the latest games with exciting themes and big jackpots.",
-        "💸 High Payouts: Enjoy high RTP slots and progressive jackpots for big wins.",
-        "🔒 Secure Play: Experience safe, fair, and licensed gaming at top UK casinos.",
+        "Top Slots: Play the latest games with exciting themes and big jackpots.",
+        "High Payouts: Enjoy high RTP slots and progressive jackpots for big wins.",
+        "Secure Play: Experience safe, fair, and licensed gaming at top UK casinos.",
       ],
     },
     table: {
       title: "Best Table Games in the UK – Our Casino Picks for ",
       list: [
-        "🎲 Iconic Classics: Play staples like roulette, blackjack, and poker with rich history.",
-        "🃏 Skill & Social Play: Enjoy strategy, chance, and camaraderie in immersive settings.",
-        "🌟 Innovative Future: Discover VR, AR, and live dealer experiences redefining table games.",
+        "Iconic Classics: Play staples like roulette, blackjack, and poker with rich history.",
+        "Skill & Social Play: Enjoy strategy, chance, and camaraderie in immersive settings.",
+        "Innovative Future: Discover VR, AR, and live dealer experiences redefining table games.",
       ],
     },
     cookie: {
@@ -96,12 +96,14 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro tit-n-des text-white mt-5">
+    <div className="intro tit-n-des text-white">
       {page ? (
         <div className="text-white mb-5_ mt-4">
           <h1 className="intro-title fw-bold w-75 sm-w-100 ">
-            {headlineInfo[page].title}{" "}
-            {location.pathname.includes("games") && fullYear}
+            <span className="bg-dark bg-opacity-75 px-1">
+              {headlineInfo[page].title}{" "}
+              {location.pathname.includes("games") && fullYear}
+            </span>
           </h1>
         </div>
       ) : (
@@ -111,20 +113,22 @@ const Intro = observer(() => {
           }`}
         >
           <div>
-            <h1 className={`intro-title  fw-bold w-${isDesktop ? 75 : 100} `}>
-              {myStore.type.startsWith("b")
-                ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
-                    "default",
-                    {
-                      month: "long",
-                    },
-                  )} ${fullYear}`
-                : toJS(myStore.content)?.firstTitle.replace(
-                    "{curDate}",
-                    `${curDate.toLocaleString("default", {
-                      month: "long",
-                    })} ${fullYear}`,
-                  )}
+            <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100} `}>
+              <span className="bg-dark bg-opacity-75 px-1">
+                {myStore.type.startsWith("b")
+                  ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
+                      "default",
+                      {
+                        month: "long",
+                      },
+                    )} ${fullYear}`
+                  : toJS(myStore.content)?.firstTitle.replace(
+                      "{curDate}",
+                      `${curDate.toLocaleString("default", {
+                        month: "long",
+                      })} ${fullYear}`,
+                    )}
+              </span>
             </h1>
           </div>
           {isDesktop && (

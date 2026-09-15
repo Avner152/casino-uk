@@ -11,13 +11,13 @@ export default function CrashGames() {
 
   const what = {
     id: "par-2",
-    h4: "🎮 What Are Crash Games?",
+    h4: "What Are Crash Games?",
     p: "Crash games are multiplayer casino games where players bet on an increasing multiplier. The goal? Cash out before the multiplier crashes! With simple rules and high-stakes excitement, crash games are perfect for thrill-seekers.",
   };
 
   const why = {
     id: "par-3",
-    h4: "🚀 Why Are They Popular?",
+    h4: "Why Are They Popular?",
     ul: [
       "Fast-Paced Fun: Each round is short and packed with excitement, making it ideal for quick gaming sessions.",
       "Social Play: Many crash games let you compete with other players, adding a dynamic, competitive edge.",
@@ -27,7 +27,7 @@ export default function CrashGames() {
 
   const top = {
     id: "par-4",
-    h4: `🌟 Top Crash Games of ${curDate.getFullYear()}`,
+    h4: `Top Crash Games of ${curDate.getFullYear()}`,
     p: "From the iconic Aviator to space-themed adventures like Space Crash, explore the best crash games that combine stunning visuals, innovative gameplay, and huge win potential.",
   };
 

@@ -12,13 +12,13 @@ export default function LiveGames() {
 
   const what = {
     id: "par-2",
-    h4: "🎥 What Are Live Casino Games?",
+    h4: "What Are Live Casino Games?",
     p: "Live games are hosted by professional dealers and streamed directly to your device. Players can place bets, make decisions, and interact with the dealer and other players in real time, creating a social and authentic gaming atmosphere.",
   };
 
   const why = {
     id: "par-3",
-    h4: "🎮 Why Are Live Casino Games Popular in the UK?",
+    h4: "Why Are Live Casino Games Popular in the UK?",
     ul: [
       "Authenticity: Get the excitement of a real casino without leaving home.",
       "Convenience: Accessible 24/7 on desktop, tablet, or smartphone.",
@@ -28,7 +28,7 @@ export default function LiveGames() {
 
   const top = {
     id: "par-4",
-    h4: "🌟 Top Live Games in UK Casinos",
+    h4: "Top Live Games in UK Casinos",
     ul: [
       "Live Roulette: Spin the iconic wheel and try your luck on your favorite bets.",
       "Live Blackjack: Test your strategy against the dealer in this thrilling game of skill.",
