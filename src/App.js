@@ -12,6 +12,7 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import trophy from "./assets/trophy.svg";
 import casinoHero from "./assets/hero.png";
 import bettingHero from "./assets/betting-hero.jpg";
 
@@ -95,7 +96,11 @@ const App = observer(() => {
             />
           </div>
           <div className="position-absolute bottom-25 start-25 z-n1 translate-middle">
-            <img alt="chips" height={400} src={chips} />
+            <img
+              alt="chips"
+              height={400}
+              src={myStore.product.startsWith("c") ? chips : trophy}
+            />
           </div>
 
           <div className="d-flex text-center _gap-1">
@@ -158,7 +163,7 @@ const App = observer(() => {
       <Header />
 
       <img
-        className={`hero hero-${myStore.product} position-absolute z-n1 end-0`}
+        className={`hero hero-${myStore.product} position-fixed z-n1 end-0`}
         src={myStore.product.startsWith("c") ? casinoHero : bettingHero}
         alt="hero"
       />
