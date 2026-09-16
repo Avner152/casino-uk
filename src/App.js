@@ -12,6 +12,7 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import ball from "./assets/ball.png";
 import hero from "./assets/hero.jpg";
 
 import { useSearchParams } from "react-router-dom";
@@ -97,7 +98,11 @@ const App = observer(() => {
             />
           </div>
           <div className="position-absolute bottom-25 start-25 z-n1 translate-middle">
-            <img alt="chips" height={400} src={chips} />
+            <img
+              alt="chips"
+              height={400}
+              src={myStore.product.startsWith("c") ? chips : ball}
+            />
           </div>
 
           <div className="d-flex text-center _gap-1">
@@ -180,11 +185,7 @@ const App = observer(() => {
 
       <Header />
       {myStore.product === "betting" && (
-        <img
-          className="hero position-absolute z-n1 end-0"
-          src={hero}
-          alt="hero"
-        />
+        <img className="hero position-fixed z-n1 end-0" src={hero} alt="hero" />
       )}
       <div className="w-75 sm-w-100 _px-5 sm-px-1 m-auto casino-main">
         <div
