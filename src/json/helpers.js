@@ -53,10 +53,6 @@ export const pages = {
   ],
   betting: [
     {
-      name: "Betting Bonuses",
-      url: "/betting-bonuses",
-    },
-    {
       name: "GAA",
       url: "/gaa",
     },
