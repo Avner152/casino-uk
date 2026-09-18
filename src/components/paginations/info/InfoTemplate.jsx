@@ -4,11 +4,11 @@ import { observer } from "mobx-react";
 import PortalSection from "../../PortalSection";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { fullDate } from "../../../json/helpers";
 
 const InfoTemplate = observer(() => {
   const location = useLocation();
   const [content, setContent] = useState(null);
-  const curDate = new Date();
 
   useEffect(() => {
     const segments = location.pathname.substring(1).split("/");
@@ -38,7 +38,7 @@ const InfoTemplate = observer(() => {
       <article className="bg-dark px-5_ sm-px-1 py-3 bg-white w-100">
         <div className="px-3 w-60 sm-w-100 mx-auto">
           <h1 className="pe-5">
-            {content?.title?.replace("{year}", curDate.getFullYear())}
+            {content?.title?.replace("{year}", fullDate)}
           </h1>
           {content?.sections?.map((section, index) => (
             <section key={index} className="mt-3 ">

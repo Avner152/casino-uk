@@ -117,3 +117,8 @@ export function getScoreByIndex(index) {
 
   return Number(Math.max(minScore, score).toFixed(1));
 }
+
+export const fullDate = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  year: "numeric",
+}).format(new Date());

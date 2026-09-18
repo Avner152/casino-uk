@@ -1,10 +1,9 @@
 import { observer } from "mobx-react";
 import myStore from "../mobX/Store";
 import { toJS } from "mobx";
+import { fullDate } from "../json/helpers";
 
 const ContentV2 = observer(() => {
-  const curDate = new Date();
-
   const topPar = toJS(myStore.content).headlineSection;
 
   const content = Object.values(toJS(myStore.content))
@@ -13,22 +12,22 @@ const ContentV2 = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold">
-        {topPar.h1.replace("{curDate}", curDate.getFullYear())}
-      </h1>
+      <h1 className="fw-bold">{topPar.h1.replace("{curDate}", fullDate)}</h1>
       {topPar?.p?.split("\n")?.map((pi, i) => (
         <p key={i}>{pi}</p>
       ))}
-      {/* <p>{topPar.p.replace("{curDate}", curDate.getFullYear())}</p> */}
 
       {content.map((item) => (
         <div className="mt-4 px-3" key={item.id}>
           <h2 className="fw-bold">{item.h2}</h2>
           {item.p && (
             <>
-              {item.p.split("/n").map((pi, i) => (
-                <p key={i}>{pi}</p>
-              ))}
+              {item.p
+                .replace("{curDate}", fullDate)
+                .split("/n")
+                .map((pi, i) => (
+                  <p key={i}>{pi}</p>
+                ))}
             </>
           )}
           {item.ol && (
