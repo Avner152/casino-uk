@@ -93,7 +93,11 @@ const Content = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold">Online Casino Comparison for UK Players</h1>
+      <h1 className="fw-bold ">
+        <span className="text-bg-danger">
+          Online Casino Comparison for UK Players
+        </span>
+      </h1>
       <p>
         Welcome to UKCasinoCompare.net, an independent comparison website
         created for players in the United Kingdom.
@@ -124,7 +128,9 @@ const Content = observer(() => {
             return (
               <div className="mt-4" key={key} id={id}>
                 {/* H2 */}
-                <h2>{h2}</h2>
+                <h2 className="fw-bold ">
+                  <span className="text-bg-danger">{h2}</span>
+                </h2>
 
                 {paragraphs.map((pi, i) => (
                   <p key={i}>{pi}</p>

@@ -12,14 +12,20 @@ const ContentV2 = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold">{topPar.h1.replace("{curDate}", fullDate)}</h1>
+      <h1 className="fw-bold ">
+        <span className="text-bg-danger">
+          {topPar.h1.replace("{curDate}", fullDate)}
+        </span>
+      </h1>
       {topPar?.p?.split("\n")?.map((pi, i) => (
         <p key={i}>{pi}</p>
       ))}
 
       {content.map((item) => (
         <div className="mt-4 px-3" key={item.id}>
-          <h2 className="fw-bold">{item.h2}</h2>
+          <h2 className="fw-bold">
+            <span className="text-bg-danger">{item.h2}</span>
+          </h2>
           {item.p && (
             <>
               {item.p

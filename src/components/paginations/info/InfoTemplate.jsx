@@ -35,14 +35,20 @@ const InfoTemplate = observer(() => {
   return (
     <>
       <PortalSection />
-      <article className="bg-dark px-5_ sm-px-1 py-3 bg-white w-100">
-        <div className="px-3 w-60 sm-w-100 mx-auto">
+      <article className="bg-dark bg-opacity-75 sm-px-1 py-3 w-60 sm-w-100 mx-auto text-white">
+        <div className="px-3 w-75 sm-w-100 mx-auto">
           <h1 className="pe-5">
             {content?.title?.replace("{year}", fullDate)}
           </h1>
           {content?.sections?.map((section, index) => (
             <section key={index} className="mt-3 ">
-              {section?.type === "h2" && <h2>{section?.heading}</h2>}
+              {section?.type === "h2" && (
+                <h2 className="fw-bold ">
+                  <span className="text-bg-danger">
+                    {section?.heading}
+                  </span>{" "}
+                </h2>
+              )}
 
               {section?.content &&
                 section?.content.map((p, i) => <p key={i}>{p}</p>)}
