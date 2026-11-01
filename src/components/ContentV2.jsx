@@ -13,7 +13,9 @@ const ContentV2 = observer(() => {
   return (
     <>
       <h1 className="fw-bold ">
-        <span className="text-bg-danger">
+        <span
+          className={`text-bg-${myStore.product.startsWith("b") ? "betting" : "danger"}`}
+        >
           {topPar.h1.replace("{curDate}", fullDate)}
         </span>
       </h1>
@@ -24,7 +26,11 @@ const ContentV2 = observer(() => {
       {content.map((item) => (
         <div className="mt-4 px-3" key={item.id}>
           <h2 className="fw-bold">
-            <span className="text-bg-danger">{item.h2}</span>
+            <span
+              className={`text-bg-${myStore.product.startsWith("b") ? "betting" : "danger"}`}
+            >
+              {item.h2}
+            </span>
           </h2>
           {item.p && (
             <>

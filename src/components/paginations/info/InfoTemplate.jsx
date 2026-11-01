@@ -44,7 +44,9 @@ const InfoTemplate = observer(() => {
             <section key={index} className="mt-3 ">
               {section?.type === "h2" && (
                 <h2 className="fw-bold ">
-                  <span className="text-bg-danger">
+                  <span
+                    className={`text-bg-${myStore.product.startsWith("b") ? "betting" : "danger"}`}
+                  >
                     {section?.heading}
                   </span>{" "}
                 </h2>

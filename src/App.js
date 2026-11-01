@@ -153,11 +153,7 @@ const App = observer(() => {
     <div className={`${myStore.product}-wrapper`}>
       {!isDesktop && <div className={`${myStore.product}-container`} />}
       {myStore.product === "betting" && (
-        <img
-          className="hero position-absolute z-n1 end-0"
-          src={hero}
-          alt="hero"
-        />
+        <img className="hero position-fixed z-n1 end-0" src={hero} alt="hero" />
       )}
       <Header />
       <div>
