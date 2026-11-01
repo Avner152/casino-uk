@@ -36,7 +36,7 @@ const InfoTemplate = observer(() => {
     <>
       <PortalSection />
       <article className="bg-dark px-5_ sm-px-1 py-3 bg-opacity-75 text-white w-100 m-auto">
-        <div className="px-5 mx-auto">
+        <div className="px-5 sm-p-0 mx-auto">
           <h1 className="pe-5">
             {content?.title?.replace("{year}", curDate.getFullYear())}
           </h1>

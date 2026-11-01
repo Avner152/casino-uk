@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
+import logo2 from "../assets/logo2.png";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
@@ -37,19 +38,22 @@ const Header = observer(() => {
               }`}
             >
               <img
-                src={logo}
-                width={75}
-                height={75}
+                src={logo2}
+                width={250}
+                height={55}
                 alt="logo"
                 className="mb-2"
               />
             </NavLink>
-            <Nav className="fs-7 gap-2">
+            <Nav className="fs-6  gap-2">
               {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
                   key={i}
                   onClick={() => myStore.updateInfoContent(item.name)}
-                  className="my-nav text-black fw-medium"
+                  className={({ isActive }) =>
+                    `my-nav ${isActive ? "my-nav-clicked" : ""} text-black fw-medium`
+                  }
+                  end
                   to={`${
                     myStore.product === "betting" ? "/special/sport" : ""
                   }${item.url}${window.location.search}`}

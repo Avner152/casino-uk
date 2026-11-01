@@ -131,12 +131,14 @@ const PortalSection = observer(({ captchaToken }) => {
             <Fade key={k} cascade triggerOnce>
               <div onClick={() => window.open(fixedURL, "_blank")}>
                 {isMobile ? (
-                  <CasinoItemMobile
-                    key={k}
-                    item={casino}
-                    index={k}
-                    fixedURL={fixedURL}
-                  />
+                  <div className="px-1">
+                    <CasinoItemMobile
+                      key={k}
+                      item={casino}
+                      index={k}
+                      fixedURL={fixedURL}
+                    />
+                  </div>
                 ) : (
                   <CasinoItem
                     key={k}
