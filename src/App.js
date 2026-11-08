@@ -178,8 +178,8 @@ const App = observer(() => {
           alt="hero"
         />
       )}
-      <div className="w-75 sm-w-100 _px-5 sm-px-0 m-auto casino-main">
-        <div className="row_">
+      <div className="w-60 md-w-85 sm-w-100 _px-5 sm-px-0 m-auto casino-main">
+        <div className="">
           <div
             className="md-col-6 col-12"
             style={{ paddingTop: isDesktop ? 80 : 60 }}

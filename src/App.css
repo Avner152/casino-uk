@@ -585,6 +585,10 @@ a:hover {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .md-w-85 {
+    width: 85% !important;
+  }
+
   .rating {
     width: 3.7vw;
     height: 3.7vw;
@@ -920,7 +924,6 @@ a:hover {
   }
   .welcome-bonus {
     width: 100%;
-    /* margin: 10px 0 0; */
     padding: unset;
   }
   .card-content h1 {
@@ -932,7 +935,6 @@ a:hover {
   }
   .card-content p {
     font-size: 8.5px;
-    /* line-height: 1.2; */
   }
 
   .information {

@@ -1,6 +1,4 @@
 import { observer } from "mobx-react";
-import casino from "../assets/casino.png";
-import sport from "../assets/sport.png";
 import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
@@ -112,16 +110,6 @@ const SportIntro = observer(() => {
               </h1>
             )}
           </div>
-          {isDesktop && !isBettingHome && (
-            <div>
-              <img
-                className="cards"
-                alt="cards"
-                width={isDesktop ? 220 : 120}
-                src={myStore.product === "casino" ? casino : sport}
-              />
-            </div>
-          )}
         </div>
       )}
     </div>

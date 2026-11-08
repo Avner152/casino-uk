@@ -33,27 +33,14 @@ const Header = observer(() => {
     },
   ];
 
-  // const desktopMenu = [
-  //   "Slots",
-  //   "Jackpot",
-  //   "Roulette",
-  //   "Live Casino",
-  //   "Game Shows",
-  //   "About us",
-  // ];
-
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
-  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <header
       className={`${isDesktop ? "desktop" : "mobile"}-header header w-100`}
     >
       <div
-        className={`w-100 d-flex ${
+        className={`w-60 md-w-85 sm-w-100 mx-auto d-flex ${
           !isDesktop && "justify-content-between"
         } align-items-center fs-2`}
       >

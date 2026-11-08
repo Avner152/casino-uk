@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { importImages } from "../App";
 import logo from "../assets/logo.png";
-import cards from "../assets/casino.png";
 import React from "react";
 import myStore from "../mobX/Store";
 import { observer } from "mobx-react";
@@ -84,11 +83,6 @@ const Footer = observer(() => {
           >
             {footer.map((footerItem, k) => (
               <React.Fragment key={footerItem.title}>
-                {k === 2 && isMobile && (
-                  <div className="col-4 d-flex ms-3 align-items-center justify-content-center">
-                    <img alt="cards" width={230} src={cards} />
-                  </div>
-                )}
                 <div
                   className={`d-flex flex-column ${
                     isDesktop ? "" : "col-4 flex-wrap"
