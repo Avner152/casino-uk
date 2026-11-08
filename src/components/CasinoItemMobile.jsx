@@ -18,7 +18,7 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
       <div className="top-card d-flex justify-content-around align-items-center ">
         <div className="mt-3 d-flex flex-column justify-content-center align-items-center gap-1 square">
           <img
-            className="rounded"
+            className="rounded img-fluid"
             alt={item.name}
             width={220}
             height={80}
@@ -59,12 +59,11 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
           </div>
         </div>
 
-        <div className="card-content text-white _d-flex _flex-column">
+        <div className="card-content text-white">
           <h1 className="">{item.title}</h1>
-          <p className="mb-2">{item.brandText}</p>
 
           <div
-            className="d-flex _justify-content-between w-100 mb-2"
+            className="d-flex  w-100 mb-2"
             style={{ fontSize: "1.25vw" }}
           ></div>
           <Button
@@ -76,6 +75,11 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
           </Button>
         </div>
       </div>
+      {myStore.type.startsWith("ne") && (
+        <div>
+          <p className="px-3 text-white fs-7">{item.brandText}</p>
+        </div>
+      )}
     </div>
   );
 });

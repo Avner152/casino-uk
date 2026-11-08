@@ -79,7 +79,7 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro mt-3 w-75 md-w-100 sm-w-100 mx-auto tit-n-des text-white">
+    <div className="intro  mx-auto tit-n-des text-white">
       <div
         className={`d-flex align-items-center justify-content-${
           isDesktop ? "between" : "center"
@@ -97,9 +97,9 @@ const Intro = observer(() => {
           ) : (
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
               <span className="bg-dark bg-opacity-75">
-                {myStore.type === "blanca"
+                {myStore.type.startsWith("b")
                   ? `Check Our Top UK ${myStore.product} sites Of ${fullYear}`
-                  : toJS(myStore.content)?.firstTitle.replace(
+                  : myStore.content?.firstTitle.replace(
                       "{curDate}",
                       `${fullYear}`,
                     )}

@@ -55,8 +55,8 @@ const HomePage = observer(({ captchaToken }) => {
           </div>
         </>
       )}
-      <div className="content bg-white  text-white p-3  text-break">
-        <div className="text-black w-100 m-auto">
+      <div className="content bg-dark bg-opacity-75   p-3  text-break">
+        <div className="text-white w-100 m-auto">
           {!myStore.content ? (
             <Content isDesktop={isDesktop} />
           ) : (

@@ -16,6 +16,7 @@ import CasinoItemPlaceholder from "./CasinoItemPlaceholder";
 const PortalSection = observer(({ captchaToken }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 1023px)" });
 
   const list = toJS(myStore.list);
   captchaToken = true;
@@ -142,7 +143,7 @@ const PortalSection = observer(({ captchaToken }) => {
             return (
               <Fade key={k} cascade triggerOnce>
                 <div onClick={() => window.open(fixedURL, "_blank")}>
-                  {isMobile ? (
+                  {isMobileOrTablet ? (
                     <CasinoItemMobile
                       key={k}
                       item={casino}

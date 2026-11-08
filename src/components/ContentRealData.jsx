@@ -10,9 +10,9 @@ const ContentRealData = observer(() => {
     .sort((a, b) => a.sortOrder - b.sortOrder);
 
   return (
-    <div className="w-60_ _sm-w-100 mx-auto">
-      <h1 className="fw-bold ">
-        <span className="bg-warning">
+    <div className="mx-auto">
+      <h1 className="fw-bold">
+        <span className="bg-warning text-black">
           {topPar.h1.replace("{curDate}", curDate.getFullYear())}
         </span>
       </h1>

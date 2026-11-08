@@ -14,6 +14,7 @@ import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
 import ball from "./assets/ball.png";
 import hero from "./assets/hero.jpg";
+import heroCasino from "./assets/casino-hero.jpg";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
@@ -184,14 +185,14 @@ const App = observer(() => {
       )}
 
       <Header />
-      {myStore.product === "betting" && (
-        <img className="hero position-fixed z-n1 end-0" src={hero} alt="hero" />
-      )}
-      <div className="w-75 sm-w-100 _px-5 sm-px-1 m-auto casino-main">
-        <div
-          className="md-col-6 col-12"
-          style={{ paddingTop: isDesktop ? 80 : 60 }}
-        >
+      <img
+        className="hero position-fixed z-n1 end-0"
+        src={myStore.product.startsWith("c") ? heroCasino : hero}
+        alt="hero"
+      />
+
+      <div className="w-60 md-w-85 sm-w-100 sm-px-1 m-auto casino-main">
+        <div style={{ paddingTop: isDesktop ? 80 : 60 }}>
           {myStore.type.startsWith("b") && advertorialSection()}
           {myStore.product === "betting" ? <SportIntro /> : <Intro />}
         </div>

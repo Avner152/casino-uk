@@ -19,7 +19,7 @@ h1 {
 
 body {
   font-size: 14px;
-  background-color: #13161f !important;
+  background-color: #000 !important;
   font-family: "Raleway", sans-serif;
   /* background-image: url(./assets/bg.webp); */
   background-size: 100%;
@@ -31,7 +31,7 @@ body {
 }
 
 body.casino {
-  background-image: url(./assets/bg.webp);
+  /* background-image: url(./assets/bg.webp); */
 }
 
 .w-60 {
@@ -51,7 +51,6 @@ body.casino {
 .desktop-header {
   position: fixed !important;
   background-color: #000000;
-  padding: 0 50px;
   z-index: 9999;
 }
 
@@ -886,7 +885,7 @@ a:hover {
   }
 
   .intro p {
-    font-size: 0.75rem;
+    font-size: 2.5vw;
   }
 
   .my-card {
@@ -919,7 +918,7 @@ a:hover {
     padding: 5px;
   }
   .top-card {
-    min-height: 50vw;
+    min-height: 45vw;
     /* padding: 1vw 1.25vw 0.75vw 1.25vw; */
     max-height: 400px;
     z-index: 9;
