@@ -148,7 +148,7 @@ const App = observer(() => {
 
       <Header />
 
-      <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
+      <div className="w-60 md-w-100 sm-w-100 m-auto casino-main">
         <br />
         {myStore.type.startsWith("bl") && (
           <>

@@ -193,17 +193,11 @@ ul svg {
   border: unset !important;
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
-  /* color: #113454; */
 }
 
-/* .top-card > div {
-  min-width: 15%;
-  max-width: 28%;
-} */
-
-/* .my-card:hover {
-  border: 8px solid #7F7FB3 !important  ;
-} */
+.desktop-top-card {
+  grid-template-columns: 1fr 1.6fr 0.4fr 1.6fr;
+}
 
 .text-theme {
   color: #7f7fb3 !important;
@@ -643,10 +637,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 1023px) {
-  /* .top-card > div {
-    min-width: unset;
-    max-width: unset;
-  } */
   .disclaimer {
     margin-bottom: 3rem;
   }
@@ -665,6 +655,9 @@ a:hover {
 
   .casino-main {
     width: 75% !important;
+  }
+  .desktop-top-card {
+    grid-template-columns: 1fr 1.2fr 0.8fr 1.2fr;
   }
 }
 
@@ -871,7 +864,7 @@ a:hover {
   .welcome-bonus h1 {
     font-size: 1.25rem;
     min-width: 120px;
-    max-width: 140px;
+    /* max-width: 140px; */
     font-weight: 700;
     /* text-align: center; */
   }
@@ -892,6 +885,10 @@ a:hover {
   }
   .params .col-md-6 {
     flex: 1 0 39%;
+  }
+
+  .md-w-85 {
+    max-width: 85%;
   }
   /* Styles for Desktops */
 }

@@ -6,9 +6,5 @@ export default function ParamItem({ icon, text }) {
       <img alt="icon" src={icon} />
       <div>{text}</div>
     </div>
-    // <div className="d-flex justify-content-start _m-auto _flex-nowrap w-40 gap-2 p-3 border rounded">
-    //   <img src={icon} />
-    //   <div>{text}</div>
-    // </div>
   );
 }

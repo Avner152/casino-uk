@@ -123,7 +123,7 @@ const PortalSection = observer(({ captchaToken }) => {
           </div>
         ))}
       </div>
-      <div className="mx-5 sm-m-0">
+      <div className="">
         {toJS(myStore.list).map((casino, k) => {
           const fixedURL = `${casino.url}${appendQueryParams(searchParams, k + 1)}`;
 

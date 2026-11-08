@@ -38,7 +38,6 @@ const SportPage = observer(({ captchaToken }) => {
       )}
       <div className="content min-vh-100 text-white p-2">
         <div className="content-container w-100 m-auto">
-          {/* <ContentV2 /> */}
           <Content />
 
           <div className="ms-3">
