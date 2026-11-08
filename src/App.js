@@ -12,6 +12,7 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import betting from "./assets/betting.png";
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
 import { autorun } from "mobx";
@@ -90,7 +91,11 @@ const App = observer(() => {
             />
           </div>
           <div className="position-absolute bottom-25 start-25 z-n1 translate-middle">
-            <img alt="chips" height={400} src={chips} />
+            <img
+              alt="chips"
+              height={myStore.product.startsWith("b") ? 200 : 400}
+              src={myStore.product.startsWith("b") ? betting : chips}
+            />
           </div>
 
           <div className="d-flex text-center _gap-1">
@@ -100,12 +105,7 @@ const App = observer(() => {
                 key={casinoItem?.name || i}
               >
                 <div className="top-card">
-                  <img
-                    alt="card-logo"
-                    // width={180}
-                    height={70}
-                    src={casinoItem?.image}
-                  />
+                  <img alt="card-logo" height={70} src={casinoItem?.image} />
                 </div>
                 <h2 className="px-4 fw-bold">{casinoItem?.title}</h2>
                 <div>
