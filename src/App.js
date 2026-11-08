@@ -13,7 +13,7 @@ import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
 import trophy from "./assets/trophy.svg";
-import casinoHero from "./assets/hero.png";
+import casinoHero from "./assets/hero.jpg";
 import bettingHero from "./assets/betting-hero.jpg";
 
 import { useSearchParams } from "react-router-dom";
