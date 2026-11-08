@@ -10,6 +10,10 @@ const InfoTemplate = observer(() => {
   const location = useLocation();
   const [content, setContent] = useState(null);
   const curDate = new Date();
+  const curDateStr = curDate.toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
 
   useEffect(() => {
     const segments = location.pathname.substring(1).split("/");
@@ -40,7 +44,7 @@ const InfoTemplate = observer(() => {
       <article className="bg-dark px-5_ sm-px-1 py-3 bg-white w-100">
         <div className="px-3 w-60 sm-w-100 mx-auto">
           <h1 className="pe-5">
-            {content?.title?.replace("{year}", curDate.getFullYear())}
+            {content?.title?.replace("{year}", curDateStr)}
           </h1>
           <Accordion
             alwaysOpen

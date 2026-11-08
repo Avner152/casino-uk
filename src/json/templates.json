@@ -1,9 +1,9 @@
 {
   "online-bonuses": {
-    "title": "Top UK Casino Bonuses – March {year}",
+    "title": "Top UK Casino Bonuses - {year}",
     "sections": [
       {
-        "heading": "🎁 Casino Bonus Comparison for UK Players",
+        "heading": "Casino Bonus Comparison for UK Players",
         "type": "h2",
         "content": [
           "Casino bonuses are one of the most visible promotional features offered by online casino platforms. These promotions are designed to attract new players and reward existing customers with additional playing funds, free spins or other incentives.",
@@ -12,7 +12,7 @@
         ]
       },
       {
-        "heading": "👋 Welcome Bonuses",
+        "heading": "Welcome Bonuses",
         "type": "h2",
         "content": [
           "Welcome bonuses are among the most widely promoted offers provided by online casinos. These bonuses are typically available to new players who create an account and make their first qualifying deposit.",
@@ -27,7 +27,7 @@
         ]
       },
       {
-        "heading": "🎰 Free Spins Promotions",
+        "heading": "Free Spins Promotions",
         "type": "h2",
         "content": [
           "Free spins promotions are commonly associated with slot games.",
@@ -37,7 +37,7 @@
         ]
       },
       {
-        "heading": "🔄 Reload Bonuses",
+        "heading": "Reload Bonuses",
         "type": "h2",
         "content": [
           "Reload bonuses are promotional offers provided to existing players who make additional deposits after their first deposit.",
@@ -46,7 +46,7 @@
         ]
       },
       {
-        "heading": "💸 Cashback Offers",
+        "heading": "Cashback Offers",
         "type": "h2",
         "content": [
           "Cashback promotions provide players with a percentage of their net losses over a specific period of time.",
@@ -55,7 +55,7 @@
         ]
       },
       {
-        "heading": "📜 Understanding Bonus Terms",
+        "heading": "Understanding Bonus Terms",
         "type": "h2",
         "content": [
           "Before claiming any casino bonus, players should review the full promotional terms and conditions.",
@@ -70,7 +70,7 @@
         ]
       },
       {
-        "heading": "🛡️ Responsible Gambling Information",
+        "heading": "Responsible Gambling Information",
         "type": "h2",
         "content": [
           "UKCasinoList.net supports responsible gambling.",
@@ -88,10 +88,10 @@
   },
 
   "table-games": {
-    "title": "Top Table Game Casinos – March {year}",
+    "title": "Top Table Game Casinos - {year}",
     "sections": [
       {
-        "heading": "🎲 Online Table Game Casino Comparison",
+        "heading": "Online Table Game Casino Comparison",
         "type": "h2",
         "content": [
           "Table games have long been an important part of the traditional casino experience. Many players enjoy table games because they follow structured rules and often involve strategic decision-making.",
@@ -100,7 +100,7 @@
         ]
       },
       {
-        "heading": "🃏 Popular Online Table Games",
+        "heading": "Popular Online Table Games",
         "type": "h2",
         "content": [
           "Most online casinos provide a selection of digital table games that replicate the structure of traditional casino games.",
@@ -115,7 +115,7 @@
         ]
       },
       {
-        "heading": "♠️ Blackjack",
+        "heading": "Blackjack",
         "type": "h2",
         "content": [
           "Blackjack is one of the most widely played table games in both land-based and online casinos.",
@@ -126,7 +126,7 @@
         "list": ["Hit", "Stand", "Double down", "Split"]
       },
       {
-        "heading": "♦️ Baccarat",
+        "heading": "Baccarat",
         "type": "h2",
         "content": [
           "Baccarat is another widely available casino table game. The game is known for its simple structure and relatively straightforward betting options.",
@@ -137,7 +137,7 @@
         "list": ["Player hand", "Banker hand", "Tie"]
       },
       {
-        "heading": "🧠 Casino Poker Variations",
+        "heading": "Casino Poker Variations",
         "type": "h2",
         "content": [
           "Many online casinos offer poker-style table games that are played against the house rather than against other players.",
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "heading": "🎥 Live Dealer Table Games",
+        "heading": "Live Dealer Table Games",
         "type": "h2",
         "content": [
           "Many casino platforms now offer live dealer versions of popular table games.",
@@ -161,7 +161,7 @@
         ]
       },
       {
-        "heading": "🛡️ Responsible Gambling Information",
+        "heading": "Responsible Gambling Information",
         "type": "h2",
         "content": [
           "UKCasinoList.net supports responsible gambling.",
@@ -179,10 +179,10 @@
   },
 
   "roulette": {
-    "title": "Top Roulette Casinos for UK Players – March {year}",
+    "title": "Top Roulette Casinos for UK Players - {year}",
     "sections": [
       {
-        "heading": "🎡 Online Roulette Casino Comparison Guide",
+        "heading": "Online Roulette Casino Comparison Guide",
         "type": "h2",
         "content": [
           "Roulette is one of the most widely recognised casino games in the world and remains a popular choice among players who enjoy traditional casino gameplay. Online roulette brings this classic game to digital casino platforms, allowing players to place bets and spin the wheel from their computers or mobile devices.",
@@ -191,7 +191,7 @@
         ]
       },
       {
-        "heading": "🎯 Popular Online Roulette Variations",
+        "heading": "Popular Online Roulette Variations",
         "type": "h2",
         "content": [
           "Online casinos often provide multiple roulette formats. Each version may include slightly different rules and gameplay mechanics.",
@@ -208,7 +208,7 @@
         ]
       },
       {
-        "heading": "🎥 Live Dealer Roulette",
+        "heading": "Live Dealer Roulette",
         "type": "h2",
         "content": [
           "Live dealer roulette has become increasingly popular among online casino players. These games are streamed in real time from studio environments and hosted by professional dealers.",
@@ -218,7 +218,7 @@
         ]
       },
       {
-        "heading": "💰 Roulette Betting Options",
+        "heading": "Roulette Betting Options",
         "type": "h2",
         "content": [
           "Roulette offers a variety of betting options that allow players to choose different levels of risk and potential payouts.",
@@ -226,7 +226,7 @@
         ]
       },
       {
-        "heading": "🔢 Inside Bets",
+        "heading": "Inside Bets",
         "type": "h2",
         "content": [
           "Inside bets focus on specific numbers or small groups of numbers. These bets usually offer higher payouts but lower probabilities.",
@@ -235,7 +235,7 @@
         "list": ["Straight-up bets", "Split bets", "Corner bets", "Line bets"]
       },
       {
-        "heading": "📊 Outside Bets",
+        "heading": "Outside Bets",
         "type": "h2",
         "content": [
           "Outside bets cover larger groups of numbers and offer higher probabilities but smaller payouts.",
@@ -250,7 +250,7 @@
         ]
       },
       {
-        "heading": "📱 Mobile Roulette Gaming",
+        "heading": "Mobile Roulette Gaming",
         "type": "h2",
         "content": [
           "Many online casinos now offer roulette games that are optimised for mobile devices.",
@@ -260,7 +260,7 @@
         ]
       },
       {
-        "heading": "🛡️ Responsible Gambling Information",
+        "heading": "Responsible Gambling Information",
         "type": "h2",
         "content": [
           "UKCasinoList.net supports responsible gambling.",
@@ -278,10 +278,10 @@
   },
 
   "online-slots": {
-    "title": "Top UK Slot Casinos – March {year}",
+    "title": "Top UK Slot Casinos - {year}",
     "sections": [
       {
-        "heading": "🎰 Online Slot Casino Comparison",
+        "heading": "Online Slot Casino Comparison",
         "type": "h2",
         "content": [
           "Online slot games are among the most widely played casino games available on modern online casino platforms.",
@@ -290,7 +290,7 @@
         ]
       },
       {
-        "heading": "🧩 Types of Online Slots",
+        "heading": "Types of Online Slots",
         "type": "h2",
         "content": [
           "Online slot games may be divided into several categories.",
@@ -305,7 +305,7 @@
         ]
       },
       {
-        "heading": "✨ Slot Game Features",
+        "heading": "Slot Game Features",
         "type": "h2",
         "content": [
           "Modern slot games often include a variety of special features.",
@@ -322,7 +322,7 @@
         ]
       },
       {
-        "heading": "📱 Mobile Slot Gaming",
+        "heading": "Mobile Slot Gaming",
         "type": "h2",
         "content": [
           "Many players prefer to access slot games through mobile devices.",
@@ -331,7 +331,7 @@
         ]
       },
       {
-        "heading": "🛡️ Responsible Gambling Information",
+        "heading": "Responsible Gambling Information",
         "type": "h2",
         "content": [
           "UKCasinoList.net supports responsible gambling.",
@@ -352,7 +352,7 @@
     "title": "Hurling & Gaelic Football Betting - Best GAA Betting Sites in Ireland",
     "sections": [
       {
-        "heading": "🏐 What Is GAA Betting?",
+        "heading": "What Is GAA Betting?",
         "type": "h2",
         "content": [
           "Hurling and Gaelic Football are central to Irish sporting culture, and betting on GAA competitions has grown rapidly in recent years.",
@@ -367,7 +367,7 @@
         ]
       },
       {
-        "heading": "🏆 Biggest GAA Competitions to Bet On",
+        "heading": "Biggest GAA Competitions to Bet On",
         "type": "h2",
         "content": [
           "The All-Ireland Championships are the highlight of the GAA calendar and attract the widest range of betting markets."
@@ -382,18 +382,18 @@
         ]
       },
       {
-        "heading": "🎯 Popular Hurling & Gaelic Football Betting Markets",
+        "heading": "Popular Hurling & Gaelic Football Betting Markets",
         "type": "h2",
         "list": [
-          "✅ Match Winner",
-          "📊 Handicap Betting (e.g., Kerry -3, Dublin -2, Limerick -4)",
-          "📌 Over/Under Total Points",
-          "🎯 Winning Margin (1-3, 4-6, 7-9, 10+ points)",
-          "⚡ Live In-Play Betting"
+          "Match Winner",
+          "Handicap Betting (e.g., Kerry -3, Dublin -2, Limerick -4)",
+          "Over/Under Total Points",
+          "Winning Margin (1-3, 4-6, 7-9, 10+ points)",
+          "Live In-Play Betting"
         ]
       },
       {
-        "heading": "📊 How We Review GAA Betting Sites in Ireland",
+        "heading": "How We Review GAA Betting Sites in Ireland",
         "type": "h2",
         "list": [
           "Market depth",
@@ -406,7 +406,7 @@
         ]
       },
       {
-        "heading": "🧠 Tips for Betting on Hurling & Gaelic Football",
+        "heading": "Tips for Betting on Hurling & Gaelic Football",
         "type": "h2",
         "list": [
           "Follow team news and player availability",
@@ -417,7 +417,7 @@
         ]
       },
       {
-        "heading": "⭐ Best GAA Betting Sites Ireland - Final Thoughts",
+        "heading": "Best GAA Betting Sites Ireland - Final Thoughts",
         "type": "h2",
         "content": [
           "The best GAA betting sites properly cover Irish competitions, offer competitive odds, provide smooth mobile betting, and process withdrawals quickly.",
@@ -428,10 +428,10 @@
   },
 
   "rugby": {
-    "title": "🏉 Rugby Betting Ireland - Best Sites for Six Nations, URC & International Rugby ",
+    "title": "Rugby Betting Ireland - Best Sites for Six Nations, URC & International Rugby ",
     "sections": [
       {
-        "heading": "⭐ Why Rugby Betting Is So Popular in Ireland",
+        "heading": "Why Rugby Betting Is So Popular in Ireland",
         "type": "h2",
         "content": [
           "Rugby is one of the most bet-on sports in Ireland, with strong national and provincial support.",
@@ -445,18 +445,18 @@
         ]
       },
       {
-        "heading": "🎯 Popular Rugby Betting Markets",
+        "heading": "Popular Rugby Betting Markets",
         "type": "h2",
         "list": [
-          "✅ Match Winner",
-          "📊 Handicap / Spread Betting",
-          "📌 Over/Under Total Points",
-          "🏉 Anytime & First Try Scorer",
-          "🧠 Player Specials (tries, kicks, conversions, drop goals, cards)"
+          "Match Winner",
+          "Handicap / Spread Betting",
+          "Over/Under Total Points",
+          "Anytime & First Try Scorer",
+          "Player Specials (tries, kicks, conversions, drop goals, cards)"
         ]
       },
       {
-        "heading": "⚡ Live In-Play Rugby Betting",
+        "heading": "Live In-Play Rugby Betting",
         "type": "h2",
         "content": [
           "Live rugby betting allows players to react to momentum swings, scoring runs, and tactical changes during the match.",
@@ -464,7 +464,7 @@
         ]
       },
       {
-        "heading": "📱 Mobile Rugby Betting",
+        "heading": "Mobile Rugby Betting",
         "type": "h2",
         "list": [
           "App stability",
@@ -475,7 +475,7 @@
         ]
       },
       {
-        "heading": "🛡️ Responsible Gambling Tools",
+        "heading": "Responsible Gambling Tools",
         "type": "h2",
         "list": [
           "Timeout options",
@@ -485,7 +485,7 @@
         ]
       },
       {
-        "heading": "⭐ Rugby Betting Ireland - Final Thoughts",
+        "heading": "Rugby Betting Ireland - Final Thoughts",
         "type": "h2",
         "content": [
           "The best rugby betting sites for Ireland combine strong odds, full market coverage, excellent live betting, and fast withdrawals.",
@@ -496,10 +496,10 @@
   },
 
   "horse-racing": {
-    "title": "🐎 Irish Horse Racing Betting - Best Racing Bookmakers for Ireland ",
+    "title": "Irish Horse Racing Betting - Best Racing Bookmakers for Ireland ",
     "sections": [
       {
-        "heading": "🏇 Why Horse Racing Betting Is Huge in Ireland",
+        "heading": "Why Horse Racing Betting Is Huge in Ireland",
         "type": "h2",
         "content": [
           "Ireland is one of the biggest horse racing nations in the world, and betting is a natural part of the racing culture.",
@@ -513,32 +513,32 @@
         ]
       },
       {
-        "heading": "🏆 Major Irish Horse Racing Events",
+        "heading": "Major Irish Horse Racing Events",
         "type": "h2",
         "content": [
           "Irish bettors follow major racing festivals throughout the year, both at home and across the UK."
         ],
         "list": [
-          "🏅 Cheltenham Festival",
-          "🏇 Punchestown Festival",
-          "🎉 Galway Races",
-          "🏟️ Leopardstown Meetings",
-          "🐎 Fairyhouse & The Curragh"
+          "Cheltenham Festival",
+          "Punchestown Festival",
+          "Galway Races",
+          "Leopardstown Meetings",
+          "Fairyhouse & The Curragh"
         ]
       },
       {
-        "heading": "🎯 Popular Horse Racing Betting Markets",
+        "heading": "Popular Horse Racing Betting Markets",
         "type": "h2",
         "list": [
-          "✅ Win Betting",
-          "🧾 Each-Way Betting (with extra places and fair settlement rules)",
-          "📊 Forecast & Tricast",
-          "🧠 Racing Specials & Props (top trainer, top jockey, winning distance, meeting specials)",
-          "⚡ Live Betting on Horse Racing (where available)"
+          "Win Betting",
+          "Each-Way Betting (with extra places and fair settlement rules)",
+          "Forecast & Tricast",
+          "Racing Specials & Props (top trainer, top jockey, winning distance, meeting specials)",
+          "Live Betting on Horse Racing (where available)"
         ]
       },
       {
-        "heading": "💰 What Makes a Racing Sportsbook Great?",
+        "heading": "What Makes a Racing Sportsbook Great?",
         "type": "h2",
         "content": [
           "Not all bookmakers offer the same racing experience. We focus on sportsbooks that treat Irish racing bettors properly."
@@ -556,7 +556,7 @@
         ]
       },
       {
-        "heading": "📱 Mobile Horse Racing Betting in Ireland",
+        "heading": "Mobile Horse Racing Betting in Ireland",
         "type": "h2",
         "content": [
           "Horse racing betting is often time-sensitive, especially close to off-time.",
@@ -571,7 +571,7 @@
         ]
       },
       {
-        "heading": "⭐ Irish Horse Racing Betting - Final Thoughts",
+        "heading": "Irish Horse Racing Betting - Final Thoughts",
         "type": "h2",
         "content": [
           "The best horse racing betting sites for Irish players combine strong local coverage, competitive odds, and reliable payouts.",

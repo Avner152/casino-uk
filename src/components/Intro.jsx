@@ -1,5 +1,4 @@
 import { observer } from "mobx-react";
-import casino from "../assets/casino.png";
 import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
@@ -66,7 +65,7 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro mt-4_ tit-n-des text-white pt-3 w-60 sm-w-100 mx-auto">
+    <div className="intro mt-4_ tit-n-des text-white pt-3 w-60 md-w-85 sm-w-100 mx-auto">
       {page ? (
         <div className="text-white mb-5_ mt-4">
           <h1 className="intro-title fw-bold w-75 sm-w-100">
@@ -82,9 +81,7 @@ const Intro = observer(() => {
           }`}
         >
           <div>
-            <h1
-              className={`intro-title bg-dark bg-opacity-50 px-4 py-1 fw-bold w-${isDesktop ? 75 : 100}`}
-            >
+            <h1 className="intro-title mt-5 bg-dark bg-opacity-50 px-4 py-1 fw-bold w-100">
               {myStore.type.startsWith("bl")
                 ? `Check Our Top UK Casinos Of ${curDate.toLocaleString(
                     "default",
@@ -100,16 +97,6 @@ const Intro = observer(() => {
                   )}
             </h1>
           </div>
-          {isDesktop && (
-            <div>
-              <img
-                className="cards"
-                alt="cards"
-                width={isDesktop ? 200 : 120}
-                src={casino}
-              />
-            </div>
-          )}
         </div>
       )}
     </div>

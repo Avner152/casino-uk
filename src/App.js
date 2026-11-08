@@ -12,6 +12,7 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
 import chips from "./assets/golden-chips.png";
+import cards from "./assets/cards.svg";
 
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
@@ -75,31 +76,8 @@ const App = observer(() => {
     return () => dispose(); // cleanup
   }, []);
 
-  // function TurnstileWidget() {
-  //   return (
-  //     <Turnstile
-  //       sitekey="0x4AAAAAAA3zELOcESURpGT7"
-  //       onVerify={(token) => {
-  //         fetch(`${process.env.REACT_APP_SERVER_URI}/api/verify-captcha`, {
-  //           method: "POST",
-  //           body: JSON.stringify({ token }),
-  //         })
-  //           .then((response) => {
-  //             // console.log(response);q
-  //             setCaptchaToken(response.ok);
-  //           })
-  //           .catch((err) => setCaptchaToken(false));
-  //       }}
-  //       retry="never"
-  //       onError={() => {
-  //         setCaptchaToken(false);
-  //       }}
-  //     />
-  //   );
-  // }
-
-  return (
-    <div>
+  const raisePopOut = () => {
+    return (
       <Modal
         className="bg-transparent"
         centered
@@ -115,7 +93,11 @@ const App = observer(() => {
             />
           </div>
           <div className="position-absolute bottom-25 start-25 z-n1 translate-middle">
-            <img alt="chips" height={400} src={chips} />
+            <img
+              alt="chips"
+              height={400}
+              src={myStore.product.startsWith("b") ? chips : cards}
+            />
           </div>
 
           <div className="d-flex text-center _gap-1">
@@ -171,7 +153,11 @@ const App = observer(() => {
           </div>
         </Modal.Body>
       </Modal>
-      {/* {!captchaToken && TurnstileWidget()} */}
+    );
+  };
+
+  return (
+    <div>
       {!isDesktop && <div className="casino-container" />}
 
       <Header />
@@ -200,6 +186,7 @@ const App = observer(() => {
       <Footer />
 
       {!hasCookie && <CookieConsent setCookieStatus={setCookieStatus} />}
+      {isDesktop && showPopOut && raisePopOut()}
     </div>
   );
 });

@@ -48,7 +48,6 @@ body {
 .desktop-header {
   position: fixed !important;
   background-color: #000000dd;
-  padding: 0 50px;
   z-index: 9999;
 }
 
@@ -158,6 +157,10 @@ ul svg {
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
   /* color: #113454; */
+}
+
+.desktop-top-card {
+  grid-template-columns: 1fr 1.6fr 0.4fr 1.6fr;
 }
 
 /* .top-card > div {
@@ -396,7 +399,7 @@ ul svg {
 .welcome-bonus h1 {
   font-size: 1.25rem;
   min-width: 200px;
-  max-width: 200px;
+  max-width: 240px;
   font-weight: 700;
   /* text-align: center; */
 }
@@ -537,6 +540,9 @@ a:hover {
 
   .casino-main {
     width: 75% !important;
+  }
+  .desktop-top-card {
+    grid-template-columns: 1fr 1.2fr 0.8fr 1.2fr;
   }
 }
 
@@ -734,6 +740,10 @@ a:hover {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .md-w-85 {
+    max-width: 85%;
+  }
+
   .params img {
     width: 1.8vw !important;
   }
@@ -743,7 +753,7 @@ a:hover {
   .welcome-bonus h1 {
     font-size: 1.25rem;
     min-width: 120px;
-    max-width: 140px;
+    /* max-width: 140px; */
     font-weight: 700;
     /* text-align: center; */
   }

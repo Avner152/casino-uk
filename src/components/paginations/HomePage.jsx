@@ -42,7 +42,7 @@ const HomePage = observer(({ captchaToken }) => {
           </div>
         </>
       )}
-      <div className="bg-white min-vh-100 py-4 px-3">
+      <div className="bg-white py-4 px-3">
         <div className="w-60 sm-w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
         </div>

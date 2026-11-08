@@ -3,12 +3,16 @@ import { Accordion } from "react-bootstrap";
 
 const Content = observer(() => {
   const curDate = new Date();
+  const curDateStr = curDate.toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
 
   const content = {
-    title: "Top UK Online Casinos – March {year}",
+    title: "Top UK Online Casinos - {year}",
     sections: [
       {
-        heading: "🔎 What Players Look For When Choosing an Online Casino",
+        heading: "What Players Look For When Choosing an Online Casino",
         type: "h2",
         content: [
           "Players who review casino platforms often consider several key factors before creating an account.",
@@ -29,7 +33,7 @@ const Content = observer(() => {
         ],
       },
       {
-        heading: "🎮 Casino Games Available Online",
+        heading: "Casino Games Available Online",
         type: "h2",
         content: [
           "Modern online casino platforms usually provide a wide range of digital casino games that can be played through web browsers or mobile devices.",
@@ -47,7 +51,7 @@ const Content = observer(() => {
         ],
       },
       {
-        heading: "🎁 Casino Bonuses and Promotions",
+        heading: "Casino Bonuses and Promotions",
         type: "h2",
         content: [
           "Casino bonuses are one of the most widely promoted features of online casino platforms.",
@@ -64,7 +68,7 @@ const Content = observer(() => {
         ],
       },
       {
-        heading: "📱 Mobile Casino Gaming",
+        heading: "Mobile Casino Gaming",
         type: "h2",
         content: [
           "Mobile casino gaming has become increasingly popular among UK players.",
@@ -81,7 +85,7 @@ const Content = observer(() => {
         ],
       },
       {
-        heading: "💳 Payment Methods and Withdrawals",
+        heading: "Payment Methods and Withdrawals",
         type: "h2",
         content: [
           "Payment methods are another important factor that players may consider when choosing a casino platform.",
@@ -98,7 +102,7 @@ const Content = observer(() => {
         ],
       },
       {
-        heading: "🛡️ Responsible Gambling Information",
+        heading: "Responsible Gambling Information",
         type: "h2",
         content: [
           "UKCasinoList.net supports responsible gambling.",
@@ -120,8 +124,7 @@ const Content = observer(() => {
       <article className="bg-dark px-5_ sm-px-1 py-3 bg-white w-100">
         <div className="mx-auto">
           <h1 className="pe-5">
-            Independent Online Casino Comparison for UK Players{" "}
-            {curDate.getFullYear()}
+            Independent Online Casino Comparison for UK Players - {curDateStr}
           </h1>
           <p>
             Welcome to UKCasinoList.net, an informational comparison website

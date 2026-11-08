@@ -4,8 +4,12 @@ import { toJS } from "mobx";
 
 const ContentV2 = observer(() => {
   const curDate = new Date();
-
   const topPar = toJS(myStore.content).headlineSection;
+
+  const curDateStr = curDate.toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
 
   const content = Object.values(toJS(myStore.content))
     .filter((item) => item.sortOrder)
@@ -15,13 +19,10 @@ const ContentV2 = observer(() => {
 
   return (
     <>
-      <h1 className="fw-bold">
-        {topPar.h1.replace("{curDate}", curDate.getFullYear())}
-      </h1>
+      <h1 className="fw-bold">{topPar.h1.replace("{curDate}", curDateStr)}</h1>
       {topPar?.p?.split("\n")?.map((pi, i) => (
         <p key={i}>{pi}</p>
       ))}
-      {/* <p>{topPar.p.replace("{curDate}", curDate.getFullYear())}</p> */}
 
       {content.map((item) => (
         <div className="mt-4 px-3" key={item.id}>

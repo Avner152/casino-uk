@@ -51,7 +51,7 @@ const SportSection = observer(({ captchaToken }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
-    <div className="min-vh-100">
+    <div className="">
       <div className="w-100 d-flex m-auto text-white justify-content-around align-items-center">
         {homepageIconsObjectList.slice(0, isDesktop ? 4 : 3).map((icon, k) => (
           <div
