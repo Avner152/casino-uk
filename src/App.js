@@ -196,7 +196,7 @@ const App = observer(() => {
           {myStore.product === "betting" ? <SportIntro /> : <Intro />}
         </div>
       </div>
-      <div className="w-60 md-w-100 sm-w-100 px-3 sm-p-0 m-auto">
+      <div className="w-60 md-w-85 sm-w-100 px-3 sm-p-0 m-auto">
         <MyRoutes />
       </div>
       {showPopOut && raisePopOut()}

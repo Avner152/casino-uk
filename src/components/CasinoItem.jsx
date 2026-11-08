@@ -21,21 +21,28 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
         </p>
       )}
       <div
-        className={`top-card d-flex gap-${
-          !isDesktop ? "2 flex-column" : "1 row"
-        } justify-content-around border rounded align-items-center text-center`}
+        className="top-card gap-4 px-4 border rounded align-items-center text-center"
+        style={{
+          display: "grid",
+          gridTemplateColumns: isDesktop ? "1fr 1.8fr 0.6fr 1.4fr" : "1fr",
+        }}
       >
-        <div className="col-md-3 rounded _square">
-          <img alt={item.name} width={210} height={80} src={item.image} />
+        <div className="rounded _square">
+          <img
+            className="img-fluid"
+            alt={item.name}
+            width={210}
+            height={80}
+            src={item.image}
+          />
         </div>
-        <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">
-          {/* <span className="text-decoration-underline">{item.name} Casino</span> */}
-          <span className="text-center">Welcome Bonus:</span>
-          <h1 className="golden text-center">{item.title}</h1>
+        <div className="welcome-bonus text-white d-flex flex-column gap-1 ">
+          <span className="ms-2 pt-2">Welcome Bonus:</span>
+          <h1 className="golden ms-2">{item.title}</h1>
         </div>
 
         {isDesktop && (
-          <div className="score d-flex flex-column align-items-center col-md-3">
+          <div className="score d-flex flex-column align-items-center ">
             <div className="d-flex flex-column gap-2">
               <div
                 style={{
@@ -54,6 +61,7 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
 
         <div className="d-flex flex-column col-md-3">
           <Button
+            style={{ maxWidth: "260px" }}
             onClick={() => setClicked(!clicked)}
             href={fixedURL}
             target="_blank"

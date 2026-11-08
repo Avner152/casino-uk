@@ -187,6 +187,11 @@ ul svg {
   /* color: #113454; */
 }
 
+.top-card > div {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* .top-card > div {
   min-width: 15%;
   max-width: 28%;
@@ -451,8 +456,8 @@ ul svg {
 
 .welcome-bonus h1 {
   font-size: 1.25rem;
-  min-width: 200px;
-  max-width: 200px;
+  /* min-width: 200px;
+  max-width: 200px; */
   font-weight: 700;
   /* text-align: center; */
 }
@@ -799,8 +804,8 @@ a:hover {
   }
   .welcome-bonus h1 {
     font-size: 1.25rem;
-    min-width: 120px;
-    max-width: 140px;
+    /* min-width: 120px;
+    max-width: 140px; */
     font-weight: 700;
     /* text-align: center; */
   }
@@ -1047,6 +1052,9 @@ a:hover {
     --bs-modal-width: 65%;
   }
 
+  .md-w-85 {
+    width: 85% !important;
+  }
   .md-w-100 {
     width: 100% !important;
   }

@@ -7,9 +7,12 @@ export default function CasinoItemPlaceholder() {
   return (
     <div style={{ zIndex: 1 }} className="my-card w-100 m-0 mx-5 ">
       <div
-        className={`top-card d-flex gap-${
-          !isDesktop ? "2 flex-column" : "1 row"
-        } justify-content-around border mt-3 rounded align-items-center text-center`}
+        className="top-card border mt-3 rounded align-items-center text-center"
+        style={{
+          display: "grid",
+          gridTemplateColumns: isDesktop ? "repeat(5, 20%)" : "1fr",
+          gap: isDesktop ? "0.5rem" : "1rem",
+        }}
       >
         <div className="col-md-3 rounded _square">
           <Placeholder
