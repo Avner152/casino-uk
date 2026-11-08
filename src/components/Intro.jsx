@@ -4,7 +4,6 @@ import myStore from "../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { toJS } from "mobx";
 
 const Intro = observer(() => {
   const infoPages = ["cookie", "about", "terms", "privacy"];
@@ -79,7 +78,7 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro  mx-auto tit-n-des text-white">
+    <div className="intro mx-auto tit-n-des text-white">
       <div
         className={`d-flex align-items-center justify-content-${
           isDesktop ? "between" : "center"

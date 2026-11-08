@@ -3,7 +3,6 @@ import myStore from "../../mobX/Store";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { toJS } from "mobx";
 
 const SportIntro = observer(() => {
   const curDate = new Date();

@@ -20,25 +20,19 @@ const CasinoItem = observer(({ item, index, fixedURL }) => {
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
       )}
-      <div
-        className="top-card gap-4 px-4 border rounded align-items-center text-center"
-        style={{
-          display: "grid",
-          gridTemplateColumns: isDesktop ? "1fr 1.8fr 0.6fr 1.4fr" : "1fr",
-        }}
-      >
-        <div className="rounded _square">
+      <div className="top-card desktop-top-card d-grid gap-5 px-4 border rounded align-items-center text-center">
+        <div className="rounded">
           <img
             className="img-fluid"
             alt={item.name}
-            width={210}
+            width={200}
             height={80}
             src={item.image}
           />
         </div>
         <div className="welcome-bonus text-white d-flex flex-column gap-1 ">
-          <span className="ms-2 pt-2">Welcome Bonus:</span>
-          <h1 className="golden ms-2">{item.title}</h1>
+          <span className="text-start">Welcome Bonus:</span>
+          <h1 className="golden text-start">{item.title}</h1>
         </div>
 
         {isDesktop && (
