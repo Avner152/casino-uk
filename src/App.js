@@ -7,11 +7,10 @@ import Header from "./components/Header";
 import CookieConsent from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import MyRoutes from "./routes/MyRoutes";
-// import Turnstile from "react-turnstile";
 import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import { observer } from "mobx-react";
-import chips from "./assets/golden-chips.png";
+import slots from "./assets/slots.svg";
 import betting from "./assets/betting.png";
 import { useSearchParams } from "react-router-dom";
 import myStore from "./mobX/Store";
@@ -94,7 +93,7 @@ const App = observer(() => {
             <img
               alt="chips"
               height={myStore.product.startsWith("b") ? 200 : 400}
-              src={myStore.product.startsWith("b") ? betting : chips}
+              src={myStore.product.startsWith("b") ? betting : slots}
             />
           </div>
 
