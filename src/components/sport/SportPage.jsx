@@ -41,7 +41,7 @@ const SportPage = observer(({ captchaToken }) => {
       <div
         className={`${myStore.product === "casino" ? "bg-white text-black" : " text-white"} min-vh-100 py-4`}
       >
-        <div className="bg-dark p-3 w-60 sm-w-100 m-auto">
+        <div className="bg-dark p-3 w-60 md-w-75 bg-opacity-75 sm-w-100 m-auto">
           {!myStore.content ? <Content isDesktop={isDesktop} /> : <ContentV2 />}
         </div>
       </div>

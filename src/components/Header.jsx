@@ -25,8 +25,8 @@ const Header = observer(() => {
       className={`${isDesktop ? "desktop" : "mobile"}-header header w-100`}
     >
       <div
-        className={`w-100 d-flex ${
-          !isDesktop && "justify-content-between"
+        className={`w-60 sm-w-100 d-flex mx-auto ${
+          !isDesktop ? "justify-content-between" : ""
         } align-items-center fs-2`}
       >
         {isDesktop ? (
